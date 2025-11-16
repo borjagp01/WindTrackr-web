@@ -147,12 +147,6 @@ export class FirebaseDataSource implements DataSource {
    */
   async getReadings(id: string, range: ReadingRange): Promise<Reading[]> {
     try {
-      // Calculate time range
-      const endTime = Math.floor(Date.now() / 1000); // Unix timestamp in seconds
-      const startTime = range === '24h'
-        ? endTime - 24 * 60 * 60
-        : endTime - 7 * 24 * 60 * 60;
-
       // Try 'history' first (V1 structure), fallback to 'readings' (deprecated)
       let dbRef = ref(db, `weather_stations/${id}/history`);
       let snapshot = await get(dbRef);
@@ -171,14 +165,14 @@ export class FirebaseDataSource implements DataSource {
       const readingsData = snapshot.val();
 
       // Convert object to array and map to Reading type
-      let readings: Reading[] = [];
+      let allReadings: Reading[] = [];
       if (typeof readingsData === 'object') {
-        readings = Object.entries(readingsData)
+        allReadings = Object.entries(readingsData)
           .map(([key, data]: [string, any]) => {
             // Parse timestamp (can be key or timestamp field)
-            const timestamp = this.parseTimestamp(data.timestamp || key);
+            const timestamp = this.parseTimestamp(data.timestamp || data.datetime || key);
 
-            return {
+            const reading = {
               stationId: id,
               timestamp: new Date(timestamp * 1000).toISOString(), // Convert to milliseconds
               windSpeedKts: data.wind?.speed_knots || this.msToKnots(data.wind?.speed_ms || 0),
@@ -188,20 +182,59 @@ export class FirebaseDataSource implements DataSource {
               humidityPct: data.humidity,
               pressureHPa: undefined
             };
+
+            return reading;
           })
-          .filter(r => {
-            // Filter by time range (timestamp is in seconds)
-            const time = Math.floor(new Date(r.timestamp).getTime() / 1000);
-            return time >= startTime && time <= endTime;
+          .sort((a, b) => {
+            // Sort chronologically (newest first for filtering)
+            const timeA = new Date(a.timestamp).getTime();
+            const timeB = new Date(b.timestamp).getTime();
+            return timeB - timeA;
           });
       }
 
-      // Sort chronologically
-      return readings.sort((a, b) => {
+      // Filter readings by actual time range (not by count)
+      // BUT: if no readings in range, show the most recent available data
+      const now = Date.now();
+      const timeRangeMs = range === '24h' ? 24 * 60 * 60 * 1000 : 7 * 24 * 60 * 60 * 1000;
+      const cutoffTime = now - timeRangeMs;
+
+      console.log(`🕐 Filtering readings:`, {
+        now: new Date(now).toISOString(),
+        cutoffTime: new Date(cutoffTime).toISOString(),
+        range,
+        totalReadings: allReadings.length,
+        oldestReading: allReadings[allReadings.length - 1]?.timestamp,
+        newestReading: allReadings[0]?.timestamp
+      });
+
+      // Filter readings within the time range
+      let filteredReadings = allReadings.filter(reading => {
+        const readingTime = new Date(reading.timestamp).getTime();
+        return readingTime >= cutoffTime;
+      });
+
+      // If no readings in the time range, show the most recent available data
+      // (e.g., Arduino offline but we still want to show last known data)
+      if (filteredReadings.length === 0 && allReadings.length > 0) {
+        console.log(`⚠️ No readings in ${range} range, showing most recent available data`);
+        const limit = range === '24h' ? 500 : 1000;
+        filteredReadings = allReadings.slice(0, Math.min(limit, allReadings.length));
+      }
+
+      // Sort chronologically (oldest first) for display
+      const readings = filteredReadings.sort((a, b) => {
         const timeA = new Date(a.timestamp).getTime();
         const timeB = new Date(b.timestamp).getTime();
         return timeA - timeB;
       });
+
+      console.log(`📊 Loaded ${readings.length} readings for ${id} (range: ${range}, total available: ${allReadings.length})`);
+      if (readings.length > 0) {
+        console.log(`📊 Time range: ${readings[0].timestamp} to ${readings[readings.length - 1].timestamp}`);
+        console.log(`📊 Cutoff time: ${new Date(cutoffTime).toISOString()} (${range})`);
+      }
+      return readings;
     } catch (error) {
       console.error(`Error fetching readings for station ${id}:`, error);
       throw new Error(`Failed to fetch readings: ${error instanceof Error ? error.message : 'Unknown error'}`);
@@ -225,9 +258,17 @@ export class FirebaseDataSource implements DataSource {
       return timestamp;
     }
     if (typeof timestamp === 'string') {
-      // Try to parse as date string
-      const parsed = Date.parse(timestamp);
-      return isNaN(parsed) ? Math.floor(Date.now() / 1000) : Math.floor(parsed / 1000);
+      // Try to parse as date string (handles "2025-11-15 11:52:23" format from Arduino)
+      // Replace space with 'T' to make it ISO-compatible
+      const isoString = timestamp.includes('T') ? timestamp : timestamp.replace(' ', 'T');
+      const parsed = Date.parse(isoString);
+
+      if (!isNaN(parsed)) {
+        return Math.floor(parsed / 1000);
+      }
+
+      console.warn(`⚠️ Could not parse timestamp: "${timestamp}"`);
+      return Math.floor(Date.now() / 1000);
     }
     return Math.floor(Date.now() / 1000);
   }

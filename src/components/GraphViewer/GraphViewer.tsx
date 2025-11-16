@@ -35,6 +35,15 @@ export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps
     temperature: r.temperatureC || 0,
   }));
 
+  // Check if all wind values are zero (sensor might be offline)
+  const hasNonZeroWind = chartData.some(d => d.windSpeed > 0 || d.windGust > 0);
+
+  // Check if data is old (last reading more than 2 hours ago)
+  const lastReadingTime = chartData.length > 0
+    ? new Date(chartData[chartData.length - 1].timestamp).getTime()
+    : 0;
+  const isDataOld = lastReadingTime > 0 && (Date.now() - lastReadingTime) > 2 * 60 * 60 * 1000;
+
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
@@ -59,9 +68,16 @@ export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          {t('graph.title')}
-        </h3>
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+            {t('graph.title')}
+          </h3>
+          {chartData.length > 0 && (
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              {chartData.length} {t('graph.readings', 'lecturas')} • {chartData[0].time} - {chartData[chartData.length - 1].time}
+            </p>
+          )}
+        </div>
 
         <div className="flex gap-2">
           <button
@@ -129,6 +145,24 @@ export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps
           </span>
         </label>
       </div>
+
+      {/* Warning if all values are zero */}
+      {!hasNonZeroWind && (
+        <div className="mb-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+          <p className="text-sm text-yellow-800 dark:text-yellow-200">
+            ⚠️ Sensor de viento sin lecturas válidas. Todas las mediciones muestran 0 kt.
+          </p>
+        </div>
+      )}
+
+      {/* Warning if data is old */}
+      {isDataOld && (
+        <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+          <p className="text-sm text-blue-800 dark:text-blue-200">
+            ℹ️ Mostrando últimos datos disponibles. La estación no ha enviado datos recientes.
+          </p>
+        </div>
+      )}
 
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={chartData}>

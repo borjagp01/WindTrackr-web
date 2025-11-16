@@ -10,6 +10,14 @@ interface BasicInfoTileProps {
 export function BasicInfoTile({ station, lastUpdated }: BasicInfoTileProps) {
   const { t } = useTranslation();
 
+  // Calculate if data is stale (more than 5 minutes old)
+  const isDataStale = lastUpdated
+    ? (Date.now() - new Date(lastUpdated).getTime()) > 5 * 60 * 1000
+    : false;
+
+  // Determine actual status based on data freshness
+  const actualStatus = isDataStale ? 'offline' : station.status;
+
   const statusColors = {
     online: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
     offline: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400',
@@ -30,9 +38,9 @@ export function BasicInfoTile({ station, lastUpdated }: BasicInfoTileProps) {
           )}
         </div>
         <span
-          className={`px-3 py-1 rounded-full text-xs font-medium ${statusColors[station.status]}`}
+          className={`px-3 py-1 rounded-full text-xs font-medium ${statusColors[actualStatus]}`}
         >
-          {t(`station.status.${station.status}`)}
+          {t(`station.status.${actualStatus}`)}
         </span>
       </div>
 
