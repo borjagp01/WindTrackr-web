@@ -109,7 +109,28 @@ src/
 └── utils/               # Utilidades
 ```
 
-## � Firebase Integration (Fase 1)
+## 🔥 Firebase Integration (Fase 1)
+
+### ⚡ Importante: Autenticación Anónima
+
+**La app requiere autenticación para acceder a Firebase Realtime Database.**
+
+La aplicación se autentica **automáticamente** usando Firebase Anonymous Auth cuando se carga. Para que esto funcione:
+
+1. Ve a [Firebase Console](https://console.firebase.google.com/)
+2. Selecciona tu proyecto
+3. Ve a **Authentication** > **Sign-in method**
+4. **Habilita "Anonymous"** ✅
+
+Si no está habilitado, verás el error "Permission denied" al intentar cargar datos.
+
+**Cómo funciona:**
+- Al abrir la app, se ejecuta automáticamente `signInAnonymously()`
+- Firebase crea un usuario anónimo temporal
+- Las peticiones a la base de datos ahora cumplen con `auth != null`
+- Verás el estado de autenticación en el FirebaseDebugPanel (esquina inferior derecha en desarrollo)
+
+📖 **Más detalles:** Ver `AUTENTICACION_RESUMEN.md`
 
 ### Configuración
 

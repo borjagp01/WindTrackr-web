@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
 import { ref, get } from 'firebase/database';
-import { db } from '@/app/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
+import { db, auth } from '@/app/firebase';
 
 interface FirebaseStatus {
   connected: boolean;
   dataSource: string;
   stationsCount?: number;
   error?: string;
+  userId?: string;
+  isAuthenticated: boolean;
 }
 
 /**
@@ -22,8 +25,22 @@ interface FirebaseStatus {
 export function FirebaseDebugPanel() {
   const [status, setStatus] = useState<FirebaseStatus>({
     connected: false,
-    dataSource: import.meta.env.VITE_DATA_SOURCE || 'mock'
+    dataSource: import.meta.env.VITE_DATA_SOURCE || 'mock',
+    isAuthenticated: false
   });
+
+  useEffect(() => {
+    // Listen for auth state changes
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setStatus(prev => ({
+        ...prev,
+        isAuthenticated: !!user,
+        userId: user?.uid
+      }));
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     async function checkFirebase() {
@@ -32,7 +49,7 @@ export function FirebaseDebugPanel() {
       }
 
       try {
-        const stationsRef = ref(db, 'stations');
+        const stationsRef = ref(db, 'weather_stations');
         const snapshot = await get(stationsRef);
 
         if (snapshot.exists()) {
@@ -41,30 +58,31 @@ export function FirebaseDebugPanel() {
             ? data.length
             : Object.keys(data).length;
 
-          setStatus({
+          setStatus(prev => ({
+            ...prev,
             connected: true,
-            dataSource: 'firebase',
-            stationsCount: count
-          });
+            stationsCount: count,
+            error: undefined
+          }));
         } else {
-          setStatus({
+          setStatus(prev => ({
+            ...prev,
             connected: true,
-            dataSource: 'firebase',
             stationsCount: 0,
             error: 'No data found in Firebase'
-          });
+          }));
         }
       } catch (error) {
-        setStatus({
+        setStatus(prev => ({
+          ...prev,
           connected: false,
-          dataSource: 'firebase',
           error: error instanceof Error ? error.message : 'Unknown error'
-        });
+        }));
       }
     }
 
     checkFirebase();
-  }, [status.dataSource]);
+  }, [status.dataSource, status.isAuthenticated]);
 
   // Only show in development
   if (import.meta.env.PROD) {
@@ -84,7 +102,21 @@ export function FirebaseDebugPanel() {
         {status.dataSource === 'firebase' && (
           <>
             <div>
-              <span className="text-gray-400">Status:</span>{' '}
+              <span className="text-gray-400">Auth:</span>{' '}
+              <span className={status.isAuthenticated ? 'text-green-400' : 'text-red-400'}>
+                {status.isAuthenticated ? '● Authenticated' : '● Not authenticated'}
+              </span>
+            </div>
+
+            {status.userId && (
+              <div>
+                <span className="text-gray-400">User ID:</span>{' '}
+                <span className="font-mono text-[10px]">{status.userId.substring(0, 8)}...</span>
+              </div>
+            )}
+
+            <div>
+              <span className="text-gray-400">DB Status:</span>{' '}
               <span className={status.connected ? 'text-green-400' : 'text-red-400'}>
                 {status.connected ? '● Connected' : '● Disconnected'}
               </span>
