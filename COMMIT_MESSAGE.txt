@@ -1,0 +1,79 @@
+feat: WindTrackr Fase 0 + Fase 1A - Implementación completa con Firebase
+
+Fase 0: Aplicación SPA funcional con datos mock
+================================================
+✅ Implementación completa de UI/UX con React 19 + TypeScript + Vite
+✅ 8 componentes principales: NavBar, StationSelector, BasicInfoTile, WindCompass, 
+   GraphViewer, WeatherForecast, StationMap, FirebaseDebugPanel
+✅ 5 páginas: Home, Station, Map, About, NotFound
+✅ Zustand para gestión de estado (tema + selección)
+✅ React Router v7 para navegación
+✅ Tailwind CSS 4 con modo oscuro
+✅ Recharts para gráficas de series temporales
+✅ React Leaflet + OpenStreetMap para mapas interactivos
+✅ i18n con react-i18next (español)
+✅ 20 tests con Vitest + Testing Library
+✅ Mock data generator con datos realistas
+✅ Build optimizado: 1,081 KB JS (329 KB gzipped)
+
+Fase 1A: Integración Firebase Realtime Database
+================================================
+✅ Firebase SDK 12.6.0 instalado y configurado
+✅ Patrón Repository con abstracción DataSource
+✅ FirebaseDataSource completamente implementado
+   - getStations(): lee de /weather_stations
+   - getStation(id): lee estación individual
+   - getReadings(id, range): filtra por timestamp con soporte 24h/7d
+   - getForecast(id): pronóstico del tiempo
+   - Manejo robusto de errores
+   - Conversión automática de estructuras Arduino V1
+✅ FirebaseDebugPanel para monitoreo en desarrollo
+✅ Scripts de utilidad:
+   - npm run inspect-firebase: inspeccionar base de datos
+   - npm run seed-firebase: poblar con datos mock
+   - npm run check-auth: verificar autenticación
+✅ Documentación exhaustiva:
+   - README.md actualizado a v0.2.0-firebase
+   - FIREBASE_GUIDE.md (350+ líneas)
+   - FASE1_RESUMEN.md, NEXT_STEPS.md
+   - CHECKLIST.md, ENTREGA_FASE1A.md
+   - RESUMEN_FASE1.md, DECISIONES_TECNICAS.md
+   - CONTRIBUTING.md, QUICKSTART.md
+✅ Configuración de entorno:
+   - .env.example con plantilla de variables
+   - .env (gitignored) con credenciales reales
+   - Variables VITE_* configuradas
+   - VITE_DATA_SOURCE para switch mock/firebase
+✅ Seguridad:
+   - .env en .gitignore
+   - Documentación sanitizada sin API keys
+   - Firebase Security Rules documentadas
+
+Tecnologías principales
+=======================
+- Frontend: React 19.2.0, TypeScript 5.9.3, Vite 7.2.2
+- Backend: Firebase Realtime Database + Auth
+- Estilos: Tailwind CSS 4.1.17
+- Estado: Zustand 5.0.8
+- Routing: React Router 7.9.6
+- Gráficos: Recharts 3.4.1
+- Mapas: React Leaflet 5.0.0 + Leaflet 1.9.4
+- Testing: Vitest 4.0.9 + Testing Library
+- i18n: react-i18next 16.1.7
+
+Próximos pasos (Fase 1B/1C)
+============================
+- [ ] Firebase Authentication con Google Sign-In
+- [ ] Real-time updates con onValue()
+- [ ] Panel de administración
+- [ ] PWA con service workers
+
+Estado del proyecto
+===================
+✅ Build exitoso sin errores
+✅ 20/20 tests passing
+✅ TypeScript strict mode
+✅ ESLint sin warnings
+✅ Documentación completa
+✅ Seguridad verificada (sin API keys en repo)
+✅ Listo para despliegue en Firebase Hosting

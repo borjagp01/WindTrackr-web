@@ -1,0 +1,3372 @@
+[
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-09T19:37:14.249Z",
+    "windSpeedKts": 19.5,
+    "windGustKts": 25.4,
+    "windDirectionDeg": 83,
+    "temperatureC": 22.6,
+    "humidityPct": 73,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-09T20:07:14.249Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 23,
+    "windDirectionDeg": 107,
+    "temperatureC": 19.5,
+    "humidityPct": 74,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-09T20:37:14.249Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 28.2,
+    "windDirectionDeg": 105,
+    "temperatureC": 21,
+    "humidityPct": 80,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-09T21:07:14.249Z",
+    "windSpeedKts": 21.4,
+    "windGustKts": 27.8,
+    "windDirectionDeg": 94,
+    "temperatureC": 24.7,
+    "humidityPct": 78,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-09T21:37:14.249Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 19.2,
+    "windDirectionDeg": 277,
+    "temperatureC": 21.3,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-09T22:07:14.249Z",
+    "windSpeedKts": 14,
+    "windGustKts": 18.3,
+    "windDirectionDeg": 266,
+    "temperatureC": 22.7,
+    "humidityPct": 70,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-09T22:37:14.249Z",
+    "windSpeedKts": 12.6,
+    "windGustKts": 16.4,
+    "windDirectionDeg": 285,
+    "temperatureC": 19.9,
+    "humidityPct": 71,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-09T23:07:14.249Z",
+    "windSpeedKts": 18.7,
+    "windGustKts": 24.3,
+    "windDirectionDeg": 78,
+    "temperatureC": 22.4,
+    "humidityPct": 69,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-09T23:37:14.249Z",
+    "windSpeedKts": 12.6,
+    "windGustKts": 16.4,
+    "windDirectionDeg": 81,
+    "temperatureC": 22.4,
+    "humidityPct": 83,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T00:07:14.249Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 25,
+    "windDirectionDeg": 82,
+    "temperatureC": 16.1,
+    "humidityPct": 70,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T00:37:14.249Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 18.6,
+    "windDirectionDeg": 95,
+    "temperatureC": 23.1,
+    "humidityPct": 85,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T01:07:14.249Z",
+    "windSpeedKts": 12.8,
+    "windGustKts": 16.7,
+    "windDirectionDeg": 70,
+    "temperatureC": 22.7,
+    "humidityPct": 72,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T01:37:14.249Z",
+    "windSpeedKts": 19.8,
+    "windGustKts": 25.7,
+    "windDirectionDeg": 101,
+    "temperatureC": 18.1,
+    "humidityPct": 72,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T02:07:14.249Z",
+    "windSpeedKts": 20.6,
+    "windGustKts": 26.8,
+    "windDirectionDeg": 102,
+    "temperatureC": 24.5,
+    "humidityPct": 66,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T02:37:14.249Z",
+    "windSpeedKts": 17.3,
+    "windGustKts": 22.4,
+    "windDirectionDeg": 85,
+    "temperatureC": 17,
+    "humidityPct": 83,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T03:07:14.249Z",
+    "windSpeedKts": 10.7,
+    "windGustKts": 13.9,
+    "windDirectionDeg": 262,
+    "temperatureC": 21.3,
+    "humidityPct": 78,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T03:37:14.249Z",
+    "windSpeedKts": 13.8,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 89,
+    "temperatureC": 22,
+    "humidityPct": 80,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T04:07:14.249Z",
+    "windSpeedKts": 19.1,
+    "windGustKts": 24.8,
+    "windDirectionDeg": 103,
+    "temperatureC": 22.6,
+    "humidityPct": 65,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T04:37:14.249Z",
+    "windSpeedKts": 18.4,
+    "windGustKts": 23.9,
+    "windDirectionDeg": 89,
+    "temperatureC": 22.8,
+    "humidityPct": 82,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T05:07:14.249Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 28.2,
+    "windDirectionDeg": 253,
+    "temperatureC": 16,
+    "humidityPct": 79,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T05:37:14.249Z",
+    "windSpeedKts": 13.8,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 282,
+    "temperatureC": 23.3,
+    "humidityPct": 80,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T06:07:14.249Z",
+    "windSpeedKts": 11.4,
+    "windGustKts": 14.8,
+    "windDirectionDeg": 99,
+    "temperatureC": 18.6,
+    "humidityPct": 66,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T06:37:14.249Z",
+    "windSpeedKts": 10.1,
+    "windGustKts": 13.1,
+    "windDirectionDeg": 276,
+    "temperatureC": 21.7,
+    "humidityPct": 69,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T07:07:14.249Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 20.6,
+    "windDirectionDeg": 252,
+    "temperatureC": 21.8,
+    "humidityPct": 66,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T07:37:14.249Z",
+    "windSpeedKts": 18.8,
+    "windGustKts": 24.5,
+    "windDirectionDeg": 76,
+    "temperatureC": 15.1,
+    "humidityPct": 84,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T08:07:14.249Z",
+    "windSpeedKts": 19.8,
+    "windGustKts": 25.8,
+    "windDirectionDeg": 284,
+    "temperatureC": 16.2,
+    "humidityPct": 83,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T08:37:14.249Z",
+    "windSpeedKts": 19.3,
+    "windGustKts": 25,
+    "windDirectionDeg": 103,
+    "temperatureC": 22.2,
+    "humidityPct": 80,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T09:07:14.249Z",
+    "windSpeedKts": 13.7,
+    "windGustKts": 17.8,
+    "windDirectionDeg": 86,
+    "temperatureC": 23.4,
+    "humidityPct": 73,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T09:37:14.249Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 18.5,
+    "windDirectionDeg": 74,
+    "temperatureC": 15.2,
+    "humidityPct": 68,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T10:07:14.249Z",
+    "windSpeedKts": 21.3,
+    "windGustKts": 27.7,
+    "windDirectionDeg": 263,
+    "temperatureC": 22,
+    "humidityPct": 67,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T10:37:14.249Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 264,
+    "temperatureC": 23.6,
+    "humidityPct": 78,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T11:07:14.249Z",
+    "windSpeedKts": 11,
+    "windGustKts": 14.3,
+    "windDirectionDeg": 256,
+    "temperatureC": 20.3,
+    "humidityPct": 85,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T11:37:14.249Z",
+    "windSpeedKts": 21,
+    "windGustKts": 27.3,
+    "windDirectionDeg": 86,
+    "temperatureC": 21.1,
+    "humidityPct": 75,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T12:07:14.249Z",
+    "windSpeedKts": 12.3,
+    "windGustKts": 16,
+    "windDirectionDeg": 83,
+    "temperatureC": 23.8,
+    "humidityPct": 69,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T12:37:14.249Z",
+    "windSpeedKts": 10.8,
+    "windGustKts": 14.1,
+    "windDirectionDeg": 95,
+    "temperatureC": 18.4,
+    "humidityPct": 69,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T13:07:14.249Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 19.2,
+    "windDirectionDeg": 277,
+    "temperatureC": 20.2,
+    "humidityPct": 70,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T13:37:14.249Z",
+    "windSpeedKts": 12.8,
+    "windGustKts": 16.7,
+    "windDirectionDeg": 103,
+    "temperatureC": 20.8,
+    "humidityPct": 71,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T14:07:14.249Z",
+    "windSpeedKts": 11.3,
+    "windGustKts": 14.7,
+    "windDirectionDeg": 287,
+    "temperatureC": 17.4,
+    "humidityPct": 77,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T14:37:14.249Z",
+    "windSpeedKts": 10.7,
+    "windGustKts": 13.9,
+    "windDirectionDeg": 260,
+    "temperatureC": 21.7,
+    "humidityPct": 81,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T15:07:14.249Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 28.2,
+    "windDirectionDeg": 282,
+    "temperatureC": 21.6,
+    "humidityPct": 79,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T15:37:14.249Z",
+    "windSpeedKts": 14.5,
+    "windGustKts": 18.9,
+    "windDirectionDeg": 272,
+    "temperatureC": 16.1,
+    "humidityPct": 66,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T16:07:14.249Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 26.3,
+    "windDirectionDeg": 94,
+    "temperatureC": 22.6,
+    "humidityPct": 70,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T16:37:14.249Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 19.3,
+    "windDirectionDeg": 267,
+    "temperatureC": 17.8,
+    "humidityPct": 78,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T17:07:14.249Z",
+    "windSpeedKts": 19,
+    "windGustKts": 24.7,
+    "windDirectionDeg": 262,
+    "temperatureC": 23.7,
+    "humidityPct": 80,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T17:37:14.249Z",
+    "windSpeedKts": 17.8,
+    "windGustKts": 23.1,
+    "windDirectionDeg": 108,
+    "temperatureC": 23.6,
+    "humidityPct": 84,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T18:07:14.249Z",
+    "windSpeedKts": 19.8,
+    "windGustKts": 25.8,
+    "windDirectionDeg": 289,
+    "temperatureC": 18.9,
+    "humidityPct": 75,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T18:37:14.249Z",
+    "windSpeedKts": 17.8,
+    "windGustKts": 23.1,
+    "windDirectionDeg": 77,
+    "temperatureC": 22.1,
+    "humidityPct": 65,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T19:07:14.249Z",
+    "windSpeedKts": 13.5,
+    "windGustKts": 17.5,
+    "windDirectionDeg": 251,
+    "temperatureC": 20.5,
+    "humidityPct": 71,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T19:37:14.249Z",
+    "windSpeedKts": 16.8,
+    "windGustKts": 21.8,
+    "windDirectionDeg": 105,
+    "temperatureC": 18.6,
+    "humidityPct": 66,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T20:07:14.249Z",
+    "windSpeedKts": 20.7,
+    "windGustKts": 26.9,
+    "windDirectionDeg": 260,
+    "temperatureC": 24.3,
+    "humidityPct": 70,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T20:37:14.249Z",
+    "windSpeedKts": 11.5,
+    "windGustKts": 15,
+    "windDirectionDeg": 99,
+    "temperatureC": 16.3,
+    "humidityPct": 73,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T21:07:14.249Z",
+    "windSpeedKts": 13.7,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 107,
+    "temperatureC": 20.8,
+    "humidityPct": 75,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T21:37:14.249Z",
+    "windSpeedKts": 11,
+    "windGustKts": 14.3,
+    "windDirectionDeg": 105,
+    "temperatureC": 24.8,
+    "humidityPct": 76,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T22:07:14.249Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 18.6,
+    "windDirectionDeg": 108,
+    "temperatureC": 24,
+    "humidityPct": 75,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T22:37:14.249Z",
+    "windSpeedKts": 13,
+    "windGustKts": 16.9,
+    "windDirectionDeg": 270,
+    "temperatureC": 17.8,
+    "humidityPct": 74,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T23:07:14.249Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 20.9,
+    "windDirectionDeg": 108,
+    "temperatureC": 24.1,
+    "humidityPct": 75,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-10T23:37:14.249Z",
+    "windSpeedKts": 17.4,
+    "windGustKts": 22.7,
+    "windDirectionDeg": 284,
+    "temperatureC": 22.4,
+    "humidityPct": 80,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T00:07:14.249Z",
+    "windSpeedKts": 13.8,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 94,
+    "temperatureC": 17.1,
+    "humidityPct": 66,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T00:37:14.249Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 20.9,
+    "windDirectionDeg": 274,
+    "temperatureC": 15.1,
+    "humidityPct": 83,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T01:07:14.249Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 20.6,
+    "windDirectionDeg": 264,
+    "temperatureC": 22,
+    "humidityPct": 70,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T01:37:14.249Z",
+    "windSpeedKts": 14,
+    "windGustKts": 18.3,
+    "windDirectionDeg": 95,
+    "temperatureC": 21.2,
+    "humidityPct": 69,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T02:07:14.249Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 19.3,
+    "windDirectionDeg": 265,
+    "temperatureC": 20.9,
+    "humidityPct": 76,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T02:37:14.249Z",
+    "windSpeedKts": 19.1,
+    "windGustKts": 24.8,
+    "windDirectionDeg": 97,
+    "temperatureC": 24.9,
+    "humidityPct": 80,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T03:07:14.249Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 21.9,
+    "windDirectionDeg": 277,
+    "temperatureC": 20.1,
+    "humidityPct": 72,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T03:37:14.249Z",
+    "windSpeedKts": 10.4,
+    "windGustKts": 13.5,
+    "windDirectionDeg": 81,
+    "temperatureC": 19.8,
+    "humidityPct": 76,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T04:07:14.249Z",
+    "windSpeedKts": 18.3,
+    "windGustKts": 23.8,
+    "windDirectionDeg": 86,
+    "temperatureC": 20,
+    "humidityPct": 83,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T04:37:14.249Z",
+    "windSpeedKts": 20.9,
+    "windGustKts": 27.2,
+    "windDirectionDeg": 250,
+    "temperatureC": 23.5,
+    "humidityPct": 74,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T05:07:14.249Z",
+    "windSpeedKts": 12,
+    "windGustKts": 15.6,
+    "windDirectionDeg": 262,
+    "temperatureC": 22.6,
+    "humidityPct": 68,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T05:37:14.249Z",
+    "windSpeedKts": 12,
+    "windGustKts": 15.6,
+    "windDirectionDeg": 71,
+    "temperatureC": 15.2,
+    "humidityPct": 83,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T06:07:14.249Z",
+    "windSpeedKts": 18.2,
+    "windGustKts": 23.7,
+    "windDirectionDeg": 72,
+    "temperatureC": 23.9,
+    "humidityPct": 81,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T06:37:14.249Z",
+    "windSpeedKts": 21.8,
+    "windGustKts": 28.4,
+    "windDirectionDeg": 83,
+    "temperatureC": 20.6,
+    "humidityPct": 66,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T07:07:14.249Z",
+    "windSpeedKts": 14.7,
+    "windGustKts": 19.1,
+    "windDirectionDeg": 252,
+    "temperatureC": 24,
+    "humidityPct": 80,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T07:37:14.249Z",
+    "windSpeedKts": 19.3,
+    "windGustKts": 25.1,
+    "windDirectionDeg": 103,
+    "temperatureC": 18.7,
+    "humidityPct": 72,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T08:07:14.249Z",
+    "windSpeedKts": 20.3,
+    "windGustKts": 26.4,
+    "windDirectionDeg": 253,
+    "temperatureC": 21.8,
+    "humidityPct": 84,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T08:37:14.249Z",
+    "windSpeedKts": 15.6,
+    "windGustKts": 20.2,
+    "windDirectionDeg": 103,
+    "temperatureC": 23,
+    "humidityPct": 77,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T09:07:14.249Z",
+    "windSpeedKts": 16.6,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 109,
+    "temperatureC": 24,
+    "humidityPct": 71,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T09:37:14.249Z",
+    "windSpeedKts": 16.7,
+    "windGustKts": 21.7,
+    "windDirectionDeg": 100,
+    "temperatureC": 24.2,
+    "humidityPct": 69,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T10:07:14.249Z",
+    "windSpeedKts": 17.8,
+    "windGustKts": 23.2,
+    "windDirectionDeg": 86,
+    "temperatureC": 19.2,
+    "humidityPct": 69,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T10:37:14.249Z",
+    "windSpeedKts": 16.5,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 81,
+    "temperatureC": 17.4,
+    "humidityPct": 79,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T11:07:14.249Z",
+    "windSpeedKts": 16.4,
+    "windGustKts": 21.3,
+    "windDirectionDeg": 280,
+    "temperatureC": 17.2,
+    "humidityPct": 71,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T11:37:14.249Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 26.1,
+    "windDirectionDeg": 286,
+    "temperatureC": 22.5,
+    "humidityPct": 71,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T12:07:14.249Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 22.8,
+    "windDirectionDeg": 95,
+    "temperatureC": 17,
+    "humidityPct": 72,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T12:37:14.249Z",
+    "windSpeedKts": 17.4,
+    "windGustKts": 22.7,
+    "windDirectionDeg": 100,
+    "temperatureC": 17.3,
+    "humidityPct": 67,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T13:07:14.249Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 20.9,
+    "windDirectionDeg": 283,
+    "temperatureC": 22.4,
+    "humidityPct": 66,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T13:37:14.249Z",
+    "windSpeedKts": 18.5,
+    "windGustKts": 24,
+    "windDirectionDeg": 94,
+    "temperatureC": 18.9,
+    "humidityPct": 79,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T14:07:14.249Z",
+    "windSpeedKts": 13.2,
+    "windGustKts": 17.1,
+    "windDirectionDeg": 261,
+    "temperatureC": 19,
+    "humidityPct": 82,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T14:37:14.249Z",
+    "windSpeedKts": 13.1,
+    "windGustKts": 17,
+    "windDirectionDeg": 79,
+    "temperatureC": 17.5,
+    "humidityPct": 67,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T15:07:14.249Z",
+    "windSpeedKts": 16.6,
+    "windGustKts": 21.6,
+    "windDirectionDeg": 84,
+    "temperatureC": 20.6,
+    "humidityPct": 68,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T15:37:14.249Z",
+    "windSpeedKts": 18.8,
+    "windGustKts": 24.4,
+    "windDirectionDeg": 254,
+    "temperatureC": 22.4,
+    "humidityPct": 82,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T16:07:14.249Z",
+    "windSpeedKts": 11.6,
+    "windGustKts": 15.1,
+    "windDirectionDeg": 86,
+    "temperatureC": 23.8,
+    "humidityPct": 84,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T16:37:14.249Z",
+    "windSpeedKts": 18.2,
+    "windGustKts": 23.7,
+    "windDirectionDeg": 273,
+    "temperatureC": 22.4,
+    "humidityPct": 67,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T17:07:14.249Z",
+    "windSpeedKts": 16.7,
+    "windGustKts": 21.7,
+    "windDirectionDeg": 74,
+    "temperatureC": 21.4,
+    "humidityPct": 66,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T17:37:14.249Z",
+    "windSpeedKts": 12.9,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 100,
+    "temperatureC": 22.6,
+    "humidityPct": 70,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T18:07:14.249Z",
+    "windSpeedKts": 19.8,
+    "windGustKts": 25.7,
+    "windDirectionDeg": 263,
+    "temperatureC": 22.7,
+    "humidityPct": 80,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T18:37:14.249Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 26.3,
+    "windDirectionDeg": 80,
+    "temperatureC": 17.8,
+    "humidityPct": 73,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T19:07:14.249Z",
+    "windSpeedKts": 19,
+    "windGustKts": 24.7,
+    "windDirectionDeg": 269,
+    "temperatureC": 19.8,
+    "humidityPct": 70,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T19:37:14.249Z",
+    "windSpeedKts": 11.9,
+    "windGustKts": 15.4,
+    "windDirectionDeg": 261,
+    "temperatureC": 15.2,
+    "humidityPct": 71,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T20:07:14.249Z",
+    "windSpeedKts": 14.5,
+    "windGustKts": 18.9,
+    "windDirectionDeg": 107,
+    "temperatureC": 21.6,
+    "humidityPct": 81,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T20:37:14.249Z",
+    "windSpeedKts": 12.2,
+    "windGustKts": 15.9,
+    "windDirectionDeg": 277,
+    "temperatureC": 16.3,
+    "humidityPct": 67,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T21:07:14.249Z",
+    "windSpeedKts": 15.1,
+    "windGustKts": 19.7,
+    "windDirectionDeg": 290,
+    "temperatureC": 15.1,
+    "humidityPct": 80,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T21:37:14.249Z",
+    "windSpeedKts": 19.3,
+    "windGustKts": 25.1,
+    "windDirectionDeg": 263,
+    "temperatureC": 19.3,
+    "humidityPct": 67,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T22:07:14.249Z",
+    "windSpeedKts": 19.4,
+    "windGustKts": 25.2,
+    "windDirectionDeg": 88,
+    "temperatureC": 17.5,
+    "humidityPct": 83,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T22:37:14.249Z",
+    "windSpeedKts": 10.3,
+    "windGustKts": 13.4,
+    "windDirectionDeg": 94,
+    "temperatureC": 16,
+    "humidityPct": 71,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T23:07:14.249Z",
+    "windSpeedKts": 12.7,
+    "windGustKts": 16.5,
+    "windDirectionDeg": 250,
+    "temperatureC": 19.8,
+    "humidityPct": 75,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-11T23:37:14.249Z",
+    "windSpeedKts": 13.7,
+    "windGustKts": 17.8,
+    "windDirectionDeg": 289,
+    "temperatureC": 24.6,
+    "humidityPct": 83,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T00:07:14.249Z",
+    "windSpeedKts": 16.7,
+    "windGustKts": 21.7,
+    "windDirectionDeg": 83,
+    "temperatureC": 21.4,
+    "humidityPct": 67,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T00:37:14.249Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 84,
+    "temperatureC": 22.3,
+    "humidityPct": 82,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T01:07:14.249Z",
+    "windSpeedKts": 10.1,
+    "windGustKts": 13.1,
+    "windDirectionDeg": 105,
+    "temperatureC": 24.6,
+    "humidityPct": 75,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T01:37:14.249Z",
+    "windSpeedKts": 20.8,
+    "windGustKts": 27,
+    "windDirectionDeg": 250,
+    "temperatureC": 23.1,
+    "humidityPct": 83,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T02:07:14.249Z",
+    "windSpeedKts": 13.7,
+    "windGustKts": 17.8,
+    "windDirectionDeg": 259,
+    "temperatureC": 22.5,
+    "humidityPct": 79,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T02:37:14.249Z",
+    "windSpeedKts": 13.5,
+    "windGustKts": 17.5,
+    "windDirectionDeg": 277,
+    "temperatureC": 17.5,
+    "humidityPct": 68,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T03:07:14.249Z",
+    "windSpeedKts": 18.6,
+    "windGustKts": 24.1,
+    "windDirectionDeg": 86,
+    "temperatureC": 22.4,
+    "humidityPct": 84,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T03:37:14.249Z",
+    "windSpeedKts": 21.5,
+    "windGustKts": 28,
+    "windDirectionDeg": 110,
+    "temperatureC": 17.1,
+    "humidityPct": 73,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T04:07:14.249Z",
+    "windSpeedKts": 15.2,
+    "windGustKts": 19.7,
+    "windDirectionDeg": 279,
+    "temperatureC": 19.8,
+    "humidityPct": 68,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T04:37:14.249Z",
+    "windSpeedKts": 21,
+    "windGustKts": 27.3,
+    "windDirectionDeg": 94,
+    "temperatureC": 15.1,
+    "humidityPct": 70,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T05:07:14.249Z",
+    "windSpeedKts": 21,
+    "windGustKts": 27.3,
+    "windDirectionDeg": 105,
+    "temperatureC": 23.5,
+    "humidityPct": 84,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T05:37:14.249Z",
+    "windSpeedKts": 16,
+    "windGustKts": 20.8,
+    "windDirectionDeg": 281,
+    "temperatureC": 18.7,
+    "humidityPct": 82,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T06:07:14.249Z",
+    "windSpeedKts": 19.7,
+    "windGustKts": 25.6,
+    "windDirectionDeg": 282,
+    "temperatureC": 18.2,
+    "humidityPct": 84,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T06:37:14.249Z",
+    "windSpeedKts": 17.8,
+    "windGustKts": 23.1,
+    "windDirectionDeg": 93,
+    "temperatureC": 23,
+    "humidityPct": 83,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T07:07:14.249Z",
+    "windSpeedKts": 10.9,
+    "windGustKts": 14.2,
+    "windDirectionDeg": 79,
+    "temperatureC": 15.1,
+    "humidityPct": 75,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T07:37:14.249Z",
+    "windSpeedKts": 19.6,
+    "windGustKts": 25.5,
+    "windDirectionDeg": 256,
+    "temperatureC": 17.2,
+    "humidityPct": 74,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T08:07:14.249Z",
+    "windSpeedKts": 12.9,
+    "windGustKts": 16.7,
+    "windDirectionDeg": 276,
+    "temperatureC": 22.9,
+    "humidityPct": 68,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T08:37:14.249Z",
+    "windSpeedKts": 18.7,
+    "windGustKts": 24.3,
+    "windDirectionDeg": 278,
+    "temperatureC": 16.6,
+    "humidityPct": 70,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T09:07:14.249Z",
+    "windSpeedKts": 13.3,
+    "windGustKts": 17.3,
+    "windDirectionDeg": 274,
+    "temperatureC": 17.2,
+    "humidityPct": 76,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T09:37:14.249Z",
+    "windSpeedKts": 21.5,
+    "windGustKts": 28,
+    "windDirectionDeg": 277,
+    "temperatureC": 16.9,
+    "humidityPct": 68,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T10:07:14.249Z",
+    "windSpeedKts": 21.2,
+    "windGustKts": 27.6,
+    "windDirectionDeg": 99,
+    "temperatureC": 19.3,
+    "humidityPct": 72,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T10:37:14.249Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 20.9,
+    "windDirectionDeg": 267,
+    "temperatureC": 17.6,
+    "humidityPct": 73,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T11:07:14.249Z",
+    "windSpeedKts": 17.2,
+    "windGustKts": 22.3,
+    "windDirectionDeg": 284,
+    "temperatureC": 20,
+    "humidityPct": 70,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T11:37:14.249Z",
+    "windSpeedKts": 16,
+    "windGustKts": 20.8,
+    "windDirectionDeg": 285,
+    "temperatureC": 20.8,
+    "humidityPct": 74,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T12:07:14.249Z",
+    "windSpeedKts": 18.9,
+    "windGustKts": 24.6,
+    "windDirectionDeg": 255,
+    "temperatureC": 20.2,
+    "humidityPct": 67,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T12:37:14.249Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 23.1,
+    "windDirectionDeg": 103,
+    "temperatureC": 16.6,
+    "humidityPct": 77,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T13:07:14.249Z",
+    "windSpeedKts": 18.5,
+    "windGustKts": 24.1,
+    "windDirectionDeg": 256,
+    "temperatureC": 15.3,
+    "humidityPct": 66,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T13:37:14.249Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 22,
+    "windDirectionDeg": 70,
+    "temperatureC": 17.8,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T14:07:14.249Z",
+    "windSpeedKts": 13.2,
+    "windGustKts": 17.2,
+    "windDirectionDeg": 267,
+    "temperatureC": 20.3,
+    "humidityPct": 84,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T14:37:14.249Z",
+    "windSpeedKts": 15.3,
+    "windGustKts": 19.9,
+    "windDirectionDeg": 281,
+    "temperatureC": 17.9,
+    "humidityPct": 71,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T15:07:14.249Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 19.2,
+    "windDirectionDeg": 76,
+    "temperatureC": 20.8,
+    "humidityPct": 83,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T15:37:14.249Z",
+    "windSpeedKts": 14,
+    "windGustKts": 18.2,
+    "windDirectionDeg": 274,
+    "temperatureC": 20.4,
+    "humidityPct": 69,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T16:07:14.249Z",
+    "windSpeedKts": 13.6,
+    "windGustKts": 17.6,
+    "windDirectionDeg": 255,
+    "temperatureC": 20.1,
+    "humidityPct": 84,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T16:37:14.249Z",
+    "windSpeedKts": 17.2,
+    "windGustKts": 22.4,
+    "windDirectionDeg": 83,
+    "temperatureC": 20,
+    "humidityPct": 71,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T17:07:14.249Z",
+    "windSpeedKts": 11.1,
+    "windGustKts": 14.4,
+    "windDirectionDeg": 279,
+    "temperatureC": 19.3,
+    "humidityPct": 72,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T17:37:14.249Z",
+    "windSpeedKts": 20.7,
+    "windGustKts": 27,
+    "windDirectionDeg": 281,
+    "temperatureC": 16.7,
+    "humidityPct": 72,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T18:07:14.249Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 20.9,
+    "windDirectionDeg": 87,
+    "temperatureC": 18,
+    "humidityPct": 85,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T18:37:14.249Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 18.4,
+    "windDirectionDeg": 108,
+    "temperatureC": 24.2,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T19:07:14.249Z",
+    "windSpeedKts": 11.9,
+    "windGustKts": 15.5,
+    "windDirectionDeg": 85,
+    "temperatureC": 18.5,
+    "humidityPct": 75,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T19:37:14.249Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 17.5,
+    "windDirectionDeg": 88,
+    "temperatureC": 24.3,
+    "humidityPct": 70,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T20:07:14.249Z",
+    "windSpeedKts": 16.8,
+    "windGustKts": 21.8,
+    "windDirectionDeg": 97,
+    "temperatureC": 16.2,
+    "humidityPct": 80,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T20:37:14.249Z",
+    "windSpeedKts": 16.5,
+    "windGustKts": 21.4,
+    "windDirectionDeg": 99,
+    "temperatureC": 21.5,
+    "humidityPct": 84,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T21:07:14.249Z",
+    "windSpeedKts": 11.7,
+    "windGustKts": 15.3,
+    "windDirectionDeg": 81,
+    "temperatureC": 20.6,
+    "humidityPct": 68,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T21:37:14.249Z",
+    "windSpeedKts": 12,
+    "windGustKts": 15.6,
+    "windDirectionDeg": 275,
+    "temperatureC": 18.6,
+    "humidityPct": 80,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T22:07:14.249Z",
+    "windSpeedKts": 16.7,
+    "windGustKts": 21.7,
+    "windDirectionDeg": 75,
+    "temperatureC": 17.1,
+    "humidityPct": 81,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T22:37:14.249Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 19.3,
+    "windDirectionDeg": 260,
+    "temperatureC": 19.8,
+    "humidityPct": 77,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T23:07:14.249Z",
+    "windSpeedKts": 18.4,
+    "windGustKts": 23.9,
+    "windDirectionDeg": 256,
+    "temperatureC": 22.5,
+    "humidityPct": 69,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-12T23:37:14.249Z",
+    "windSpeedKts": 14.1,
+    "windGustKts": 18.3,
+    "windDirectionDeg": 256,
+    "temperatureC": 20.9,
+    "humidityPct": 69,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T00:07:14.249Z",
+    "windSpeedKts": 16.7,
+    "windGustKts": 21.7,
+    "windDirectionDeg": 101,
+    "temperatureC": 18.3,
+    "humidityPct": 66,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T00:37:14.249Z",
+    "windSpeedKts": 13.1,
+    "windGustKts": 17.1,
+    "windDirectionDeg": 253,
+    "temperatureC": 16.2,
+    "humidityPct": 77,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T01:07:14.249Z",
+    "windSpeedKts": 15.6,
+    "windGustKts": 20.3,
+    "windDirectionDeg": 99,
+    "temperatureC": 20.5,
+    "humidityPct": 66,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T01:37:14.249Z",
+    "windSpeedKts": 18.3,
+    "windGustKts": 23.8,
+    "windDirectionDeg": 100,
+    "temperatureC": 18.4,
+    "humidityPct": 69,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T02:07:14.249Z",
+    "windSpeedKts": 10.7,
+    "windGustKts": 13.9,
+    "windDirectionDeg": 253,
+    "temperatureC": 23.2,
+    "humidityPct": 74,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T02:37:14.249Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 18.7,
+    "windDirectionDeg": 103,
+    "temperatureC": 23.9,
+    "humidityPct": 66,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T03:07:14.249Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 272,
+    "temperatureC": 16.7,
+    "humidityPct": 75,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T03:37:14.249Z",
+    "windSpeedKts": 12.1,
+    "windGustKts": 15.7,
+    "windDirectionDeg": 94,
+    "temperatureC": 24.2,
+    "humidityPct": 72,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T04:07:14.249Z",
+    "windSpeedKts": 11.1,
+    "windGustKts": 14.4,
+    "windDirectionDeg": 269,
+    "temperatureC": 16,
+    "humidityPct": 70,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T04:37:14.249Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 18.7,
+    "windDirectionDeg": 107,
+    "temperatureC": 21,
+    "humidityPct": 68,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T05:07:14.249Z",
+    "windSpeedKts": 16.8,
+    "windGustKts": 21.8,
+    "windDirectionDeg": 253,
+    "temperatureC": 16.6,
+    "humidityPct": 69,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T05:37:14.249Z",
+    "windSpeedKts": 10.4,
+    "windGustKts": 13.5,
+    "windDirectionDeg": 268,
+    "temperatureC": 20.4,
+    "humidityPct": 79,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T06:07:14.249Z",
+    "windSpeedKts": 19.7,
+    "windGustKts": 25.6,
+    "windDirectionDeg": 97,
+    "temperatureC": 16.6,
+    "humidityPct": 83,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T06:37:14.249Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 25,
+    "windDirectionDeg": 263,
+    "temperatureC": 19,
+    "humidityPct": 73,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T07:07:14.249Z",
+    "windSpeedKts": 16,
+    "windGustKts": 20.8,
+    "windDirectionDeg": 259,
+    "temperatureC": 18.1,
+    "humidityPct": 71,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T07:37:14.249Z",
+    "windSpeedKts": 17.1,
+    "windGustKts": 22.3,
+    "windDirectionDeg": 257,
+    "temperatureC": 19.9,
+    "humidityPct": 84,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T08:07:14.249Z",
+    "windSpeedKts": 11.3,
+    "windGustKts": 14.7,
+    "windDirectionDeg": 72,
+    "temperatureC": 23.6,
+    "humidityPct": 82,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T08:37:14.249Z",
+    "windSpeedKts": 10.7,
+    "windGustKts": 13.9,
+    "windDirectionDeg": 260,
+    "temperatureC": 20,
+    "humidityPct": 65,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T09:07:14.249Z",
+    "windSpeedKts": 11.6,
+    "windGustKts": 15.1,
+    "windDirectionDeg": 84,
+    "temperatureC": 22.2,
+    "humidityPct": 77,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T09:37:14.249Z",
+    "windSpeedKts": 17.4,
+    "windGustKts": 22.6,
+    "windDirectionDeg": 269,
+    "temperatureC": 15.8,
+    "humidityPct": 76,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T10:07:14.249Z",
+    "windSpeedKts": 21.5,
+    "windGustKts": 27.9,
+    "windDirectionDeg": 262,
+    "temperatureC": 16.7,
+    "humidityPct": 67,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T10:37:14.249Z",
+    "windSpeedKts": 21.4,
+    "windGustKts": 27.8,
+    "windDirectionDeg": 95,
+    "temperatureC": 19,
+    "humidityPct": 80,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T11:07:14.249Z",
+    "windSpeedKts": 10,
+    "windGustKts": 13,
+    "windDirectionDeg": 108,
+    "temperatureC": 19.9,
+    "humidityPct": 79,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T11:37:14.249Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 17.4,
+    "windDirectionDeg": 256,
+    "temperatureC": 22.4,
+    "humidityPct": 74,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T12:07:14.249Z",
+    "windSpeedKts": 11.4,
+    "windGustKts": 14.8,
+    "windDirectionDeg": 84,
+    "temperatureC": 20.6,
+    "humidityPct": 72,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T12:37:14.249Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 22.8,
+    "windDirectionDeg": 288,
+    "temperatureC": 16.5,
+    "humidityPct": 79,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T13:07:14.249Z",
+    "windSpeedKts": 19.4,
+    "windGustKts": 25.2,
+    "windDirectionDeg": 105,
+    "temperatureC": 17.9,
+    "humidityPct": 76,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T13:37:14.249Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 22.9,
+    "windDirectionDeg": 94,
+    "temperatureC": 15.2,
+    "humidityPct": 85,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T14:07:14.249Z",
+    "windSpeedKts": 14,
+    "windGustKts": 18.2,
+    "windDirectionDeg": 278,
+    "temperatureC": 19.1,
+    "humidityPct": 67,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T14:37:14.249Z",
+    "windSpeedKts": 12.2,
+    "windGustKts": 15.9,
+    "windDirectionDeg": 274,
+    "temperatureC": 15.3,
+    "humidityPct": 81,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T15:07:14.249Z",
+    "windSpeedKts": 14.1,
+    "windGustKts": 18.3,
+    "windDirectionDeg": 91,
+    "temperatureC": 23.6,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T15:37:14.249Z",
+    "windSpeedKts": 16.2,
+    "windGustKts": 21,
+    "windDirectionDeg": 100,
+    "temperatureC": 16.1,
+    "humidityPct": 70,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T16:07:14.249Z",
+    "windSpeedKts": 11.6,
+    "windGustKts": 15,
+    "windDirectionDeg": 258,
+    "temperatureC": 21.9,
+    "humidityPct": 67,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T16:37:14.249Z",
+    "windSpeedKts": 18.2,
+    "windGustKts": 23.7,
+    "windDirectionDeg": 277,
+    "temperatureC": 16.6,
+    "humidityPct": 74,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T17:07:14.249Z",
+    "windSpeedKts": 13.7,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 80,
+    "temperatureC": 17.9,
+    "humidityPct": 73,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T17:37:14.249Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 24.9,
+    "windDirectionDeg": 289,
+    "temperatureC": 24.6,
+    "humidityPct": 76,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T18:07:14.249Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 18.7,
+    "windDirectionDeg": 80,
+    "temperatureC": 18.6,
+    "humidityPct": 84,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T18:37:14.249Z",
+    "windSpeedKts": 18.5,
+    "windGustKts": 24.1,
+    "windDirectionDeg": 84,
+    "temperatureC": 19.9,
+    "humidityPct": 77,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T19:07:14.249Z",
+    "windSpeedKts": 12,
+    "windGustKts": 15.7,
+    "windDirectionDeg": 282,
+    "temperatureC": 21.4,
+    "humidityPct": 85,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T19:37:14.249Z",
+    "windSpeedKts": 14.5,
+    "windGustKts": 18.8,
+    "windDirectionDeg": 77,
+    "temperatureC": 17.7,
+    "humidityPct": 66,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T20:07:14.249Z",
+    "windSpeedKts": 16.6,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 261,
+    "temperatureC": 16.3,
+    "humidityPct": 68,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T20:37:14.249Z",
+    "windSpeedKts": 10.7,
+    "windGustKts": 13.9,
+    "windDirectionDeg": 273,
+    "temperatureC": 17.6,
+    "humidityPct": 79,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T21:07:14.249Z",
+    "windSpeedKts": 20.9,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 110,
+    "temperatureC": 18.7,
+    "humidityPct": 66,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T21:37:14.249Z",
+    "windSpeedKts": 11.6,
+    "windGustKts": 15.1,
+    "windDirectionDeg": 266,
+    "temperatureC": 16.4,
+    "humidityPct": 71,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T22:07:14.249Z",
+    "windSpeedKts": 19.5,
+    "windGustKts": 25.3,
+    "windDirectionDeg": 107,
+    "temperatureC": 24.6,
+    "humidityPct": 83,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T22:37:14.249Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 18.6,
+    "windDirectionDeg": 106,
+    "temperatureC": 17,
+    "humidityPct": 77,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T23:07:14.249Z",
+    "windSpeedKts": 12.2,
+    "windGustKts": 15.9,
+    "windDirectionDeg": 278,
+    "temperatureC": 15.1,
+    "humidityPct": 83,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-13T23:37:14.249Z",
+    "windSpeedKts": 15,
+    "windGustKts": 19.5,
+    "windDirectionDeg": 256,
+    "temperatureC": 22.9,
+    "humidityPct": 69,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T00:07:14.249Z",
+    "windSpeedKts": 21.3,
+    "windGustKts": 27.6,
+    "windDirectionDeg": 285,
+    "temperatureC": 21.4,
+    "humidityPct": 74,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T00:37:14.249Z",
+    "windSpeedKts": 11,
+    "windGustKts": 14.3,
+    "windDirectionDeg": 261,
+    "temperatureC": 24.2,
+    "humidityPct": 66,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T01:07:14.249Z",
+    "windSpeedKts": 11.4,
+    "windGustKts": 14.8,
+    "windDirectionDeg": 257,
+    "temperatureC": 15.5,
+    "humidityPct": 65,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T01:37:14.249Z",
+    "windSpeedKts": 21.8,
+    "windGustKts": 28.3,
+    "windDirectionDeg": 276,
+    "temperatureC": 18.4,
+    "humidityPct": 70,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T02:07:14.249Z",
+    "windSpeedKts": 11.2,
+    "windGustKts": 14.6,
+    "windDirectionDeg": 91,
+    "temperatureC": 17.2,
+    "humidityPct": 80,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T02:37:14.249Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 26.3,
+    "windDirectionDeg": 78,
+    "temperatureC": 23.5,
+    "humidityPct": 65,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T03:07:14.249Z",
+    "windSpeedKts": 17.2,
+    "windGustKts": 22.3,
+    "windDirectionDeg": 72,
+    "temperatureC": 17.4,
+    "humidityPct": 75,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T03:37:14.249Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 18.7,
+    "windDirectionDeg": 258,
+    "temperatureC": 22.1,
+    "humidityPct": 81,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T04:07:14.249Z",
+    "windSpeedKts": 13.9,
+    "windGustKts": 18.1,
+    "windDirectionDeg": 253,
+    "temperatureC": 22.9,
+    "humidityPct": 83,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T04:37:14.249Z",
+    "windSpeedKts": 16.6,
+    "windGustKts": 21.6,
+    "windDirectionDeg": 76,
+    "temperatureC": 18.5,
+    "humidityPct": 85,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T05:07:14.249Z",
+    "windSpeedKts": 15.8,
+    "windGustKts": 20.6,
+    "windDirectionDeg": 276,
+    "temperatureC": 23.1,
+    "humidityPct": 77,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T05:37:14.249Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 28.2,
+    "windDirectionDeg": 102,
+    "temperatureC": 23.6,
+    "humidityPct": 74,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T06:07:14.249Z",
+    "windSpeedKts": 15.5,
+    "windGustKts": 20.1,
+    "windDirectionDeg": 87,
+    "temperatureC": 24.9,
+    "humidityPct": 80,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T06:37:14.249Z",
+    "windSpeedKts": 20.6,
+    "windGustKts": 26.8,
+    "windDirectionDeg": 70,
+    "temperatureC": 22.9,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T07:07:14.249Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 28.5,
+    "windDirectionDeg": 277,
+    "temperatureC": 17.8,
+    "humidityPct": 67,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T07:37:14.249Z",
+    "windSpeedKts": 10,
+    "windGustKts": 13.1,
+    "windDirectionDeg": 84,
+    "temperatureC": 15.2,
+    "humidityPct": 84,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T08:07:14.249Z",
+    "windSpeedKts": 19.5,
+    "windGustKts": 25.4,
+    "windDirectionDeg": 73,
+    "temperatureC": 17,
+    "humidityPct": 70,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T08:37:14.249Z",
+    "windSpeedKts": 13,
+    "windGustKts": 16.9,
+    "windDirectionDeg": 71,
+    "temperatureC": 16.8,
+    "humidityPct": 68,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T09:07:14.249Z",
+    "windSpeedKts": 12.9,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 105,
+    "temperatureC": 19.5,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T09:37:14.249Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 282,
+    "temperatureC": 18.2,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T10:07:14.249Z",
+    "windSpeedKts": 17.5,
+    "windGustKts": 22.8,
+    "windDirectionDeg": 253,
+    "temperatureC": 23.9,
+    "humidityPct": 69,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T10:37:14.249Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 21.9,
+    "windDirectionDeg": 108,
+    "temperatureC": 17.7,
+    "humidityPct": 82,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T11:07:14.249Z",
+    "windSpeedKts": 11.8,
+    "windGustKts": 15.3,
+    "windDirectionDeg": 252,
+    "temperatureC": 20.1,
+    "humidityPct": 84,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T11:37:14.249Z",
+    "windSpeedKts": 10.8,
+    "windGustKts": 14,
+    "windDirectionDeg": 92,
+    "temperatureC": 18.5,
+    "humidityPct": 72,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T12:07:14.249Z",
+    "windSpeedKts": 12.3,
+    "windGustKts": 16,
+    "windDirectionDeg": 273,
+    "temperatureC": 22.7,
+    "humidityPct": 77,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T12:37:14.249Z",
+    "windSpeedKts": 12.1,
+    "windGustKts": 15.7,
+    "windDirectionDeg": 106,
+    "temperatureC": 17.6,
+    "humidityPct": 70,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T13:07:14.249Z",
+    "windSpeedKts": 11.5,
+    "windGustKts": 14.9,
+    "windDirectionDeg": 266,
+    "temperatureC": 18.9,
+    "humidityPct": 85,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T13:37:14.249Z",
+    "windSpeedKts": 13.3,
+    "windGustKts": 17.3,
+    "windDirectionDeg": 272,
+    "temperatureC": 18.1,
+    "humidityPct": 80,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T14:07:14.249Z",
+    "windSpeedKts": 12.6,
+    "windGustKts": 16.4,
+    "windDirectionDeg": 92,
+    "temperatureC": 15.3,
+    "humidityPct": 84,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T14:37:14.249Z",
+    "windSpeedKts": 13.3,
+    "windGustKts": 17.3,
+    "windDirectionDeg": 275,
+    "temperatureC": 19.9,
+    "humidityPct": 83,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T15:07:14.249Z",
+    "windSpeedKts": 15.3,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 74,
+    "temperatureC": 18.7,
+    "humidityPct": 71,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T15:37:14.249Z",
+    "windSpeedKts": 20.5,
+    "windGustKts": 26.6,
+    "windDirectionDeg": 256,
+    "temperatureC": 19,
+    "humidityPct": 65,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T16:07:14.249Z",
+    "windSpeedKts": 13.6,
+    "windGustKts": 17.7,
+    "windDirectionDeg": 96,
+    "temperatureC": 18.9,
+    "humidityPct": 83,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T16:37:14.249Z",
+    "windSpeedKts": 18.9,
+    "windGustKts": 24.6,
+    "windDirectionDeg": 73,
+    "temperatureC": 20.6,
+    "humidityPct": 74,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T17:07:14.249Z",
+    "windSpeedKts": 16.3,
+    "windGustKts": 21.2,
+    "windDirectionDeg": 91,
+    "temperatureC": 19.8,
+    "humidityPct": 73,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T17:37:14.249Z",
+    "windSpeedKts": 10.7,
+    "windGustKts": 13.9,
+    "windDirectionDeg": 72,
+    "temperatureC": 22,
+    "humidityPct": 71,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T18:07:14.249Z",
+    "windSpeedKts": 13.5,
+    "windGustKts": 17.5,
+    "windDirectionDeg": 269,
+    "temperatureC": 24.5,
+    "humidityPct": 80,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T18:37:14.249Z",
+    "windSpeedKts": 13.5,
+    "windGustKts": 17.6,
+    "windDirectionDeg": 253,
+    "temperatureC": 22.4,
+    "humidityPct": 70,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T19:07:14.249Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 18.6,
+    "windDirectionDeg": 288,
+    "temperatureC": 19.9,
+    "humidityPct": 70,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T19:37:14.249Z",
+    "windSpeedKts": 17.1,
+    "windGustKts": 22.2,
+    "windDirectionDeg": 86,
+    "temperatureC": 20.9,
+    "humidityPct": 76,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T20:07:14.249Z",
+    "windSpeedKts": 12.1,
+    "windGustKts": 15.8,
+    "windDirectionDeg": 87,
+    "temperatureC": 21.9,
+    "humidityPct": 73,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T20:37:14.249Z",
+    "windSpeedKts": 19.1,
+    "windGustKts": 24.8,
+    "windDirectionDeg": 106,
+    "temperatureC": 18.3,
+    "humidityPct": 65,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T21:07:14.249Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 28.3,
+    "windDirectionDeg": 98,
+    "temperatureC": 18,
+    "humidityPct": 81,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T21:37:14.249Z",
+    "windSpeedKts": 15.2,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 79,
+    "temperatureC": 19.3,
+    "humidityPct": 68,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T22:07:14.249Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 17.5,
+    "windDirectionDeg": 90,
+    "temperatureC": 18.3,
+    "humidityPct": 67,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T22:37:14.249Z",
+    "windSpeedKts": 20.7,
+    "windGustKts": 26.9,
+    "windDirectionDeg": 290,
+    "temperatureC": 24,
+    "humidityPct": 83,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T23:07:14.249Z",
+    "windSpeedKts": 19.4,
+    "windGustKts": 25.2,
+    "windDirectionDeg": 260,
+    "temperatureC": 18.5,
+    "humidityPct": 73,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-14T23:37:14.249Z",
+    "windSpeedKts": 20,
+    "windGustKts": 26,
+    "windDirectionDeg": 98,
+    "temperatureC": 16.7,
+    "humidityPct": 74,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T00:07:14.249Z",
+    "windSpeedKts": 14.9,
+    "windGustKts": 19.3,
+    "windDirectionDeg": 71,
+    "temperatureC": 21.6,
+    "humidityPct": 68,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T00:37:14.249Z",
+    "windSpeedKts": 12.4,
+    "windGustKts": 16.1,
+    "windDirectionDeg": 276,
+    "temperatureC": 16.2,
+    "humidityPct": 84,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T01:07:14.249Z",
+    "windSpeedKts": 17.5,
+    "windGustKts": 22.7,
+    "windDirectionDeg": 105,
+    "temperatureC": 18.1,
+    "humidityPct": 74,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T01:37:14.249Z",
+    "windSpeedKts": 10.7,
+    "windGustKts": 13.9,
+    "windDirectionDeg": 109,
+    "temperatureC": 15.7,
+    "humidityPct": 74,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T02:07:14.249Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 23.1,
+    "windDirectionDeg": 95,
+    "temperatureC": 24.6,
+    "humidityPct": 77,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T02:37:14.249Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 24.9,
+    "windDirectionDeg": 75,
+    "temperatureC": 17.1,
+    "humidityPct": 83,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T03:07:14.249Z",
+    "windSpeedKts": 15.3,
+    "windGustKts": 20,
+    "windDirectionDeg": 75,
+    "temperatureC": 21,
+    "humidityPct": 71,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T03:37:14.249Z",
+    "windSpeedKts": 18,
+    "windGustKts": 23.4,
+    "windDirectionDeg": 108,
+    "temperatureC": 15.4,
+    "humidityPct": 73,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T04:07:14.249Z",
+    "windSpeedKts": 17.1,
+    "windGustKts": 22.3,
+    "windDirectionDeg": 259,
+    "temperatureC": 19.7,
+    "humidityPct": 70,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T04:37:14.249Z",
+    "windSpeedKts": 12.7,
+    "windGustKts": 16.5,
+    "windDirectionDeg": 72,
+    "temperatureC": 24.7,
+    "humidityPct": 82,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T05:07:14.249Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 28.5,
+    "windDirectionDeg": 78,
+    "temperatureC": 15.2,
+    "humidityPct": 66,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T05:37:14.249Z",
+    "windSpeedKts": 18.1,
+    "windGustKts": 23.6,
+    "windDirectionDeg": 79,
+    "temperatureC": 20,
+    "humidityPct": 71,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T06:07:14.249Z",
+    "windSpeedKts": 20,
+    "windGustKts": 26,
+    "windDirectionDeg": 252,
+    "temperatureC": 22.9,
+    "humidityPct": 74,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T06:37:14.249Z",
+    "windSpeedKts": 11,
+    "windGustKts": 14.3,
+    "windDirectionDeg": 268,
+    "temperatureC": 23.1,
+    "humidityPct": 78,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T07:07:14.249Z",
+    "windSpeedKts": 11.7,
+    "windGustKts": 15.2,
+    "windDirectionDeg": 253,
+    "temperatureC": 23,
+    "humidityPct": 70,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T07:37:14.249Z",
+    "windSpeedKts": 10.7,
+    "windGustKts": 13.9,
+    "windDirectionDeg": 107,
+    "temperatureC": 17,
+    "humidityPct": 70,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T08:07:14.249Z",
+    "windSpeedKts": 12.3,
+    "windGustKts": 15.9,
+    "windDirectionDeg": 78,
+    "temperatureC": 24.4,
+    "humidityPct": 82,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T08:37:14.249Z",
+    "windSpeedKts": 12,
+    "windGustKts": 15.6,
+    "windDirectionDeg": 106,
+    "temperatureC": 24.3,
+    "humidityPct": 71,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T09:07:14.249Z",
+    "windSpeedKts": 15.8,
+    "windGustKts": 20.5,
+    "windDirectionDeg": 78,
+    "temperatureC": 20.2,
+    "humidityPct": 74,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T09:37:14.249Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 28.2,
+    "windDirectionDeg": 70,
+    "temperatureC": 23.5,
+    "humidityPct": 68,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T10:07:14.249Z",
+    "windSpeedKts": 21.3,
+    "windGustKts": 27.7,
+    "windDirectionDeg": 269,
+    "temperatureC": 19.6,
+    "humidityPct": 69,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T10:37:14.249Z",
+    "windSpeedKts": 13.9,
+    "windGustKts": 18.1,
+    "windDirectionDeg": 256,
+    "temperatureC": 19.3,
+    "humidityPct": 77,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T11:07:14.249Z",
+    "windSpeedKts": 21.3,
+    "windGustKts": 27.7,
+    "windDirectionDeg": 71,
+    "temperatureC": 15.9,
+    "humidityPct": 72,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T11:37:14.249Z",
+    "windSpeedKts": 18.1,
+    "windGustKts": 23.5,
+    "windDirectionDeg": 109,
+    "temperatureC": 20.8,
+    "humidityPct": 84,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T12:07:14.249Z",
+    "windSpeedKts": 13,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 82,
+    "temperatureC": 17.2,
+    "humidityPct": 67,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T12:37:14.249Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 285,
+    "temperatureC": 18.5,
+    "humidityPct": 66,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T13:07:14.249Z",
+    "windSpeedKts": 14.7,
+    "windGustKts": 19.1,
+    "windDirectionDeg": 280,
+    "temperatureC": 23.1,
+    "humidityPct": 69,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T13:37:14.249Z",
+    "windSpeedKts": 20.9,
+    "windGustKts": 27.2,
+    "windDirectionDeg": 272,
+    "temperatureC": 15.8,
+    "humidityPct": 74,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T14:07:14.249Z",
+    "windSpeedKts": 11.9,
+    "windGustKts": 15.5,
+    "windDirectionDeg": 93,
+    "temperatureC": 22.3,
+    "humidityPct": 66,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T14:37:14.249Z",
+    "windSpeedKts": 19.8,
+    "windGustKts": 25.7,
+    "windDirectionDeg": 258,
+    "temperatureC": 20.4,
+    "humidityPct": 68,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T15:07:14.249Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 25,
+    "windDirectionDeg": 75,
+    "temperatureC": 17.4,
+    "humidityPct": 74,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T15:37:14.249Z",
+    "windSpeedKts": 15.5,
+    "windGustKts": 20.1,
+    "windDirectionDeg": 266,
+    "temperatureC": 19.7,
+    "humidityPct": 84,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T16:07:14.249Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 19.2,
+    "windDirectionDeg": 263,
+    "temperatureC": 18.3,
+    "humidityPct": 78,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T16:37:14.249Z",
+    "windSpeedKts": 20.5,
+    "windGustKts": 26.6,
+    "windDirectionDeg": 104,
+    "temperatureC": 23.8,
+    "humidityPct": 79,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T17:07:14.249Z",
+    "windSpeedKts": 18.2,
+    "windGustKts": 23.6,
+    "windDirectionDeg": 251,
+    "temperatureC": 19,
+    "humidityPct": 69,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T17:37:14.249Z",
+    "windSpeedKts": 15.7,
+    "windGustKts": 20.4,
+    "windDirectionDeg": 261,
+    "temperatureC": 19.6,
+    "humidityPct": 74,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T18:07:14.249Z",
+    "windSpeedKts": 16.8,
+    "windGustKts": 21.8,
+    "windDirectionDeg": 255,
+    "temperatureC": 23.1,
+    "humidityPct": 76,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T18:37:14.249Z",
+    "windSpeedKts": 17,
+    "windGustKts": 22.1,
+    "windDirectionDeg": 74,
+    "temperatureC": 15,
+    "humidityPct": 67,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T19:07:14.249Z",
+    "windSpeedKts": 22,
+    "windGustKts": 28.6,
+    "windDirectionDeg": 280,
+    "temperatureC": 19.2,
+    "humidityPct": 84,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T19:37:14.249Z",
+    "windSpeedKts": 12.9,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 288,
+    "temperatureC": 15.2,
+    "humidityPct": 73,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T20:07:14.249Z",
+    "windSpeedKts": 17.9,
+    "windGustKts": 23.2,
+    "windDirectionDeg": 271,
+    "temperatureC": 16.7,
+    "humidityPct": 77,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T20:37:14.249Z",
+    "windSpeedKts": 12.9,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 76,
+    "temperatureC": 17.3,
+    "humidityPct": 73,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T21:07:14.249Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 18.6,
+    "windDirectionDeg": 97,
+    "temperatureC": 20.2,
+    "humidityPct": 70,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T21:37:14.249Z",
+    "windSpeedKts": 13,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 81,
+    "temperatureC": 20.3,
+    "humidityPct": 77,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T22:07:14.249Z",
+    "windSpeedKts": 20.3,
+    "windGustKts": 26.4,
+    "windDirectionDeg": 277,
+    "temperatureC": 22.5,
+    "humidityPct": 78,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T22:37:14.249Z",
+    "windSpeedKts": 18.3,
+    "windGustKts": 23.7,
+    "windDirectionDeg": 285,
+    "temperatureC": 15.1,
+    "humidityPct": 80,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T23:07:14.249Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 18.6,
+    "windDirectionDeg": 80,
+    "temperatureC": 22.5,
+    "humidityPct": 84,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-15T23:37:14.249Z",
+    "windSpeedKts": 12.8,
+    "windGustKts": 16.6,
+    "windDirectionDeg": 84,
+    "temperatureC": 23.5,
+    "humidityPct": 71,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T00:07:14.249Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 19.2,
+    "windDirectionDeg": 73,
+    "temperatureC": 22.3,
+    "humidityPct": 71,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T00:37:14.249Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 23,
+    "windDirectionDeg": 72,
+    "temperatureC": 15.4,
+    "humidityPct": 81,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T01:07:14.249Z",
+    "windSpeedKts": 17.2,
+    "windGustKts": 22.3,
+    "windDirectionDeg": 261,
+    "temperatureC": 16,
+    "humidityPct": 72,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T01:37:14.249Z",
+    "windSpeedKts": 16.4,
+    "windGustKts": 21.4,
+    "windDirectionDeg": 102,
+    "temperatureC": 24.8,
+    "humidityPct": 70,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T02:07:14.249Z",
+    "windSpeedKts": 18.3,
+    "windGustKts": 23.8,
+    "windDirectionDeg": 283,
+    "temperatureC": 22.5,
+    "humidityPct": 67,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T02:37:14.249Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 25,
+    "windDirectionDeg": 101,
+    "temperatureC": 23.6,
+    "humidityPct": 67,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T03:07:14.249Z",
+    "windSpeedKts": 10.4,
+    "windGustKts": 13.5,
+    "windDirectionDeg": 279,
+    "temperatureC": 23.5,
+    "humidityPct": 82,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T03:37:14.249Z",
+    "windSpeedKts": 12.7,
+    "windGustKts": 16.5,
+    "windDirectionDeg": 259,
+    "temperatureC": 15.2,
+    "humidityPct": 81,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T04:07:14.249Z",
+    "windSpeedKts": 19.6,
+    "windGustKts": 25.4,
+    "windDirectionDeg": 99,
+    "temperatureC": 23.3,
+    "humidityPct": 81,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T04:37:14.249Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 273,
+    "temperatureC": 21,
+    "humidityPct": 82,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T05:07:14.249Z",
+    "windSpeedKts": 15.5,
+    "windGustKts": 20.2,
+    "windDirectionDeg": 90,
+    "temperatureC": 19.1,
+    "humidityPct": 84,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T05:37:14.249Z",
+    "windSpeedKts": 12,
+    "windGustKts": 15.6,
+    "windDirectionDeg": 265,
+    "temperatureC": 15.6,
+    "humidityPct": 75,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T06:07:14.249Z",
+    "windSpeedKts": 11.9,
+    "windGustKts": 15.5,
+    "windDirectionDeg": 290,
+    "temperatureC": 20.6,
+    "humidityPct": 68,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T06:37:14.249Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 18.4,
+    "windDirectionDeg": 261,
+    "temperatureC": 20.2,
+    "humidityPct": 83,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T07:07:14.249Z",
+    "windSpeedKts": 18.9,
+    "windGustKts": 24.6,
+    "windDirectionDeg": 102,
+    "temperatureC": 20.5,
+    "humidityPct": 82,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T07:37:14.249Z",
+    "windSpeedKts": 18,
+    "windGustKts": 23.4,
+    "windDirectionDeg": 76,
+    "temperatureC": 24.3,
+    "humidityPct": 78,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T08:07:14.249Z",
+    "windSpeedKts": 21.2,
+    "windGustKts": 27.5,
+    "windDirectionDeg": 280,
+    "temperatureC": 20.3,
+    "humidityPct": 66,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T08:37:14.249Z",
+    "windSpeedKts": 13.6,
+    "windGustKts": 17.6,
+    "windDirectionDeg": 264,
+    "temperatureC": 16.7,
+    "humidityPct": 79,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T09:07:14.249Z",
+    "windSpeedKts": 18,
+    "windGustKts": 23.4,
+    "windDirectionDeg": 77,
+    "temperatureC": 15.5,
+    "humidityPct": 67,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T09:37:14.249Z",
+    "windSpeedKts": 20.9,
+    "windGustKts": 27.2,
+    "windDirectionDeg": 89,
+    "temperatureC": 24.9,
+    "humidityPct": 71,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T10:07:14.249Z",
+    "windSpeedKts": 16.5,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 273,
+    "temperatureC": 15.5,
+    "humidityPct": 75,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T10:37:14.249Z",
+    "windSpeedKts": 16,
+    "windGustKts": 20.8,
+    "windDirectionDeg": 88,
+    "temperatureC": 18.4,
+    "humidityPct": 72,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T11:07:14.249Z",
+    "windSpeedKts": 13,
+    "windGustKts": 16.9,
+    "windDirectionDeg": 91,
+    "temperatureC": 24.1,
+    "humidityPct": 67,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T11:37:14.249Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 20.7,
+    "windDirectionDeg": 256,
+    "temperatureC": 23.4,
+    "humidityPct": 80,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T12:07:14.249Z",
+    "windSpeedKts": 11.8,
+    "windGustKts": 15.3,
+    "windDirectionDeg": 261,
+    "temperatureC": 23,
+    "humidityPct": 71,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T12:37:14.249Z",
+    "windSpeedKts": 20.9,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 109,
+    "temperatureC": 18.5,
+    "humidityPct": 71,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T13:07:14.249Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 20.9,
+    "windDirectionDeg": 76,
+    "temperatureC": 19.1,
+    "humidityPct": 80,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T13:37:14.249Z",
+    "windSpeedKts": 20.9,
+    "windGustKts": 27.2,
+    "windDirectionDeg": 106,
+    "temperatureC": 19.8,
+    "humidityPct": 79,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T14:07:14.249Z",
+    "windSpeedKts": 12.6,
+    "windGustKts": 16.4,
+    "windDirectionDeg": 278,
+    "temperatureC": 18.2,
+    "humidityPct": 75,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T14:37:14.249Z",
+    "windSpeedKts": 11,
+    "windGustKts": 14.3,
+    "windDirectionDeg": 98,
+    "temperatureC": 17.1,
+    "humidityPct": 82,
+    "pressureHPa": 1020
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T15:07:14.249Z",
+    "windSpeedKts": 10.9,
+    "windGustKts": 14.1,
+    "windDirectionDeg": 91,
+    "temperatureC": 19.9,
+    "humidityPct": 84,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T15:37:14.249Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 71,
+    "temperatureC": 24.2,
+    "humidityPct": 80,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T16:07:14.249Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 18.4,
+    "windDirectionDeg": 257,
+    "temperatureC": 17.1,
+    "humidityPct": 84,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T16:37:14.249Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 26.1,
+    "windDirectionDeg": 109,
+    "temperatureC": 18.5,
+    "humidityPct": 70,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T17:07:14.249Z",
+    "windSpeedKts": 16.2,
+    "windGustKts": 21.1,
+    "windDirectionDeg": 283,
+    "temperatureC": 20.1,
+    "humidityPct": 69,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T17:37:14.249Z",
+    "windSpeedKts": 21.6,
+    "windGustKts": 28.1,
+    "windDirectionDeg": 95,
+    "temperatureC": 19.5,
+    "humidityPct": 73,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T18:07:14.249Z",
+    "windSpeedKts": 16.3,
+    "windGustKts": 21.2,
+    "windDirectionDeg": 273,
+    "temperatureC": 15.8,
+    "humidityPct": 75,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T18:37:14.249Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 76,
+    "temperatureC": 19.8,
+    "humidityPct": 70,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T19:07:14.249Z",
+    "windSpeedKts": 17.4,
+    "windGustKts": 22.6,
+    "windDirectionDeg": 100,
+    "temperatureC": 17.7,
+    "humidityPct": 77,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "cabo-trafalgar",
+    "timestamp": "2025-11-16T19:37:14.249Z",
+    "windSpeedKts": 14.9,
+    "windGustKts": 19.3,
+    "windDirectionDeg": 93,
+    "temperatureC": 21.2,
+    "humidityPct": 84,
+    "pressureHPa": 1014
+  }
+]

@@ -1,0 +1,341 @@
+{
+  "stationId": "cabo-trafalgar",
+  "hourly": [
+    {
+      "timestamp": "2025-11-16T20:37:14.250Z",
+      "windKts": 16.5,
+      "gustKts": 21.5,
+      "directionDeg": 101,
+      "tempC": 18.2
+    },
+    {
+      "timestamp": "2025-11-16T21:37:14.250Z",
+      "windKts": 18.3,
+      "gustKts": 23.8,
+      "directionDeg": 81,
+      "tempC": 18.4
+    },
+    {
+      "timestamp": "2025-11-16T22:37:14.250Z",
+      "windKts": 13.8,
+      "gustKts": 18,
+      "directionDeg": 273,
+      "tempC": 21.5
+    },
+    {
+      "timestamp": "2025-11-16T23:37:14.250Z",
+      "windKts": 18.5,
+      "gustKts": 24,
+      "directionDeg": 75,
+      "tempC": 20.2
+    },
+    {
+      "timestamp": "2025-11-17T00:37:14.250Z",
+      "windKts": 14.7,
+      "gustKts": 19.1,
+      "directionDeg": 285,
+      "tempC": 20.7
+    },
+    {
+      "timestamp": "2025-11-17T01:37:14.250Z",
+      "windKts": 15.8,
+      "gustKts": 20.5,
+      "directionDeg": 266,
+      "tempC": 17.9
+    },
+    {
+      "timestamp": "2025-11-17T02:37:14.250Z",
+      "windKts": 17.3,
+      "gustKts": 22.5,
+      "directionDeg": 277,
+      "tempC": 20.6
+    },
+    {
+      "timestamp": "2025-11-17T03:37:14.250Z",
+      "windKts": 14.8,
+      "gustKts": 19.3,
+      "directionDeg": 251,
+      "tempC": 17.8
+    },
+    {
+      "timestamp": "2025-11-17T04:37:14.250Z",
+      "windKts": 15.6,
+      "gustKts": 20.3,
+      "directionDeg": 277,
+      "tempC": 18.6
+    },
+    {
+      "timestamp": "2025-11-17T05:37:14.250Z",
+      "windKts": 16.8,
+      "gustKts": 21.9,
+      "directionDeg": 78,
+      "tempC": 17.9
+    },
+    {
+      "timestamp": "2025-11-17T06:37:14.250Z",
+      "windKts": 14.5,
+      "gustKts": 18.9,
+      "directionDeg": 96,
+      "tempC": 18.1
+    },
+    {
+      "timestamp": "2025-11-17T07:37:14.250Z",
+      "windKts": 14.4,
+      "gustKts": 18.7,
+      "directionDeg": 282,
+      "tempC": 20.5
+    },
+    {
+      "timestamp": "2025-11-17T08:37:14.250Z",
+      "windKts": 14.9,
+      "gustKts": 19.4,
+      "directionDeg": 71,
+      "tempC": 18.8
+    },
+    {
+      "timestamp": "2025-11-17T09:37:14.250Z",
+      "windKts": 18.4,
+      "gustKts": 23.9,
+      "directionDeg": 102,
+      "tempC": 17.8
+    },
+    {
+      "timestamp": "2025-11-17T10:37:14.250Z",
+      "windKts": 16.1,
+      "gustKts": 20.9,
+      "directionDeg": 85,
+      "tempC": 20.5
+    },
+    {
+      "timestamp": "2025-11-17T11:37:14.250Z",
+      "windKts": 18.3,
+      "gustKts": 23.8,
+      "directionDeg": 104,
+      "tempC": 18.8
+    },
+    {
+      "timestamp": "2025-11-17T12:37:14.250Z",
+      "windKts": 15.9,
+      "gustKts": 20.7,
+      "directionDeg": 91,
+      "tempC": 20.5
+    },
+    {
+      "timestamp": "2025-11-17T13:37:14.250Z",
+      "windKts": 17.6,
+      "gustKts": 22.9,
+      "directionDeg": 268,
+      "tempC": 19.3
+    },
+    {
+      "timestamp": "2025-11-17T14:37:14.250Z",
+      "windKts": 18.5,
+      "gustKts": 24.1,
+      "directionDeg": 269,
+      "tempC": 19.8
+    },
+    {
+      "timestamp": "2025-11-17T15:37:14.250Z",
+      "windKts": 13.4,
+      "gustKts": 17.5,
+      "directionDeg": 74,
+      "tempC": 19
+    },
+    {
+      "timestamp": "2025-11-17T16:37:14.250Z",
+      "windKts": 16.9,
+      "gustKts": 22,
+      "directionDeg": 78,
+      "tempC": 17.6
+    },
+    {
+      "timestamp": "2025-11-17T17:37:14.250Z",
+      "windKts": 13.9,
+      "gustKts": 18.1,
+      "directionDeg": 280,
+      "tempC": 22.1
+    },
+    {
+      "timestamp": "2025-11-17T18:37:14.250Z",
+      "windKts": 17.3,
+      "gustKts": 22.5,
+      "directionDeg": 110,
+      "tempC": 21.6
+    },
+    {
+      "timestamp": "2025-11-17T19:37:14.250Z",
+      "windKts": 16.4,
+      "gustKts": 21.4,
+      "directionDeg": 268,
+      "tempC": 19.4
+    },
+    {
+      "timestamp": "2025-11-17T20:37:14.250Z",
+      "windKts": 15.9,
+      "gustKts": 20.7,
+      "directionDeg": 266,
+      "tempC": 17.5
+    },
+    {
+      "timestamp": "2025-11-17T21:37:14.250Z",
+      "windKts": 18.1,
+      "gustKts": 23.5,
+      "directionDeg": 103,
+      "tempC": 18.5
+    },
+    {
+      "timestamp": "2025-11-17T22:37:14.250Z",
+      "windKts": 13.2,
+      "gustKts": 17.2,
+      "directionDeg": 106,
+      "tempC": 20
+    },
+    {
+      "timestamp": "2025-11-17T23:37:14.250Z",
+      "windKts": 17.2,
+      "gustKts": 22.4,
+      "directionDeg": 89,
+      "tempC": 19.5
+    },
+    {
+      "timestamp": "2025-11-18T00:37:14.250Z",
+      "windKts": 15.1,
+      "gustKts": 19.6,
+      "directionDeg": 273,
+      "tempC": 20
+    },
+    {
+      "timestamp": "2025-11-18T01:37:14.250Z",
+      "windKts": 16.8,
+      "gustKts": 21.8,
+      "directionDeg": 98,
+      "tempC": 19.9
+    },
+    {
+      "timestamp": "2025-11-18T02:37:14.250Z",
+      "windKts": 13.3,
+      "gustKts": 17.2,
+      "directionDeg": 255,
+      "tempC": 20.7
+    },
+    {
+      "timestamp": "2025-11-18T03:37:14.250Z",
+      "windKts": 13.5,
+      "gustKts": 17.6,
+      "directionDeg": 83,
+      "tempC": 19.1
+    },
+    {
+      "timestamp": "2025-11-18T04:37:14.250Z",
+      "windKts": 17.7,
+      "gustKts": 23,
+      "directionDeg": 252,
+      "tempC": 21.7
+    },
+    {
+      "timestamp": "2025-11-18T05:37:14.250Z",
+      "windKts": 17.2,
+      "gustKts": 22.3,
+      "directionDeg": 97,
+      "tempC": 19.3
+    },
+    {
+      "timestamp": "2025-11-18T06:37:14.250Z",
+      "windKts": 15,
+      "gustKts": 19.5,
+      "directionDeg": 103,
+      "tempC": 19
+    },
+    {
+      "timestamp": "2025-11-18T07:37:14.250Z",
+      "windKts": 18.6,
+      "gustKts": 24.2,
+      "directionDeg": 71,
+      "tempC": 19.1
+    },
+    {
+      "timestamp": "2025-11-18T08:37:14.250Z",
+      "windKts": 18.8,
+      "gustKts": 24.5,
+      "directionDeg": 279,
+      "tempC": 18.5
+    },
+    {
+      "timestamp": "2025-11-18T09:37:14.250Z",
+      "windKts": 17.2,
+      "gustKts": 22.4,
+      "directionDeg": 257,
+      "tempC": 17.8
+    },
+    {
+      "timestamp": "2025-11-18T10:37:14.250Z",
+      "windKts": 14.7,
+      "gustKts": 19.1,
+      "directionDeg": 280,
+      "tempC": 18.2
+    },
+    {
+      "timestamp": "2025-11-18T11:37:14.250Z",
+      "windKts": 13.4,
+      "gustKts": 17.4,
+      "directionDeg": 102,
+      "tempC": 20
+    },
+    {
+      "timestamp": "2025-11-18T12:37:14.250Z",
+      "windKts": 18.4,
+      "gustKts": 23.9,
+      "directionDeg": 99,
+      "tempC": 22
+    },
+    {
+      "timestamp": "2025-11-18T13:37:14.250Z",
+      "windKts": 17.8,
+      "gustKts": 23.1,
+      "directionDeg": 91,
+      "tempC": 19.3
+    },
+    {
+      "timestamp": "2025-11-18T14:37:14.250Z",
+      "windKts": 14.9,
+      "gustKts": 19.4,
+      "directionDeg": 278,
+      "tempC": 19.1
+    },
+    {
+      "timestamp": "2025-11-18T15:37:14.250Z",
+      "windKts": 13.9,
+      "gustKts": 18,
+      "directionDeg": 76,
+      "tempC": 21.9
+    },
+    {
+      "timestamp": "2025-11-18T16:37:14.250Z",
+      "windKts": 17.2,
+      "gustKts": 22.4,
+      "directionDeg": 266,
+      "tempC": 22.2
+    },
+    {
+      "timestamp": "2025-11-18T17:37:14.250Z",
+      "windKts": 13.2,
+      "gustKts": 17.2,
+      "directionDeg": 255,
+      "tempC": 21.5
+    },
+    {
+      "timestamp": "2025-11-18T18:37:14.250Z",
+      "windKts": 16.8,
+      "gustKts": 21.8,
+      "directionDeg": 286,
+      "tempC": 20.3
+    },
+    {
+      "timestamp": "2025-11-18T19:37:14.250Z",
+      "windKts": 18.2,
+      "gustKts": 23.6,
+      "directionDeg": 101,
+      "tempC": 21.5
+    }
+  ]
+}

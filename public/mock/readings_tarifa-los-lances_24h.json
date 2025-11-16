@@ -1,0 +1,1452 @@
+[
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T19:37:14.231Z",
+    "windSpeedKts": 11,
+    "windGustKts": 15.3,
+    "windDirectionDeg": 281,
+    "temperatureC": 15.4,
+    "humidityPct": 73,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T19:47:14.231Z",
+    "windSpeedKts": 11.3,
+    "windGustKts": 15.9,
+    "windDirectionDeg": 257,
+    "temperatureC": 21.7,
+    "humidityPct": 77,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T19:57:14.231Z",
+    "windSpeedKts": 14.6,
+    "windGustKts": 20.4,
+    "windDirectionDeg": 289,
+    "temperatureC": 18.1,
+    "humidityPct": 60,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T20:07:14.231Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 19.9,
+    "windDirectionDeg": 102,
+    "temperatureC": 22.1,
+    "humidityPct": 66,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T20:17:14.231Z",
+    "windSpeedKts": 10.9,
+    "windGustKts": 15.3,
+    "windDirectionDeg": 89,
+    "temperatureC": 15.2,
+    "humidityPct": 79,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T20:27:14.231Z",
+    "windSpeedKts": 18,
+    "windGustKts": 25.3,
+    "windDirectionDeg": 254,
+    "temperatureC": 23.8,
+    "humidityPct": 71,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T20:37:14.231Z",
+    "windSpeedKts": 17.1,
+    "windGustKts": 23.9,
+    "windDirectionDeg": 71,
+    "temperatureC": 20.8,
+    "humidityPct": 66,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T20:47:14.231Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 28.2,
+    "windDirectionDeg": 270,
+    "temperatureC": 14.8,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T20:57:14.231Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 24.7,
+    "windDirectionDeg": 106,
+    "temperatureC": 22.3,
+    "humidityPct": 71,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T21:07:14.231Z",
+    "windSpeedKts": 23.9,
+    "windGustKts": 33.4,
+    "windDirectionDeg": 105,
+    "temperatureC": 21.3,
+    "humidityPct": 76,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T21:17:14.231Z",
+    "windSpeedKts": 18.3,
+    "windGustKts": 25.6,
+    "windDirectionDeg": 257,
+    "temperatureC": 19.9,
+    "humidityPct": 71,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T21:27:14.231Z",
+    "windSpeedKts": 21.3,
+    "windGustKts": 29.8,
+    "windDirectionDeg": 89,
+    "temperatureC": 15,
+    "humidityPct": 76,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T21:37:14.231Z",
+    "windSpeedKts": 25.6,
+    "windGustKts": 35.8,
+    "windDirectionDeg": 289,
+    "temperatureC": 23.1,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T21:47:14.231Z",
+    "windSpeedKts": 19,
+    "windGustKts": 26.6,
+    "windDirectionDeg": 254,
+    "temperatureC": 16.3,
+    "humidityPct": 80,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T21:57:14.231Z",
+    "windSpeedKts": 21,
+    "windGustKts": 29.4,
+    "windDirectionDeg": 99,
+    "temperatureC": 21.6,
+    "humidityPct": 65,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T22:07:14.231Z",
+    "windSpeedKts": 17.8,
+    "windGustKts": 24.9,
+    "windDirectionDeg": 259,
+    "temperatureC": 23.7,
+    "humidityPct": 78,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T22:17:14.231Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 24.8,
+    "windDirectionDeg": 252,
+    "temperatureC": 18.1,
+    "humidityPct": 75,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T22:27:14.231Z",
+    "windSpeedKts": 22.3,
+    "windGustKts": 31.2,
+    "windDirectionDeg": 96,
+    "temperatureC": 19.5,
+    "humidityPct": 74,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T22:37:14.231Z",
+    "windSpeedKts": 18.3,
+    "windGustKts": 25.6,
+    "windDirectionDeg": 93,
+    "temperatureC": 14.7,
+    "humidityPct": 66,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T22:47:14.231Z",
+    "windSpeedKts": 25.3,
+    "windGustKts": 35.4,
+    "windDirectionDeg": 261,
+    "temperatureC": 16.5,
+    "humidityPct": 75,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T22:57:14.231Z",
+    "windSpeedKts": 10.7,
+    "windGustKts": 14.9,
+    "windDirectionDeg": 264,
+    "temperatureC": 17.6,
+    "humidityPct": 76,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T23:07:14.231Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 30.3,
+    "windDirectionDeg": 283,
+    "temperatureC": 16.7,
+    "humidityPct": 72,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T23:17:14.231Z",
+    "windSpeedKts": 13.1,
+    "windGustKts": 18.4,
+    "windDirectionDeg": 284,
+    "temperatureC": 19.3,
+    "humidityPct": 61,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T23:27:14.231Z",
+    "windSpeedKts": 22.1,
+    "windGustKts": 30.9,
+    "windDirectionDeg": 261,
+    "temperatureC": 15.3,
+    "humidityPct": 62,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T23:37:14.231Z",
+    "windSpeedKts": 11.8,
+    "windGustKts": 16.5,
+    "windDirectionDeg": 262,
+    "temperatureC": 23.4,
+    "humidityPct": 77,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T23:47:14.231Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 34.5,
+    "windDirectionDeg": 70,
+    "temperatureC": 17.3,
+    "humidityPct": 73,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-15T23:57:14.231Z",
+    "windSpeedKts": 18,
+    "windGustKts": 25.3,
+    "windDirectionDeg": 269,
+    "temperatureC": 17.9,
+    "humidityPct": 78,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T00:07:14.231Z",
+    "windSpeedKts": 23.3,
+    "windGustKts": 32.7,
+    "windDirectionDeg": 275,
+    "temperatureC": 14.3,
+    "humidityPct": 70,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T00:17:14.231Z",
+    "windSpeedKts": 20.5,
+    "windGustKts": 28.7,
+    "windDirectionDeg": 285,
+    "temperatureC": 14.4,
+    "humidityPct": 67,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T00:27:14.231Z",
+    "windSpeedKts": 10.4,
+    "windGustKts": 14.6,
+    "windDirectionDeg": 72,
+    "temperatureC": 19.3,
+    "humidityPct": 76,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T00:37:14.231Z",
+    "windSpeedKts": 16.8,
+    "windGustKts": 23.5,
+    "windDirectionDeg": 288,
+    "temperatureC": 14.6,
+    "humidityPct": 69,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T00:47:14.231Z",
+    "windSpeedKts": 24.2,
+    "windGustKts": 33.9,
+    "windDirectionDeg": 101,
+    "temperatureC": 14.4,
+    "humidityPct": 71,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T00:57:14.231Z",
+    "windSpeedKts": 18.1,
+    "windGustKts": 25.4,
+    "windDirectionDeg": 108,
+    "temperatureC": 21,
+    "humidityPct": 67,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T01:07:14.231Z",
+    "windSpeedKts": 12.2,
+    "windGustKts": 17,
+    "windDirectionDeg": 252,
+    "temperatureC": 17.6,
+    "humidityPct": 68,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T01:17:14.231Z",
+    "windSpeedKts": 11.4,
+    "windGustKts": 15.9,
+    "windDirectionDeg": 273,
+    "temperatureC": 15,
+    "humidityPct": 78,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T01:27:14.231Z",
+    "windSpeedKts": 18.9,
+    "windGustKts": 26.4,
+    "windDirectionDeg": 277,
+    "temperatureC": 14.1,
+    "humidityPct": 60,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T01:37:14.231Z",
+    "windSpeedKts": 22.9,
+    "windGustKts": 32,
+    "windDirectionDeg": 96,
+    "temperatureC": 14.7,
+    "humidityPct": 78,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T01:47:14.231Z",
+    "windSpeedKts": 21.6,
+    "windGustKts": 30.2,
+    "windDirectionDeg": 97,
+    "temperatureC": 18.9,
+    "humidityPct": 62,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T01:57:14.231Z",
+    "windSpeedKts": 21.5,
+    "windGustKts": 30.1,
+    "windDirectionDeg": 254,
+    "temperatureC": 21,
+    "humidityPct": 71,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T02:07:14.231Z",
+    "windSpeedKts": 12.1,
+    "windGustKts": 16.9,
+    "windDirectionDeg": 101,
+    "temperatureC": 18.9,
+    "humidityPct": 66,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T02:17:14.231Z",
+    "windSpeedKts": 11.4,
+    "windGustKts": 16,
+    "windDirectionDeg": 268,
+    "temperatureC": 22.1,
+    "humidityPct": 68,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T02:27:14.231Z",
+    "windSpeedKts": 22.3,
+    "windGustKts": 31.2,
+    "windDirectionDeg": 289,
+    "temperatureC": 23.1,
+    "humidityPct": 75,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T02:37:14.231Z",
+    "windSpeedKts": 13.6,
+    "windGustKts": 19,
+    "windDirectionDeg": 104,
+    "temperatureC": 22.1,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T02:47:14.231Z",
+    "windSpeedKts": 17.9,
+    "windGustKts": 25.1,
+    "windDirectionDeg": 270,
+    "temperatureC": 23.1,
+    "humidityPct": 67,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T02:57:14.231Z",
+    "windSpeedKts": 10.4,
+    "windGustKts": 14.6,
+    "windDirectionDeg": 99,
+    "temperatureC": 15.8,
+    "humidityPct": 60,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T03:07:14.231Z",
+    "windSpeedKts": 14.7,
+    "windGustKts": 20.6,
+    "windDirectionDeg": 84,
+    "temperatureC": 23.3,
+    "humidityPct": 73,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T03:17:14.231Z",
+    "windSpeedKts": 24.3,
+    "windGustKts": 34.1,
+    "windDirectionDeg": 109,
+    "temperatureC": 20.4,
+    "humidityPct": 77,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T03:27:14.231Z",
+    "windSpeedKts": 17.9,
+    "windGustKts": 25,
+    "windDirectionDeg": 254,
+    "temperatureC": 19.8,
+    "humidityPct": 69,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T03:37:14.231Z",
+    "windSpeedKts": 25.4,
+    "windGustKts": 35.6,
+    "windDirectionDeg": 88,
+    "temperatureC": 21.1,
+    "humidityPct": 61,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T03:47:14.231Z",
+    "windSpeedKts": 19.5,
+    "windGustKts": 27.3,
+    "windDirectionDeg": 106,
+    "temperatureC": 14.8,
+    "humidityPct": 64,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T03:57:14.231Z",
+    "windSpeedKts": 22.2,
+    "windGustKts": 31.1,
+    "windDirectionDeg": 261,
+    "temperatureC": 22.6,
+    "humidityPct": 66,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T04:07:14.231Z",
+    "windSpeedKts": 16.5,
+    "windGustKts": 23.1,
+    "windDirectionDeg": 85,
+    "temperatureC": 15.9,
+    "humidityPct": 63,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T04:17:14.231Z",
+    "windSpeedKts": 23.5,
+    "windGustKts": 33,
+    "windDirectionDeg": 271,
+    "temperatureC": 15.9,
+    "humidityPct": 68,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T04:27:14.231Z",
+    "windSpeedKts": 23.8,
+    "windGustKts": 33.3,
+    "windDirectionDeg": 285,
+    "temperatureC": 23.9,
+    "humidityPct": 76,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T04:37:14.231Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 23.6,
+    "windDirectionDeg": 251,
+    "temperatureC": 15.2,
+    "humidityPct": 61,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T04:47:14.231Z",
+    "windSpeedKts": 22.6,
+    "windGustKts": 31.6,
+    "windDirectionDeg": 285,
+    "temperatureC": 17.8,
+    "humidityPct": 70,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T04:57:14.231Z",
+    "windSpeedKts": 14.1,
+    "windGustKts": 19.7,
+    "windDirectionDeg": 275,
+    "temperatureC": 20.9,
+    "humidityPct": 61,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T05:07:14.231Z",
+    "windSpeedKts": 24.2,
+    "windGustKts": 33.9,
+    "windDirectionDeg": 77,
+    "temperatureC": 23.4,
+    "humidityPct": 64,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T05:17:14.231Z",
+    "windSpeedKts": 11.5,
+    "windGustKts": 16.1,
+    "windDirectionDeg": 78,
+    "temperatureC": 21.2,
+    "humidityPct": 73,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T05:27:14.231Z",
+    "windSpeedKts": 11.6,
+    "windGustKts": 16.2,
+    "windDirectionDeg": 110,
+    "temperatureC": 20.5,
+    "humidityPct": 66,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T05:37:14.231Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 20.2,
+    "windDirectionDeg": 281,
+    "temperatureC": 16.7,
+    "humidityPct": 74,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T05:47:14.231Z",
+    "windSpeedKts": 11.3,
+    "windGustKts": 15.9,
+    "windDirectionDeg": 90,
+    "temperatureC": 20.8,
+    "humidityPct": 70,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T05:57:14.231Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 24.7,
+    "windDirectionDeg": 96,
+    "temperatureC": 21,
+    "humidityPct": 73,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T06:07:14.231Z",
+    "windSpeedKts": 24.1,
+    "windGustKts": 33.7,
+    "windDirectionDeg": 87,
+    "temperatureC": 23.5,
+    "humidityPct": 70,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T06:17:14.231Z",
+    "windSpeedKts": 19.8,
+    "windGustKts": 27.7,
+    "windDirectionDeg": 259,
+    "temperatureC": 22.1,
+    "humidityPct": 68,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T06:27:14.231Z",
+    "windSpeedKts": 16.5,
+    "windGustKts": 23.1,
+    "windDirectionDeg": 84,
+    "temperatureC": 17.8,
+    "humidityPct": 78,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T06:37:14.231Z",
+    "windSpeedKts": 11.9,
+    "windGustKts": 16.7,
+    "windDirectionDeg": 286,
+    "temperatureC": 19.1,
+    "humidityPct": 73,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T06:47:14.231Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 24.8,
+    "windDirectionDeg": 75,
+    "temperatureC": 22.5,
+    "humidityPct": 80,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T06:57:14.231Z",
+    "windSpeedKts": 13.9,
+    "windGustKts": 19.5,
+    "windDirectionDeg": 81,
+    "temperatureC": 19.1,
+    "humidityPct": 64,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T07:07:14.231Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 20,
+    "windDirectionDeg": 85,
+    "temperatureC": 20.6,
+    "humidityPct": 78,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T07:17:14.231Z",
+    "windSpeedKts": 24.2,
+    "windGustKts": 33.9,
+    "windDirectionDeg": 280,
+    "temperatureC": 22.7,
+    "humidityPct": 68,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T07:27:14.231Z",
+    "windSpeedKts": 14.1,
+    "windGustKts": 19.7,
+    "windDirectionDeg": 257,
+    "temperatureC": 16,
+    "humidityPct": 68,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T07:37:14.231Z",
+    "windSpeedKts": 11.8,
+    "windGustKts": 16.5,
+    "windDirectionDeg": 261,
+    "temperatureC": 15.1,
+    "humidityPct": 75,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T07:47:14.231Z",
+    "windSpeedKts": 24.1,
+    "windGustKts": 33.7,
+    "windDirectionDeg": 258,
+    "temperatureC": 23.1,
+    "humidityPct": 65,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T07:57:14.231Z",
+    "windSpeedKts": 13.6,
+    "windGustKts": 19.1,
+    "windDirectionDeg": 88,
+    "temperatureC": 14.2,
+    "humidityPct": 65,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T08:07:14.231Z",
+    "windSpeedKts": 12.8,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 106,
+    "temperatureC": 21.8,
+    "humidityPct": 74,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T08:17:14.231Z",
+    "windSpeedKts": 19.4,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 99,
+    "temperatureC": 15.3,
+    "humidityPct": 75,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T08:27:14.231Z",
+    "windSpeedKts": 14.6,
+    "windGustKts": 20.4,
+    "windDirectionDeg": 253,
+    "temperatureC": 15.9,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T08:37:14.231Z",
+    "windSpeedKts": 10.4,
+    "windGustKts": 14.6,
+    "windDirectionDeg": 94,
+    "temperatureC": 21.8,
+    "humidityPct": 72,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T08:47:14.231Z",
+    "windSpeedKts": 12.2,
+    "windGustKts": 17,
+    "windDirectionDeg": 83,
+    "temperatureC": 18.6,
+    "humidityPct": 77,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T08:57:14.231Z",
+    "windSpeedKts": 21.1,
+    "windGustKts": 29.6,
+    "windDirectionDeg": 85,
+    "temperatureC": 20.8,
+    "humidityPct": 72,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T09:07:14.231Z",
+    "windSpeedKts": 10.3,
+    "windGustKts": 14.4,
+    "windDirectionDeg": 270,
+    "temperatureC": 21.4,
+    "humidityPct": 69,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T09:17:14.231Z",
+    "windSpeedKts": 10.9,
+    "windGustKts": 15.3,
+    "windDirectionDeg": 99,
+    "temperatureC": 19.4,
+    "humidityPct": 61,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T09:27:14.231Z",
+    "windSpeedKts": 17.1,
+    "windGustKts": 24,
+    "windDirectionDeg": 78,
+    "temperatureC": 21.3,
+    "humidityPct": 61,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T09:37:14.231Z",
+    "windSpeedKts": 20,
+    "windGustKts": 28,
+    "windDirectionDeg": 271,
+    "temperatureC": 15.1,
+    "humidityPct": 70,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T09:47:14.231Z",
+    "windSpeedKts": 10.1,
+    "windGustKts": 14.1,
+    "windDirectionDeg": 263,
+    "temperatureC": 21.9,
+    "humidityPct": 71,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T09:57:14.231Z",
+    "windSpeedKts": 21,
+    "windGustKts": 29.3,
+    "windDirectionDeg": 265,
+    "temperatureC": 21.9,
+    "humidityPct": 69,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T10:07:14.231Z",
+    "windSpeedKts": 11.9,
+    "windGustKts": 16.7,
+    "windDirectionDeg": 109,
+    "temperatureC": 14.5,
+    "humidityPct": 63,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T10:17:14.231Z",
+    "windSpeedKts": 24.7,
+    "windGustKts": 34.6,
+    "windDirectionDeg": 86,
+    "temperatureC": 17,
+    "humidityPct": 68,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T10:27:14.231Z",
+    "windSpeedKts": 19.3,
+    "windGustKts": 27,
+    "windDirectionDeg": 267,
+    "temperatureC": 14,
+    "humidityPct": 69,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T10:37:14.231Z",
+    "windSpeedKts": 11.2,
+    "windGustKts": 15.6,
+    "windDirectionDeg": 94,
+    "temperatureC": 16.4,
+    "humidityPct": 77,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T10:47:14.231Z",
+    "windSpeedKts": 14.1,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 87,
+    "temperatureC": 20.4,
+    "humidityPct": 70,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T10:57:14.231Z",
+    "windSpeedKts": 14.5,
+    "windGustKts": 20.4,
+    "windDirectionDeg": 76,
+    "temperatureC": 14.3,
+    "humidityPct": 69,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T11:07:14.231Z",
+    "windSpeedKts": 23.6,
+    "windGustKts": 33,
+    "windDirectionDeg": 93,
+    "temperatureC": 20.9,
+    "humidityPct": 76,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T11:17:14.231Z",
+    "windSpeedKts": 16.8,
+    "windGustKts": 23.5,
+    "windDirectionDeg": 76,
+    "temperatureC": 20.8,
+    "humidityPct": 77,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T11:27:14.231Z",
+    "windSpeedKts": 19.5,
+    "windGustKts": 27.3,
+    "windDirectionDeg": 86,
+    "temperatureC": 23.5,
+    "humidityPct": 74,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T11:37:14.231Z",
+    "windSpeedKts": 18.4,
+    "windGustKts": 25.7,
+    "windDirectionDeg": 84,
+    "temperatureC": 22.7,
+    "humidityPct": 69,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T11:47:14.231Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 24.8,
+    "windDirectionDeg": 257,
+    "temperatureC": 14.2,
+    "humidityPct": 62,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T11:57:14.231Z",
+    "windSpeedKts": 16.7,
+    "windGustKts": 23.4,
+    "windDirectionDeg": 274,
+    "temperatureC": 23.7,
+    "humidityPct": 79,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T12:07:14.231Z",
+    "windSpeedKts": 16.2,
+    "windGustKts": 22.7,
+    "windDirectionDeg": 96,
+    "temperatureC": 17.9,
+    "humidityPct": 72,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T12:17:14.231Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 88,
+    "temperatureC": 22.8,
+    "humidityPct": 78,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T12:27:14.231Z",
+    "windSpeedKts": 14.1,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 95,
+    "temperatureC": 20.7,
+    "humidityPct": 78,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T12:37:14.231Z",
+    "windSpeedKts": 22.1,
+    "windGustKts": 30.9,
+    "windDirectionDeg": 77,
+    "temperatureC": 17.7,
+    "humidityPct": 61,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T12:47:14.231Z",
+    "windSpeedKts": 20.5,
+    "windGustKts": 28.7,
+    "windDirectionDeg": 107,
+    "temperatureC": 20.7,
+    "humidityPct": 65,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T12:57:14.231Z",
+    "windSpeedKts": 20.6,
+    "windGustKts": 28.8,
+    "windDirectionDeg": 72,
+    "temperatureC": 18.7,
+    "humidityPct": 71,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T13:07:14.231Z",
+    "windSpeedKts": 13.7,
+    "windGustKts": 19.2,
+    "windDirectionDeg": 288,
+    "temperatureC": 23.9,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T13:17:14.231Z",
+    "windSpeedKts": 22.6,
+    "windGustKts": 31.7,
+    "windDirectionDeg": 267,
+    "temperatureC": 16.6,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T13:27:14.231Z",
+    "windSpeedKts": 15.7,
+    "windGustKts": 22,
+    "windDirectionDeg": 274,
+    "temperatureC": 22.3,
+    "humidityPct": 66,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T13:37:14.231Z",
+    "windSpeedKts": 18.5,
+    "windGustKts": 25.9,
+    "windDirectionDeg": 264,
+    "temperatureC": 18.5,
+    "humidityPct": 76,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T13:47:14.231Z",
+    "windSpeedKts": 24.3,
+    "windGustKts": 34.1,
+    "windDirectionDeg": 254,
+    "temperatureC": 16.8,
+    "humidityPct": 77,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T13:57:14.231Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 24.7,
+    "windDirectionDeg": 277,
+    "temperatureC": 15.7,
+    "humidityPct": 70,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T14:07:14.231Z",
+    "windSpeedKts": 22.7,
+    "windGustKts": 31.8,
+    "windDirectionDeg": 109,
+    "temperatureC": 19.1,
+    "humidityPct": 63,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T14:17:14.231Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 20.1,
+    "windDirectionDeg": 256,
+    "temperatureC": 21,
+    "humidityPct": 79,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T14:27:14.231Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 30.4,
+    "windDirectionDeg": 262,
+    "temperatureC": 24,
+    "humidityPct": 70,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T14:37:14.231Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 28.1,
+    "windDirectionDeg": 269,
+    "temperatureC": 22.3,
+    "humidityPct": 62,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T14:47:14.231Z",
+    "windSpeedKts": 14.7,
+    "windGustKts": 20.6,
+    "windDirectionDeg": 90,
+    "temperatureC": 21.7,
+    "humidityPct": 70,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T14:57:14.231Z",
+    "windSpeedKts": 15.2,
+    "windGustKts": 21.3,
+    "windDirectionDeg": 93,
+    "temperatureC": 20.9,
+    "humidityPct": 62,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T15:07:14.231Z",
+    "windSpeedKts": 18.5,
+    "windGustKts": 25.9,
+    "windDirectionDeg": 78,
+    "temperatureC": 14.7,
+    "humidityPct": 62,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T15:17:14.231Z",
+    "windSpeedKts": 15.3,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 100,
+    "temperatureC": 20.7,
+    "humidityPct": 75,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T15:27:14.231Z",
+    "windSpeedKts": 22.3,
+    "windGustKts": 31.2,
+    "windDirectionDeg": 254,
+    "temperatureC": 22.6,
+    "humidityPct": 62,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T15:37:14.231Z",
+    "windSpeedKts": 22,
+    "windGustKts": 30.8,
+    "windDirectionDeg": 285,
+    "temperatureC": 19.2,
+    "humidityPct": 69,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T15:47:14.231Z",
+    "windSpeedKts": 12.9,
+    "windGustKts": 18,
+    "windDirectionDeg": 94,
+    "temperatureC": 15.5,
+    "humidityPct": 67,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T15:57:14.231Z",
+    "windSpeedKts": 24.9,
+    "windGustKts": 34.8,
+    "windDirectionDeg": 76,
+    "temperatureC": 14.5,
+    "humidityPct": 76,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T16:07:14.231Z",
+    "windSpeedKts": 21.1,
+    "windGustKts": 29.6,
+    "windDirectionDeg": 73,
+    "temperatureC": 15.4,
+    "humidityPct": 71,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T16:17:14.231Z",
+    "windSpeedKts": 11.4,
+    "windGustKts": 15.9,
+    "windDirectionDeg": 271,
+    "temperatureC": 18.6,
+    "humidityPct": 63,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T16:27:14.231Z",
+    "windSpeedKts": 24.9,
+    "windGustKts": 34.9,
+    "windDirectionDeg": 285,
+    "temperatureC": 19.4,
+    "humidityPct": 63,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T16:37:14.231Z",
+    "windSpeedKts": 19.5,
+    "windGustKts": 27.3,
+    "windDirectionDeg": 250,
+    "temperatureC": 14.8,
+    "humidityPct": 79,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T16:47:14.231Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 22.6,
+    "windDirectionDeg": 92,
+    "temperatureC": 23.7,
+    "humidityPct": 70,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T16:57:14.231Z",
+    "windSpeedKts": 24.7,
+    "windGustKts": 34.6,
+    "windDirectionDeg": 261,
+    "temperatureC": 15.4,
+    "humidityPct": 65,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T17:07:14.231Z",
+    "windSpeedKts": 22.2,
+    "windGustKts": 31,
+    "windDirectionDeg": 87,
+    "temperatureC": 18.1,
+    "humidityPct": 69,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T17:17:14.231Z",
+    "windSpeedKts": 18.1,
+    "windGustKts": 25.3,
+    "windDirectionDeg": 97,
+    "temperatureC": 14.1,
+    "humidityPct": 64,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T17:27:14.231Z",
+    "windSpeedKts": 10.6,
+    "windGustKts": 14.9,
+    "windDirectionDeg": 76,
+    "temperatureC": 22,
+    "humidityPct": 61,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T17:37:14.231Z",
+    "windSpeedKts": 10.8,
+    "windGustKts": 15.1,
+    "windDirectionDeg": 109,
+    "temperatureC": 23.4,
+    "humidityPct": 64,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T17:47:14.231Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 23.6,
+    "windDirectionDeg": 273,
+    "temperatureC": 22.5,
+    "humidityPct": 80,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T17:57:14.231Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 34.5,
+    "windDirectionDeg": 98,
+    "temperatureC": 19.3,
+    "humidityPct": 65,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T18:07:14.231Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 30.7,
+    "windDirectionDeg": 251,
+    "temperatureC": 20.3,
+    "humidityPct": 66,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T18:17:14.231Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 26.9,
+    "windDirectionDeg": 105,
+    "temperatureC": 21.3,
+    "humidityPct": 71,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T18:27:14.231Z",
+    "windSpeedKts": 24.5,
+    "windGustKts": 34.2,
+    "windDirectionDeg": 75,
+    "temperatureC": 23.5,
+    "humidityPct": 75,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T18:37:14.231Z",
+    "windSpeedKts": 19,
+    "windGustKts": 26.7,
+    "windDirectionDeg": 279,
+    "temperatureC": 20.8,
+    "humidityPct": 63,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T18:47:14.231Z",
+    "windSpeedKts": 12.8,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 279,
+    "temperatureC": 23.1,
+    "humidityPct": 68,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T18:57:14.231Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 254,
+    "temperatureC": 15.7,
+    "humidityPct": 73,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T19:07:14.231Z",
+    "windSpeedKts": 19.5,
+    "windGustKts": 27.3,
+    "windDirectionDeg": 262,
+    "temperatureC": 17.7,
+    "humidityPct": 64,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T19:17:14.231Z",
+    "windSpeedKts": 14.7,
+    "windGustKts": 20.6,
+    "windDirectionDeg": 283,
+    "temperatureC": 22.2,
+    "humidityPct": 74,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T19:27:14.231Z",
+    "windSpeedKts": 15.2,
+    "windGustKts": 21.2,
+    "windDirectionDeg": 272,
+    "temperatureC": 16.2,
+    "humidityPct": 66,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "tarifa-los-lances",
+    "timestamp": "2025-11-16T19:37:14.231Z",
+    "windSpeedKts": 25.2,
+    "windGustKts": 35.3,
+    "windDirectionDeg": 288,
+    "temperatureC": 17.4,
+    "humidityPct": 62,
+    "pressureHPa": 1012
+  }
+]

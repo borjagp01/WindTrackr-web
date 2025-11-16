@@ -1,0 +1,62 @@
+[
+  {
+    "id": "tarifa-los-lances",
+    "name": "Tarifa - Los Lances",
+    "location": {
+      "lat": 36.0153,
+      "lon": -5.6108,
+      "elevationM": 8
+    },
+    "description": "Estación en la playa de Los Lances, uno de los mejores spots de windsurf de Europa",
+    "provider": "internal",
+    "status": "online"
+  },
+  {
+    "id": "guadalmesi",
+    "name": "Guadalmesí",
+    "location": {
+      "lat": 36.0567,
+      "lon": -5.5234,
+      "elevationM": 125
+    },
+    "description": "Estación en zona elevada cerca de Tarifa, vientos constantes de Levante y Poniente",
+    "provider": "internal",
+    "status": "online"
+  },
+  {
+    "id": "valdevaqueros",
+    "name": "Valdevaqueros",
+    "location": {
+      "lat": 36.0421,
+      "lon": -5.6543,
+      "elevationM": 5
+    },
+    "description": "Playa de Valdevaqueros, spot icónico para kitesurf",
+    "provider": "internal",
+    "status": "online"
+  },
+  {
+    "id": "punta-paloma",
+    "name": "Punta Paloma",
+    "location": {
+      "lat": 36.0512,
+      "lon": -5.7021,
+      "elevationM": 15
+    },
+    "description": "Zona de la duna de Bolonia, vientos fuertes y constantes",
+    "provider": "external",
+    "status": "online"
+  },
+  {
+    "id": "cabo-trafalgar",
+    "name": "Cabo Trafalgar",
+    "location": {
+      "lat": 36.1835,
+      "lon": -6.0339,
+      "elevationM": 12
+    },
+    "description": "Estación costera al noroeste de Tarifa, menos transitada",
+    "provider": "internal",
+    "status": "maintenance"
+  }
+]

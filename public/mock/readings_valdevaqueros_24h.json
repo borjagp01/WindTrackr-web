@@ -1,0 +1,1452 @@
+[
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T19:37:14.246Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 35.6,
+    "windDirectionDeg": 281,
+    "temperatureC": 23.7,
+    "humidityPct": 76,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T19:47:14.246Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 23,
+    "windDirectionDeg": 74,
+    "temperatureC": 21.7,
+    "humidityPct": 71,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T19:57:14.246Z",
+    "windSpeedKts": 27.1,
+    "windGustKts": 39.2,
+    "windDirectionDeg": 101,
+    "temperatureC": 22,
+    "humidityPct": 67,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T20:07:14.246Z",
+    "windSpeedKts": 19.1,
+    "windGustKts": 27.7,
+    "windDirectionDeg": 281,
+    "temperatureC": 23.1,
+    "humidityPct": 65,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T20:17:14.246Z",
+    "windSpeedKts": 17.9,
+    "windGustKts": 26,
+    "windDirectionDeg": 98,
+    "temperatureC": 21.7,
+    "humidityPct": 70,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T20:27:14.246Z",
+    "windSpeedKts": 26.6,
+    "windGustKts": 38.5,
+    "windDirectionDeg": 287,
+    "temperatureC": 21.3,
+    "humidityPct": 64,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T20:37:14.246Z",
+    "windSpeedKts": 19.4,
+    "windGustKts": 28.1,
+    "windDirectionDeg": 107,
+    "temperatureC": 16.5,
+    "humidityPct": 63,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T20:47:14.246Z",
+    "windSpeedKts": 18.1,
+    "windGustKts": 26.3,
+    "windDirectionDeg": 250,
+    "temperatureC": 20,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T20:57:14.246Z",
+    "windSpeedKts": 12.3,
+    "windGustKts": 17.8,
+    "windDirectionDeg": 256,
+    "temperatureC": 14.8,
+    "humidityPct": 71,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T21:07:14.246Z",
+    "windSpeedKts": 20.9,
+    "windGustKts": 30.4,
+    "windDirectionDeg": 108,
+    "temperatureC": 17,
+    "humidityPct": 78,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T21:17:14.246Z",
+    "windSpeedKts": 19.1,
+    "windGustKts": 27.8,
+    "windDirectionDeg": 96,
+    "temperatureC": 23.5,
+    "humidityPct": 70,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T21:27:14.246Z",
+    "windSpeedKts": 13.2,
+    "windGustKts": 19.1,
+    "windDirectionDeg": 289,
+    "temperatureC": 23.8,
+    "humidityPct": 69,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T21:37:14.246Z",
+    "windSpeedKts": 25.1,
+    "windGustKts": 36.3,
+    "windDirectionDeg": 98,
+    "temperatureC": 15.9,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T21:47:14.246Z",
+    "windSpeedKts": 18.6,
+    "windGustKts": 27,
+    "windDirectionDeg": 252,
+    "temperatureC": 15.6,
+    "humidityPct": 70,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T21:57:14.246Z",
+    "windSpeedKts": 21.5,
+    "windGustKts": 31.2,
+    "windDirectionDeg": 107,
+    "temperatureC": 19.8,
+    "humidityPct": 70,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T22:07:14.246Z",
+    "windSpeedKts": 19.4,
+    "windGustKts": 28.1,
+    "windDirectionDeg": 90,
+    "temperatureC": 19.4,
+    "humidityPct": 69,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T22:17:14.246Z",
+    "windSpeedKts": 11.4,
+    "windGustKts": 16.5,
+    "windDirectionDeg": 108,
+    "temperatureC": 16.9,
+    "humidityPct": 81,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T22:27:14.246Z",
+    "windSpeedKts": 15,
+    "windGustKts": 21.8,
+    "windDirectionDeg": 265,
+    "temperatureC": 19.9,
+    "humidityPct": 70,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T22:37:14.246Z",
+    "windSpeedKts": 20.6,
+    "windGustKts": 29.9,
+    "windDirectionDeg": 101,
+    "temperatureC": 22.2,
+    "humidityPct": 77,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T22:47:14.246Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 19.4,
+    "windDirectionDeg": 78,
+    "temperatureC": 20.5,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T22:57:14.246Z",
+    "windSpeedKts": 27.4,
+    "windGustKts": 39.8,
+    "windDirectionDeg": 106,
+    "temperatureC": 23.2,
+    "humidityPct": 77,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T23:07:14.246Z",
+    "windSpeedKts": 16.8,
+    "windGustKts": 24.3,
+    "windDirectionDeg": 258,
+    "temperatureC": 22.6,
+    "humidityPct": 62,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T23:17:14.246Z",
+    "windSpeedKts": 12.4,
+    "windGustKts": 18,
+    "windDirectionDeg": 270,
+    "temperatureC": 21.3,
+    "humidityPct": 65,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T23:27:14.246Z",
+    "windSpeedKts": 26.3,
+    "windGustKts": 38.1,
+    "windDirectionDeg": 283,
+    "temperatureC": 17.2,
+    "humidityPct": 75,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T23:37:14.246Z",
+    "windSpeedKts": 14.6,
+    "windGustKts": 21.2,
+    "windDirectionDeg": 73,
+    "temperatureC": 19.9,
+    "humidityPct": 65,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T23:47:14.246Z",
+    "windSpeedKts": 15.2,
+    "windGustKts": 22.1,
+    "windDirectionDeg": 101,
+    "temperatureC": 18,
+    "humidityPct": 74,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-15T23:57:14.246Z",
+    "windSpeedKts": 23.7,
+    "windGustKts": 34.3,
+    "windDirectionDeg": 274,
+    "temperatureC": 23.2,
+    "humidityPct": 73,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T00:07:14.246Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 19.4,
+    "windDirectionDeg": 92,
+    "temperatureC": 18.7,
+    "humidityPct": 77,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T00:17:14.246Z",
+    "windSpeedKts": 15.8,
+    "windGustKts": 22.9,
+    "windDirectionDeg": 95,
+    "temperatureC": 19.8,
+    "humidityPct": 79,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T00:27:14.246Z",
+    "windSpeedKts": 11.9,
+    "windGustKts": 17.2,
+    "windDirectionDeg": 262,
+    "temperatureC": 14.8,
+    "humidityPct": 64,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T00:37:14.246Z",
+    "windSpeedKts": 25.9,
+    "windGustKts": 37.5,
+    "windDirectionDeg": 268,
+    "temperatureC": 19.8,
+    "humidityPct": 77,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T00:47:14.246Z",
+    "windSpeedKts": 17,
+    "windGustKts": 24.7,
+    "windDirectionDeg": 274,
+    "temperatureC": 22.7,
+    "humidityPct": 81,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T00:57:14.246Z",
+    "windSpeedKts": 11.2,
+    "windGustKts": 16.2,
+    "windDirectionDeg": 106,
+    "temperatureC": 17,
+    "humidityPct": 73,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T01:07:14.246Z",
+    "windSpeedKts": 26.8,
+    "windGustKts": 38.9,
+    "windDirectionDeg": 91,
+    "temperatureC": 21.5,
+    "humidityPct": 70,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T01:17:14.246Z",
+    "windSpeedKts": 27.1,
+    "windGustKts": 39.3,
+    "windDirectionDeg": 105,
+    "temperatureC": 17.9,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T01:27:14.246Z",
+    "windSpeedKts": 22.6,
+    "windGustKts": 32.8,
+    "windDirectionDeg": 267,
+    "temperatureC": 19.5,
+    "humidityPct": 76,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T01:37:14.246Z",
+    "windSpeedKts": 23.1,
+    "windGustKts": 33.5,
+    "windDirectionDeg": 277,
+    "temperatureC": 18.6,
+    "humidityPct": 75,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T01:47:14.246Z",
+    "windSpeedKts": 22.1,
+    "windGustKts": 32,
+    "windDirectionDeg": 263,
+    "temperatureC": 15,
+    "humidityPct": 82,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T01:57:14.246Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 285,
+    "temperatureC": 19.6,
+    "humidityPct": 68,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T02:07:14.246Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 20.8,
+    "windDirectionDeg": 73,
+    "temperatureC": 22.8,
+    "humidityPct": 72,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T02:17:14.246Z",
+    "windSpeedKts": 18.5,
+    "windGustKts": 26.8,
+    "windDirectionDeg": 258,
+    "temperatureC": 21.7,
+    "humidityPct": 68,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T02:27:14.246Z",
+    "windSpeedKts": 26.2,
+    "windGustKts": 38.1,
+    "windDirectionDeg": 257,
+    "temperatureC": 18.2,
+    "humidityPct": 69,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T02:37:14.246Z",
+    "windSpeedKts": 26,
+    "windGustKts": 37.7,
+    "windDirectionDeg": 100,
+    "temperatureC": 18.6,
+    "humidityPct": 75,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T02:47:14.246Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 29.2,
+    "windDirectionDeg": 252,
+    "temperatureC": 16.2,
+    "humidityPct": 62,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T02:57:14.246Z",
+    "windSpeedKts": 21.2,
+    "windGustKts": 30.7,
+    "windDirectionDeg": 78,
+    "temperatureC": 20,
+    "humidityPct": 78,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T03:07:14.246Z",
+    "windSpeedKts": 20.3,
+    "windGustKts": 29.4,
+    "windDirectionDeg": 86,
+    "temperatureC": 19,
+    "humidityPct": 63,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T03:17:14.246Z",
+    "windSpeedKts": 25,
+    "windGustKts": 36.3,
+    "windDirectionDeg": 253,
+    "temperatureC": 19.1,
+    "humidityPct": 75,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T03:27:14.246Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 25.7,
+    "windDirectionDeg": 93,
+    "temperatureC": 20.2,
+    "humidityPct": 62,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T03:37:14.246Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 278,
+    "temperatureC": 22.5,
+    "humidityPct": 76,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T03:47:14.246Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 24.5,
+    "windDirectionDeg": 97,
+    "temperatureC": 14.7,
+    "humidityPct": 82,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T03:57:14.246Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 35.7,
+    "windDirectionDeg": 283,
+    "temperatureC": 22,
+    "humidityPct": 72,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T04:07:14.246Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 31.8,
+    "windDirectionDeg": 253,
+    "temperatureC": 16,
+    "humidityPct": 74,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T04:17:14.246Z",
+    "windSpeedKts": 17.1,
+    "windGustKts": 24.7,
+    "windDirectionDeg": 255,
+    "temperatureC": 17.2,
+    "humidityPct": 63,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T04:27:14.246Z",
+    "windSpeedKts": 24.3,
+    "windGustKts": 35.2,
+    "windDirectionDeg": 78,
+    "temperatureC": 14,
+    "humidityPct": 76,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T04:37:14.246Z",
+    "windSpeedKts": 13,
+    "windGustKts": 18.9,
+    "windDirectionDeg": 72,
+    "temperatureC": 22,
+    "humidityPct": 78,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T04:47:14.246Z",
+    "windSpeedKts": 18.5,
+    "windGustKts": 26.9,
+    "windDirectionDeg": 272,
+    "temperatureC": 14.2,
+    "humidityPct": 70,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T04:57:14.246Z",
+    "windSpeedKts": 19.1,
+    "windGustKts": 27.7,
+    "windDirectionDeg": 275,
+    "temperatureC": 21.4,
+    "humidityPct": 67,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T05:07:14.246Z",
+    "windSpeedKts": 27.5,
+    "windGustKts": 39.9,
+    "windDirectionDeg": 85,
+    "temperatureC": 14.6,
+    "humidityPct": 67,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T05:17:14.246Z",
+    "windSpeedKts": 23.1,
+    "windGustKts": 33.4,
+    "windDirectionDeg": 270,
+    "temperatureC": 17,
+    "humidityPct": 64,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T05:27:14.246Z",
+    "windSpeedKts": 23.5,
+    "windGustKts": 34.1,
+    "windDirectionDeg": 107,
+    "temperatureC": 14.1,
+    "humidityPct": 78,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T05:37:14.246Z",
+    "windSpeedKts": 12.3,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 80,
+    "temperatureC": 18.9,
+    "humidityPct": 79,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T05:47:14.246Z",
+    "windSpeedKts": 11.5,
+    "windGustKts": 16.6,
+    "windDirectionDeg": 73,
+    "temperatureC": 19.6,
+    "humidityPct": 74,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T05:57:14.246Z",
+    "windSpeedKts": 15.7,
+    "windGustKts": 22.7,
+    "windDirectionDeg": 265,
+    "temperatureC": 19.9,
+    "humidityPct": 73,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T06:07:14.246Z",
+    "windSpeedKts": 18.5,
+    "windGustKts": 26.8,
+    "windDirectionDeg": 279,
+    "temperatureC": 18.4,
+    "humidityPct": 71,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T06:17:14.246Z",
+    "windSpeedKts": 24.8,
+    "windGustKts": 35.9,
+    "windDirectionDeg": 256,
+    "temperatureC": 16.2,
+    "humidityPct": 71,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T06:27:14.246Z",
+    "windSpeedKts": 22.2,
+    "windGustKts": 32.2,
+    "windDirectionDeg": 265,
+    "temperatureC": 14.6,
+    "humidityPct": 81,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T06:37:14.246Z",
+    "windSpeedKts": 20.8,
+    "windGustKts": 30.2,
+    "windDirectionDeg": 87,
+    "temperatureC": 17.7,
+    "humidityPct": 74,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T06:47:14.246Z",
+    "windSpeedKts": 25.9,
+    "windGustKts": 37.5,
+    "windDirectionDeg": 261,
+    "temperatureC": 15.3,
+    "humidityPct": 79,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T06:57:14.246Z",
+    "windSpeedKts": 11.2,
+    "windGustKts": 16.2,
+    "windDirectionDeg": 287,
+    "temperatureC": 20.1,
+    "humidityPct": 78,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T07:07:14.246Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 31.5,
+    "windDirectionDeg": 264,
+    "temperatureC": 22.3,
+    "humidityPct": 68,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T07:17:14.246Z",
+    "windSpeedKts": 23.3,
+    "windGustKts": 33.8,
+    "windDirectionDeg": 278,
+    "temperatureC": 22.8,
+    "humidityPct": 63,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T07:27:14.246Z",
+    "windSpeedKts": 19.3,
+    "windGustKts": 28,
+    "windDirectionDeg": 289,
+    "temperatureC": 22.6,
+    "humidityPct": 64,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T07:37:14.246Z",
+    "windSpeedKts": 15.2,
+    "windGustKts": 22.1,
+    "windDirectionDeg": 276,
+    "temperatureC": 23.7,
+    "humidityPct": 66,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T07:47:14.246Z",
+    "windSpeedKts": 28.5,
+    "windGustKts": 41.4,
+    "windDirectionDeg": 262,
+    "temperatureC": 22,
+    "humidityPct": 65,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T07:57:14.246Z",
+    "windSpeedKts": 14.6,
+    "windGustKts": 21.1,
+    "windDirectionDeg": 267,
+    "temperatureC": 15.2,
+    "humidityPct": 66,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T08:07:14.246Z",
+    "windSpeedKts": 27.4,
+    "windGustKts": 39.7,
+    "windDirectionDeg": 258,
+    "temperatureC": 23.2,
+    "humidityPct": 75,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T08:17:14.246Z",
+    "windSpeedKts": 27.2,
+    "windGustKts": 39.4,
+    "windDirectionDeg": 253,
+    "temperatureC": 18.9,
+    "humidityPct": 73,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T08:27:14.246Z",
+    "windSpeedKts": 18.6,
+    "windGustKts": 27,
+    "windDirectionDeg": 276,
+    "temperatureC": 16.6,
+    "humidityPct": 64,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T08:37:14.246Z",
+    "windSpeedKts": 26.2,
+    "windGustKts": 38,
+    "windDirectionDeg": 103,
+    "temperatureC": 18.8,
+    "humidityPct": 82,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T08:47:14.246Z",
+    "windSpeedKts": 20.6,
+    "windGustKts": 29.8,
+    "windDirectionDeg": 257,
+    "temperatureC": 17.3,
+    "humidityPct": 79,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T08:57:14.246Z",
+    "windSpeedKts": 27.1,
+    "windGustKts": 39.3,
+    "windDirectionDeg": 72,
+    "temperatureC": 18.9,
+    "humidityPct": 79,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T09:07:14.246Z",
+    "windSpeedKts": 19.6,
+    "windGustKts": 28.4,
+    "windDirectionDeg": 274,
+    "temperatureC": 15.7,
+    "humidityPct": 66,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T09:17:14.246Z",
+    "windSpeedKts": 25.2,
+    "windGustKts": 36.5,
+    "windDirectionDeg": 272,
+    "temperatureC": 17.7,
+    "humidityPct": 74,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T09:27:14.246Z",
+    "windSpeedKts": 21,
+    "windGustKts": 30.5,
+    "windDirectionDeg": 80,
+    "temperatureC": 18.5,
+    "humidityPct": 73,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T09:37:14.246Z",
+    "windSpeedKts": 23,
+    "windGustKts": 33.3,
+    "windDirectionDeg": 89,
+    "temperatureC": 19.3,
+    "humidityPct": 67,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T09:47:14.246Z",
+    "windSpeedKts": 25.7,
+    "windGustKts": 37.2,
+    "windDirectionDeg": 284,
+    "temperatureC": 21.9,
+    "humidityPct": 69,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T09:57:14.246Z",
+    "windSpeedKts": 13.5,
+    "windGustKts": 19.5,
+    "windDirectionDeg": 78,
+    "temperatureC": 15.7,
+    "humidityPct": 72,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T10:07:14.246Z",
+    "windSpeedKts": 23.1,
+    "windGustKts": 33.6,
+    "windDirectionDeg": 94,
+    "temperatureC": 17.9,
+    "humidityPct": 64,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T10:17:14.246Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 27.8,
+    "windDirectionDeg": 260,
+    "temperatureC": 14.4,
+    "humidityPct": 70,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T10:27:14.246Z",
+    "windSpeedKts": 26.4,
+    "windGustKts": 38.2,
+    "windDirectionDeg": 260,
+    "temperatureC": 15.3,
+    "humidityPct": 82,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T10:37:14.246Z",
+    "windSpeedKts": 23.4,
+    "windGustKts": 33.9,
+    "windDirectionDeg": 263,
+    "temperatureC": 15.1,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T10:47:14.246Z",
+    "windSpeedKts": 24.9,
+    "windGustKts": 36.1,
+    "windDirectionDeg": 273,
+    "temperatureC": 16.4,
+    "humidityPct": 73,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T10:57:14.246Z",
+    "windSpeedKts": 21.7,
+    "windGustKts": 31.5,
+    "windDirectionDeg": 73,
+    "temperatureC": 19.1,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T11:07:14.246Z",
+    "windSpeedKts": 13.2,
+    "windGustKts": 19.1,
+    "windDirectionDeg": 87,
+    "temperatureC": 16.9,
+    "humidityPct": 72,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T11:17:14.246Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 20.6,
+    "windDirectionDeg": 250,
+    "temperatureC": 21.7,
+    "humidityPct": 80,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T11:27:14.246Z",
+    "windSpeedKts": 20.6,
+    "windGustKts": 29.8,
+    "windDirectionDeg": 254,
+    "temperatureC": 18.7,
+    "humidityPct": 64,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T11:37:14.246Z",
+    "windSpeedKts": 12.8,
+    "windGustKts": 18.5,
+    "windDirectionDeg": 103,
+    "temperatureC": 20.7,
+    "humidityPct": 72,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T11:47:14.246Z",
+    "windSpeedKts": 14.1,
+    "windGustKts": 20.5,
+    "windDirectionDeg": 264,
+    "temperatureC": 19,
+    "humidityPct": 66,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T11:57:14.246Z",
+    "windSpeedKts": 15.1,
+    "windGustKts": 21.9,
+    "windDirectionDeg": 289,
+    "temperatureC": 19.3,
+    "humidityPct": 75,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T12:07:14.246Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 23,
+    "windDirectionDeg": 108,
+    "temperatureC": 23.2,
+    "humidityPct": 71,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T12:17:14.246Z",
+    "windSpeedKts": 27.8,
+    "windGustKts": 40.2,
+    "windDirectionDeg": 75,
+    "temperatureC": 15.1,
+    "humidityPct": 65,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T12:27:14.246Z",
+    "windSpeedKts": 13.2,
+    "windGustKts": 19.1,
+    "windDirectionDeg": 270,
+    "temperatureC": 17.7,
+    "humidityPct": 76,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T12:37:14.246Z",
+    "windSpeedKts": 21.5,
+    "windGustKts": 31.2,
+    "windDirectionDeg": 107,
+    "temperatureC": 22.4,
+    "humidityPct": 69,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T12:47:14.246Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 35.7,
+    "windDirectionDeg": 84,
+    "temperatureC": 20.1,
+    "humidityPct": 79,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T12:57:14.246Z",
+    "windSpeedKts": 23.7,
+    "windGustKts": 34.3,
+    "windDirectionDeg": 278,
+    "temperatureC": 23.6,
+    "humidityPct": 62,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T13:07:14.246Z",
+    "windSpeedKts": 13.1,
+    "windGustKts": 19,
+    "windDirectionDeg": 276,
+    "temperatureC": 22.5,
+    "humidityPct": 68,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T13:17:14.246Z",
+    "windSpeedKts": 21.8,
+    "windGustKts": 31.6,
+    "windDirectionDeg": 103,
+    "temperatureC": 17,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T13:27:14.246Z",
+    "windSpeedKts": 26.2,
+    "windGustKts": 38,
+    "windDirectionDeg": 255,
+    "temperatureC": 22.5,
+    "humidityPct": 81,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T13:37:14.246Z",
+    "windSpeedKts": 27.7,
+    "windGustKts": 40.1,
+    "windDirectionDeg": 72,
+    "temperatureC": 20.8,
+    "humidityPct": 72,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T13:47:14.246Z",
+    "windSpeedKts": 27.1,
+    "windGustKts": 39.4,
+    "windDirectionDeg": 276,
+    "temperatureC": 20.3,
+    "humidityPct": 69,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T13:57:14.246Z",
+    "windSpeedKts": 26.8,
+    "windGustKts": 38.8,
+    "windDirectionDeg": 286,
+    "temperatureC": 21.7,
+    "humidityPct": 64,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T14:07:14.246Z",
+    "windSpeedKts": 24,
+    "windGustKts": 34.8,
+    "windDirectionDeg": 98,
+    "temperatureC": 18.6,
+    "humidityPct": 74,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T14:17:14.246Z",
+    "windSpeedKts": 19.6,
+    "windGustKts": 28.4,
+    "windDirectionDeg": 266,
+    "temperatureC": 17,
+    "humidityPct": 68,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T14:27:14.246Z",
+    "windSpeedKts": 20.4,
+    "windGustKts": 29.6,
+    "windDirectionDeg": 252,
+    "temperatureC": 18.9,
+    "humidityPct": 81,
+    "pressureHPa": 1019
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T14:37:14.246Z",
+    "windSpeedKts": 15.5,
+    "windGustKts": 22.4,
+    "windDirectionDeg": 274,
+    "temperatureC": 15.6,
+    "humidityPct": 74,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T14:47:14.246Z",
+    "windSpeedKts": 27.9,
+    "windGustKts": 40.4,
+    "windDirectionDeg": 282,
+    "temperatureC": 19.7,
+    "humidityPct": 63,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T14:57:14.246Z",
+    "windSpeedKts": 23.2,
+    "windGustKts": 33.6,
+    "windDirectionDeg": 258,
+    "temperatureC": 16.4,
+    "humidityPct": 72,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T15:07:14.246Z",
+    "windSpeedKts": 17.4,
+    "windGustKts": 25.2,
+    "windDirectionDeg": 254,
+    "temperatureC": 19.9,
+    "humidityPct": 77,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T15:17:14.246Z",
+    "windSpeedKts": 23.5,
+    "windGustKts": 34.1,
+    "windDirectionDeg": 286,
+    "temperatureC": 16.6,
+    "humidityPct": 81,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T15:27:14.246Z",
+    "windSpeedKts": 13,
+    "windGustKts": 18.8,
+    "windDirectionDeg": 109,
+    "temperatureC": 22,
+    "humidityPct": 77,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T15:37:14.246Z",
+    "windSpeedKts": 27.7,
+    "windGustKts": 40.2,
+    "windDirectionDeg": 259,
+    "temperatureC": 23.6,
+    "humidityPct": 74,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T15:47:14.246Z",
+    "windSpeedKts": 13.9,
+    "windGustKts": 20.2,
+    "windDirectionDeg": 74,
+    "temperatureC": 22.3,
+    "humidityPct": 68,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T15:57:14.246Z",
+    "windSpeedKts": 23.3,
+    "windGustKts": 33.7,
+    "windDirectionDeg": 91,
+    "temperatureC": 17.5,
+    "humidityPct": 64,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T16:07:14.246Z",
+    "windSpeedKts": 15.5,
+    "windGustKts": 22.4,
+    "windDirectionDeg": 284,
+    "temperatureC": 22.8,
+    "humidityPct": 78,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T16:17:14.246Z",
+    "windSpeedKts": 25,
+    "windGustKts": 36.3,
+    "windDirectionDeg": 107,
+    "temperatureC": 17.6,
+    "humidityPct": 67,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T16:27:14.246Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 35.7,
+    "windDirectionDeg": 82,
+    "temperatureC": 23,
+    "humidityPct": 62,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T16:37:14.246Z",
+    "windSpeedKts": 23.7,
+    "windGustKts": 34.4,
+    "windDirectionDeg": 95,
+    "temperatureC": 22.4,
+    "humidityPct": 76,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T16:47:14.246Z",
+    "windSpeedKts": 11.6,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 81,
+    "temperatureC": 19.4,
+    "humidityPct": 69,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T16:57:14.246Z",
+    "windSpeedKts": 22.3,
+    "windGustKts": 32.4,
+    "windDirectionDeg": 93,
+    "temperatureC": 14,
+    "humidityPct": 75,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T17:07:14.246Z",
+    "windSpeedKts": 25.2,
+    "windGustKts": 36.5,
+    "windDirectionDeg": 90,
+    "temperatureC": 20,
+    "humidityPct": 75,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T17:17:14.246Z",
+    "windSpeedKts": 25.2,
+    "windGustKts": 36.6,
+    "windDirectionDeg": 250,
+    "temperatureC": 14.3,
+    "humidityPct": 73,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T17:27:14.246Z",
+    "windSpeedKts": 17.8,
+    "windGustKts": 25.8,
+    "windDirectionDeg": 88,
+    "temperatureC": 22.7,
+    "humidityPct": 68,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T17:37:14.246Z",
+    "windSpeedKts": 15.5,
+    "windGustKts": 22.4,
+    "windDirectionDeg": 76,
+    "temperatureC": 17.6,
+    "humidityPct": 69,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T17:47:14.246Z",
+    "windSpeedKts": 24.5,
+    "windGustKts": 35.5,
+    "windDirectionDeg": 264,
+    "temperatureC": 18,
+    "humidityPct": 68,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T17:57:14.246Z",
+    "windSpeedKts": 27.2,
+    "windGustKts": 39.4,
+    "windDirectionDeg": 256,
+    "temperatureC": 22.2,
+    "humidityPct": 81,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T18:07:14.246Z",
+    "windSpeedKts": 13.9,
+    "windGustKts": 20.2,
+    "windDirectionDeg": 257,
+    "temperatureC": 18,
+    "humidityPct": 71,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T18:17:14.246Z",
+    "windSpeedKts": 22.2,
+    "windGustKts": 32.2,
+    "windDirectionDeg": 109,
+    "temperatureC": 20.5,
+    "humidityPct": 81,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T18:27:14.246Z",
+    "windSpeedKts": 27.1,
+    "windGustKts": 39.4,
+    "windDirectionDeg": 96,
+    "temperatureC": 19.4,
+    "humidityPct": 81,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T18:37:14.246Z",
+    "windSpeedKts": 20.7,
+    "windGustKts": 30.1,
+    "windDirectionDeg": 97,
+    "temperatureC": 20.8,
+    "humidityPct": 65,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T18:47:14.246Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 25.5,
+    "windDirectionDeg": 270,
+    "temperatureC": 17,
+    "humidityPct": 77,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T18:57:14.246Z",
+    "windSpeedKts": 12.3,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 254,
+    "temperatureC": 22.1,
+    "humidityPct": 64,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T19:07:14.246Z",
+    "windSpeedKts": 25.6,
+    "windGustKts": 37.1,
+    "windDirectionDeg": 100,
+    "temperatureC": 22.2,
+    "humidityPct": 68,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T19:17:14.246Z",
+    "windSpeedKts": 14.9,
+    "windGustKts": 21.6,
+    "windDirectionDeg": 276,
+    "temperatureC": 18.1,
+    "humidityPct": 77,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T19:27:14.246Z",
+    "windSpeedKts": 15.5,
+    "windGustKts": 22.4,
+    "windDirectionDeg": 283,
+    "temperatureC": 20.4,
+    "humidityPct": 78,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "valdevaqueros",
+    "timestamp": "2025-11-16T19:37:14.246Z",
+    "windSpeedKts": 28,
+    "windGustKts": 40.5,
+    "windDirectionDeg": 103,
+    "temperatureC": 23,
+    "humidityPct": 79,
+    "pressureHPa": 1011
+  }
+]

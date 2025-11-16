@@ -1,0 +1,3372 @@
+[
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-09T19:37:14.248Z",
+    "windSpeedKts": 14.8,
+    "windGustKts": 20,
+    "windDirectionDeg": 72,
+    "temperatureC": 22.4,
+    "humidityPct": 64,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-09T20:07:14.248Z",
+    "windSpeedKts": 15.3,
+    "windGustKts": 20.7,
+    "windDirectionDeg": 276,
+    "temperatureC": 19,
+    "humidityPct": 66,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-09T20:37:14.248Z",
+    "windSpeedKts": 24.4,
+    "windGustKts": 32.9,
+    "windDirectionDeg": 98,
+    "temperatureC": 16.5,
+    "humidityPct": 65,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-09T21:07:14.248Z",
+    "windSpeedKts": 15,
+    "windGustKts": 20.3,
+    "windDirectionDeg": 275,
+    "temperatureC": 16.8,
+    "humidityPct": 69,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-09T21:37:14.248Z",
+    "windSpeedKts": 22.7,
+    "windGustKts": 30.6,
+    "windDirectionDeg": 257,
+    "temperatureC": 23.7,
+    "humidityPct": 70,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-09T22:07:14.248Z",
+    "windSpeedKts": 22.2,
+    "windGustKts": 30,
+    "windDirectionDeg": 265,
+    "temperatureC": 19.3,
+    "humidityPct": 58,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-09T22:37:14.248Z",
+    "windSpeedKts": 20.7,
+    "windGustKts": 28,
+    "windDirectionDeg": 286,
+    "temperatureC": 17.6,
+    "humidityPct": 77,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-09T23:07:14.248Z",
+    "windSpeedKts": 22.7,
+    "windGustKts": 30.6,
+    "windDirectionDeg": 274,
+    "temperatureC": 22.9,
+    "humidityPct": 74,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-09T23:37:14.248Z",
+    "windSpeedKts": 21.1,
+    "windGustKts": 28.5,
+    "windDirectionDeg": 263,
+    "temperatureC": 18,
+    "humidityPct": 69,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T00:07:14.248Z",
+    "windSpeedKts": 15.8,
+    "windGustKts": 21.3,
+    "windDirectionDeg": 286,
+    "temperatureC": 22.3,
+    "humidityPct": 78,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T00:37:14.248Z",
+    "windSpeedKts": 14.6,
+    "windGustKts": 19.7,
+    "windDirectionDeg": 281,
+    "temperatureC": 18.4,
+    "humidityPct": 70,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T01:07:14.248Z",
+    "windSpeedKts": 25.8,
+    "windGustKts": 34.9,
+    "windDirectionDeg": 89,
+    "temperatureC": 19,
+    "humidityPct": 77,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T01:37:14.248Z",
+    "windSpeedKts": 15.2,
+    "windGustKts": 20.5,
+    "windDirectionDeg": 97,
+    "temperatureC": 16.9,
+    "humidityPct": 72,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T02:07:14.248Z",
+    "windSpeedKts": 19.6,
+    "windGustKts": 26.4,
+    "windDirectionDeg": 276,
+    "temperatureC": 23.9,
+    "humidityPct": 69,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T02:37:14.248Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 19.5,
+    "windDirectionDeg": 271,
+    "temperatureC": 19.9,
+    "humidityPct": 75,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T03:07:14.248Z",
+    "windSpeedKts": 21.5,
+    "windGustKts": 29.1,
+    "windDirectionDeg": 252,
+    "temperatureC": 19.5,
+    "humidityPct": 71,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T03:37:14.248Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 26,
+    "windDirectionDeg": 99,
+    "temperatureC": 21.5,
+    "humidityPct": 74,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T04:07:14.248Z",
+    "windSpeedKts": 25.8,
+    "windGustKts": 34.9,
+    "windDirectionDeg": 99,
+    "temperatureC": 18.3,
+    "humidityPct": 72,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T04:37:14.248Z",
+    "windSpeedKts": 22.9,
+    "windGustKts": 30.9,
+    "windDirectionDeg": 287,
+    "temperatureC": 20.3,
+    "humidityPct": 73,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T05:07:14.248Z",
+    "windSpeedKts": 17.2,
+    "windGustKts": 23.3,
+    "windDirectionDeg": 275,
+    "temperatureC": 17.4,
+    "humidityPct": 68,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T05:37:14.248Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 27.3,
+    "windDirectionDeg": 109,
+    "temperatureC": 19,
+    "humidityPct": 71,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T06:07:14.248Z",
+    "windSpeedKts": 25,
+    "windGustKts": 33.8,
+    "windDirectionDeg": 79,
+    "temperatureC": 16.3,
+    "humidityPct": 62,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T06:37:14.248Z",
+    "windSpeedKts": 12,
+    "windGustKts": 16.2,
+    "windDirectionDeg": 90,
+    "temperatureC": 16.7,
+    "humidityPct": 68,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T07:07:14.248Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 276,
+    "temperatureC": 23.3,
+    "humidityPct": 61,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T07:37:14.248Z",
+    "windSpeedKts": 24.1,
+    "windGustKts": 32.5,
+    "windDirectionDeg": 273,
+    "temperatureC": 21.8,
+    "humidityPct": 72,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T08:07:14.248Z",
+    "windSpeedKts": 16.5,
+    "windGustKts": 22.3,
+    "windDirectionDeg": 96,
+    "temperatureC": 21.8,
+    "humidityPct": 62,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T08:37:14.248Z",
+    "windSpeedKts": 17.5,
+    "windGustKts": 23.7,
+    "windDirectionDeg": 275,
+    "temperatureC": 22.9,
+    "humidityPct": 60,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T09:07:14.248Z",
+    "windSpeedKts": 15.6,
+    "windGustKts": 21,
+    "windDirectionDeg": 252,
+    "temperatureC": 16.9,
+    "humidityPct": 70,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T09:37:14.248Z",
+    "windSpeedKts": 15.4,
+    "windGustKts": 20.8,
+    "windDirectionDeg": 290,
+    "temperatureC": 23,
+    "humidityPct": 65,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T10:07:14.248Z",
+    "windSpeedKts": 13.7,
+    "windGustKts": 18.4,
+    "windDirectionDeg": 264,
+    "temperatureC": 17,
+    "humidityPct": 75,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T10:37:14.248Z",
+    "windSpeedKts": 23.8,
+    "windGustKts": 32.2,
+    "windDirectionDeg": 78,
+    "temperatureC": 18.9,
+    "humidityPct": 72,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T11:07:14.248Z",
+    "windSpeedKts": 24,
+    "windGustKts": 32.5,
+    "windDirectionDeg": 81,
+    "temperatureC": 18.3,
+    "humidityPct": 76,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T11:37:14.248Z",
+    "windSpeedKts": 19.8,
+    "windGustKts": 26.8,
+    "windDirectionDeg": 283,
+    "temperatureC": 17.3,
+    "humidityPct": 59,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T12:07:14.248Z",
+    "windSpeedKts": 25.2,
+    "windGustKts": 34,
+    "windDirectionDeg": 74,
+    "temperatureC": 20.6,
+    "humidityPct": 64,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T12:37:14.248Z",
+    "windSpeedKts": 23.2,
+    "windGustKts": 31.3,
+    "windDirectionDeg": 70,
+    "temperatureC": 18.2,
+    "humidityPct": 70,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T13:07:14.248Z",
+    "windSpeedKts": 21.6,
+    "windGustKts": 29.2,
+    "windDirectionDeg": 257,
+    "temperatureC": 18.3,
+    "humidityPct": 77,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T13:37:14.248Z",
+    "windSpeedKts": 22,
+    "windGustKts": 29.7,
+    "windDirectionDeg": 289,
+    "temperatureC": 17.2,
+    "humidityPct": 74,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T14:07:14.248Z",
+    "windSpeedKts": 22.9,
+    "windGustKts": 30.9,
+    "windDirectionDeg": 84,
+    "temperatureC": 19.3,
+    "humidityPct": 73,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T14:37:14.248Z",
+    "windSpeedKts": 25.1,
+    "windGustKts": 33.9,
+    "windDirectionDeg": 98,
+    "temperatureC": 18.5,
+    "humidityPct": 77,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T15:07:14.248Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 18.1,
+    "windDirectionDeg": 74,
+    "temperatureC": 23.1,
+    "humidityPct": 68,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T15:37:14.248Z",
+    "windSpeedKts": 15.3,
+    "windGustKts": 20.7,
+    "windDirectionDeg": 91,
+    "temperatureC": 17.9,
+    "humidityPct": 74,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T16:07:14.248Z",
+    "windSpeedKts": 20.9,
+    "windGustKts": 28.2,
+    "windDirectionDeg": 262,
+    "temperatureC": 19.3,
+    "humidityPct": 64,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T16:37:14.248Z",
+    "windSpeedKts": 16.3,
+    "windGustKts": 22,
+    "windDirectionDeg": 71,
+    "temperatureC": 17.6,
+    "humidityPct": 58,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T17:07:14.248Z",
+    "windSpeedKts": 25.7,
+    "windGustKts": 34.7,
+    "windDirectionDeg": 100,
+    "temperatureC": 17.5,
+    "humidityPct": 66,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T17:37:14.248Z",
+    "windSpeedKts": 24,
+    "windGustKts": 32.5,
+    "windDirectionDeg": 85,
+    "temperatureC": 17,
+    "humidityPct": 68,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T18:07:14.248Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 29.5,
+    "windDirectionDeg": 89,
+    "temperatureC": 20.9,
+    "humidityPct": 58,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T18:37:14.248Z",
+    "windSpeedKts": 20.5,
+    "windGustKts": 27.7,
+    "windDirectionDeg": 280,
+    "temperatureC": 21,
+    "humidityPct": 61,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T19:07:14.248Z",
+    "windSpeedKts": 16,
+    "windGustKts": 21.6,
+    "windDirectionDeg": 262,
+    "temperatureC": 21.3,
+    "humidityPct": 58,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T19:37:14.248Z",
+    "windSpeedKts": 17.4,
+    "windGustKts": 23.5,
+    "windDirectionDeg": 80,
+    "temperatureC": 21.3,
+    "humidityPct": 75,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T20:07:14.248Z",
+    "windSpeedKts": 18.2,
+    "windGustKts": 24.6,
+    "windDirectionDeg": 87,
+    "temperatureC": 23,
+    "humidityPct": 70,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T20:37:14.248Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 33.2,
+    "windDirectionDeg": 74,
+    "temperatureC": 19.9,
+    "humidityPct": 76,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T21:07:14.248Z",
+    "windSpeedKts": 20.8,
+    "windGustKts": 28.1,
+    "windDirectionDeg": 273,
+    "temperatureC": 18,
+    "humidityPct": 75,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T21:37:14.248Z",
+    "windSpeedKts": 20.5,
+    "windGustKts": 27.7,
+    "windDirectionDeg": 276,
+    "temperatureC": 23.8,
+    "humidityPct": 64,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T22:07:14.248Z",
+    "windSpeedKts": 13,
+    "windGustKts": 17.6,
+    "windDirectionDeg": 284,
+    "temperatureC": 17.5,
+    "humidityPct": 59,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T22:37:14.248Z",
+    "windSpeedKts": 13.6,
+    "windGustKts": 18.4,
+    "windDirectionDeg": 105,
+    "temperatureC": 16.7,
+    "humidityPct": 63,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T23:07:14.248Z",
+    "windSpeedKts": 24.7,
+    "windGustKts": 33.3,
+    "windDirectionDeg": 95,
+    "temperatureC": 21.9,
+    "humidityPct": 62,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-10T23:37:14.248Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 19.3,
+    "windDirectionDeg": 90,
+    "temperatureC": 22.3,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T00:07:14.248Z",
+    "windSpeedKts": 12.4,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 274,
+    "temperatureC": 21.5,
+    "humidityPct": 60,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T00:37:14.248Z",
+    "windSpeedKts": 12.5,
+    "windGustKts": 16.9,
+    "windDirectionDeg": 80,
+    "temperatureC": 21.6,
+    "humidityPct": 59,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T01:07:14.248Z",
+    "windSpeedKts": 24.5,
+    "windGustKts": 33.1,
+    "windDirectionDeg": 268,
+    "temperatureC": 19.8,
+    "humidityPct": 66,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T01:37:14.248Z",
+    "windSpeedKts": 13.1,
+    "windGustKts": 17.7,
+    "windDirectionDeg": 280,
+    "temperatureC": 23.1,
+    "humidityPct": 60,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T02:07:14.248Z",
+    "windSpeedKts": 12.6,
+    "windGustKts": 17,
+    "windDirectionDeg": 268,
+    "temperatureC": 16.9,
+    "humidityPct": 58,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T02:37:14.248Z",
+    "windSpeedKts": 22.3,
+    "windGustKts": 30.1,
+    "windDirectionDeg": 71,
+    "temperatureC": 21.8,
+    "humidityPct": 61,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T03:07:14.248Z",
+    "windSpeedKts": 12.4,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 265,
+    "temperatureC": 21.6,
+    "humidityPct": 75,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T03:37:14.248Z",
+    "windSpeedKts": 22.8,
+    "windGustKts": 30.8,
+    "windDirectionDeg": 74,
+    "temperatureC": 16.4,
+    "humidityPct": 73,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T04:07:14.248Z",
+    "windSpeedKts": 19.3,
+    "windGustKts": 26,
+    "windDirectionDeg": 276,
+    "temperatureC": 20.6,
+    "humidityPct": 69,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T04:37:14.248Z",
+    "windSpeedKts": 24.4,
+    "windGustKts": 32.9,
+    "windDirectionDeg": 75,
+    "temperatureC": 17.4,
+    "humidityPct": 70,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T05:07:14.248Z",
+    "windSpeedKts": 12.1,
+    "windGustKts": 16.3,
+    "windDirectionDeg": 265,
+    "temperatureC": 21.2,
+    "humidityPct": 69,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T05:37:14.248Z",
+    "windSpeedKts": 17.5,
+    "windGustKts": 23.6,
+    "windDirectionDeg": 107,
+    "temperatureC": 21.5,
+    "humidityPct": 59,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T06:07:14.248Z",
+    "windSpeedKts": 19.3,
+    "windGustKts": 26,
+    "windDirectionDeg": 271,
+    "temperatureC": 18.7,
+    "humidityPct": 63,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T06:37:14.248Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 19.4,
+    "windDirectionDeg": 271,
+    "temperatureC": 21.9,
+    "humidityPct": 62,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T07:07:14.248Z",
+    "windSpeedKts": 16.7,
+    "windGustKts": 22.5,
+    "windDirectionDeg": 95,
+    "temperatureC": 23.9,
+    "humidityPct": 69,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T07:37:14.248Z",
+    "windSpeedKts": 12.4,
+    "windGustKts": 16.7,
+    "windDirectionDeg": 268,
+    "temperatureC": 20.7,
+    "humidityPct": 60,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T08:07:14.248Z",
+    "windSpeedKts": 20,
+    "windGustKts": 27,
+    "windDirectionDeg": 277,
+    "temperatureC": 17,
+    "humidityPct": 76,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T08:37:14.248Z",
+    "windSpeedKts": 12.5,
+    "windGustKts": 16.9,
+    "windDirectionDeg": 262,
+    "temperatureC": 20.5,
+    "humidityPct": 74,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T09:07:14.248Z",
+    "windSpeedKts": 18.6,
+    "windGustKts": 25.1,
+    "windDirectionDeg": 92,
+    "temperatureC": 19.3,
+    "humidityPct": 68,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T09:37:14.248Z",
+    "windSpeedKts": 23.8,
+    "windGustKts": 32.2,
+    "windDirectionDeg": 105,
+    "temperatureC": 19.7,
+    "humidityPct": 63,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T10:07:14.248Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 22.8,
+    "windDirectionDeg": 261,
+    "temperatureC": 17.6,
+    "humidityPct": 76,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T10:37:14.248Z",
+    "windSpeedKts": 23.3,
+    "windGustKts": 31.5,
+    "windDirectionDeg": 283,
+    "temperatureC": 18.3,
+    "humidityPct": 75,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T11:07:14.248Z",
+    "windSpeedKts": 12.2,
+    "windGustKts": 16.5,
+    "windDirectionDeg": 101,
+    "temperatureC": 19.2,
+    "humidityPct": 65,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T11:37:14.248Z",
+    "windSpeedKts": 16,
+    "windGustKts": 21.6,
+    "windDirectionDeg": 256,
+    "temperatureC": 16.8,
+    "humidityPct": 76,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T12:07:14.248Z",
+    "windSpeedKts": 20.4,
+    "windGustKts": 27.5,
+    "windDirectionDeg": 263,
+    "temperatureC": 21.2,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T12:37:14.248Z",
+    "windSpeedKts": 23.5,
+    "windGustKts": 31.7,
+    "windDirectionDeg": 258,
+    "temperatureC": 21.3,
+    "humidityPct": 72,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T13:07:14.248Z",
+    "windSpeedKts": 13,
+    "windGustKts": 17.6,
+    "windDirectionDeg": 88,
+    "temperatureC": 21.7,
+    "humidityPct": 68,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T13:37:14.248Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 19.2,
+    "windDirectionDeg": 261,
+    "temperatureC": 16.5,
+    "humidityPct": 62,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T14:07:14.248Z",
+    "windSpeedKts": 17.9,
+    "windGustKts": 24.2,
+    "windDirectionDeg": 254,
+    "temperatureC": 19.7,
+    "humidityPct": 65,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T14:37:14.248Z",
+    "windSpeedKts": 23.6,
+    "windGustKts": 31.8,
+    "windDirectionDeg": 89,
+    "temperatureC": 21.7,
+    "humidityPct": 62,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T15:07:14.248Z",
+    "windSpeedKts": 19.6,
+    "windGustKts": 26.4,
+    "windDirectionDeg": 251,
+    "temperatureC": 21.6,
+    "humidityPct": 77,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T15:37:14.248Z",
+    "windSpeedKts": 15,
+    "windGustKts": 20.2,
+    "windDirectionDeg": 86,
+    "temperatureC": 17.5,
+    "humidityPct": 75,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T16:07:14.248Z",
+    "windSpeedKts": 13.5,
+    "windGustKts": 18.3,
+    "windDirectionDeg": 285,
+    "temperatureC": 22.5,
+    "humidityPct": 63,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T16:37:14.248Z",
+    "windSpeedKts": 12.9,
+    "windGustKts": 17.4,
+    "windDirectionDeg": 90,
+    "temperatureC": 18.7,
+    "humidityPct": 75,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T17:07:14.248Z",
+    "windSpeedKts": 16.2,
+    "windGustKts": 21.9,
+    "windDirectionDeg": 250,
+    "temperatureC": 16.3,
+    "humidityPct": 75,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T17:37:14.248Z",
+    "windSpeedKts": 25,
+    "windGustKts": 33.7,
+    "windDirectionDeg": 108,
+    "temperatureC": 20.3,
+    "humidityPct": 74,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T18:07:14.248Z",
+    "windSpeedKts": 21.6,
+    "windGustKts": 29.1,
+    "windDirectionDeg": 102,
+    "temperatureC": 18.1,
+    "humidityPct": 68,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T18:37:14.248Z",
+    "windSpeedKts": 17.5,
+    "windGustKts": 23.6,
+    "windDirectionDeg": 265,
+    "temperatureC": 22.1,
+    "humidityPct": 67,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T19:07:14.248Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 19.4,
+    "windDirectionDeg": 71,
+    "temperatureC": 21.3,
+    "humidityPct": 77,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T19:37:14.248Z",
+    "windSpeedKts": 19,
+    "windGustKts": 25.7,
+    "windDirectionDeg": 269,
+    "temperatureC": 22.9,
+    "humidityPct": 70,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T20:07:14.248Z",
+    "windSpeedKts": 24.5,
+    "windGustKts": 33.1,
+    "windDirectionDeg": 100,
+    "temperatureC": 18.5,
+    "humidityPct": 64,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T20:37:14.248Z",
+    "windSpeedKts": 17.2,
+    "windGustKts": 23.2,
+    "windDirectionDeg": 101,
+    "temperatureC": 20.6,
+    "humidityPct": 61,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T21:07:14.248Z",
+    "windSpeedKts": 22.4,
+    "windGustKts": 30.3,
+    "windDirectionDeg": 254,
+    "temperatureC": 23.3,
+    "humidityPct": 76,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T21:37:14.248Z",
+    "windSpeedKts": 24.8,
+    "windGustKts": 33.4,
+    "windDirectionDeg": 90,
+    "temperatureC": 22.6,
+    "humidityPct": 67,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T22:07:14.248Z",
+    "windSpeedKts": 22.7,
+    "windGustKts": 30.7,
+    "windDirectionDeg": 280,
+    "temperatureC": 23.2,
+    "humidityPct": 70,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T22:37:14.248Z",
+    "windSpeedKts": 12.6,
+    "windGustKts": 17,
+    "windDirectionDeg": 257,
+    "temperatureC": 21.3,
+    "humidityPct": 63,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T23:07:14.248Z",
+    "windSpeedKts": 17.4,
+    "windGustKts": 23.5,
+    "windDirectionDeg": 99,
+    "temperatureC": 18.9,
+    "humidityPct": 60,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-11T23:37:14.248Z",
+    "windSpeedKts": 13.8,
+    "windGustKts": 18.6,
+    "windDirectionDeg": 282,
+    "temperatureC": 17.3,
+    "humidityPct": 68,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T00:07:14.248Z",
+    "windSpeedKts": 15.8,
+    "windGustKts": 21.3,
+    "windDirectionDeg": 273,
+    "temperatureC": 16.6,
+    "humidityPct": 71,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T00:37:14.248Z",
+    "windSpeedKts": 15.5,
+    "windGustKts": 21,
+    "windDirectionDeg": 251,
+    "temperatureC": 17.8,
+    "humidityPct": 59,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T01:07:14.248Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 86,
+    "temperatureC": 20.6,
+    "humidityPct": 70,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T01:37:14.248Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 18.1,
+    "windDirectionDeg": 261,
+    "temperatureC": 22.3,
+    "humidityPct": 76,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T02:07:14.248Z",
+    "windSpeedKts": 16.3,
+    "windGustKts": 22,
+    "windDirectionDeg": 283,
+    "temperatureC": 20.5,
+    "humidityPct": 72,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T02:37:14.248Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 25.9,
+    "windDirectionDeg": 95,
+    "temperatureC": 22,
+    "humidityPct": 58,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T03:07:14.248Z",
+    "windSpeedKts": 13.1,
+    "windGustKts": 17.7,
+    "windDirectionDeg": 251,
+    "temperatureC": 19.5,
+    "humidityPct": 67,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T03:37:14.248Z",
+    "windSpeedKts": 19.8,
+    "windGustKts": 26.8,
+    "windDirectionDeg": 268,
+    "temperatureC": 20.8,
+    "humidityPct": 64,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T04:07:14.248Z",
+    "windSpeedKts": 16,
+    "windGustKts": 21.6,
+    "windDirectionDeg": 285,
+    "temperatureC": 18.2,
+    "humidityPct": 70,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T04:37:14.248Z",
+    "windSpeedKts": 18.9,
+    "windGustKts": 25.5,
+    "windDirectionDeg": 260,
+    "temperatureC": 19,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T05:07:14.248Z",
+    "windSpeedKts": 14.6,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 277,
+    "temperatureC": 19.6,
+    "humidityPct": 70,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T05:37:14.248Z",
+    "windSpeedKts": 20.7,
+    "windGustKts": 28,
+    "windDirectionDeg": 281,
+    "temperatureC": 21.5,
+    "humidityPct": 70,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T06:07:14.248Z",
+    "windSpeedKts": 25.9,
+    "windGustKts": 35,
+    "windDirectionDeg": 289,
+    "temperatureC": 17.1,
+    "humidityPct": 74,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T06:37:14.248Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 29.6,
+    "windDirectionDeg": 281,
+    "temperatureC": 19.8,
+    "humidityPct": 78,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T07:07:14.248Z",
+    "windSpeedKts": 20.3,
+    "windGustKts": 27.4,
+    "windDirectionDeg": 103,
+    "temperatureC": 17.6,
+    "humidityPct": 76,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T07:37:14.248Z",
+    "windSpeedKts": 20.3,
+    "windGustKts": 27.3,
+    "windDirectionDeg": 99,
+    "temperatureC": 16.6,
+    "humidityPct": 69,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T08:07:14.248Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 110,
+    "temperatureC": 16.5,
+    "humidityPct": 71,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T08:37:14.248Z",
+    "windSpeedKts": 24.9,
+    "windGustKts": 33.6,
+    "windDirectionDeg": 103,
+    "temperatureC": 19.3,
+    "humidityPct": 68,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T09:07:14.248Z",
+    "windSpeedKts": 20.3,
+    "windGustKts": 27.5,
+    "windDirectionDeg": 109,
+    "temperatureC": 18.8,
+    "humidityPct": 77,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T09:37:14.248Z",
+    "windSpeedKts": 13.1,
+    "windGustKts": 17.7,
+    "windDirectionDeg": 253,
+    "temperatureC": 21.7,
+    "humidityPct": 69,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T10:07:14.248Z",
+    "windSpeedKts": 14.5,
+    "windGustKts": 19.6,
+    "windDirectionDeg": 270,
+    "temperatureC": 23.5,
+    "humidityPct": 73,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T10:37:14.248Z",
+    "windSpeedKts": 25.7,
+    "windGustKts": 34.7,
+    "windDirectionDeg": 95,
+    "temperatureC": 22.6,
+    "humidityPct": 75,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T11:07:14.248Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 22.8,
+    "windDirectionDeg": 286,
+    "temperatureC": 19.5,
+    "humidityPct": 62,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T11:37:14.248Z",
+    "windSpeedKts": 25.5,
+    "windGustKts": 34.4,
+    "windDirectionDeg": 82,
+    "temperatureC": 23.9,
+    "humidityPct": 69,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T12:07:14.248Z",
+    "windSpeedKts": 23.5,
+    "windGustKts": 31.7,
+    "windDirectionDeg": 288,
+    "temperatureC": 21.7,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T12:37:14.248Z",
+    "windSpeedKts": 18.7,
+    "windGustKts": 25.3,
+    "windDirectionDeg": 89,
+    "temperatureC": 22.6,
+    "humidityPct": 66,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T13:07:14.248Z",
+    "windSpeedKts": 21.3,
+    "windGustKts": 28.7,
+    "windDirectionDeg": 105,
+    "temperatureC": 21.2,
+    "humidityPct": 72,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T13:37:14.248Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 33.3,
+    "windDirectionDeg": 258,
+    "temperatureC": 19.6,
+    "humidityPct": 67,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T14:07:14.248Z",
+    "windSpeedKts": 16.6,
+    "windGustKts": 22.4,
+    "windDirectionDeg": 71,
+    "temperatureC": 23.1,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T14:37:14.248Z",
+    "windSpeedKts": 24.1,
+    "windGustKts": 32.5,
+    "windDirectionDeg": 250,
+    "temperatureC": 16.5,
+    "humidityPct": 64,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T15:07:14.248Z",
+    "windSpeedKts": 22.8,
+    "windGustKts": 30.8,
+    "windDirectionDeg": 289,
+    "temperatureC": 21.1,
+    "humidityPct": 72,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T15:37:14.248Z",
+    "windSpeedKts": 17.3,
+    "windGustKts": 23.4,
+    "windDirectionDeg": 258,
+    "temperatureC": 23,
+    "humidityPct": 63,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T16:07:14.248Z",
+    "windSpeedKts": 19.3,
+    "windGustKts": 26.1,
+    "windDirectionDeg": 92,
+    "temperatureC": 17.8,
+    "humidityPct": 61,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T16:37:14.248Z",
+    "windSpeedKts": 22.6,
+    "windGustKts": 30.5,
+    "windDirectionDeg": 261,
+    "temperatureC": 17.4,
+    "humidityPct": 63,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T17:07:14.248Z",
+    "windSpeedKts": 14.1,
+    "windGustKts": 19,
+    "windDirectionDeg": 109,
+    "temperatureC": 17.3,
+    "humidityPct": 71,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T17:37:14.248Z",
+    "windSpeedKts": 25.4,
+    "windGustKts": 34.3,
+    "windDirectionDeg": 274,
+    "temperatureC": 16.1,
+    "humidityPct": 64,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T18:07:14.248Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 21.8,
+    "windDirectionDeg": 278,
+    "temperatureC": 20.1,
+    "humidityPct": 62,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T18:37:14.248Z",
+    "windSpeedKts": 17.8,
+    "windGustKts": 24.1,
+    "windDirectionDeg": 97,
+    "temperatureC": 21.8,
+    "humidityPct": 65,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T19:07:14.248Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 97,
+    "temperatureC": 23.1,
+    "humidityPct": 69,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T19:37:14.248Z",
+    "windSpeedKts": 14.5,
+    "windGustKts": 19.6,
+    "windDirectionDeg": 71,
+    "temperatureC": 19.9,
+    "humidityPct": 65,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T20:07:14.248Z",
+    "windSpeedKts": 12.2,
+    "windGustKts": 16.5,
+    "windDirectionDeg": 265,
+    "temperatureC": 22.7,
+    "humidityPct": 78,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T20:37:14.248Z",
+    "windSpeedKts": 22.9,
+    "windGustKts": 30.9,
+    "windDirectionDeg": 285,
+    "temperatureC": 19.9,
+    "humidityPct": 63,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T21:07:14.248Z",
+    "windSpeedKts": 16.7,
+    "windGustKts": 22.5,
+    "windDirectionDeg": 94,
+    "temperatureC": 21.7,
+    "humidityPct": 73,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T21:37:14.248Z",
+    "windSpeedKts": 25.3,
+    "windGustKts": 34.1,
+    "windDirectionDeg": 254,
+    "temperatureC": 16,
+    "humidityPct": 59,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T22:07:14.248Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 19.5,
+    "windDirectionDeg": 83,
+    "temperatureC": 16.4,
+    "humidityPct": 59,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T22:37:14.248Z",
+    "windSpeedKts": 18.8,
+    "windGustKts": 25.3,
+    "windDirectionDeg": 81,
+    "temperatureC": 21.4,
+    "humidityPct": 71,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T23:07:14.248Z",
+    "windSpeedKts": 25.5,
+    "windGustKts": 34.4,
+    "windDirectionDeg": 281,
+    "temperatureC": 17.8,
+    "humidityPct": 63,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-12T23:37:14.248Z",
+    "windSpeedKts": 15.2,
+    "windGustKts": 20.5,
+    "windDirectionDeg": 89,
+    "temperatureC": 18,
+    "humidityPct": 69,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T00:07:14.248Z",
+    "windSpeedKts": 13.3,
+    "windGustKts": 18,
+    "windDirectionDeg": 93,
+    "temperatureC": 17.7,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T00:37:14.248Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 22.9,
+    "windDirectionDeg": 271,
+    "temperatureC": 20.5,
+    "humidityPct": 63,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T01:07:14.248Z",
+    "windSpeedKts": 12.6,
+    "windGustKts": 17,
+    "windDirectionDeg": 75,
+    "temperatureC": 23.1,
+    "humidityPct": 60,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T01:37:14.248Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 19.2,
+    "windDirectionDeg": 100,
+    "temperatureC": 19.2,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T02:07:14.248Z",
+    "windSpeedKts": 15.8,
+    "windGustKts": 21.3,
+    "windDirectionDeg": 72,
+    "temperatureC": 20.4,
+    "humidityPct": 69,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T02:37:14.248Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 21.8,
+    "windDirectionDeg": 88,
+    "temperatureC": 22.6,
+    "humidityPct": 60,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T03:07:14.248Z",
+    "windSpeedKts": 19.4,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 253,
+    "temperatureC": 20.9,
+    "humidityPct": 78,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T03:37:14.248Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 33.3,
+    "windDirectionDeg": 76,
+    "temperatureC": 22,
+    "humidityPct": 60,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T04:07:14.248Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 281,
+    "temperatureC": 23,
+    "humidityPct": 70,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T04:37:14.248Z",
+    "windSpeedKts": 13.6,
+    "windGustKts": 18.3,
+    "windDirectionDeg": 70,
+    "temperatureC": 17.8,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T05:07:14.248Z",
+    "windSpeedKts": 12.7,
+    "windGustKts": 17.2,
+    "windDirectionDeg": 280,
+    "temperatureC": 19.8,
+    "humidityPct": 73,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T05:37:14.248Z",
+    "windSpeedKts": 15.6,
+    "windGustKts": 21.1,
+    "windDirectionDeg": 78,
+    "temperatureC": 19.5,
+    "humidityPct": 70,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T06:07:14.248Z",
+    "windSpeedKts": 16.8,
+    "windGustKts": 22.7,
+    "windDirectionDeg": 270,
+    "temperatureC": 20.8,
+    "humidityPct": 69,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T06:37:14.248Z",
+    "windSpeedKts": 13.5,
+    "windGustKts": 18.2,
+    "windDirectionDeg": 286,
+    "temperatureC": 21.5,
+    "humidityPct": 61,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T07:07:14.248Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 265,
+    "temperatureC": 22.1,
+    "humidityPct": 60,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T07:37:14.248Z",
+    "windSpeedKts": 14,
+    "windGustKts": 18.9,
+    "windDirectionDeg": 90,
+    "temperatureC": 21.5,
+    "humidityPct": 61,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T08:07:14.248Z",
+    "windSpeedKts": 12,
+    "windGustKts": 16.2,
+    "windDirectionDeg": 102,
+    "temperatureC": 17.6,
+    "humidityPct": 71,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T08:37:14.248Z",
+    "windSpeedKts": 17.1,
+    "windGustKts": 23,
+    "windDirectionDeg": 254,
+    "temperatureC": 21.4,
+    "humidityPct": 73,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T09:07:14.248Z",
+    "windSpeedKts": 12.1,
+    "windGustKts": 16.3,
+    "windDirectionDeg": 78,
+    "temperatureC": 20.4,
+    "humidityPct": 65,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T09:37:14.248Z",
+    "windSpeedKts": 20.6,
+    "windGustKts": 27.8,
+    "windDirectionDeg": 93,
+    "temperatureC": 21.5,
+    "humidityPct": 62,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T10:07:14.248Z",
+    "windSpeedKts": 13.3,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 288,
+    "temperatureC": 21.1,
+    "humidityPct": 76,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T10:37:14.248Z",
+    "windSpeedKts": 23.5,
+    "windGustKts": 31.7,
+    "windDirectionDeg": 283,
+    "temperatureC": 17.6,
+    "humidityPct": 74,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T11:07:14.248Z",
+    "windSpeedKts": 22.7,
+    "windGustKts": 30.7,
+    "windDirectionDeg": 265,
+    "temperatureC": 22.6,
+    "humidityPct": 77,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T11:37:14.248Z",
+    "windSpeedKts": 22.3,
+    "windGustKts": 30.1,
+    "windDirectionDeg": 257,
+    "temperatureC": 23.1,
+    "humidityPct": 74,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T12:07:14.248Z",
+    "windSpeedKts": 15.7,
+    "windGustKts": 21.2,
+    "windDirectionDeg": 70,
+    "temperatureC": 18.7,
+    "humidityPct": 76,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T12:37:14.248Z",
+    "windSpeedKts": 21.3,
+    "windGustKts": 28.8,
+    "windDirectionDeg": 265,
+    "temperatureC": 17,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T13:07:14.248Z",
+    "windSpeedKts": 20.6,
+    "windGustKts": 27.8,
+    "windDirectionDeg": 97,
+    "temperatureC": 18.9,
+    "humidityPct": 69,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T13:37:14.248Z",
+    "windSpeedKts": 25,
+    "windGustKts": 33.7,
+    "windDirectionDeg": 97,
+    "temperatureC": 21,
+    "humidityPct": 76,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T14:07:14.248Z",
+    "windSpeedKts": 12.4,
+    "windGustKts": 16.8,
+    "windDirectionDeg": 284,
+    "temperatureC": 17.5,
+    "humidityPct": 72,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T14:37:14.248Z",
+    "windSpeedKts": 13.7,
+    "windGustKts": 18.5,
+    "windDirectionDeg": 260,
+    "temperatureC": 20.6,
+    "humidityPct": 67,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T15:07:14.248Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 23.8,
+    "windDirectionDeg": 278,
+    "temperatureC": 19.7,
+    "humidityPct": 73,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T15:37:14.248Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 253,
+    "temperatureC": 20.2,
+    "humidityPct": 71,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T16:07:14.248Z",
+    "windSpeedKts": 19.5,
+    "windGustKts": 26.3,
+    "windDirectionDeg": 98,
+    "temperatureC": 21.8,
+    "humidityPct": 74,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T16:37:14.248Z",
+    "windSpeedKts": 25,
+    "windGustKts": 33.7,
+    "windDirectionDeg": 277,
+    "temperatureC": 16.8,
+    "humidityPct": 76,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T17:07:14.248Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 284,
+    "temperatureC": 21.7,
+    "humidityPct": 76,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T17:37:14.248Z",
+    "windSpeedKts": 15.7,
+    "windGustKts": 21.2,
+    "windDirectionDeg": 280,
+    "temperatureC": 17.6,
+    "humidityPct": 76,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T18:07:14.248Z",
+    "windSpeedKts": 16.4,
+    "windGustKts": 22.1,
+    "windDirectionDeg": 289,
+    "temperatureC": 16.9,
+    "humidityPct": 69,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T18:37:14.248Z",
+    "windSpeedKts": 24.9,
+    "windGustKts": 33.6,
+    "windDirectionDeg": 258,
+    "temperatureC": 23.4,
+    "humidityPct": 62,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T19:07:14.248Z",
+    "windSpeedKts": 23.4,
+    "windGustKts": 31.6,
+    "windDirectionDeg": 278,
+    "temperatureC": 17.4,
+    "humidityPct": 61,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T19:37:14.248Z",
+    "windSpeedKts": 20.1,
+    "windGustKts": 27.1,
+    "windDirectionDeg": 253,
+    "temperatureC": 16.4,
+    "humidityPct": 67,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T20:07:14.248Z",
+    "windSpeedKts": 23,
+    "windGustKts": 31,
+    "windDirectionDeg": 76,
+    "temperatureC": 23.7,
+    "humidityPct": 67,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T20:37:14.248Z",
+    "windSpeedKts": 16.1,
+    "windGustKts": 21.7,
+    "windDirectionDeg": 264,
+    "temperatureC": 23.6,
+    "humidityPct": 60,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T21:07:14.248Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 19.4,
+    "windDirectionDeg": 255,
+    "temperatureC": 18.2,
+    "humidityPct": 71,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T21:37:14.248Z",
+    "windSpeedKts": 23.3,
+    "windGustKts": 31.4,
+    "windDirectionDeg": 274,
+    "temperatureC": 20.9,
+    "humidityPct": 61,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T22:07:14.248Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 23.8,
+    "windDirectionDeg": 85,
+    "temperatureC": 21,
+    "humidityPct": 69,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T22:37:14.248Z",
+    "windSpeedKts": 12.6,
+    "windGustKts": 17,
+    "windDirectionDeg": 81,
+    "temperatureC": 19,
+    "humidityPct": 63,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T23:07:14.248Z",
+    "windSpeedKts": 23.4,
+    "windGustKts": 31.6,
+    "windDirectionDeg": 102,
+    "temperatureC": 20.9,
+    "humidityPct": 67,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-13T23:37:14.248Z",
+    "windSpeedKts": 24.2,
+    "windGustKts": 32.7,
+    "windDirectionDeg": 76,
+    "temperatureC": 17.2,
+    "humidityPct": 72,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T00:07:14.248Z",
+    "windSpeedKts": 17.5,
+    "windGustKts": 23.6,
+    "windDirectionDeg": 286,
+    "temperatureC": 22.5,
+    "humidityPct": 74,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T00:37:14.248Z",
+    "windSpeedKts": 23.4,
+    "windGustKts": 31.6,
+    "windDirectionDeg": 106,
+    "temperatureC": 20.9,
+    "humidityPct": 77,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T01:07:14.248Z",
+    "windSpeedKts": 23.8,
+    "windGustKts": 32.1,
+    "windDirectionDeg": 108,
+    "temperatureC": 23.9,
+    "humidityPct": 63,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T01:37:14.248Z",
+    "windSpeedKts": 15.8,
+    "windGustKts": 21.4,
+    "windDirectionDeg": 73,
+    "temperatureC": 16.6,
+    "humidityPct": 63,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T02:07:14.248Z",
+    "windSpeedKts": 13.3,
+    "windGustKts": 17.9,
+    "windDirectionDeg": 106,
+    "temperatureC": 20,
+    "humidityPct": 60,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T02:37:14.248Z",
+    "windSpeedKts": 24.3,
+    "windGustKts": 32.8,
+    "windDirectionDeg": 105,
+    "temperatureC": 18.6,
+    "humidityPct": 59,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T03:07:14.248Z",
+    "windSpeedKts": 25.1,
+    "windGustKts": 33.9,
+    "windDirectionDeg": 256,
+    "temperatureC": 22.9,
+    "humidityPct": 74,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T03:37:14.248Z",
+    "windSpeedKts": 19.7,
+    "windGustKts": 26.6,
+    "windDirectionDeg": 108,
+    "temperatureC": 17.1,
+    "humidityPct": 76,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T04:07:14.248Z",
+    "windSpeedKts": 14.5,
+    "windGustKts": 19.6,
+    "windDirectionDeg": 278,
+    "temperatureC": 21.8,
+    "humidityPct": 62,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T04:37:14.248Z",
+    "windSpeedKts": 22.8,
+    "windGustKts": 30.8,
+    "windDirectionDeg": 73,
+    "temperatureC": 18.8,
+    "humidityPct": 74,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T05:07:14.248Z",
+    "windSpeedKts": 14.2,
+    "windGustKts": 19.1,
+    "windDirectionDeg": 71,
+    "temperatureC": 23.5,
+    "humidityPct": 73,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T05:37:14.248Z",
+    "windSpeedKts": 15.6,
+    "windGustKts": 21,
+    "windDirectionDeg": 280,
+    "temperatureC": 18.7,
+    "humidityPct": 64,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T06:07:14.248Z",
+    "windSpeedKts": 13.6,
+    "windGustKts": 18.4,
+    "windDirectionDeg": 264,
+    "temperatureC": 22.2,
+    "humidityPct": 63,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T06:37:14.248Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 23.7,
+    "windDirectionDeg": 73,
+    "temperatureC": 20.2,
+    "humidityPct": 70,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T07:07:14.248Z",
+    "windSpeedKts": 16,
+    "windGustKts": 21.7,
+    "windDirectionDeg": 98,
+    "temperatureC": 18.2,
+    "humidityPct": 65,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T07:37:14.248Z",
+    "windSpeedKts": 15.6,
+    "windGustKts": 21,
+    "windDirectionDeg": 264,
+    "temperatureC": 22.8,
+    "humidityPct": 62,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T08:07:14.248Z",
+    "windSpeedKts": 13.8,
+    "windGustKts": 18.6,
+    "windDirectionDeg": 258,
+    "temperatureC": 18.5,
+    "humidityPct": 63,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T08:37:14.248Z",
+    "windSpeedKts": 19.1,
+    "windGustKts": 25.7,
+    "windDirectionDeg": 94,
+    "temperatureC": 22.7,
+    "humidityPct": 77,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T09:07:14.248Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 77,
+    "temperatureC": 20,
+    "humidityPct": 71,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T09:37:14.248Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 29.6,
+    "windDirectionDeg": 259,
+    "temperatureC": 22.3,
+    "humidityPct": 73,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T10:07:14.248Z",
+    "windSpeedKts": 15.3,
+    "windGustKts": 20.7,
+    "windDirectionDeg": 272,
+    "temperatureC": 21.6,
+    "humidityPct": 69,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T10:37:14.248Z",
+    "windSpeedKts": 12.1,
+    "windGustKts": 16.4,
+    "windDirectionDeg": 92,
+    "temperatureC": 16.3,
+    "humidityPct": 72,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T11:07:14.248Z",
+    "windSpeedKts": 24.7,
+    "windGustKts": 33.4,
+    "windDirectionDeg": 282,
+    "temperatureC": 22.8,
+    "humidityPct": 75,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T11:37:14.248Z",
+    "windSpeedKts": 15.4,
+    "windGustKts": 20.8,
+    "windDirectionDeg": 254,
+    "temperatureC": 20.8,
+    "humidityPct": 64,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T12:07:14.248Z",
+    "windSpeedKts": 22.6,
+    "windGustKts": 30.5,
+    "windDirectionDeg": 253,
+    "temperatureC": 21,
+    "humidityPct": 77,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T12:37:14.248Z",
+    "windSpeedKts": 23.6,
+    "windGustKts": 31.8,
+    "windDirectionDeg": 96,
+    "temperatureC": 16.7,
+    "humidityPct": 77,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T13:07:14.248Z",
+    "windSpeedKts": 17.2,
+    "windGustKts": 23.2,
+    "windDirectionDeg": 85,
+    "temperatureC": 22.7,
+    "humidityPct": 76,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T13:37:14.248Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 23.8,
+    "windDirectionDeg": 255,
+    "temperatureC": 18.5,
+    "humidityPct": 75,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T14:07:14.248Z",
+    "windSpeedKts": 21.2,
+    "windGustKts": 28.7,
+    "windDirectionDeg": 78,
+    "temperatureC": 23.4,
+    "humidityPct": 59,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T14:37:14.248Z",
+    "windSpeedKts": 18.2,
+    "windGustKts": 24.5,
+    "windDirectionDeg": 269,
+    "temperatureC": 18.8,
+    "humidityPct": 74,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T15:07:14.248Z",
+    "windSpeedKts": 22.2,
+    "windGustKts": 30,
+    "windDirectionDeg": 107,
+    "temperatureC": 20.3,
+    "humidityPct": 67,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T15:37:14.248Z",
+    "windSpeedKts": 21.6,
+    "windGustKts": 29.1,
+    "windDirectionDeg": 74,
+    "temperatureC": 17.8,
+    "humidityPct": 67,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T16:07:14.248Z",
+    "windSpeedKts": 14.1,
+    "windGustKts": 19,
+    "windDirectionDeg": 72,
+    "temperatureC": 17.5,
+    "humidityPct": 74,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T16:37:14.248Z",
+    "windSpeedKts": 18.7,
+    "windGustKts": 25.3,
+    "windDirectionDeg": 274,
+    "temperatureC": 22.6,
+    "humidityPct": 60,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T17:07:14.248Z",
+    "windSpeedKts": 17.9,
+    "windGustKts": 24.1,
+    "windDirectionDeg": 269,
+    "temperatureC": 17.4,
+    "humidityPct": 63,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T17:37:14.248Z",
+    "windSpeedKts": 18.6,
+    "windGustKts": 25.1,
+    "windDirectionDeg": 256,
+    "temperatureC": 22.4,
+    "humidityPct": 63,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T18:07:14.248Z",
+    "windSpeedKts": 20.9,
+    "windGustKts": 28.2,
+    "windDirectionDeg": 273,
+    "temperatureC": 20.9,
+    "humidityPct": 72,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T18:37:14.248Z",
+    "windSpeedKts": 24.9,
+    "windGustKts": 33.6,
+    "windDirectionDeg": 276,
+    "temperatureC": 22.7,
+    "humidityPct": 65,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T19:07:14.248Z",
+    "windSpeedKts": 25,
+    "windGustKts": 33.7,
+    "windDirectionDeg": 262,
+    "temperatureC": 21.2,
+    "humidityPct": 71,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T19:37:14.248Z",
+    "windSpeedKts": 21.8,
+    "windGustKts": 29.5,
+    "windDirectionDeg": 254,
+    "temperatureC": 21,
+    "humidityPct": 67,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T20:07:14.248Z",
+    "windSpeedKts": 16.5,
+    "windGustKts": 22.3,
+    "windDirectionDeg": 280,
+    "temperatureC": 19.9,
+    "humidityPct": 69,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T20:37:14.248Z",
+    "windSpeedKts": 19.6,
+    "windGustKts": 26.4,
+    "windDirectionDeg": 100,
+    "temperatureC": 20.8,
+    "humidityPct": 73,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T21:07:14.248Z",
+    "windSpeedKts": 15.8,
+    "windGustKts": 21.4,
+    "windDirectionDeg": 275,
+    "temperatureC": 23.3,
+    "humidityPct": 67,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T21:37:14.248Z",
+    "windSpeedKts": 24.8,
+    "windGustKts": 33.5,
+    "windDirectionDeg": 263,
+    "temperatureC": 16,
+    "humidityPct": 73,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T22:07:14.248Z",
+    "windSpeedKts": 21.3,
+    "windGustKts": 28.8,
+    "windDirectionDeg": 92,
+    "temperatureC": 20.5,
+    "humidityPct": 59,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T22:37:14.248Z",
+    "windSpeedKts": 22.1,
+    "windGustKts": 29.9,
+    "windDirectionDeg": 271,
+    "temperatureC": 23.8,
+    "humidityPct": 71,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T23:07:14.248Z",
+    "windSpeedKts": 21.2,
+    "windGustKts": 28.7,
+    "windDirectionDeg": 270,
+    "temperatureC": 23.3,
+    "humidityPct": 77,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-14T23:37:14.248Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 18,
+    "windDirectionDeg": 261,
+    "temperatureC": 21.9,
+    "humidityPct": 71,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T00:07:14.248Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 19.3,
+    "windDirectionDeg": 79,
+    "temperatureC": 17.4,
+    "humidityPct": 59,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T00:37:14.248Z",
+    "windSpeedKts": 16.9,
+    "windGustKts": 22.8,
+    "windDirectionDeg": 106,
+    "temperatureC": 22.1,
+    "humidityPct": 68,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T01:07:14.248Z",
+    "windSpeedKts": 20.3,
+    "windGustKts": 27.4,
+    "windDirectionDeg": 257,
+    "temperatureC": 20.9,
+    "humidityPct": 75,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T01:37:14.248Z",
+    "windSpeedKts": 25.8,
+    "windGustKts": 34.9,
+    "windDirectionDeg": 87,
+    "temperatureC": 23.2,
+    "humidityPct": 63,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T02:07:14.248Z",
+    "windSpeedKts": 20.4,
+    "windGustKts": 27.5,
+    "windDirectionDeg": 89,
+    "temperatureC": 16.1,
+    "humidityPct": 73,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T02:37:14.248Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 26,
+    "windDirectionDeg": 273,
+    "temperatureC": 21.1,
+    "humidityPct": 76,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T03:07:14.248Z",
+    "windSpeedKts": 12.1,
+    "windGustKts": 16.3,
+    "windDirectionDeg": 105,
+    "temperatureC": 23.2,
+    "humidityPct": 60,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T03:37:14.248Z",
+    "windSpeedKts": 13.5,
+    "windGustKts": 18.2,
+    "windDirectionDeg": 96,
+    "temperatureC": 16.8,
+    "humidityPct": 61,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T04:07:14.248Z",
+    "windSpeedKts": 20.4,
+    "windGustKts": 27.6,
+    "windDirectionDeg": 79,
+    "temperatureC": 16.1,
+    "humidityPct": 63,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T04:37:14.248Z",
+    "windSpeedKts": 17.8,
+    "windGustKts": 24,
+    "windDirectionDeg": 289,
+    "temperatureC": 20,
+    "humidityPct": 64,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T05:07:14.248Z",
+    "windSpeedKts": 19.7,
+    "windGustKts": 26.6,
+    "windDirectionDeg": 110,
+    "temperatureC": 22.6,
+    "humidityPct": 66,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T05:37:14.248Z",
+    "windSpeedKts": 23.4,
+    "windGustKts": 31.5,
+    "windDirectionDeg": 79,
+    "temperatureC": 20.2,
+    "humidityPct": 72,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T06:07:14.248Z",
+    "windSpeedKts": 23,
+    "windGustKts": 31,
+    "windDirectionDeg": 91,
+    "temperatureC": 17,
+    "humidityPct": 64,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T06:37:14.248Z",
+    "windSpeedKts": 22.3,
+    "windGustKts": 30.1,
+    "windDirectionDeg": 253,
+    "temperatureC": 18.6,
+    "humidityPct": 72,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T07:07:14.248Z",
+    "windSpeedKts": 22,
+    "windGustKts": 29.8,
+    "windDirectionDeg": 106,
+    "temperatureC": 17.2,
+    "humidityPct": 73,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T07:37:14.248Z",
+    "windSpeedKts": 23.8,
+    "windGustKts": 32.1,
+    "windDirectionDeg": 105,
+    "temperatureC": 19,
+    "humidityPct": 67,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T08:07:14.248Z",
+    "windSpeedKts": 20,
+    "windGustKts": 27,
+    "windDirectionDeg": 77,
+    "temperatureC": 18.2,
+    "humidityPct": 67,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T08:37:14.248Z",
+    "windSpeedKts": 14.7,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 259,
+    "temperatureC": 17.6,
+    "humidityPct": 73,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T09:07:14.248Z",
+    "windSpeedKts": 16.8,
+    "windGustKts": 22.7,
+    "windDirectionDeg": 71,
+    "temperatureC": 22.8,
+    "humidityPct": 68,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T09:37:14.248Z",
+    "windSpeedKts": 18,
+    "windGustKts": 24.3,
+    "windDirectionDeg": 92,
+    "temperatureC": 22.9,
+    "humidityPct": 70,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T10:07:14.248Z",
+    "windSpeedKts": 13.5,
+    "windGustKts": 18.2,
+    "windDirectionDeg": 80,
+    "temperatureC": 16.3,
+    "humidityPct": 67,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T10:37:14.248Z",
+    "windSpeedKts": 24.8,
+    "windGustKts": 33.4,
+    "windDirectionDeg": 261,
+    "temperatureC": 22.2,
+    "humidityPct": 68,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T11:07:14.248Z",
+    "windSpeedKts": 25.5,
+    "windGustKts": 34.4,
+    "windDirectionDeg": 90,
+    "temperatureC": 19.3,
+    "humidityPct": 61,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T11:37:14.248Z",
+    "windSpeedKts": 20.4,
+    "windGustKts": 27.6,
+    "windDirectionDeg": 74,
+    "temperatureC": 17.3,
+    "humidityPct": 65,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T12:07:14.248Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 24,
+    "windDirectionDeg": 73,
+    "temperatureC": 20.3,
+    "humidityPct": 71,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T12:37:14.248Z",
+    "windSpeedKts": 17.7,
+    "windGustKts": 24,
+    "windDirectionDeg": 254,
+    "temperatureC": 19.7,
+    "humidityPct": 69,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T13:07:14.248Z",
+    "windSpeedKts": 18.9,
+    "windGustKts": 25.5,
+    "windDirectionDeg": 99,
+    "temperatureC": 22.5,
+    "humidityPct": 61,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T13:37:14.248Z",
+    "windSpeedKts": 17,
+    "windGustKts": 22.9,
+    "windDirectionDeg": 256,
+    "temperatureC": 21.6,
+    "humidityPct": 76,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T14:07:14.248Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 18.1,
+    "windDirectionDeg": 275,
+    "temperatureC": 23.3,
+    "humidityPct": 58,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T14:37:14.248Z",
+    "windSpeedKts": 18.9,
+    "windGustKts": 25.6,
+    "windDirectionDeg": 102,
+    "temperatureC": 18.7,
+    "humidityPct": 74,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T15:07:14.248Z",
+    "windSpeedKts": 23.3,
+    "windGustKts": 31.5,
+    "windDirectionDeg": 262,
+    "temperatureC": 17,
+    "humidityPct": 66,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T15:37:14.248Z",
+    "windSpeedKts": 16.5,
+    "windGustKts": 22.2,
+    "windDirectionDeg": 81,
+    "temperatureC": 21.2,
+    "humidityPct": 62,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T16:07:14.248Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 23.7,
+    "windDirectionDeg": 85,
+    "temperatureC": 22,
+    "humidityPct": 71,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T16:37:14.248Z",
+    "windSpeedKts": 25,
+    "windGustKts": 33.7,
+    "windDirectionDeg": 84,
+    "temperatureC": 19.6,
+    "humidityPct": 58,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T17:07:14.248Z",
+    "windSpeedKts": 14.3,
+    "windGustKts": 19.4,
+    "windDirectionDeg": 277,
+    "temperatureC": 23.4,
+    "humidityPct": 76,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T17:37:14.248Z",
+    "windSpeedKts": 18.4,
+    "windGustKts": 24.9,
+    "windDirectionDeg": 279,
+    "temperatureC": 16.2,
+    "humidityPct": 66,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T18:07:14.248Z",
+    "windSpeedKts": 14.4,
+    "windGustKts": 19.5,
+    "windDirectionDeg": 258,
+    "temperatureC": 23.2,
+    "humidityPct": 65,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T18:37:14.248Z",
+    "windSpeedKts": 19.6,
+    "windGustKts": 26.5,
+    "windDirectionDeg": 94,
+    "temperatureC": 19.8,
+    "humidityPct": 76,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T19:07:14.248Z",
+    "windSpeedKts": 19.4,
+    "windGustKts": 26.2,
+    "windDirectionDeg": 265,
+    "temperatureC": 17.4,
+    "humidityPct": 77,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T19:37:14.248Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 29.6,
+    "windDirectionDeg": 80,
+    "temperatureC": 21.5,
+    "humidityPct": 61,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T20:07:14.248Z",
+    "windSpeedKts": 16.5,
+    "windGustKts": 22.2,
+    "windDirectionDeg": 273,
+    "temperatureC": 23.7,
+    "humidityPct": 76,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T20:37:14.248Z",
+    "windSpeedKts": 16.3,
+    "windGustKts": 22,
+    "windDirectionDeg": 260,
+    "temperatureC": 20.4,
+    "humidityPct": 69,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T21:07:14.248Z",
+    "windSpeedKts": 23.8,
+    "windGustKts": 32.2,
+    "windDirectionDeg": 108,
+    "temperatureC": 16,
+    "humidityPct": 65,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T21:37:14.248Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 21.4,
+    "windDirectionDeg": 275,
+    "temperatureC": 17.4,
+    "humidityPct": 70,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T22:07:14.248Z",
+    "windSpeedKts": 18.5,
+    "windGustKts": 24.9,
+    "windDirectionDeg": 282,
+    "temperatureC": 16.4,
+    "humidityPct": 77,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T22:37:14.248Z",
+    "windSpeedKts": 24.6,
+    "windGustKts": 33.2,
+    "windDirectionDeg": 101,
+    "temperatureC": 22.9,
+    "humidityPct": 64,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T23:07:14.248Z",
+    "windSpeedKts": 23.5,
+    "windGustKts": 31.7,
+    "windDirectionDeg": 288,
+    "temperatureC": 23.6,
+    "humidityPct": 70,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-15T23:37:14.248Z",
+    "windSpeedKts": 22.8,
+    "windGustKts": 30.7,
+    "windDirectionDeg": 101,
+    "temperatureC": 18.9,
+    "humidityPct": 72,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T00:07:14.248Z",
+    "windSpeedKts": 12.6,
+    "windGustKts": 17,
+    "windDirectionDeg": 275,
+    "temperatureC": 18.7,
+    "humidityPct": 59,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T00:37:14.248Z",
+    "windSpeedKts": 12.2,
+    "windGustKts": 16.4,
+    "windDirectionDeg": 79,
+    "temperatureC": 21.2,
+    "humidityPct": 72,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T01:07:14.248Z",
+    "windSpeedKts": 22.8,
+    "windGustKts": 30.8,
+    "windDirectionDeg": 74,
+    "temperatureC": 17.1,
+    "humidityPct": 74,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T01:37:14.248Z",
+    "windSpeedKts": 13.4,
+    "windGustKts": 18.1,
+    "windDirectionDeg": 100,
+    "temperatureC": 23.4,
+    "humidityPct": 68,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T02:07:14.248Z",
+    "windSpeedKts": 18.8,
+    "windGustKts": 25.4,
+    "windDirectionDeg": 283,
+    "temperatureC": 18.7,
+    "humidityPct": 67,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T02:37:14.248Z",
+    "windSpeedKts": 14.7,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 274,
+    "temperatureC": 22.1,
+    "humidityPct": 61,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T03:07:14.248Z",
+    "windSpeedKts": 17.3,
+    "windGustKts": 23.4,
+    "windDirectionDeg": 108,
+    "temperatureC": 23.4,
+    "humidityPct": 65,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T03:37:14.248Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 29.5,
+    "windDirectionDeg": 264,
+    "temperatureC": 17,
+    "humidityPct": 72,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T04:07:14.248Z",
+    "windSpeedKts": 23.8,
+    "windGustKts": 32.1,
+    "windDirectionDeg": 75,
+    "temperatureC": 20.9,
+    "humidityPct": 67,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T04:37:14.248Z",
+    "windSpeedKts": 16,
+    "windGustKts": 21.5,
+    "windDirectionDeg": 283,
+    "temperatureC": 20.3,
+    "humidityPct": 71,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T05:07:14.248Z",
+    "windSpeedKts": 24.5,
+    "windGustKts": 33,
+    "windDirectionDeg": 80,
+    "temperatureC": 17.8,
+    "humidityPct": 71,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T05:37:14.248Z",
+    "windSpeedKts": 19.2,
+    "windGustKts": 25.9,
+    "windDirectionDeg": 283,
+    "temperatureC": 23.6,
+    "humidityPct": 69,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T06:07:14.248Z",
+    "windSpeedKts": 22.4,
+    "windGustKts": 30.3,
+    "windDirectionDeg": 83,
+    "temperatureC": 21.3,
+    "humidityPct": 66,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T06:37:14.248Z",
+    "windSpeedKts": 21.8,
+    "windGustKts": 29.5,
+    "windDirectionDeg": 104,
+    "temperatureC": 18.8,
+    "humidityPct": 69,
+    "pressureHPa": 1016
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T07:07:14.248Z",
+    "windSpeedKts": 17.3,
+    "windGustKts": 23.4,
+    "windDirectionDeg": 85,
+    "temperatureC": 18.3,
+    "humidityPct": 60,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T07:37:14.248Z",
+    "windSpeedKts": 23.8,
+    "windGustKts": 32.1,
+    "windDirectionDeg": 263,
+    "temperatureC": 17.6,
+    "humidityPct": 70,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T08:07:14.248Z",
+    "windSpeedKts": 21.9,
+    "windGustKts": 29.6,
+    "windDirectionDeg": 256,
+    "temperatureC": 20.6,
+    "humidityPct": 60,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T08:37:14.248Z",
+    "windSpeedKts": 25.5,
+    "windGustKts": 34.4,
+    "windDirectionDeg": 76,
+    "temperatureC": 20.2,
+    "humidityPct": 72,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T09:07:14.248Z",
+    "windSpeedKts": 17.9,
+    "windGustKts": 24.2,
+    "windDirectionDeg": 100,
+    "temperatureC": 21.5,
+    "humidityPct": 65,
+    "pressureHPa": 1015
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T09:37:14.248Z",
+    "windSpeedKts": 22.7,
+    "windGustKts": 30.7,
+    "windDirectionDeg": 285,
+    "temperatureC": 17,
+    "humidityPct": 68,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T10:07:14.248Z",
+    "windSpeedKts": 14.7,
+    "windGustKts": 19.8,
+    "windDirectionDeg": 98,
+    "temperatureC": 20.1,
+    "humidityPct": 66,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T10:37:14.248Z",
+    "windSpeedKts": 25.8,
+    "windGustKts": 34.8,
+    "windDirectionDeg": 281,
+    "temperatureC": 22.1,
+    "humidityPct": 60,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T11:07:14.248Z",
+    "windSpeedKts": 20.3,
+    "windGustKts": 27.4,
+    "windDirectionDeg": 102,
+    "temperatureC": 16.2,
+    "humidityPct": 66,
+    "pressureHPa": 1008
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T11:37:14.248Z",
+    "windSpeedKts": 15.7,
+    "windGustKts": 21.2,
+    "windDirectionDeg": 84,
+    "temperatureC": 23.8,
+    "humidityPct": 76,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T12:07:14.248Z",
+    "windSpeedKts": 15.3,
+    "windGustKts": 20.6,
+    "windDirectionDeg": 100,
+    "temperatureC": 22,
+    "humidityPct": 63,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T12:37:14.248Z",
+    "windSpeedKts": 23.1,
+    "windGustKts": 31.2,
+    "windDirectionDeg": 94,
+    "temperatureC": 17.2,
+    "humidityPct": 74,
+    "pressureHPa": 1009
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T13:07:14.248Z",
+    "windSpeedKts": 17.6,
+    "windGustKts": 23.8,
+    "windDirectionDeg": 286,
+    "temperatureC": 21.9,
+    "humidityPct": 59,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T13:37:14.248Z",
+    "windSpeedKts": 14.7,
+    "windGustKts": 19.9,
+    "windDirectionDeg": 70,
+    "temperatureC": 20,
+    "humidityPct": 69,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T14:07:14.248Z",
+    "windSpeedKts": 15.9,
+    "windGustKts": 21.4,
+    "windDirectionDeg": 90,
+    "temperatureC": 18.9,
+    "humidityPct": 76,
+    "pressureHPa": 1017
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T14:37:14.248Z",
+    "windSpeedKts": 16.7,
+    "windGustKts": 22.6,
+    "windDirectionDeg": 76,
+    "temperatureC": 23.1,
+    "humidityPct": 68,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T15:07:14.248Z",
+    "windSpeedKts": 21.2,
+    "windGustKts": 28.6,
+    "windDirectionDeg": 252,
+    "temperatureC": 19.7,
+    "humidityPct": 69,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T15:37:14.248Z",
+    "windSpeedKts": 25.2,
+    "windGustKts": 34,
+    "windDirectionDeg": 76,
+    "temperatureC": 17.7,
+    "humidityPct": 65,
+    "pressureHPa": 1012
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T16:07:14.248Z",
+    "windSpeedKts": 23.4,
+    "windGustKts": 31.6,
+    "windDirectionDeg": 73,
+    "temperatureC": 21.4,
+    "humidityPct": 78,
+    "pressureHPa": 1010
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T16:37:14.248Z",
+    "windSpeedKts": 13,
+    "windGustKts": 17.6,
+    "windDirectionDeg": 97,
+    "temperatureC": 23.6,
+    "humidityPct": 78,
+    "pressureHPa": 1018
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T17:07:14.248Z",
+    "windSpeedKts": 22.2,
+    "windGustKts": 29.9,
+    "windDirectionDeg": 284,
+    "temperatureC": 19.4,
+    "humidityPct": 73,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T17:37:14.248Z",
+    "windSpeedKts": 20.2,
+    "windGustKts": 27.2,
+    "windDirectionDeg": 288,
+    "temperatureC": 20.6,
+    "humidityPct": 67,
+    "pressureHPa": 1013
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T18:07:14.248Z",
+    "windSpeedKts": 15.7,
+    "windGustKts": 21.2,
+    "windDirectionDeg": 83,
+    "temperatureC": 22.5,
+    "humidityPct": 75,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T18:37:14.248Z",
+    "windSpeedKts": 15,
+    "windGustKts": 20.3,
+    "windDirectionDeg": 100,
+    "temperatureC": 22.6,
+    "humidityPct": 72,
+    "pressureHPa": 1011
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T19:07:14.248Z",
+    "windSpeedKts": 22,
+    "windGustKts": 29.7,
+    "windDirectionDeg": 253,
+    "temperatureC": 23.1,
+    "humidityPct": 71,
+    "pressureHPa": 1014
+  },
+  {
+    "stationId": "punta-paloma",
+    "timestamp": "2025-11-16T19:37:14.248Z",
+    "windSpeedKts": 14.9,
+    "windGustKts": 20.1,
+    "windDirectionDeg": 109,
+    "temperatureC": 23.7,
+    "humidityPct": 68,
+    "pressureHPa": 1017
+  }
+]
