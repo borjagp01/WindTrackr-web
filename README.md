@@ -58,7 +58,7 @@
 
 ```bash
 git clone <repo-url>
-cd estacion-meteorologica
+cd WindTrackr-web
 npm install
 ```
 
