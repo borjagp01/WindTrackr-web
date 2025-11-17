@@ -1,392 +1,244 @@
-# 🌬️ WindTrackr# 🌬️ WindTrackr
+# 🌬️ WindTrackr
+
+**WindTrackr** es un visor de estaciones meteorológicas especializado en datos de viento, diseñado para entusiastas del windsurf, kitesurf, vela y cualquier actividad relacionada con el viento en la zona del Estrecho de Gibraltar.
+
+![Version](https://img.shields.io/badge/version-0.3.0--realtime-blue)
+![Phase](https://img.shields.io/badge/phase-2.1%20(Real--time)-green)
+![Status](https://img.shields.io/badge/status-production%20ready-success)
 
 
 
-**WindTrackr** es un visor de estaciones meteorológicas especializado en datos de viento, diseñado para entusiastas del windsurf, kitesurf, vela y cualquier actividad relacionada con el viento en la zona del Estrecho de Gibraltar.**WindTrackr** es un visor de estaciones meteorológicas especializado en datos de viento, diseñado para entusiastas del windsurf, kitesurf, vela y cualquier actividad relacionada con el viento en la zona del Estrecho de Gibraltar.
+---
 
+## ✨ Características Actuales
 
+### ⚡ Actualización en Tiempo Real (Fase 2.1) ✅
 
-![Version](https://img.shields.io/badge/version-0.2.1--firebase-blue)![Version](https://img.shields.io/badge/version-0.2.1--firebase-blue)
+- ✅ **Actualizaciones automáticas**: Los datos se sincronizan sin recargar la página
+- ✅ **Latencia <1 segundo**: Cambios en Firebase reflejados casi instantáneamente
+- ✅ **Suscripciones inteligentes**: Se re-suscriben automáticamente al cambiar filtros
+- ✅ **Cleanup automático**: Sin memory leaks gracias al patrón useEffect
 
-![Phase](https://img.shields.io/badge/phase-1%20Complete-green)![Phase](https://img.shields.io/badge/phase-1%20(Firebase%20Complete)-green)
+### 🔥 Integración Firebase Completa
 
-![Status](https://img.shields.io/badge/status-production%20ready-success)![Status](https://img.shields.io/badge/status-production%20ready-success)
-
-
-
----## ✨ Características Actuales
-
-
-
-## 📋 Tabla de Contenidos### Integración Firebase Completa ✅
-
-
-
-- [Características](#-características-actuales)- ✅ **Firebase Realtime Database**: Conexión a datos reales desde Arduino
-
-- [Stack Tecnológico](#️-stack-tecnológico)- ✅ **Autenticación Anónima**: Login automático sin intervención del usuario
-
-- [Inicio Rápido](#-inicio-rápido)- ✅ **Visualización multi-estación**: Soporte para múltiples estaciones meteorológicas
-
-- [Uso del Proyecto](#-uso-del-proyecto)- ✅ **Selector de estación**: Buscador con filtrado en tiempo real
-
-- [Estructura del Proyecto](#-estructura-del-proyecto)- ✅ **Brújula de viento**: Dirección, velocidad media y rachas en tiempo real
-
-- [Firebase Integration](#-firebase-integration)- ✅ **Gráficas interactivas**: Series temporales de 24h y 7 días con scroll completo
-
-- [Troubleshooting](#-troubleshooting)- ✅ **Filtrado inteligente por tiempo**: Muestra datos de últimas 24h/7d, con fallback a datos disponibles
-
-- [Roadmap](#️-roadmap)- ✅ **Pronóstico**: Previsión de viento y temperatura para las próximas 48 horas
-
-- [Contribución](#-contribución)- ✅ **Mapa interactivo**: Leaflet con OpenStreetMap mostrando todas las estaciones
-
+- ✅ **Firebase Realtime Database**: Conexión a datos reales desde Arduino con `onValue()`
+- ✅ **Autenticación Anónima**: Login automático sin intervención del usuario
+- ✅ **Visualización multi-estación**: Soporte para múltiples estaciones meteorológicas
+- ✅ **Selector de estación**: Buscador con filtrado en tiempo real
+- ✅ **Brújula de viento**: Dirección, velocidad media y rachas en tiempo real
+- ✅ **Gráficas interactivas**: Series temporales de 24h y 7 días con scroll completo
+- ✅ **Filtrado inteligente por tiempo**: Muestra datos de últimas 24h/7d, con fallback a datos disponibles
+- ✅ **Pronóstico**: Previsión de viento y temperatura para las próximas 48 horas
+- ✅ **Mapa interactivo**: Leaflet con OpenStreetMap mostrando todas las estaciones
 - ✅ **Estado inteligente**: Detecta automáticamente estaciones offline (>5 min sin datos)
-
----- ✅ **Manejo de datos antiguos**: Muestra últimas lecturas disponibles si no hay datos recientes
-
+- ✅ **Manejo de datos antiguos**: Muestra últimas lecturas disponibles si no hay datos recientes
 - ✅ **Alertas de sensores**: Notifica cuando sensores reportan valores 0
-
-## ✨ Características Actuales- ✅ **Modo oscuro**: Toggle persistente con soporte de preferencias del sistema
-
+- ✅ **Modo oscuro**: Toggle persistente con soporte de preferencias del sistema
 - ✅ **Responsive design**: Optimizado para móvil, tablet y escritorio
-
-### Fase 1 Completada ✅- ✅ **i18n preparado**: Infraestructura react-i18next (actualmente en español)
-
+- ✅ **i18n preparado**: Infraestructura react-i18next (actualmente en español)
 - ✅ **DataSource abstraction**: Cambio transparente entre mock y Firebase
 
-- ✅ **Firebase Realtime Database**: Conexión a datos reales desde Arduino
+---
 
-- ✅ **Autenticación Anónima Automática**: Sin formularios, transparente al usuario## 🛠️ Stack Tecnológico
+## 📋 Tabla de Contenidos
 
-- ✅ **Visualización Multi-Estación**: Soporte para múltiples estaciones meteorológicas
-
-- ✅ **Selector de Estación**: Buscador con filtrado en tiempo real### Core
-
-- ✅ **Brújula de Viento**: Dirección, velocidad media y rachas actualizadas- **Vite** 5.x - Build tool ultrarrápido
-
-- ✅ **Gráficas Interactivas**: Series temporales 24h/7d con Recharts- **React** 19.x - Framework UI
-
-- ✅ **Filtrado Inteligente**: Por tiempo real con fallback a datos disponibles- **TypeScript** 5.x - Type safety
-
-- ✅ **Estado Dinámico**: Detecta estaciones offline (>5 min sin datos)
-
-- ✅ **Alertas de Sensores**: Notifica sensores con valor 0### UI & Styling
-
-- ✅ **Pronóstico**: Previsión de viento y temperatura 48h- **Tailwind CSS** 4.x - Utility-first CSS
-
-- ✅ **Mapa Interactivo**: Leaflet con OpenStreetMap- **Recharts** 3.x - Gráficas interactivas
-
-- ✅ **Modo Oscuro**: Toggle persistente con soporte system preference- **React Leaflet** 5.x - Mapas con OpenStreetMap
-
-- ✅ **Responsive Design**: Optimizado móvil, tablet y escritorio
-
-- ✅ **i18n Ready**: Infraestructura react-i18next (español)### Estado & Navegación
-
-- **Zustand** 5.x - Estado global ligero
-
----- **React Router** 7.x - Routing SPA
-
-
-
-## 🛠️ Stack Tecnológico### Backend & Auth
-
-- **Firebase** 12.x - Realtime Database + Authentication
-
-### Core- **Firebase Hosting** - Deploy y CDN
-
-- **Vite** 5.x - Build tool
-
-- **React** 19.x - UI Framework### Testing & Quality
-
-- **TypeScript** 5.x - Type safety- **Vitest** + **React Testing Library** - Unit & integration tests
-
-- **ESLint** + **Prettier** - Code quality
-
-### UI & Styling
-
-- **Tailwind CSS** 4.x - Utility-first CSS## 🚀 Inicio Rápido
-
-- **Recharts** 3.x - Gráficas interactivas
-
-- **React Leaflet** 5.x - Mapas### 1. Requisitos Previos
-
-
-
-### Estado & Navegación- Node.js 18+ y npm
-
-- **Zustand** 5.x - Estado global- Cuenta de Firebase (gratis)
-
-- **React Router** 7.x - Routing SPA- Git
-
-
-
-### Backend & Auth### 2. Instalación
-
-- **Firebase** 12.x - Realtime Database + Auth
-
-- **Firebase Hosting** - Deploy```bash
-
-# Clonar repositorio
-
-### Testing & Qualitygit clone <repo-url>
-
-- **Vitest** + **React Testing Library**cd estacion-meteorologica
-
-- **ESLint** + **Prettier**
-
-# Instalar dependencias
-
----npm install
-
-```
+- [Características](#-características-actuales)
+- [Stack Tecnológico](#-stack-tecnológico)
+- [Inicio Rápido](#-inicio-rápido)
+- [Uso del Proyecto](#-uso-del-proyecto)
+- [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Firebase Integration](#-firebase-integration)
+- [Troubleshooting](#-troubleshooting)
+- [Roadmap](#-roadmap)
+- [Contribución](#-contribución)
 
 ## 🚀 Inicio Rápido
 
-### 3. Configuración de Firebase
-
 ### 1. Clonar e Instalar
+
+```bash
+git clone <repo-url>
+cd estacion-meteorologica
+npm install
+```
+
+### 2. Configurar Firebase
 
 #### A. Habilitar Autenticación Anónima (CRÍTICO ⚠️)
 
-```bash
+**La app NO funcionará sin este paso:**
 
-git clone <repo-url>**La app NO funcionará sin este paso:**
-
-cd estacion-meteorologica
-
-npm install1. Ve a [Firebase Console](https://console.firebase.google.com/)
-
-```2. Selecciona tu proyecto
-
-3. **Authentication** > **Sign-in method**
-
-### 2. Configurar Firebase4. **Habilita "Anonymous"** ✅
-
-
-
-#### A. Habilitar Anonymous Auth (CRÍTICO ⚠️)La app se autentica automáticamente al cargar. Si no habilitas Anonymous Auth, verás el error "Permission denied".
-
-
-
-1. Ve a [Firebase Console](https://console.firebase.google.com/)#### B. Configurar Variables de Entorno
-
+1. Ve a [Firebase Console](https://console.firebase.google.com/)
 2. Selecciona tu proyecto
-
-3. **Authentication** > **Sign-in method**Crea `.env` basándote en `.env.example`:
-
+3. **Authentication** > **Sign-in method**
 4. **Habilita "Anonymous"** ✅
 
+La app se autentica automáticamente al cargar. Si no habilitas Anonymous Auth, verás el error "Permission denied".
+
+#### B. Configurar Variables de Entorno
+
+Crea `.env` basándote en `.env.example`:
+
 ```env
-
-**Sin este paso la app no funcionará** (error "Permission denied")# Data source: 'mock' o 'firebase'
-
+# Data source: 'mock' o 'firebase'
 VITE_DATA_SOURCE=firebase
 
-#### B. Crear archivo `.env`
-
 # Firebase Config (obtener de Firebase Console > Project Settings)
-
-Copia `.env.example` a `.env` y configura:VITE_FIREBASE_API_KEY=your_api_key
-
+VITE_FIREBASE_API_KEY=your_api_key
 VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-
-```envVITE_FIREBASE_DATABASE_URL=https://your_project.firebaseio.com
-
-VITE_DATA_SOURCE=firebaseVITE_FIREBASE_PROJECT_ID=your_project_id
-
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-
-# Obtener de Firebase Console > Project Settings > Your appsVITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-
-VITE_FIREBASE_API_KEY=your_api_keyVITE_FIREBASE_APP_ID=your_app_id
-
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.comVITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
-
-VITE_FIREBASE_DATABASE_URL=https://your_project.firebaseio.com```
-
+VITE_FIREBASE_DATABASE_URL=https://your_project.firebaseio.com
 VITE_FIREBASE_PROJECT_ID=your_project_id
-
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com### 4. Ejecutar en Desarrollo
-
+VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
+VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
+```
 
-VITE_FIREBASE_APP_ID=your_app_id```bash
+### 3. Ejecutar en Desarrollo
 
-VITE_FIREBASE_MEASUREMENT_ID=your_measurement_idnpm run dev
+```bash
+npm run dev
+```
 
-``````
+La app estará en `http://localhost:5173`
 
+**Verificación:**
+- ✅ Consola: `🔐 Firebase: User authenticated`
+- ✅ Panel debug (esquina inferior derecha): Estado verde
+- ✅ UI: Estaciones visibles con actualizaciones en tiempo real
 
-
-### 3. EjecutarLa app estará en `http://localhost:5173`
-
-
-
-```bash**Verificación:**
-
-npm run dev- ✅ Consola: `🔐 Firebase: User authenticated`
-
-```- ✅ Panel debug (esquina inferior derecha): Estado verde
-
-- ✅ UI: Estaciones visibles
-
-Abre `http://localhost:5173`
+---
 
 ## 📜 Scripts Disponibles
 
-**Verificación:**
+### Desarrollo
 
-- ✅ Consola: `🔐 Firebase: User authenticated`### Desarrollo
-
-- ✅ Panel debug (esquina derecha): Estado verde```bash
-
-- ✅ UI: Estaciones visiblesnpm run dev         # Servidor de desarrollo
-
+```bash
+npm run dev         # Servidor de desarrollo
 npm run build       # Build para producción
-
----npm run preview     # Preview del build local
-
+npm run preview     # Preview del build local
 ```
-
-## 🎮 Uso del Proyecto
 
 ### Testing & Quality
 
-### Scripts Disponibles```bash
-
+```bash
 npm run test        # Ejecutar tests
+npm run test:watch  # Tests en modo watch
+npm run lint        # ESLint
+npm run format      # Prettier
+```
 
-#### Desarrollonpm run test:watch  # Tests en modo watch
-
-```bashnpm run lint        # ESLint
-
-npm run dev         # Servidor desarrollo (localhost:5173)npm run format      # Prettier
-
-npm run build       # Build producción```
-
-npm run preview     # Preview del build
-
-```### Firebase Utilities
+### Firebase Utilities
 
 ```bash
+npm run inspect-firebase  # Inspeccionar estructura de Firebase DB
+npm run seed-firebase     # Poblar Firebase con datos mock (testing)
+```
 
-#### Testing & Qualitynpm run inspect-firebase  # Inspeccionar estructura de Firebase DB
+### Deploy
 
-```bashnpm run seed-firebase     # Poblar Firebase con datos mock (testing)
-
-npm run test        # Ejecutar tests```
-
-npm run test:watch  # Tests en watch mode
-
-npm run lint        # ESLint### Deploy
-
-npm run format      # Prettier```bash
-
-```firebase deploy --only hosting              # Deploy a producción
-
+```bash
+firebase deploy --only hosting              # Deploy a producción
 firebase hosting:channel:deploy preview     # Deploy a canal preview
+```
 
-#### Firebase Utilities```
+### Switching: Mock ↔ Firebase
+
+Cambiar entre entornos modificando `.env`:
+
+```env
+# Desarrollo con datos mock (sin Firebase)
+VITE_DATA_SOURCE=mock
+
+# Producción con datos reales
+VITE_DATA_SOURCE=firebase
+```
+
+No requiere cambios en código - el `DataSource` abstraction lo maneja.
+
+### Inspeccionar Firebase DB
+
+Antes de ejecutar la app, verifica la estructura de datos:
 
 ```bash
+npm run inspect-firebase
+```
 
-npm run inspect-firebase  # Inspeccionar estructura Firebase DB## 📁 Estructura del Proyecto
+**Salida esperada:**
 
-npm run seed-firebase     # Poblar con datos mock (testing)
+```
+🔍 Inspecting Firebase Realtime Database...
+📊 Root keys: [ 'weather_stations' ]
+🏠 Stations found: V1_STATION_TEST, catarroja
+📈 Sample reading structure: {...}
+```
 
-``````
+### Poblar con Datos de Prueba
 
+Si tu Firebase está vacío o quieres testing:
+
+```bash
+npm run seed-firebase
+```
+
+Esto sube datos mock con 5 estaciones + readings + forecasts.
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
 src/
-
-#### Deploy├── app/                      # App shell & configuración
-
-```bash│   ├── firebase.ts          # Firebase SDK init
-
-firebase deploy --only hosting              # Deploy producción│   ├── useFirebaseAuth.ts   # Hook de autenticación automática
-
-firebase hosting:channel:deploy preview     # Deploy preview│   ├── AppLayout.tsx        # Layout principal
-
-```│   └── router.tsx           # React Router config
-
+├── app/                      # App shell & configuración
+│   ├── firebase.ts          # Firebase SDK init
+│   ├── useFirebaseAuth.ts   # Hook de autenticación automática
+│   ├── AppLayout.tsx        # Layout principal
+│   └── router.tsx           # React Router config
 │
-
-### Switching: Mock ↔ Firebase├── components/              # Componentes UI reutilizables
-
+├── components/              # Componentes UI reutilizables
 │   ├── BasicInfoTile/       # Info + estado de estación
-
-Cambiar entre entornos modificando `.env`:│   ├── FirebaseDebugPanel/  # Panel de debug (solo dev)
-
+│   ├── FirebaseDebugPanel/  # Panel de debug (solo dev)
 │   ├── GraphViewer/         # Gráficas con Recharts
-
-```env│   ├── NavBar/              # Barra de navegación
-
-# Desarrollo con datos mock (sin Firebase)│   ├── StationMap/          # Mapa con Leaflet
-
-VITE_DATA_SOURCE=mock│   ├── StationSelector/     # Selector con búsqueda
-
+│   ├── NavBar/              # Barra de navegación
+│   ├── StationMap/          # Mapa con Leaflet
+│   ├── StationSelector/     # Selector con búsqueda
 │   ├── ThemeToggle/         # Toggle modo oscuro
-
-# Producción con datos reales│   ├── WeatherForecast/     # Pronóstico 48h
-
-VITE_DATA_SOURCE=firebase│   └── WindCompass/         # Brújula de viento
-
-```│
-
+│   ├── WeatherForecast/     # Pronóstico 48h
+│   └── WindCompass/         # Brújula de viento
+│
 ├── data/
-
-No requiere cambios en código - el `DataSource` abstraction lo maneja.│   └── services/            # Data layer (Repository pattern)
-
+│   └── services/            # Data layer (Repository pattern)
 │       ├── DataSource.ts           # Interface abstracta
-
-### Inspeccionar Firebase DB│       ├── MockDataSource.ts       # Implementación mock
-
-│       ├── FirebaseDataSource.ts   # Implementación Firebase
-
-Antes de ejecutar la app, verifica la estructura de datos:│       └── index.ts                # Factory function
-
+│       ├── MockDataSource.ts       # Implementación mock
+│       ├── FirebaseDataSource.ts   # Implementación Firebase (real-time)
+│       └── index.ts                # Factory function
 │
-
-```bash├── features/
-
-npm run inspect-firebase│   └── stations/            # Domain logic de estaciones
-
-```│       ├── hooks/           # Custom hooks (useStations, useReadings, etc.)
-
+├── features/
+│   └── stations/            # Domain logic de estaciones
+│       ├── hooks/           # Custom hooks (useStationsRealtime, useReadingsRealtime, etc.)
 │       └── store/           # Zustand store
-
-**Salida esperada:**│
-
-```├── i18n/                    # Internacionalización
-
-🔍 Inspecting Firebase Realtime Database...│   └── config.ts            # i18next config + traducciones
-
-📊 Root keys: [ 'weather_stations' ]│
-
-🏠 Stations found: V1_STATION_TEST, catarroja├── pages/                   # Páginas de la app
-
-📈 Sample reading structure: {...}│   ├── Home.tsx            # Página principal
-
-```│   ├── Station.tsx         # Detalle de estación
-
-│   └── NotFound.tsx        # 404
-
-### Poblar con Datos de Prueba│
-
-├── theme/                   # Sistema de temas
-
-Si tu Firebase está vacío o quieres testing:│   └── useTheme.ts         # Hook de dark mode
-
 │
-
-```bash├── types/                   # TypeScript definitions
-
-npm run seed-firebase│   └── index.ts            # Tipos globales
-
-```│
-
+├── i18n/                    # Internacionalización
+│   └── config.ts            # i18next config + traducciones
+│
+├── pages/                   # Páginas de la app
+│   ├── Home.tsx            # Página principal
+│   ├── Station.tsx         # Detalle de estación
+│   └── NotFound.tsx        # 404
+│
+├── theme/                   # Sistema de temas
+│   └── useTheme.ts         # Hook de dark mode
+│
+├── types/                   # TypeScript definitions
+│   └── index.ts            # Tipos globales
+│
 └── utils/                   # Funciones utilidad
+    └── index.ts            # Formatters, helpers, etc.
 
-Esto sube datos mock con 5 estaciones + readings + forecasts.    └── index.ts            # Formatters, helpers, etc.
+scripts/                     # Utilidades Node.js
+├── inspectFirebase.ts      # Inspeccionar Firebase DB
+└── seedFirebase.ts         # Poblar datos de prueba
+```
 
 
 
@@ -654,105 +506,64 @@ if (readings.length === 0 && allReadings.length > 0) {- ✅ Utilidades (formateo
 
 ## 🗺️ Roadmap
 
-#### 2. Detección Estado Offline
-
 ### ✅ Fase 0: Mock Data & UI (COMPLETADO)
 
-```typescript
-
-// Si última lectura > 5 minutos, marca offline- ✅ Proyecto base con Vite + React + TypeScript
-
-const isDataStale = (Date.now() - lastReading) > 5 * 60 * 1000;- ✅ UI completa con 9 componentes reutilizables
-
-const status = isDataStale ? 'offline' : 'online';- ✅ Mock data para desarrollo
-
-```- ✅ Tests con Vitest + React Testing Library
-
+- ✅ Proyecto base con Vite + React + TypeScript
+- ✅ UI completa con 9 componentes reutilizables
+- ✅ Mock data para desarrollo
+- ✅ Tests con Vitest + React Testing Library
 - ✅ Deploy a Firebase Hosting
-
-#### 3. Alertas Visuales
 
 ### ✅ Fase 1: Firebase Integration (COMPLETADO)
 
-- 🟡 **Amarillo**: Sensor reporta 0 (defectuoso/offline)
-
-- 🔵 **Azul**: Datos antiguos (estación no envía actualizaciones)- ✅ Firebase Realtime Database conectado
-
+- ✅ Firebase Realtime Database conectado
 - ✅ FirebaseDataSource implementado
-
----- ✅ Firebase Anonymous Auth automático
-
+- ✅ Firebase Anonymous Auth automático
 - ✅ Scripts de inspección y seed
-
-## 🆘 Troubleshooting- ✅ Panel de debug para desarrollo
-
+- ✅ Panel de debug para desarrollo
 - ✅ Manejo inteligente de datos antiguos
-
-### "Permission denied"- ✅ Alertas de sensores offline
-
+- ✅ Alertas de sensores offline
 - ✅ Estado dinámico de estaciones
-
-**Causa:** Anonymous Auth no habilitado- ✅ Filtrado por tiempo con fallback
-
+- ✅ Filtrado por tiempo con fallback
 - ✅ Soporte completo para estructura Arduino V1
 
-**Solución:**
+### ✅ Fase 2.1: Actualización en Tiempo Real (COMPLETADO)
 
-1. Firebase Console > Authentication > Sign-in method### ⏳ Fase 2: Real-time & Auth (EN PLANIFICACIÓN)
+- ✅ Real-time subscriptions con `onValue()`
+- ✅ Hooks personalizados con cleanup automático
+- ✅ Migración de componentes a real-time
+- ✅ Re-suscripción automática al cambiar filtros
+- ✅ Sin memory leaks (patrón useEffect)
+- ✅ Latencia < 1 segundo verificada
+- ✅ Documentación completa (ver `FASE2_COMPLETADA.md`)
 
-2. Habilita **Anonymous** ✅
-
-3. Recarga app- [ ] Real-time subscriptions con `onValue()`
+### ⏳ Fase 2.2: Auth Avanzado (EN PLANIFICACIÓN)
 
 - [ ] Google Sign-In (opcional)
-
-### "No stations found"- [ ] Email/Password Auth (opcional)
-
+- [ ] Email/Password Auth (opcional)
 - [ ] Rutas protegidas (admin)
+- [ ] Gestión de usuarios
 
-**Causa:** Base de datos vacía o estructura incorrecta- [ ] Gestión de usuarios
+### 📋 Fase 3: Features Avanzadas
 
-
-
-**Solución:**### 📋 Fase 3: Features Avanzadas
-
-```bash
-
-# Inspeccionar estructura- [ ] PWA con offline support
-
-npm run inspect-firebase- [ ] Notificaciones push para alertas de viento
-
+- [ ] PWA con offline support
+- [ ] Notificaciones push para alertas de viento
 - [ ] Comparativa entre estaciones
-
-# Si está vacía, poblar con datos prueba- [ ] Exportación de datos (CSV/JSON)
-
-npm run seed-firebase- [ ] Históricos más extensos
-
-```- [ ] Dashboard de administración
-
+- [ ] Exportación de datos (CSV/JSON)
+- [ ] Históricos más extensos
+- [ ] Dashboard de administración
 - [ ] Configuración de umbrales de alerta
-
-### App en "Conectando..."
 
 ### 🚀 Fase 4: Optimización
 
-**Causa:** Credenciales Firebase incorrectas
-
 - [ ] Analytics con Firebase Analytics
-
-**Solución:**- [ ] SEO optimizado
-
-1. Verifica variables `VITE_FIREBASE_*` en `.env`- [ ] Code splitting avanzado
-
-2. Compara con Firebase Console > Project Settings- [ ] Performance monitoring
-
-3. Reinicia servidor: `Ctrl+C` → `npm run dev`- [ ] Compression de imágenes
-
+- [ ] SEO optimizado
+- [ ] Code splitting avanzado
+- [ ] Performance monitoring
+- [ ] Compression de imágenes
 - [ ] Service Workers avanzados
 
-### FirebaseDebugPanel no aparece
-
-## 📄 Configuración de Firebase Hosting
+---
 
 **Causa:** Solo visible en desarrollo
 
@@ -992,51 +803,41 @@ Ver [CONTRIBUTING.md](CONTRIBUTING.md) para guía detallada.### "Permission deni
 
 ## 📝 Changelog
 
-**Solución:**
+### v0.3.0-realtime (Fase 2.1 - Dic 2024)
 
-### v0.2.1-firebase (16 Nov 2025)- Verifica que tu Arduino esté enviando datos correctos
+- ✅ **Real-time subscriptions**: Migrado de `get()` a `onValue()` en Firebase
+- ✅ **Hooks real-time**: `useStationsRealtime`, `useStationRealtime`, `useReadingsRealtime`
+- ✅ **Actualización automática**: Datos se sincronizan sin recargar (<1s latencia)
+- ✅ **Re-suscripción inteligente**: Al cambiar filtros se re-subscribe automáticamente
+- ✅ **Cleanup automático**: Patrón useEffect con cleanup para prevenir memory leaks
+- ✅ **Eliminados hooks legacy**: `useStations`, `useStation`, `useReadings` (ya no necesarios)
+- ✅ **Eliminado refetch manual**: Ya no se necesitan botones de recargar
+- ✅ **Documentación completa**: Ver `FASE2_COMPLETADA.md` para detalles técnicos
+- 📊 **Métricas**: +488 LOC, 7 archivos modificados, ~4 horas implementación
 
-- ✅ Filtrado inteligente por tiempo- Revisa en Firebase Console que `wind.speed_knots` no sea 0
+### v0.2.1-firebase (Nov 2024)
 
-- ✅ Estado dinámico estaciones (offline >5min)- Si el sensor está defectuoso, es comportamiento esperado
-
+- ✅ Filtrado inteligente por tiempo
+- ✅ Estado dinámico estaciones (offline >5min)
 - ✅ Alertas sensores con valor 0
-
-- ✅ Fallback datos antiguos### Estado "Fuera de línea" pero hay datos
-
+- ✅ Fallback datos antiguos
 - ✅ Documentación consolidada
 
-**Causa:** Última lectura tiene más de 5 minutos
+### v0.2.0-firebase (Nov 2024)
 
-### v0.2.0-firebase (Nov 2025)
-
-- ✅ Firebase Realtime Database**Solución:**
-
-- ✅ Anonymous Auth automático- Verifica que Arduino esté enviando datos actualizados
-
-- ✅ FirebaseDataSource implementation- Es comportamiento normal si no hay nuevos datos en 5+ min
-
+- ✅ Firebase Realtime Database
+- ✅ Anonymous Auth automático
+- ✅ FirebaseDataSource implementation
 - ✅ Scripts inspect/seed
+- ✅ Panel debug
 
-- ✅ Panel debug## 🔐 Variables de Entorno
+### v0.1.0 (Fase 0)
 
-
-
-### v0.1.0 (Fase 0)```env
-
-- ✅ Proyecto base Vite + React + TS# REQUERIDAS
-
-- ✅ UI completa con mock dataVITE_DATA_SOURCE=firebase                    # 'mock' o 'firebase'
-
+- ✅ Proyecto base Vite + React + TS
+- ✅ UI completa con mock data
 - ✅ Deploy Firebase Hosting
 
-# FIREBASE CONFIG (obtener de Project Settings)
-
----VITE_FIREBASE_API_KEY=AIzaSy...              # API Key
-
-VITE_FIREBASE_AUTH_DOMAIN=proyecto.firebaseapp.com
-
-## 📄 LicenciaVITE_FIREBASE_DATABASE_URL=https://proyecto.firebaseio.com
+---
 
 VITE_FIREBASE_PROJECT_ID=proyecto-id
 
