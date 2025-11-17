@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { StationSelector } from '@/components/StationSelector';
 import { BasicInfoTile } from '@/components/BasicInfoTile';
@@ -12,7 +11,6 @@ import type { ReadingRange } from '@/types';
 
 export function Home() {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   const { stations, loading: stationsLoading } = useStationsRealtime(); // ✨ Real-time
   const [selectedStationId, setSelectedStationId] = useState<string | null>(null);
   const [range, setRange] = useState<ReadingRange>('24h');
@@ -52,14 +50,37 @@ export function Home() {
       </div>
 
       {selectedStation && (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left column - Main info */}
-          <div className="lg:col-span-2 space-y-6">
-            <BasicInfoTile
-              station={selectedStation}
-              lastUpdated={latestReading?.timestamp}
-            />
+        <div className="space-y-6">
+          {/* Two column layout - Map + Info | Wind Compass */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Left column - Map + BasicInfo */}
+            <div className="lg:col-span-2 space-y-6">
+              <BasicInfoTile
+                station={selectedStation}
+                lastUpdated={latestReading?.timestamp}
+              />
+              <StationMap
+                stations={stations}
+                selectedStation={selectedStation}
+                onStationSelect={setSelectedStationId}
+                height="300px"
+              />
+            </div>
 
+            {/* Right column - Wind Compass */}
+            <div className="space-y-6">
+              {latestReading && (
+                <WindCompass
+                  directionDeg={latestReading.windDirectionDeg}
+                  speedAvgKts={latestReading.windSpeedKts}
+                  gustKts={latestReading.windGustKts}
+                />
+              )}
+            </div>
+          </div>
+
+          {/* Graphs - Full width */}
+          <div className="w-full">
             {readingsLoading ? (
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                 <p className="text-center text-gray-600 dark:text-gray-400">
@@ -75,35 +96,18 @@ export function Home() {
                 </p>
               </div>
             )}
-
-            {forecastLoading ? (
-              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-                <p className="text-center text-gray-600 dark:text-gray-400">
-                  {t('common.loading')}
-                </p>
-              </div>
-            ) : forecast ? (
-              <WeatherForecast forecast={forecast} />
-            ) : null}
           </div>
 
-          {/* Right column - Wind and Map */}
-          <div className="space-y-6">
-            {latestReading && (
-              <WindCompass
-                directionDeg={latestReading.windDirectionDeg}
-                speedAvgKts={latestReading.windSpeedKts}
-                gustKts={latestReading.windGustKts}
-              />
-            )}
-
-            <StationMap
-              stations={stations}
-              selectedStation={selectedStation}
-              onStationSelect={(id) => navigate(`/station/${id}`)}
-              height="350px"
-            />
-          </div>
+          {/* Forecast - Full width */}
+          {forecastLoading ? (
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+              <p className="text-center text-gray-600 dark:text-gray-400">
+                {t('common.loading')}
+              </p>
+            </div>
+          ) : forecast ? (
+            <WeatherForecast forecast={forecast} />
+          ) : null}
         </div>
       )}
 
