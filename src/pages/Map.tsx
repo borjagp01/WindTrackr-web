@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { StationMap } from '@/components/StationMap';
-import { useStations } from '@/features/stations/hooks';
+import { useStationsRealtime } from '@/features/stations/hooks';
 
 export function Map() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { stations, loading } = useStations();
+  const { stations, loading } = useStationsRealtime(); // ✨ Real-time
 
   if (loading) {
     return (

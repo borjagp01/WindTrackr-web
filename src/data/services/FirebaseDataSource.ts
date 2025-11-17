@@ -1,4 +1,4 @@
-import { ref, get } from 'firebase/database';
+import { ref, get, onValue, off } from 'firebase/database';
 import type { Station, Reading, Forecast, ReadingRange } from '@/types';
 import type { DataSource } from './DataSource';
 import { db } from '@/app/firebase';
@@ -307,5 +307,261 @@ export class FirebaseDataSource implements DataSource {
         hourly: []
       };
     }
+  }
+
+  // ==================== PHASE 2: Real-time Subscriptions ====================
+
+  /**
+   * Subscribe to real-time updates for all stations.
+   * Uses Firebase onValue() to listen for changes.
+   */
+  subscribeToStations(
+    onUpdate: (stations: Station[]) => void,
+    onError?: (error: Error) => void
+  ): () => void {
+    const dbRef = ref(db, 'weather_stations');
+
+    const unsubscribe = onValue(
+      dbRef,
+      (snapshot) => {
+        try {
+          if (!snapshot.exists()) {
+            console.warn('🔄 Real-time: No stations found');
+            onUpdate([]);
+            return;
+          }
+
+          const stationsData = snapshot.val();
+          const stations: Station[] = [];
+
+          for (const [stationId, stationData] of Object.entries(stationsData)) {
+            const data = stationData as any;
+            const info = data.info || {};
+
+            stations.push({
+              id: stationId,
+              name: info.name || stationId,
+              location: {
+                lat: info.latitude || 0,
+                lon: info.longitude || 0,
+                elevationM: info.altitude || 0
+              },
+              description: `${info.province || ''}, ${info.country || ''}`.trim().replace(/^,\s*/, ''),
+              provider: info.station_type === 'Automatic' ? 'internal' : 'external',
+              status: 'online'
+            });
+          }
+
+          console.log(`🔄 Real-time update: ${stations.length} stations`);
+          onUpdate(stations);
+        } catch (error) {
+          console.error('Error processing stations update:', error);
+          if (onError) {
+            onError(error instanceof Error ? error : new Error('Unknown error'));
+          }
+        }
+      },
+      (error) => {
+        console.error('Firebase onValue error (stations):', error);
+        if (onError) {
+          onError(error);
+        }
+      }
+    );
+
+    // Return cleanup function
+    return () => {
+      console.log('🔌 Unsubscribing from stations');
+      off(dbRef);
+    };
+  }
+
+  /**
+   * Subscribe to real-time updates for a specific station.
+   */
+  subscribeToStation(
+    id: string,
+    onUpdate: (station: Station) => void,
+    onError?: (error: Error) => void
+  ): () => void {
+    const dbRef = ref(db, `weather_stations/${id}`);
+
+    const unsubscribe = onValue(
+      dbRef,
+      (snapshot) => {
+        try {
+          if (!snapshot.exists()) {
+            const error = new Error(`Station ${id} not found`);
+            console.error(error.message);
+            if (onError) {
+              onError(error);
+            }
+            return;
+          }
+
+          const data = snapshot.val() as any;
+          const info = data.info || {};
+
+          const station: Station = {
+            id,
+            name: info.name || id,
+            location: {
+              lat: info.latitude || 0,
+              lon: info.longitude || 0,
+              elevationM: info.altitude || 0
+            },
+            description: `${info.province || ''}, ${info.country || ''}`.trim().replace(/^,\s*/, ''),
+            provider: info.station_type === 'Automatic' ? 'internal' : 'external',
+            status: 'online'
+          };
+
+          console.log(`🔄 Real-time update: station ${id}`);
+          onUpdate(station);
+        } catch (error) {
+          console.error(`Error processing station ${id} update:`, error);
+          if (onError) {
+            onError(error instanceof Error ? error : new Error('Unknown error'));
+          }
+        }
+      },
+      (error) => {
+        console.error(`Firebase onValue error (station ${id}):`, error);
+        if (onError) {
+          onError(error);
+        }
+      }
+    );
+
+    return () => {
+      console.log(`🔌 Unsubscribing from station ${id}`);
+      off(dbRef);
+    };
+  }
+
+  /**
+   * Subscribe to real-time updates for station readings.
+   * Filters readings by time range and handles fallback to deprecated paths.
+   */
+  subscribeToReadings(
+    id: string,
+    range: ReadingRange,
+    onUpdate: (readings: Reading[]) => void,
+    onError?: (error: Error) => void
+  ): () => void {
+    // Try 'history' first (V1 structure)
+    const historyRef = ref(db, `weather_stations/${id}/history`);
+
+    const unsubscribe = onValue(
+      historyRef,
+      (snapshot) => {
+        try {
+          if (!snapshot.exists()) {
+            // Try deprecated 'readings' path as fallback
+            const readingsRef = ref(db, `weather_stations/${id}/readings`);
+            onValue(
+              readingsRef,
+              (snapshot2) => {
+                if (!snapshot2.exists()) {
+                  console.warn(`🔄 Real-time: No readings found for station ${id}`);
+                  onUpdate([]);
+                  return;
+                }
+                const readings = this.processReadingsSnapshot(snapshot2, id, range);
+                console.log(`🔄 Real-time update: ${readings.length} readings for ${id} (deprecated path)`);
+                onUpdate(readings);
+              },
+              (error) => {
+                console.error(`Firebase onValue error (readings ${id} - deprecated):`, error);
+                if (onError) {
+                  onError(error);
+                }
+              }
+            );
+            return;
+          }
+
+          const readings = this.processReadingsSnapshot(snapshot, id, range);
+          console.log(`🔄 Real-time update: ${readings.length} readings for ${id}`);
+          onUpdate(readings);
+        } catch (error) {
+          console.error(`Error processing readings update for ${id}:`, error);
+          if (onError) {
+            onError(error instanceof Error ? error : new Error('Unknown error'));
+          }
+        }
+      },
+      (error) => {
+        console.error(`Firebase onValue error (readings ${id}):`, error);
+        if (onError) {
+          onError(error);
+        }
+      }
+    );
+
+    return () => {
+      console.log(`🔌 Unsubscribing from readings for ${id}`);
+      off(historyRef);
+    };
+  }
+
+  /**
+   * Helper: Process readings snapshot (extracted from getReadings).
+   * Reusable logic for both one-time fetch and real-time subscriptions.
+   */
+  private processReadingsSnapshot(snapshot: any, id: string, range: ReadingRange): Reading[] {
+    const readingsData = snapshot.val();
+
+    // Convert object to array and map to Reading type
+    let allReadings: Reading[] = [];
+    if (typeof readingsData === 'object') {
+      allReadings = Object.entries(readingsData)
+        .map(([key, data]: [string, any]) => {
+          // Parse timestamp (can be key or timestamp field)
+          const timestamp = this.parseTimestamp(data.timestamp || data.datetime || key);
+
+          const reading = {
+            stationId: id,
+            timestamp: new Date(timestamp * 1000).toISOString(), // Convert to milliseconds
+            windSpeedKts: data.wind?.speed_knots || this.msToKnots(data.wind?.speed_ms || 0),
+            windGustKts: data.wind?.speed_knots || this.msToKnots(data.wind?.speed_ms || 0),
+            windDirectionDeg: data.wind?.direction || 0,
+            temperatureC: data.temperature,
+            humidityPct: data.humidity,
+            pressureHPa: undefined
+          };
+
+          return reading;
+        })
+        .sort((a, b) => {
+          // Sort chronologically (newest first for filtering)
+          const timeA = new Date(a.timestamp).getTime();
+          const timeB = new Date(b.timestamp).getTime();
+          return timeB - timeA;
+        });
+    }
+
+    // Filter readings by actual time range
+    const now = Date.now();
+    const timeRangeMs = range === '24h' ? 24 * 60 * 60 * 1000 : 7 * 24 * 60 * 60 * 1000;
+    const cutoffTime = now - timeRangeMs;
+
+    // Filter readings within the time range
+    let filteredReadings = allReadings.filter(reading => {
+      const readingTime = new Date(reading.timestamp).getTime();
+      return readingTime >= cutoffTime;
+    });
+
+    // If no readings in the time range, show the most recent available data
+    if (filteredReadings.length === 0 && allReadings.length > 0) {
+      const limit = range === '24h' ? 500 : 1000;
+      filteredReadings = allReadings.slice(0, Math.min(limit, allReadings.length));
+    }
+
+    // Sort chronologically (oldest first) for display
+    return filteredReadings.sort((a, b) => {
+      const timeA = new Date(a.timestamp).getTime();
+      const timeB = new Date(b.timestamp).getTime();
+      return timeA - timeB;
+    });
   }
 }

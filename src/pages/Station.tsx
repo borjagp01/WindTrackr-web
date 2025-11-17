@@ -6,7 +6,7 @@ import { WindCompass } from '@/components/WindCompass';
 import { GraphViewer } from '@/components/GraphViewer';
 import { WeatherForecast } from '@/components/WeatherForecast';
 import { StationMap } from '@/components/StationMap';
-import { useStation, useReadings, useForecast, useStations } from '@/features/stations/hooks';
+import { useStationRealtime, useReadingsRealtime, useForecast, useStationsRealtime } from '@/features/stations/hooks';
 import type { ReadingRange } from '@/types';
 
 export function Station() {
@@ -15,10 +15,10 @@ export function Station() {
   const { t } = useTranslation();
   const [range, setRange] = useState<ReadingRange>('24h');
 
-  const { station, loading: stationLoading, error } = useStation(id);
-  const { readings, loading: readingsLoading } = useReadings(id, range);
+  const { station, loading: stationLoading, error } = useStationRealtime(id); // ✨ Real-time
+  const { readings, loading: readingsLoading } = useReadingsRealtime(id, range); // ✨ Real-time
   const { forecast, loading: forecastLoading } = useForecast(id);
-  const { stations } = useStations();
+  const { stations } = useStationsRealtime(); // ✨ Real-time
 
   if (stationLoading) {
     return (

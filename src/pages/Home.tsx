@@ -7,17 +7,17 @@ import { WindCompass } from '@/components/WindCompass';
 import { GraphViewer } from '@/components/GraphViewer';
 import { WeatherForecast } from '@/components/WeatherForecast';
 import { StationMap } from '@/components/StationMap';
-import { useStations, useReadings, useForecast } from '@/features/stations/hooks';
+import { useStationsRealtime, useReadingsRealtime, useForecast } from '@/features/stations/hooks';
 import type { ReadingRange } from '@/types';
 
 export function Home() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { stations, loading: stationsLoading } = useStations();
+  const { stations, loading: stationsLoading } = useStationsRealtime(); // ✨ Real-time
   const [selectedStationId, setSelectedStationId] = useState<string | null>(null);
   const [range, setRange] = useState<ReadingRange>('24h');
 
-  const { readings, loading: readingsLoading } = useReadings(selectedStationId || undefined, range);
+  const { readings, loading: readingsLoading } = useReadingsRealtime(selectedStationId || undefined, range); // ✨ Real-time
   const { forecast, loading: forecastLoading } = useForecast(selectedStationId || undefined);
 
   // Auto-select first station on load
