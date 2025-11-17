@@ -11,23 +11,6 @@ export function WindCompass({ directionDeg, speedAvgKts, gustKts }: WindCompassP
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
-      {/* Header with speed highlight */}
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-          Viento en tiempo real
-        </h3>
-        {/* <div className="flex items-center gap-2">
-          <div className={`w-2.5 h-2.5 rounded-full ${
-            windIntensity === 'strong' ? 'bg-red-500 animate-pulse shadow-lg shadow-red-500/50' :
-            windIntensity === 'moderate' ? 'bg-amber-500 shadow-lg shadow-amber-500/50' :
-            'bg-emerald-500 shadow-lg shadow-emerald-500/50'
-          }`} />
-          <span className="text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide">
-            {windIntensity === 'strong' ? 'Fuerte' : windIntensity === 'moderate' ? 'Moderado' : 'Suave'}
-          </span>
-        </div> */}
-      </div>
-
       <div className="flex flex-col items-center">
         {/* Clean Compass Circle */}
         <div className="relative w-72 h-72 mb-6">
@@ -160,7 +143,12 @@ export function WindCompass({ directionDeg, speedAvgKts, gustKts }: WindCompassP
 
         {/* Wind data - Clean minimal cards */}
         <div className="w-full space-y-3">
-          {/* Main direction display */}
+
+
+          {/* Speed metrics */}
+          <div className="grid grid-cols-2 gap-3">
+            {/* Direction speed */}
+             {/* Main direction display */}
           <div className="bg-gradient-to-br from-primary-50 via-blue-50 to-primary-50 dark:from-primary-900/20 dark:via-blue-900/20 dark:to-primary-900/20 border-2 border-primary-200 dark:border-primary-800 rounded-xl p-5 shadow-sm">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide">
@@ -179,28 +167,6 @@ export function WindCompass({ directionDeg, speedAvgKts, gustKts }: WindCompassP
               </div>
             </div>
           </div>
-
-          {/* Speed metrics */}
-          <div className="grid grid-cols-2 gap-3">
-            {/* Average speed */}
-            <div className="bg-white dark:bg-gray-700/80 border-2 border-gray-200 dark:border-gray-600 rounded-xl p-4 shadow-sm hover:shadow-md transition-all">
-              <div className="flex items-center gap-2 mb-2">
-                <svg className="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-                <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase">
-                  Promedio
-                </span>
-              </div>
-              <div className="flex items-baseline gap-1">
-                <span className="text-3xl font-black text-gray-900 dark:text-white">
-                  {Math.round(speedAvgKts)}
-                </span>
-                <span className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                  kt
-                </span>
-              </div>
-            </div>
 
             {/* Gust speed */}
             <div className={`border-2 rounded-xl p-4 shadow-sm hover:shadow-md transition-all ${
