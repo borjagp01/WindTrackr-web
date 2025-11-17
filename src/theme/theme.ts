@@ -9,44 +9,49 @@ interface ThemeState {
   setTheme: (theme: Theme) => void;
 }
 
-export const useThemeStore = create<ThemeState>()(
-  persist(
-    (set) => ({
-      theme: 'light',
-      toggleTheme: () =>
-        set((state) => {
-          const newTheme = state.theme === 'light' ? 'dark' : 'light';
-          applyTheme(newTheme);
-          return { theme: newTheme };
-        }),
-      setTheme: (theme) => {
-        applyTheme(theme);
-        set({ theme });
-      },
-    }),
-    {
-      name: 'windtrackr-theme',
-      onRehydrateStorage: () => (state) => {
-        if (state) {
-          applyTheme(state.theme);
-        }
-      },
-    }
-  )
-);
-
 function applyTheme(theme: Theme) {
+  if (typeof window === 'undefined') return;
   const root = window.document.documentElement;
   root.classList.remove('light', 'dark');
   root.classList.add(theme);
 }
 
-// Initialize theme on load
-if (typeof window !== 'undefined') {
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const stored = localStorage.getItem('windtrackr-theme');
+// Detectar tema preferido del sistema
+function getSystemTheme(): Theme {
+  if (typeof window === 'undefined') return 'light';
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
 
-  if (!stored && prefersDark) {
-    applyTheme('dark');
-  }
+export const useThemeStore = create<ThemeState>()(
+  persist(
+    (set, get) => ({
+      theme: getSystemTheme(), // Se sobrescribirá por persist si hay algo guardado
+      toggleTheme: () => {
+        const currentTheme = get().theme;
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        set({ theme: newTheme });
+        applyTheme(newTheme);
+      },
+      setTheme: (theme) => {
+        set({ theme });
+        applyTheme(theme);
+      },
+    }),
+    {
+      name: 'windtrackr-theme',
+      onRehydrateStorage: () => {
+        return (state) => {
+          if (state) {
+            applyTheme(state.theme);
+          }
+        };
+      },
+    }
+  )
+);
+
+// Aplicar tema inicial
+if (typeof window !== 'undefined') {
+  const state = useThemeStore.getState();
+  applyTheme(state.theme);
 }

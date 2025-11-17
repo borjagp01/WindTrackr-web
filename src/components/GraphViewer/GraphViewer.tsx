@@ -47,7 +47,7 @@ export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-3">
+        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg p-3">
           <p className="text-sm font-medium text-gray-900 dark:text-white mb-2">
             {formatTime(payload[0].payload.timestamp)}
           </p>
@@ -112,7 +112,7 @@ export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps
             onChange={(e) =>
               setVisibleLines({ ...visibleLines, windSpeed: e.target.checked })
             }
-            className="mr-2"
+            className="mr-2 w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
           <span className="text-sm text-gray-700 dark:text-gray-300">
             {t('graph.windSpeed')}
@@ -125,7 +125,7 @@ export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps
             onChange={(e) =>
               setVisibleLines({ ...visibleLines, windGust: e.target.checked })
             }
-            className="mr-2"
+            className="mr-2 w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
           <span className="text-sm text-gray-700 dark:text-gray-300">
             {t('graph.windGust')}
@@ -138,7 +138,7 @@ export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps
             onChange={(e) =>
               setVisibleLines({ ...visibleLines, temperature: e.target.checked })
             }
-            className="mr-2"
+            className="mr-2 w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
           />
           <span className="text-sm text-gray-700 dark:text-gray-300">
             {t('graph.temperature')}
