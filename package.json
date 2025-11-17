@@ -12,7 +12,9 @@
     "test:watch": "vitest",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "inspect-firebase": "tsx scripts/inspectFirebase.ts",
-    "seed-firebase": "tsx scripts/seedFirebase.ts"
+    "seed-firebase": "tsx scripts/seedFirebase.ts",
+    "deploy": "npm run build && firebase deploy --only hosting",
+    "deploy:preview": "npm run build && firebase hosting:channel:deploy preview"
   },
   "dependencies": {
     "firebase": "^12.6.0",
