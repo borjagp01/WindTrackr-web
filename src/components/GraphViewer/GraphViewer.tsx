@@ -5,6 +5,8 @@ import type { EChartsOption } from 'echarts';
 import type { Reading } from '@/types';
 import { formatTime, formatWindSpeed, formatTemperature } from '@/utils';
 import { useThemeStore } from '@/theme/theme';
+import downloadIcon from '@/assets/download-icon.svg';
+import refreshIcon from '@/assets/refresh-icon.svg';
 
 interface GraphViewerProps {
   readings: Reading[];
@@ -30,13 +32,17 @@ export function GraphViewer({ readings }: GraphViewerProps) {
   }));
 
   // Check if all wind values are zero (sensor might be offline)
-  const hasNonZeroWind = chartData.some(d => d.windSpeed > 0 || d.windGust > 0);
+  const hasNonZeroWind = chartData.some(
+    (d) => d.windSpeed > 0 || d.windGust > 0
+  );
 
   // Check if data is old (last reading more than 2 hours ago)
-  const lastReadingTime = chartData.length > 0
-    ? new Date(chartData[chartData.length - 1].timestamp).getTime()
-    : 0;
-  const isDataOld = lastReadingTime > 0 && (Date.now() - lastReadingTime) > 2 * 60 * 60 * 1000;
+  const lastReadingTime =
+    chartData.length > 0
+      ? new Date(chartData[chartData.length - 1].timestamp).getTime()
+      : 0;
+  const isDataOld =
+    lastReadingTime > 0 && Date.now() - lastReadingTime > 2 * 60 * 60 * 1000;
 
   // Dark mode colors
   const isDark = theme === 'dark';
@@ -77,19 +83,70 @@ export function GraphViewer({ readings }: GraphViewerProps) {
   const showWindChart = visibleLines.windSpeed || visibleLines.windGust;
   const showTempChart = true; // Siempre visible
 
+  // Calcular intervalo responsive basado en ancho de pantalla
+  const getResponsiveInterval = () => {
+    const width = window.innerWidth;
+    // Mobile: mostrar cada 60 minutos
+    if (width < 640) return 60;
+    // Tablet: mostrar cada 30 minutos
+    if (width < 1024) return 30;
+    // Desktop: mostrar cada 15 minutos
+    return 20;
+  };
+
+  const labelInterval = getResponsiveInterval();
+
+  // Detectar cambios de día para mostrar líneas separadoras
+  const dayChanges: number[] = [];
+  for (let i = 1; i < chartData.length; i++) {
+    const prevDate = new Date(chartData[i - 1].timestamp);
+    const currDate = new Date(chartData[i].timestamp);
+
+    // Si cambia el día, marcar este índice
+    if (prevDate.getDate() !== currDate.getDate()) {
+      dayChanges.push(i);
+    }
+  }
+
   // Configuración común
   const commonConfig = {
     backgroundColor: 'transparent',
     grid: {
-      left: '3%',
-      right: '4%',
+      left: '15px',
+      right: '15px',
       bottom: '15%',
       top: '10%',
-      containLabel: true,
+      containLabel: false,
     },
+    toolbox: {
+      feature: {
+        restore: {
+          title: 'Resetear vista',
+          icon: `image://${refreshIcon}`,
+        },
+        saveAsImage: {
+          type: 'png',
+          name: 'grafico-viento',
+          title: 'Guardar imagen',
+          backgroundColor: isDark ? '#1f2937' : '#ffffff',
+          icon: `image://${downloadIcon}`,
+        },
+      },
+      iconStyle: {
+        borderColor: isDark ? '#9ca3af' : '#6b7280',
+      },
+      itemSize: 16,
+      emphasis: {
+        iconStyle: {
+          borderColor: '#3b82f6',
+        },
+      },
+      top: 0,
+      right: 15,
+    } as any,
     xAxis: {
       type: 'category' as const,
-      data: chartData.map(d => d.time),
+      data: chartData.map((d) => d.time),
       axisLine: {
         lineStyle: {
           color: gridColor,
@@ -99,15 +156,14 @@ export function GraphViewer({ readings }: GraphViewerProps) {
         color: textColor,
         fontSize: 11,
         rotate: 45,
-        interval: function(index: number) {
-          // Mostrar etiqueta cada ~30 minutos (asumiendo 1 lectura/minuto)
-          // Ajustar según la cantidad de datos visibles
-          return index % 15 === 0;
+        interval: function (index: number) {
+          // Intervalo responsive: mobile 45min, tablet 30min, desktop 15min
+          return index % labelInterval === 0;
         },
         showMinLabel: true,
         showMaxLabel: true,
-        hideOverlap: true, // Ocultar etiquetas que se solapen
-        margin: 12, // Aumentar margen para mejor espaciado
+        hideOverlap: true,
+        margin: 12,
       },
     },
     dataZoom: [
@@ -118,31 +174,32 @@ export function GraphViewer({ readings }: GraphViewerProps) {
         zoomOnMouseWheel: true,
         moveOnMouseMove: true,
       },
-      {
-        type: 'slider' as const,
-        start: initialZoom.start,
-        end: initialZoom.end,
-        height: 24,
-        bottom: 10,
-        textStyle: {
-          color: textColor,
-          fontSize: 10,
-        },
-        borderColor: gridColor,
-        fillerColor: isDark ? 'rgba(59, 130, 246, 0.2)' : 'rgba(59, 130, 246, 0.1)',
-        handleStyle: {
-          color: '#3b82f6',
-          borderWidth: 1,
-        },
-        dataBackground: {
-          lineStyle: {
-            color: gridColor,
-          },
-          areaStyle: {
-            color: isDark ? 'rgba(59, 130, 246, 0.1)' : 'rgba(59, 130, 246, 0.05)',
-          },
-        },
-      },
+      // Sider deshabilitado temporalmente // Marcar opcion containLabel true en grid si se activa
+      // {
+      //   type: 'slider' as const,
+      //   start: initialZoom.start,
+      //   end: initialZoom.end,
+      //   height: 24,
+      //   bottom: 10,
+      //   textStyle: {
+      //     color: textColor,
+      //     fontSize: 10,
+      //   },
+      //   borderColor: gridColor,
+      //   fillerColor: isDark ? 'rgba(59, 130, 246, 0.2)' : 'rgba(59, 130, 246, 0.1)',
+      //   handleStyle: {
+      //     color: '#3b82f6',
+      //     borderWidth: 1,
+      //   },
+      //   dataBackground: {
+      //     lineStyle: {
+      //       color: gridColor,
+      //     },
+      //     areaStyle: {
+      //       color: isDark ? 'rgba(59, 130, 246, 0.1)' : 'rgba(59, 130, 246, 0.05)',
+      //     },
+      //   },
+      // },
     ],
   };
 
@@ -151,7 +208,9 @@ export function GraphViewer({ readings }: GraphViewerProps) {
     ...commonConfig,
     tooltip: {
       trigger: 'axis' as const,
-      backgroundColor: isDark ? 'rgba(31, 41, 55, 0.95)' : 'rgba(255, 255, 255, 0.95)',
+      backgroundColor: isDark
+        ? 'rgba(31, 41, 55, 0.95)'
+        : 'rgba(255, 255, 255, 0.95)',
       borderColor: isDark ? '#4b5563' : '#e5e7eb',
       textStyle: {
         color: textColor,
@@ -197,7 +256,7 @@ export function GraphViewer({ readings }: GraphViewerProps) {
       splitLine: {
         lineStyle: {
           color: gridColor,
-          opacity: 0.3,
+          opacity: 0.5,
         },
       },
     },
@@ -205,7 +264,7 @@ export function GraphViewer({ readings }: GraphViewerProps) {
       visibleLines.windSpeed && {
         name: t('graph.windSpeed'),
         type: 'line',
-        data: chartData.map(d => d.windSpeed),
+        data: chartData.map((d) => d.windSpeed),
         smooth: true,
         symbol: 'circle',
         symbolSize: 4,
@@ -229,11 +288,35 @@ export function GraphViewer({ readings }: GraphViewerProps) {
             ],
           },
         },
+        markLine: {
+          silent: true,
+          symbol: 'none',
+          lineStyle: {
+            color: isDark ? '#6b7280' : '#d1d5db',
+            type: 'dashed',
+            width: 1,
+          },
+          label: {
+            show: true,
+            position: 'insideEndTop',
+            formatter: (params: any) => {
+              const index = params.data.xAxis;
+              const date = new Date(chartData[index].timestamp);
+              return date.toLocaleDateString('es-ES', {
+                day: '2-digit',
+                month: 'short',
+              });
+            },
+            fontSize: 10,
+            color: isDark ? '#9ca3af' : '#6b7280',
+          },
+          data: dayChanges.map((index) => ({ xAxis: index })),
+        },
       },
       visibleLines.windGust && {
         name: t('graph.windGust'),
         type: 'line',
-        data: chartData.map(d => d.windGust),
+        data: chartData.map((d) => d.windGust),
         smooth: true,
         symbol: 'circle',
         symbolSize: 4,
@@ -266,7 +349,9 @@ export function GraphViewer({ readings }: GraphViewerProps) {
     ...commonConfig,
     tooltip: {
       trigger: 'axis' as const,
-      backgroundColor: isDark ? 'rgba(31, 41, 55, 0.95)' : 'rgba(255, 255, 255, 0.95)',
+      backgroundColor: isDark
+        ? 'rgba(31, 41, 55, 0.95)'
+        : 'rgba(255, 255, 255, 0.95)',
       borderColor: isDark ? '#4b5563' : '#e5e7eb',
       textStyle: {
         color: textColor,
@@ -303,7 +388,7 @@ export function GraphViewer({ readings }: GraphViewerProps) {
       splitLine: {
         lineStyle: {
           color: gridColor,
-          opacity: 0.3,
+          opacity: 0.5,
         },
       },
     },
@@ -311,7 +396,7 @@ export function GraphViewer({ readings }: GraphViewerProps) {
       {
         name: t('graph.temperature'),
         type: 'line',
-        data: chartData.map(d => d.temperature),
+        data: chartData.map((d) => d.temperature),
         smooth: true,
         symbol: 'circle',
         symbolSize: 4,
@@ -334,6 +419,30 @@ export function GraphViewer({ readings }: GraphViewerProps) {
               { offset: 1, color: 'rgba(16, 185, 129, 0.05)' },
             ],
           },
+        },
+        markLine: {
+          silent: true,
+          symbol: 'none',
+          lineStyle: {
+            color: isDark ? '#6b7280' : '#d1d5db',
+            type: 'dashed',
+            width: 1,
+          },
+          label: {
+            show: true,
+            position: 'insideEndTop',
+            formatter: (params: any) => {
+              const index = params.data.xAxis;
+              const date = new Date(chartData[index].timestamp);
+              return date.toLocaleDateString('es-ES', {
+                day: '2-digit',
+                month: 'short',
+              });
+            },
+            fontSize: 10,
+            color: isDark ? '#9ca3af' : '#6b7280',
+          },
+          data: dayChanges.map((index) => ({ xAxis: index })),
         },
       },
     ],
@@ -359,7 +468,8 @@ export function GraphViewer({ readings }: GraphViewerProps) {
           </h3>
           {chartData.length > 0 && (
             <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-              {chartData.length} {t('graph.readings', 'lecturas')} disponibles • Usa el zoom para navegar
+              {chartData.length} {t('graph.readings', 'lecturas')} disponibles •
+              Usa el zoom para navegar
             </p>
           )}
         </div>
@@ -371,7 +481,10 @@ export function GraphViewer({ readings }: GraphViewerProps) {
               type="checkbox"
               checked={visibleLines.windSpeed}
               onChange={(e) =>
-                setVisibleLines({ ...visibleLines, windSpeed: e.target.checked })
+                setVisibleLines({
+                  ...visibleLines,
+                  windSpeed: e.target.checked,
+                })
               }
               className="mr-2 w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
@@ -398,7 +511,8 @@ export function GraphViewer({ readings }: GraphViewerProps) {
         {!hasNonZeroWind && (
           <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
             <p className="text-sm text-yellow-800 dark:text-yellow-200">
-              ⚠️ Sensor de viento sin lecturas válidas. Todas las mediciones muestran 0 kt.
+              ⚠️ Sensor de viento sin lecturas válidas. Todas las mediciones
+              muestran 0 kt.
             </p>
           </div>
         )}
@@ -407,7 +521,8 @@ export function GraphViewer({ readings }: GraphViewerProps) {
         {isDataOld && (
           <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
             <p className="text-sm text-blue-800 dark:text-blue-200">
-              ℹ️ Mostrando últimos datos disponibles. La estación no ha enviado datos recientes.
+              ℹ️ Mostrando últimos datos disponibles. La estación no ha enviado
+              datos recientes.
             </p>
           </div>
         )}
