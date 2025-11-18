@@ -49,11 +49,63 @@ function MapScrollHandler({ onShowHint }: { onShowHint: () => void }) {
   return null;
 }
 
+// Handler to fit bounds to active stations when the map is used as an overview
+function FitBoundsHandler({
+  stations,
+  selectedStation,
+}: {
+  stations: Station[];
+  selectedStation?: Station | null;
+}) {
+  const map = useMap();
+
+  useEffect(() => {
+    if (!map) return;
+
+    // If a specific station is selected, center on it and keep the previous behavior
+    if (selectedStation) {
+      map.setView(
+        [selectedStation.location.lat, selectedStation.location.lon],
+        12
+      );
+      return;
+    }
+
+    // Fit to ALL provided stations (used on the /map overview)
+    const validStations = stations.filter(
+      (s) =>
+        s.location &&
+        typeof s.location.lat === 'number' &&
+        typeof s.location.lon === 'number'
+    );
+
+    if (validStations.length === 0) {
+      return;
+    }
+
+    if (validStations.length === 1) {
+      const s = validStations[0];
+      map.setView([s.location.lat, s.location.lon], 12);
+      return;
+    }
+
+    const latlngs = validStations.map(
+      (s) => [s.location.lat, s.location.lon] as [number, number]
+    );
+    const bounds = L.latLngBounds(latlngs);
+    // Fit bounds with a bit of padding
+    map.fitBounds(bounds, { padding: [50, 50] });
+  }, [map, stations, selectedStation]);
+
+  return null;
+}
+
 interface StationMapProps {
   stations: Station[];
   selectedStation?: Station | null;
   onStationSelect?: (stationId: string) => void;
   height?: string;
+  fitToActive?: boolean;
 }
 
 export function StationMap({
@@ -61,6 +113,7 @@ export function StationMap({
   selectedStation,
   onStationSelect,
   height = '400px',
+  fitToActive = false,
 }: StationMapProps) {
   const { t } = useTranslation();
   const [showScrollHint, setShowScrollHint] = useState(false);
@@ -109,6 +162,13 @@ export function StationMap({
         scrollWheelZoom={false}
         doubleClickZoom={true}
       >
+        {/* Adjust map bounds to active stations when requested */}
+        {fitToActive && (
+          <FitBoundsHandler
+            stations={stations}
+            selectedStation={selectedStation}
+          />
+        )}
         <MapScrollHandler onShowHint={handleShowHint} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

@@ -13,7 +13,9 @@ export function Map() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">{t('common.loading')}</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            {t('common.loading')}
+          </p>
         </div>
       </div>
     );
@@ -34,6 +36,7 @@ export function Map() {
         <StationMap
           stations={stations}
           onStationSelect={(id) => navigate(`/station/${id}`)}
+          fitToActive
           height="calc(100vh - 250px)"
         />
       </div>
@@ -46,14 +49,16 @@ export function Map() {
             className="text-left p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow"
           >
             <div className="flex items-start justify-between mb-2">
-              <h3 className="font-semibold text-gray-900 dark:text-white">{station.name}</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white">
+                {station.name}
+              </h3>
               <span
                 className={`px-2 py-1 rounded text-xs ${
                   station.status === 'online'
                     ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
                     : station.status === 'offline'
-                    ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
-                    : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400'
+                      ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
+                      : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400'
                 }`}
               >
                 {t(`station.status.${station.status}`)}
@@ -65,7 +70,8 @@ export function Map() {
               </p>
             )}
             <div className="text-xs text-gray-500 dark:text-gray-500">
-              {station.location.lat.toFixed(4)}, {station.location.lon.toFixed(4)}
+              {station.location.lat.toFixed(4)},{' '}
+              {station.location.lon.toFixed(4)}
             </div>
           </button>
         ))}
