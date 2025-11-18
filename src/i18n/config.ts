@@ -16,6 +16,7 @@ const resources = {
       // Station Info
       'station.status.online': 'En línea',
       'station.status.offline': 'Fuera de línea',
+      'station.status.warning': 'Datos antiguos',
       'station.status.maintenance': 'Mantenimiento',
       'station.lastUpdate': 'Última actualización',
       'station.location': 'Ubicación',
@@ -51,7 +52,8 @@ const resources = {
 
       // About
       'about.title': 'Acerca de WindTrackr',
-      'about.description': 'WindTrackr es un visor de estaciones meteorológicas especializado en datos de viento.',
+      'about.description':
+        'WindTrackr es un visor de estaciones meteorológicas especializado en datos de viento.',
 
       // Common
       'common.loading': 'Cargando...',
