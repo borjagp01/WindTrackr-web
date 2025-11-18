@@ -1,7 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { BasicInfoTile } from '@/components/BasicInfoTile';
-import { WindCompass } from '@/components/WindCompass';
+import { WeatherPanel } from '@/components/WeatherPanel';
+import { DataCard } from '@/components/DataCard';
 import { GraphViewer } from '@/components/GraphViewer';
 import { WeatherForecast } from '@/components/WeatherForecast';
 import { StationMap } from '@/components/StationMap';
@@ -83,29 +84,58 @@ export function Station() {
         Volver
       </button>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+      <div className="col-span-6 gap-6 mb-6">
+        <BasicInfoTile
+          station={station}
+          lastUpdated={latestReading?.timestamp}
+        />
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
         {/* Left column */}
-        <div className="lg:col-span-2 space-y-6">
-          <BasicInfoTile
-            station={station}
-            lastUpdated={latestReading?.timestamp}
-          />
-
+        <div className="lg:col-span-3 flex flex-col gap-10">
           <StationMap
             stations={stations}
             selectedStation={station}
             onStationSelect={(stationId) => navigate(`/station/${stationId}`)}
-            height="400px"
+            height="505px"
           />
+          {/* Tarjetas de Temperatura y Humedad */}
+          {/* {latestReading && (
+            <div className="grid grid-cols-2 gap-6">
+              {latestReading.temperatureC !== undefined && (
+                <DataCard
+                  label="Temperatura"
+                  value={latestReading.temperatureC}
+                  unit="°C"
+                  color="orange"
+                />
+              )}
+              {latestReading.humidityPct !== undefined && (
+                <DataCard
+                  label="Humedad"
+                  value={latestReading.humidityPct}
+                  unit="%"
+                  color="blue"
+                />
+              )}
+            </div>
+          )} */}
         </div>
 
         {/* Right column */}
-        <div className="space-y-6 h-full">
+        <div className="lg:col-span-3 flex flex-col gap-6">
+          {/* <BasicInfoTile
+            station={station}
+            lastUpdated={latestReading?.timestamp}
+          /> */}
+
           {latestReading && (
-            <WindCompass
+            <WeatherPanel
               directionDeg={latestReading.windDirectionDeg}
               speedAvgKts={latestReading.windSpeedKts}
               gustKts={latestReading.windGustKts}
+              temperatureC={latestReading.temperatureC}
+              humidityPct={latestReading.humidityPct}
             />
           )}
         </div>
