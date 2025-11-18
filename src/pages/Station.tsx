@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { BasicInfoTile } from '@/components/BasicInfoTile';
@@ -7,16 +6,14 @@ import { GraphViewer } from '@/components/GraphViewer';
 import { WeatherForecast } from '@/components/WeatherForecast';
 import { StationMap } from '@/components/StationMap';
 import { useStationRealtime, useReadingsRealtime, useForecast, useStationsRealtime } from '@/features/stations/hooks';
-import type { ReadingRange } from '@/types';
 
 export function Station() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [range, setRange] = useState<ReadingRange>('24h');
 
   const { station, loading: stationLoading, error } = useStationRealtime(id); // ✨ Real-time
-  const { readings, loading: readingsLoading } = useReadingsRealtime(id, range); // ✨ Real-time
+  const { readings, loading: readingsLoading } = useReadingsRealtime(id, '7d'); // ✨ Cargar siempre 7 días
   const { forecast, loading: forecastLoading } = useForecast(id);
   const { stations } = useStationsRealtime(); // ✨ Real-time
 
@@ -78,7 +75,7 @@ export function Station() {
               </p>
             </div>
           ) : readings.length > 0 ? (
-            <GraphViewer readings={readings} range={range} onRangeChange={setRange} />
+            <GraphViewer readings={readings} />
           ) : (
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
               <p className="text-center text-gray-600 dark:text-gray-400">

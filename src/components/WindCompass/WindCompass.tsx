@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { getWindDirectionCardinal, getWindDirectionName } from '@/utils';
 
 interface WindCompassProps {
@@ -93,10 +94,16 @@ export function WindCompass({ directionDeg, speedAvgKts, gustKts }: WindCompassP
             <text x="35" y="150" textAnchor="middle" className="fill-gray-500 dark:fill-gray-400 font-semibold text-lg">O</text>
           </svg>
 
-          {/* Rotating arrow - Clean design */}
-          <div
-            className="absolute inset-0 flex items-center justify-center transition-transform duration-1000 ease-out"
-            style={{ transform: `rotate(${directionDeg}deg)` }}
+          {/* Rotating arrow - Physics-based animation */}
+          <motion.div
+            className="absolute inset-0 flex items-center justify-center"
+            animate={{ rotate: directionDeg }}
+            transition={{
+              type: 'spring',
+              stiffness: 100,
+              damping: 20,
+              mass: 0.8,
+            }}
           >
             <svg width="32" height="160" viewBox="0 0 32 160" className="drop-shadow-2xl">
               {/* Arrow body with gradient */}
@@ -122,7 +129,7 @@ export function WindCompass({ directionDeg, speedAvgKts, gustKts }: WindCompassP
                 opacity="0.3"
               />
             </svg>
-          </div>
+          </motion.div>
 
           {/* Center dot with pulse effect */}
           <div className="absolute inset-0 flex items-center justify-center">
@@ -146,10 +153,19 @@ export function WindCompass({ directionDeg, speedAvgKts, gustKts }: WindCompassP
 
 
           {/* Speed metrics */}
-          <div className="grid grid-cols-2 gap-3">
+          <motion.div
+            className="grid grid-cols-2 gap-3"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
             {/* Direction speed */}
              {/* Main direction display */}
-          <div className="bg-gradient-to-br from-primary-50 via-blue-50 to-primary-50 dark:from-primary-900/20 dark:via-blue-900/20 dark:to-primary-900/20 border-2 border-primary-200 dark:border-primary-800 rounded-xl p-5 shadow-sm">
+          <motion.div
+            className="bg-gradient-to-br from-primary-50 via-blue-50 to-primary-50 dark:from-primary-900/20 dark:via-blue-900/20 dark:to-primary-900/20 border-2 border-primary-200 dark:border-primary-800 rounded-xl p-5 shadow-sm"
+            whileHover={{ scale: 1.02 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide">
                 Dirección
@@ -166,10 +182,11 @@ export function WindCompass({ directionDeg, speedAvgKts, gustKts }: WindCompassP
                 {getWindDirectionName(directionDeg)}
               </div>
             </div>
-          </div>
+          </motion.div>
 
             {/* Gust speed */}
-            <div className={`border-2 rounded-xl p-4 shadow-sm hover:shadow-md transition-all ${
+            <motion.div
+              className={`border-2 rounded-xl p-4 shadow-sm hover:shadow-md transition-all ${
               windIntensity === 'strong'
                 ? 'bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border-red-300 dark:border-red-800'
                 : 'bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-900/20 dark:to-orange-900/20 border-amber-300 dark:border-amber-800'
@@ -194,8 +211,8 @@ export function WindCompass({ directionDeg, speedAvgKts, gustKts }: WindCompassP
                   kt
                 </span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>

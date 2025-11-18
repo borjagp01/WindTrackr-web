@@ -1,26 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from 'recharts';
-import type { Reading, ReadingRange } from '@/types';
+import ReactECharts from 'echarts-for-react';
+import type { EChartsOption } from 'echarts';
+import type { Reading } from '@/types';
 import { formatTime, formatWindSpeed, formatTemperature } from '@/utils';
+import { useThemeStore } from '@/theme/theme';
 
 interface GraphViewerProps {
   readings: Reading[];
-  range: ReadingRange;
-  onRangeChange: (range: ReadingRange) => void;
 }
 
-export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps) {
+export function GraphViewer({ readings }: GraphViewerProps) {
   const { t } = useTranslation();
+  const { theme } = useThemeStore();
+  const chartRef = useRef<ReactECharts>(null);
+
   const [visibleLines, setVisibleLines] = useState({
     windSpeed: true,
     windGust: true,
@@ -44,63 +38,257 @@ export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps
     : 0;
   const isDataOld = lastReadingTime > 0 && (Date.now() - lastReadingTime) > 2 * 60 * 60 * 1000;
 
-  const CustomTooltip = ({ active, payload }: any) => {
-    if (active && payload && payload.length) {
-      return (
-        <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg p-3">
-          <p className="text-sm font-medium text-gray-900 dark:text-white mb-2">
-            {formatTime(payload[0].payload.timestamp)}
-          </p>
-          {payload.map((entry: any) => (
-            <p key={entry.dataKey} className="text-sm" style={{ color: entry.color }}>
-              {entry.name}:{' '}
-              {entry.dataKey === 'temperature'
-                ? formatTemperature(entry.value)
-                : formatWindSpeed(entry.value, 'kts')}
-            </p>
-          ))}
-        </div>
-      );
+  // Dark mode colors
+  const isDark = theme === 'dark';
+  const textColor = isDark ? '#e5e7eb' : '#374151';
+  const gridColor = isDark ? '#374151' : '#e5e7eb';
+
+  // Calcular zoom inicial para mostrar últimas 12h
+  const calculateInitialZoom = () => {
+    if (chartData.length === 0) return { start: 0, end: 100 };
+
+    // 12 horas en milisegundos
+    const twelveHours = 12 * 60 * 60 * 1000;
+    const now = new Date(chartData[chartData.length - 1].timestamp).getTime();
+    const cutoffTime = now - twelveHours;
+
+    // Encontrar el índice del primer dato que está dentro de las últimas 12h
+    let startIndex = 0;
+    for (let i = chartData.length - 1; i >= 0; i--) {
+      const dataTime = new Date(chartData[i].timestamp).getTime();
+      if (dataTime < cutoffTime) {
+        startIndex = i + 1; // El siguiente dato ya está dentro de las 12h
+        break;
+      }
     }
-    return null;
+
+    // Convertir índice a porcentaje
+    const startPercentage = (startIndex / chartData.length) * 100;
+
+    return {
+      start: Math.max(0, startPercentage),
+      end: 100,
+    };
   };
+
+  const initialZoom = calculateInitialZoom();
+
+  // ECharts configuration
+  const option: EChartsOption = {
+    backgroundColor: 'transparent',
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '15%',
+      top: '10%',
+      containLabel: true,
+    },
+    tooltip: {
+      trigger: 'axis',
+      backgroundColor: isDark ? 'rgba(31, 41, 55, 0.95)' : 'rgba(255, 255, 255, 0.95)',
+      borderColor: isDark ? '#4b5563' : '#e5e7eb',
+      textStyle: {
+        color: textColor,
+      },
+      formatter: (params: any) => {
+        if (!params || params.length === 0) return '';
+        const dataIndex = params[0].dataIndex;
+        const data = chartData[dataIndex];
+
+        let html = `<div style="padding: 4px;">`;
+        html += `<div style="font-weight: 600; margin-bottom: 8px;">${data.time}</div>`;
+
+        params.forEach((param: any) => {
+          if (param.seriesName === t('graph.windSpeed') && visibleLines.windSpeed) {
+            html += `<div style="color: #3b82f6;">● ${param.seriesName}: ${formatWindSpeed(param.value, 'kts')}</div>`;
+          }
+          if (param.seriesName === t('graph.windGust') && visibleLines.windGust) {
+            html += `<div style="color: #ef4444;">● ${param.seriesName}: ${formatWindSpeed(param.value, 'kts')}</div>`;
+          }
+          if (param.seriesName === t('graph.temperature') && visibleLines.temperature) {
+            html += `<div style="color: #10b981;">● ${param.seriesName}: ${formatTemperature(param.value)}</div>`;
+          }
+        });
+
+        html += `</div>`;
+        return html;
+      },
+    },
+    xAxis: {
+      type: 'category',
+      data: chartData.map(d => d.time),
+      axisLine: {
+        lineStyle: {
+          color: gridColor,
+        },
+      },
+      axisLabel: {
+        color: textColor,
+        fontSize: 11,
+        rotate: 45,
+        interval: 'auto', // ECharts calcula automáticamente según el zoom
+        showMinLabel: true,
+        showMaxLabel: true,
+      },
+    },
+    yAxis: {
+      type: 'value',
+      axisLine: {
+        lineStyle: {
+          color: gridColor,
+        },
+      },
+      axisLabel: {
+        color: textColor,
+        fontSize: 11,
+        formatter: (value: number) => {
+          // Si solo temperatura está visible, mostrar °C
+          if (visibleLines.temperature && !visibleLines.windSpeed && !visibleLines.windGust) {
+            return `${value}°C`;
+          }
+          // Si viento está visible (solo o con temperatura), mostrar kt
+          if (visibleLines.windSpeed || visibleLines.windGust) {
+            return `${value} kt`;
+          }
+          // Fallback
+          return `${value}`;
+        },
+      },
+      splitLine: {
+        lineStyle: {
+          color: gridColor,
+          opacity: 0.3,
+        },
+      },
+    },
+    dataZoom: [
+      {
+        type: 'inside',
+        start: initialZoom.start, // Calculado dinámicamente para 12h
+        end: initialZoom.end,
+        zoomOnMouseWheel: true,
+        moveOnMouseMove: true,
+      },
+      {
+        type: 'slider',
+        start: initialZoom.start, // Sincronizado con inside zoom
+        end: initialZoom.end,
+        height: 24,
+        bottom: 10,
+        textStyle: {
+          color: textColor,
+          fontSize: 10,
+        },
+        borderColor: gridColor,
+        fillerColor: isDark ? 'rgba(59, 130, 246, 0.2)' : 'rgba(59, 130, 246, 0.1)',
+        handleStyle: {
+          color: '#3b82f6',
+          borderWidth: 1,
+        },
+        dataBackground: {
+          lineStyle: {
+            color: gridColor,
+          },
+          areaStyle: {
+            color: isDark ? 'rgba(59, 130, 246, 0.1)' : 'rgba(59, 130, 246, 0.05)',
+          },
+        },
+      },
+    ],
+    series: [
+      visibleLines.windSpeed && {
+        name: t('graph.windSpeed'),
+        type: 'line',
+        data: chartData.map(d => d.windSpeed),
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 4,
+        lineStyle: {
+          color: '#3b82f6',
+          width: 2,
+        },
+        itemStyle: {
+          color: '#3b82f6',
+        },
+        areaStyle: {
+          color: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [
+              { offset: 0, color: 'rgba(59, 130, 246, 0.3)' },
+              { offset: 1, color: 'rgba(59, 130, 246, 0.05)' },
+            ],
+          },
+        },
+      },
+      visibleLines.windGust && {
+        name: t('graph.windGust'),
+        type: 'line',
+        data: chartData.map(d => d.windGust),
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 4,
+        lineStyle: {
+          color: '#ef4444',
+          width: 2,
+        },
+        itemStyle: {
+          color: '#ef4444',
+        },
+        areaStyle: {
+          color: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [
+              { offset: 0, color: 'rgba(239, 68, 68, 0.3)' },
+              { offset: 1, color: 'rgba(239, 68, 68, 0.05)' },
+            ],
+          },
+        },
+      },
+      visibleLines.temperature && {
+        name: t('graph.temperature'),
+        type: 'line',
+        data: chartData.map(d => d.temperature),
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 4,
+        lineStyle: {
+          color: '#10b981',
+          width: 2,
+        },
+        itemStyle: {
+          color: '#10b981',
+        },
+      },
+    ].filter(Boolean) as any[],
+  };
+
+  // Resize chart on theme change
+  useEffect(() => {
+    if (chartRef.current) {
+      const instance = chartRef.current.getEchartsInstance();
+      instance.resize();
+    }
+  }, [theme]);
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            {t('graph.title')}
-          </h3>
-          {chartData.length > 0 && (
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-              {chartData.length} {t('graph.readings', 'lecturas')} • {chartData[0].time} - {chartData[chartData.length - 1].time}
-            </p>
-          )}
-        </div>
-
-        <div className="flex gap-2">
-          <button
-            onClick={() => onRangeChange('24h')}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              range === '24h'
-                ? 'bg-primary-500 text-white'
-                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-            }`}
-          >
-            {t('range.24h')}
-          </button>
-          <button
-            onClick={() => onRangeChange('7d')}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              range === '7d'
-                ? 'bg-primary-500 text-white'
-                : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
-            }`}
-          >
-            {t('range.7d')}
-          </button>
-        </div>
+      <div className="mb-6">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          {t('graph.title')}
+        </h3>
+        {chartData.length > 0 && (
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+            {chartData.length} {t('graph.readings', 'lecturas')} disponibles • Usa el zoom para navegar
+          </p>
+        )}
       </div>
 
       {/* Legend toggles */}
@@ -164,50 +352,14 @@ export function GraphViewer({ readings, range, onRangeChange }: GraphViewerProps
         </div>
       )}
 
-      <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={chartData}>
-          <CartesianGrid strokeDasharray="3 3" className="stroke-gray-200 dark:stroke-gray-700" />
-          <XAxis
-            dataKey="time"
-            tick={{ fontSize: 12 }}
-            className="fill-gray-600 dark:fill-gray-400"
-            interval="preserveStartEnd"
-          />
-          <YAxis tick={{ fontSize: 12 }} className="fill-gray-600 dark:fill-gray-400" />
-          <Tooltip content={<CustomTooltip />} />
-          <Legend />
-          {visibleLines.windSpeed && (
-            <Line
-              type="monotone"
-              dataKey="windSpeed"
-              stroke="#3b82f6"
-              name={t('graph.windSpeed')}
-              dot={false}
-              strokeWidth={2}
-            />
-          )}
-          {visibleLines.windGust && (
-            <Line
-              type="monotone"
-              dataKey="windGust"
-              stroke="#ef4444"
-              name={t('graph.windGust')}
-              dot={false}
-              strokeWidth={2}
-            />
-          )}
-          {visibleLines.temperature && (
-            <Line
-              type="monotone"
-              dataKey="temperature"
-              stroke="#10b981"
-              name={t('graph.temperature')}
-              dot={false}
-              strokeWidth={2}
-            />
-          )}
-        </LineChart>
-      </ResponsiveContainer>
+      <ReactECharts
+        ref={chartRef}
+        option={option}
+        style={{ height: '350px', width: '100%' }}
+        opts={{ renderer: 'svg' }}
+        notMerge={true}
+        lazyUpdate={true}
+      />
     </div>
   );
 }
