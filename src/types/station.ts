@@ -1,4 +1,4 @@
-export type StationStatus = 'online' | 'offline' | 'maintenance';
+export type StationStatus = 'online' | 'offline' | 'warning' | 'maintenance';
 
 export type StationProvider = 'internal' | 'external';
 

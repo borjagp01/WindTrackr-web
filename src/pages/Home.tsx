@@ -1,3 +1,7 @@
+/**
+ * @deprecated This component is no longer used. See Landing.tsx instead.
+ * Kept for reference only.
+ */
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { StationSelector } from '@/components/StationSelector';
@@ -6,17 +10,28 @@ import { WindCompass } from '@/components/WindCompass';
 import { GraphViewer } from '@/components/GraphViewer';
 import { WeatherForecast } from '@/components/WeatherForecast';
 import { StationMap } from '@/components/StationMap';
-import { useStationsRealtime, useReadingsRealtime, useForecast } from '@/features/stations/hooks';
+import {
+  useStationsRealtime,
+  useReadingsRealtime,
+  useForecast,
+} from '@/features/stations/hooks';
 import type { ReadingRange } from '@/types';
 
 export function Home() {
   const { t } = useTranslation();
   const { stations, loading: stationsLoading } = useStationsRealtime(); // ✨ Real-time
-  const [selectedStationId, setSelectedStationId] = useState<string | null>(null);
+  const [selectedStationId, setSelectedStationId] = useState<string | null>(
+    null
+  );
   const [range, setRange] = useState<ReadingRange>('24h');
 
-  const { readings, loading: readingsLoading } = useReadingsRealtime(selectedStationId || undefined, range); // ✨ Real-time
-  const { forecast, loading: forecastLoading } = useForecast(selectedStationId || undefined);
+  const { readings, loading: readingsLoading } = useReadingsRealtime(
+    selectedStationId || undefined,
+    range
+  ); // ✨ Real-time
+  const { forecast, loading: forecastLoading } = useForecast(
+    selectedStationId || undefined
+  );
 
   // Auto-select first station on load
   useEffect(() => {
@@ -33,7 +48,9 @@ export function Home() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">{t('common.loading')}</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            {t('common.loading')}
+          </p>
         </div>
       </div>
     );
@@ -88,7 +105,11 @@ export function Home() {
                 </p>
               </div>
             ) : readings.length > 0 ? (
-              <GraphViewer readings={readings} range={range} onRangeChange={setRange} />
+              <GraphViewer
+                readings={readings}
+                range={range}
+                onRangeChange={setRange}
+              />
             ) : (
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                 <p className="text-center text-gray-600 dark:text-gray-400">
@@ -113,7 +134,9 @@ export function Home() {
 
       {!selectedStation && stations.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-gray-600 dark:text-gray-400">{t('common.noData')}</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            {t('common.noData')}
+          </p>
         </div>
       )}
     </div>

@@ -5,7 +5,12 @@ import { WindCompass } from '@/components/WindCompass';
 import { GraphViewer } from '@/components/GraphViewer';
 import { WeatherForecast } from '@/components/WeatherForecast';
 import { StationMap } from '@/components/StationMap';
-import { useStationRealtime, useReadingsRealtime, useForecast, useStationsRealtime } from '@/features/stations/hooks';
+import {
+  useStationRealtime,
+  useReadingsRealtime,
+  useForecast,
+  useStationsRealtime,
+} from '@/features/stations/hooks';
 
 export function Station() {
   const { id } = useParams<{ id: string }>();
@@ -22,7 +27,9 @@ export function Station() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">{t('common.loading')}</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            {t('common.loading')}
+          </p>
         </div>
       </div>
     );
@@ -57,8 +64,18 @@ export function Station() {
         onClick={() => navigate('/')}
         className="mb-6 flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300"
       >
-        <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        <svg
+          className="w-5 h-5 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
         </svg>
         Volver
       </button>
@@ -66,7 +83,16 @@ export function Station() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left column */}
         <div className="lg:col-span-2 space-y-6">
-          <BasicInfoTile station={station} lastUpdated={latestReading?.timestamp} />
+          <BasicInfoTile
+            station={station}
+            lastUpdated={latestReading?.timestamp}
+          />
+          <StationMap
+            stations={stations}
+            selectedStation={station}
+            onStationSelect={(stationId) => navigate(`/station/${stationId}`)}
+            height="400px"
+          />
 
           {readingsLoading ? (
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
@@ -93,13 +119,6 @@ export function Station() {
           ) : forecast ? (
             <WeatherForecast forecast={forecast} />
           ) : null}
-
-          <StationMap
-            stations={stations}
-            selectedStation={station}
-            onStationSelect={(stationId) => navigate(`/station/${stationId}`)}
-            height="400px"
-          />
         </div>
 
         {/* Right column */}

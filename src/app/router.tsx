@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Home } from '@/pages/Home';
+import { Landing } from '@/pages/Landing';
 import { Station } from '@/pages/Station';
 import { Map } from '@/pages/Map';
 import { About } from '@/pages/About';
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Landing />,
       },
       {
         path: 'station/:id',
