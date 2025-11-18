@@ -2,9 +2,11 @@ import { useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { WiStrongWind } from 'react-icons/wi';
+import Lottie from 'lottie-react';
 import { useStationsRealtime } from '@/features/stations/hooks';
 import DotGrid from '@/components/DotGrid/DotGrid';
+import { WindParticles } from '@/components/WindParticles';
+import windAnimation from '@/assets/wind-lottie.json';
 
 export function Landing() {
   const { t } = useTranslation();
@@ -38,7 +40,7 @@ export function Landing() {
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
       {/* DotGrid Background */}
-      <div className="absolute inset-0 opacity-30 dark:opacity-20">
+      <div className="absolute inset-0 opacity-50 dark:opacity-30">
         <DotGrid
           dotSize={8}
           gap={20}
@@ -60,23 +62,22 @@ export function Landing() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="flex items-center justify-center mb-6">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
-            >
-              <WiStrongWind className="w-20 h-20 text-primary-600 dark:text-primary-400" />
-            </motion.div>
+          <div className="flex items-center justify-center">
+            <div className="w-32 h-32">
+              <Lottie animationData={windAnimation} loop={true} />
+            </div>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
-            WindTrackr
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-2">
-            Datos meteorológicos en tiempo real
-          </p>
-          <p className="text-gray-500 dark:text-gray-400">
-            Selecciona una estación para ver los datos
-          </p>
+          <div className="inline-block backdrop-blur-md bg-white/10 dark:bg-gray-800/10 px-8 py-6 rounded-3xl border border-white/10 dark:border-gray-700/10 shadow-xl">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+              WindTrackr
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-2">
+              Datos meteorológicos en tiempo real
+            </p>
+            <p className="text-gray-500 dark:text-gray-400">
+              Selecciona una estación para ver los datos
+            </p>
+          </div>
         </motion.div>
 
         {/* Search Bar */}
@@ -137,11 +138,20 @@ export function Landing() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 * index }}
-              whileHover={{ scale: 1.03, y: -4, transition: { duration: 0.2 } }}
+              whileHover={{
+                scale: 1.03,
+                y: -4,
+                transition: { duration: 0.15 },
+              }}
               whileTap={{ scale: 0.98 }}
               onClick={() => navigate(`/station/${station.id}`)}
-              className="group relative text-left p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow overflow-hidden"
+              className="group relative text-left p-6 bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 hover:border-primary-400 dark:hover:border-primary-500 rounded-2xl shadow-lg hover:shadow-2xl transition-[border-color,box-shadow] duration-200 overflow-hidden"
             >
+              {/* Wind particles animation on hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <WindParticles particleCount={15} color="#3b82f6" speed={2} />
+              </div>
+
               {/* Gradient overlay on hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 
