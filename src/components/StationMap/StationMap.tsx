@@ -118,9 +118,6 @@ export function StationMap({
           <Marker
             key={station.id}
             position={[station.location.lat, station.location.lon]}
-            eventHandlers={{
-              click: () => onStationSelect?.(station.id),
-            }}
           >
             <Popup>
               <div className="min-w-[200px] p-2">
