@@ -13,12 +13,12 @@ interface GraphViewerProps {
 export function GraphViewer({ readings }: GraphViewerProps) {
   const { t } = useTranslation();
   const { theme } = useThemeStore();
-  const chartRef = useRef<ReactECharts>(null);
+  const windChartRef = useRef<ReactECharts>(null);
+  const tempChartRef = useRef<ReactECharts>(null);
 
   const [visibleLines, setVisibleLines] = useState({
     windSpeed: true,
     windGust: true,
-    temperature: false,
   });
 
   const chartData = readings.map((r) => ({
@@ -73,8 +73,12 @@ export function GraphViewer({ readings }: GraphViewerProps) {
 
   const initialZoom = calculateInitialZoom();
 
-  // ECharts configuration
-  const option: EChartsOption = {
+  // Determinar qué gráficas mostrar
+  const showWindChart = visibleLines.windSpeed || visibleLines.windGust;
+  const showTempChart = true; // Siempre visible
+
+  // Configuración común
+  const commonConfig = {
     backgroundColor: 'transparent',
     grid: {
       left: '3%',
@@ -83,39 +87,8 @@ export function GraphViewer({ readings }: GraphViewerProps) {
       top: '10%',
       containLabel: true,
     },
-    tooltip: {
-      trigger: 'axis',
-      backgroundColor: isDark ? 'rgba(31, 41, 55, 0.95)' : 'rgba(255, 255, 255, 0.95)',
-      borderColor: isDark ? '#4b5563' : '#e5e7eb',
-      textStyle: {
-        color: textColor,
-      },
-      formatter: (params: any) => {
-        if (!params || params.length === 0) return '';
-        const dataIndex = params[0].dataIndex;
-        const data = chartData[dataIndex];
-
-        let html = `<div style="padding: 4px;">`;
-        html += `<div style="font-weight: 600; margin-bottom: 8px;">${data.time}</div>`;
-
-        params.forEach((param: any) => {
-          if (param.seriesName === t('graph.windSpeed') && visibleLines.windSpeed) {
-            html += `<div style="color: #3b82f6;">● ${param.seriesName}: ${formatWindSpeed(param.value, 'kts')}</div>`;
-          }
-          if (param.seriesName === t('graph.windGust') && visibleLines.windGust) {
-            html += `<div style="color: #ef4444;">● ${param.seriesName}: ${formatWindSpeed(param.value, 'kts')}</div>`;
-          }
-          if (param.seriesName === t('graph.temperature') && visibleLines.temperature) {
-            html += `<div style="color: #10b981;">● ${param.seriesName}: ${formatTemperature(param.value)}</div>`;
-          }
-        });
-
-        html += `</div>`;
-        return html;
-      },
-    },
     xAxis: {
-      type: 'category',
+      type: 'category' as const,
       data: chartData.map(d => d.time),
       axisLine: {
         lineStyle: {
@@ -126,52 +99,28 @@ export function GraphViewer({ readings }: GraphViewerProps) {
         color: textColor,
         fontSize: 11,
         rotate: 45,
-        interval: 'auto', // ECharts calcula automáticamente según el zoom
+        interval: function(index: number) {
+          // Mostrar etiqueta cada ~30 minutos (asumiendo 1 lectura/minuto)
+          // Ajustar según la cantidad de datos visibles
+          return index % 15 === 0;
+        },
         showMinLabel: true,
         showMaxLabel: true,
-      },
-    },
-    yAxis: {
-      type: 'value',
-      axisLine: {
-        lineStyle: {
-          color: gridColor,
-        },
-      },
-      axisLabel: {
-        color: textColor,
-        fontSize: 11,
-        formatter: (value: number) => {
-          // Si solo temperatura está visible, mostrar °C
-          if (visibleLines.temperature && !visibleLines.windSpeed && !visibleLines.windGust) {
-            return `${value}°C`;
-          }
-          // Si viento está visible (solo o con temperatura), mostrar kt
-          if (visibleLines.windSpeed || visibleLines.windGust) {
-            return `${value} kt`;
-          }
-          // Fallback
-          return `${value}`;
-        },
-      },
-      splitLine: {
-        lineStyle: {
-          color: gridColor,
-          opacity: 0.3,
-        },
+        hideOverlap: true, // Ocultar etiquetas que se solapen
+        margin: 12, // Aumentar margen para mejor espaciado
       },
     },
     dataZoom: [
       {
-        type: 'inside',
-        start: initialZoom.start, // Calculado dinámicamente para 12h
+        type: 'inside' as const,
+        start: initialZoom.start,
         end: initialZoom.end,
         zoomOnMouseWheel: true,
         moveOnMouseMove: true,
       },
       {
-        type: 'slider',
-        start: initialZoom.start, // Sincronizado con inside zoom
+        type: 'slider' as const,
+        start: initialZoom.start,
         end: initialZoom.end,
         height: 24,
         bottom: 10,
@@ -195,6 +144,63 @@ export function GraphViewer({ readings }: GraphViewerProps) {
         },
       },
     ],
+  };
+
+  // Gráfica de Viento
+  const windOption: EChartsOption = {
+    ...commonConfig,
+    tooltip: {
+      trigger: 'axis' as const,
+      backgroundColor: isDark ? 'rgba(31, 41, 55, 0.95)' : 'rgba(255, 255, 255, 0.95)',
+      borderColor: isDark ? '#4b5563' : '#e5e7eb',
+      textStyle: {
+        color: textColor,
+      },
+      formatter: (params: any) => {
+        if (!params || params.length === 0) return '';
+        const dataIndex = params[0].dataIndex;
+        const data = chartData[dataIndex];
+
+        let html = `<div style="padding: 4px;">`;
+        html += `<div style="font-weight: 600; margin-bottom: 8px;">${data.time}</div>`;
+
+        params.forEach((param: any) => {
+          if (param.seriesName === t('graph.windSpeed')) {
+            html += `<div style="color: #3b82f6;">● ${param.seriesName}: ${formatWindSpeed(param.value, 'kts')}</div>`;
+          }
+          if (param.seriesName === t('graph.windGust')) {
+            html += `<div style="color: #ef4444;">● ${param.seriesName}: ${formatWindSpeed(param.value, 'kts')}</div>`;
+          }
+        });
+
+        html += `</div>`;
+        return html;
+      },
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Viento (kt)',
+      nameTextStyle: {
+        color: textColor,
+        fontSize: 12,
+      },
+      axisLine: {
+        lineStyle: {
+          color: gridColor,
+        },
+      },
+      axisLabel: {
+        color: textColor,
+        fontSize: 11,
+        formatter: (value: number) => `${value} kt`,
+      },
+      splitLine: {
+        lineStyle: {
+          color: gridColor,
+          opacity: 0.3,
+        },
+      },
+    },
     series: [
       visibleLines.windSpeed && {
         name: t('graph.windSpeed'),
@@ -252,7 +258,57 @@ export function GraphViewer({ readings }: GraphViewerProps) {
           },
         },
       },
-      visibleLines.temperature && {
+    ].filter(Boolean) as any[],
+  };
+
+  // Gráfica de Temperatura
+  const tempOption: EChartsOption = {
+    ...commonConfig,
+    tooltip: {
+      trigger: 'axis' as const,
+      backgroundColor: isDark ? 'rgba(31, 41, 55, 0.95)' : 'rgba(255, 255, 255, 0.95)',
+      borderColor: isDark ? '#4b5563' : '#e5e7eb',
+      textStyle: {
+        color: textColor,
+      },
+      formatter: (params: any) => {
+        if (!params || params.length === 0) return '';
+        const dataIndex = params[0].dataIndex;
+        const data = chartData[dataIndex];
+
+        let html = `<div style="padding: 4px;">`;
+        html += `<div style="font-weight: 600; margin-bottom: 8px;">${data.time}</div>`;
+        html += `<div style="color: #10b981;">● ${t('graph.temperature')}: ${formatTemperature(data.temperature)}</div>`;
+        html += `</div>`;
+        return html;
+      },
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Temperatura (°C)',
+      nameTextStyle: {
+        color: textColor,
+        fontSize: 12,
+      },
+      axisLine: {
+        lineStyle: {
+          color: gridColor,
+        },
+      },
+      axisLabel: {
+        color: textColor,
+        fontSize: 11,
+        formatter: (value: number) => `${value}°C`,
+      },
+      splitLine: {
+        lineStyle: {
+          color: gridColor,
+          opacity: 0.3,
+        },
+      },
+    },
+    series: [
+      {
         name: t('graph.temperature'),
         type: 'line',
         data: chartData.map(d => d.temperature),
@@ -266,100 +322,130 @@ export function GraphViewer({ readings }: GraphViewerProps) {
         itemStyle: {
           color: '#10b981',
         },
+        areaStyle: {
+          color: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [
+              { offset: 0, color: 'rgba(16, 185, 129, 0.3)' },
+              { offset: 1, color: 'rgba(16, 185, 129, 0.05)' },
+            ],
+          },
+        },
       },
-    ].filter(Boolean) as any[],
+    ],
   };
 
-  // Resize chart on theme change
+  // Resize charts on theme change
   useEffect(() => {
-    if (chartRef.current) {
-      const instance = chartRef.current.getEchartsInstance();
-      instance.resize();
+    if (windChartRef.current) {
+      windChartRef.current.getEchartsInstance().resize();
+    }
+    if (tempChartRef.current) {
+      tempChartRef.current.getEchartsInstance().resize();
     }
   }, [theme]);
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-      <div className="mb-6">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          {t('graph.title')}
-        </h3>
-        {chartData.length > 0 && (
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-            {chartData.length} {t('graph.readings', 'lecturas')} disponibles • Usa el zoom para navegar
-          </p>
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+            {t('graph.title')}
+          </h3>
+          {chartData.length > 0 && (
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              {chartData.length} {t('graph.readings', 'lecturas')} disponibles • Usa el zoom para navegar
+            </p>
+          )}
+        </div>
+
+        {/* Legend toggles */}
+        <div className="flex flex-wrap gap-4">
+          <label className="flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              checked={visibleLines.windSpeed}
+              onChange={(e) =>
+                setVisibleLines({ ...visibleLines, windSpeed: e.target.checked })
+              }
+              className="mr-2 w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <span className="text-sm text-gray-700 dark:text-gray-300">
+              {t('graph.windSpeed')}
+            </span>
+          </label>
+          <label className="flex items-center cursor-pointer">
+            <input
+              type="checkbox"
+              checked={visibleLines.windGust}
+              onChange={(e) =>
+                setVisibleLines({ ...visibleLines, windGust: e.target.checked })
+              }
+              className="mr-2 w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            />
+            <span className="text-sm text-gray-700 dark:text-gray-300">
+              {t('graph.windGust')}
+            </span>
+          </label>
+        </div>
+
+        {/* Warning if all values are zero */}
+        {!hasNonZeroWind && (
+          <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
+            <p className="text-sm text-yellow-800 dark:text-yellow-200">
+              ⚠️ Sensor de viento sin lecturas válidas. Todas las mediciones muestran 0 kt.
+            </p>
+          </div>
+        )}
+
+        {/* Warning if data is old */}
+        {isDataOld && (
+          <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+            <p className="text-sm text-blue-800 dark:text-blue-200">
+              ℹ️ Mostrando últimos datos disponibles. La estación no ha enviado datos recientes.
+            </p>
+          </div>
         )}
       </div>
 
-      {/* Legend toggles */}
-      <div className="flex flex-wrap gap-4 mb-4">
-        <label className="flex items-center cursor-pointer">
-          <input
-            type="checkbox"
-            checked={visibleLines.windSpeed}
-            onChange={(e) =>
-              setVisibleLines({ ...visibleLines, windSpeed: e.target.checked })
-            }
-            className="mr-2 w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+      {/* Wind Chart */}
+      {showWindChart && (
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+          <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-4">
+            Datos de Viento
+          </h4>
+          <ReactECharts
+            ref={windChartRef}
+            option={windOption}
+            style={{ height: '350px', width: '100%' }}
+            opts={{ renderer: 'svg' }}
+            notMerge={true}
+            lazyUpdate={true}
           />
-          <span className="text-sm text-gray-700 dark:text-gray-300">
-            {t('graph.windSpeed')}
-          </span>
-        </label>
-        <label className="flex items-center cursor-pointer">
-          <input
-            type="checkbox"
-            checked={visibleLines.windGust}
-            onChange={(e) =>
-              setVisibleLines({ ...visibleLines, windGust: e.target.checked })
-            }
-            className="mr-2 w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-          />
-          <span className="text-sm text-gray-700 dark:text-gray-300">
-            {t('graph.windGust')}
-          </span>
-        </label>
-        <label className="flex items-center cursor-pointer">
-          <input
-            type="checkbox"
-            checked={visibleLines.temperature}
-            onChange={(e) =>
-              setVisibleLines({ ...visibleLines, temperature: e.target.checked })
-            }
-            className="mr-2 w-4 h-4 text-primary-600 bg-gray-100 border-gray-300 rounded focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-          />
-          <span className="text-sm text-gray-700 dark:text-gray-300">
-            {t('graph.temperature')}
-          </span>
-        </label>
-      </div>
-
-      {/* Warning if all values are zero */}
-      {!hasNonZeroWind && (
-        <div className="mb-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
-          <p className="text-sm text-yellow-800 dark:text-yellow-200">
-            ⚠️ Sensor de viento sin lecturas válidas. Todas las mediciones muestran 0 kt.
-          </p>
         </div>
       )}
 
-      {/* Warning if data is old */}
-      {isDataOld && (
-        <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-          <p className="text-sm text-blue-800 dark:text-blue-200">
-            ℹ️ Mostrando últimos datos disponibles. La estación no ha enviado datos recientes.
-          </p>
+      {/* Temperature Chart */}
+      {showTempChart && (
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+          <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-4">
+            Datos de Temperatura
+          </h4>
+          <ReactECharts
+            ref={tempChartRef}
+            option={tempOption}
+            style={{ height: '300px', width: '100%' }}
+            opts={{ renderer: 'svg' }}
+            notMerge={true}
+            lazyUpdate={true}
+          />
         </div>
       )}
-
-      <ReactECharts
-        ref={chartRef}
-        option={option}
-        style={{ height: '350px', width: '100%' }}
-        opts={{ renderer: 'svg' }}
-        notMerge={true}
-        lazyUpdate={true}
-      />
     </div>
   );
 }
