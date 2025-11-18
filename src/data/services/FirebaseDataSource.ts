@@ -366,6 +366,52 @@ export class FirebaseDataSource implements DataSource {
             const data = stationData as any;
             const info = data.info || {};
 
+            // Determinar estado basándose en la última lectura
+            let status: 'online' | 'offline' | 'warning' = 'offline';
+
+            // Intentar obtener la última lectura de history o current
+            const current = data.current;
+            const history = data.history;
+
+            if (current?.timestamp) {
+              const lastReadingTime =
+                this.parseTimestamp(current.timestamp) * 1000;
+              const timeSinceLastReading = Date.now() - lastReadingTime;
+
+              // Si la última lectura fue hace menos de 5 minutos → online
+              if (timeSinceLastReading < 5 * 60 * 1000) {
+                status = 'online';
+              }
+              // Si fue hace menos de 1 hora → warning
+              else if (timeSinceLastReading < 60 * 60 * 1000) {
+                status = 'warning';
+              }
+            } else if (history) {
+              // Si no hay current, verificar la última entrada en history
+              const historyEntries = Object.entries(history);
+              if (historyEntries.length > 0) {
+                // Ordenar por timestamp descendente
+                historyEntries.sort(([, a]: any, [, b]: any) => {
+                  const timeA = this.parseTimestamp(a.timestamp || a.datetime);
+                  const timeB = this.parseTimestamp(b.timestamp || b.datetime);
+                  return timeB - timeA;
+                });
+
+                const [, lastReading]: any = historyEntries[0];
+                const lastReadingTime =
+                  this.parseTimestamp(
+                    lastReading.timestamp || lastReading.datetime
+                  ) * 1000;
+                const timeSinceLastReading = Date.now() - lastReadingTime;
+
+                if (timeSinceLastReading < 5 * 60 * 1000) {
+                  status = 'online';
+                } else if (timeSinceLastReading < 60 * 60 * 1000) {
+                  status = 'warning';
+                }
+              }
+            }
+
             stations.push({
               id: stationId,
               name: info.name || stationId,
@@ -379,7 +425,7 @@ export class FirebaseDataSource implements DataSource {
                 .replace(/^,\s*/, ''),
               provider:
                 info.station_type === 'Automatic' ? 'internal' : 'external',
-              status: 'online',
+              status,
             });
           }
 
