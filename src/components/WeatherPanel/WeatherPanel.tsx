@@ -22,44 +22,19 @@ export function WeatherPanel({
     speedAvgKts > 20 ? 'strong' : speedAvgKts > 10 ? 'moderate' : 'light';
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
-      {/* Badge de intensidad */}
-      {/* <div className="flex justify-center mb-4">
-        <div
-          className={`px-2.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wide ${
-            windIntensity === 'strong'
-              ? 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300'
-              : windIntensity === 'moderate'
-                ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300'
-                : 'bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300'
-          }`}
-        >
-          {windIntensity === 'strong'
-            ? 'Fuerte'
-            : windIntensity === 'moderate'
-              ? 'Moderado'
-              : 'Suave'}
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-6 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
+      {/* Responsive layout: vertical en móvil portrait, horizontal en desktop */}
+      <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <div className="w-[230px] h-[170px] sm:w-[290px] sm:h-[230px] flex items-center mx-auto">
+          <SpeedGauge speedAvgKts={speedAvgKts} gustKts={gustKts} />
         </div>
-      </div> */}
-
-      {/* Layout paralelo: Brújula + Gauge */}
-      <div className="grid grid-cols-2 gap-8 items-center">
-        {/* Brújula */}
-        <div className="flex justify-center items-center">
+        <div className="w-[165px] h-[165px] mb-4 sm:w-[210px] sm:h-[210px] flex items-center mx-auto">
           <Compass directionDeg={directionDeg} windIntensity={windIntensity} />
-        </div>
-
-        {/* Speed gauge más grande */}
-        <div className="flex justify-center items-center">
-          <div className="w-full h-full flex items-center justify-center">
-            <SpeedGauge speedAvgKts={speedAvgKts} gustKts={gustKts} />
-          </div>
         </div>
       </div>
 
-      {/* Tarjetas: Dirección y Velocidad */}
-      <div className="grid grid-cols-2 gap-8 mt-3">
-        {/* Dirección */}
+      {/* Tarjetas: Dirección, Velocidad, Temperatura, Humedad */}
+      <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-3">
         <DataCard
           label="Dirección"
           value={directionDeg}
@@ -67,8 +42,6 @@ export function WeatherPanel({
           subtitle={getWindDirectionName(directionDeg)}
           color="primary"
         />
-
-        {/* Velocidad */}
         <DataCard label="Velocidad" value={gustKts} unit="kt" color="amber" />
         <DataCard
           label="Temperatura"

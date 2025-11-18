@@ -1,8 +1,8 @@
+import { useIsMobile } from '@/utils/useIsMobilePortrait';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { BasicInfoTile } from '@/components/BasicInfoTile';
 import { WeatherPanel } from '@/components/WeatherPanel';
-import { DataCard } from '@/components/DataCard';
 import { GraphViewer } from '@/components/GraphViewer';
 import { WeatherForecast } from '@/components/WeatherForecast';
 import { StationMap } from '@/components/StationMap';
@@ -14,6 +14,7 @@ import {
 } from '@/features/stations/hooks';
 
 export function Station() {
+  const isMobile = useIsMobile();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { t } = useTranslation();
@@ -97,7 +98,7 @@ export function Station() {
             stations={stations}
             selectedStation={station}
             onStationSelect={(stationId) => navigate(`/station/${stationId}`)}
-            height="505px"
+            height={isMobile ? '225px' : '505px'}
           />
           {/* Tarjetas de Temperatura y Humedad */}
           {/* {latestReading && (

@@ -5,48 +5,50 @@ interface SpeedGaugeProps {
   maxSpeed?: number;
 }
 
-export function SpeedGauge({
-  speedAvgKts,
-  gustKts,
-  maxSpeed = 40,
-}: SpeedGaugeProps) {
+export function SpeedGauge({ speedAvgKts, maxSpeed = 40 }: SpeedGaugeProps) {
   return (
-    <GaugeComponent
-      value={speedAvgKts}
-      minValue={0}
-      maxValue={maxSpeed}
-      type="radial"
-      labels={{
-        valueLabel: { hide: true },
-        tickLabels: {
-          type: 'inner',
-          ticks: [
-            { value: 6 },
-            { value: 12 },
-            { value: 24 },
-            { value: 32 },
-            { value: 40 },
+    <div className="relative w-full h-full flex items-center justify-center">
+      <GaugeComponent
+        value={speedAvgKts}
+        minValue={0}
+        maxValue={maxSpeed}
+        type="radial"
+        style={{
+          width: '100%',
+          height: '100%',
+        }}
+        labels={{
+          valueLabel: { hide: true },
+          tickLabels: {
+            type: 'inner',
+            ticks: [
+              { value: 6 },
+              { value: 12 },
+              { value: 24 },
+              { value: 32 },
+              { value: 40 },
+            ],
+          },
+        }}
+        arc={{
+          colorArray: ['#4affb4ff', '#FF2121'],
+          subArcs: [
+            { limit: 6 },
+            { limit: 12 },
+            { limit: 24 },
+            { limit: 32 },
+            { limit: 40 },
           ],
-        },
-      }}
-      arc={{
-        colorArray: ['#4affb4ff', '#FF2121'],
-        subArcs: [
-          { limit: 6 },
-          { limit: 12 },
-          { limit: 24 },
-          { limit: 32 },
-          { limit: 40 },
-        ],
-        padding: 0.02,
-        width: 0.3,
-      }}
-      pointer={{
-        elastic: true,
-        animationDelay: 0,
-        type: 'needle',
-      }}
-    />
+          padding: 0.02,
+          width: 0.3,
+        }}
+        pointer={{
+          elastic: true,
+          animationDelay: 0,
+          type: 'needle',
+        }}
+      />
+    </div>
     // <div className="relative w-56 h-56 flex items-center justify-center">
     //   <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-sm">
     //     {/* Gauge track 300° - gradiente de izquierda (verde) a derecha (rojo) */}
