@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import type { Station } from '@/types';
+import type { Station, StationStatus } from '@/types';
 import { formatDateTime } from '@/utils';
 
 interface BasicInfoTileProps {
@@ -12,16 +12,20 @@ export function BasicInfoTile({ station, lastUpdated }: BasicInfoTileProps) {
 
   // Calculate if data is stale (more than 5 minutes old)
   const isDataStale = lastUpdated
-    ? (Date.now() - new Date(lastUpdated).getTime()) > 5 * 60 * 1000
+    ? Date.now() - new Date(lastUpdated).getTime() > 5 * 60 * 1000
     : false;
 
   // Determine actual status based on data freshness
   const actualStatus = isDataStale ? 'offline' : station.status;
 
-  const statusColors = {
-    online: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
+  const statusColors: Record<StationStatus, string> = {
+    online:
+      'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
     offline: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400',
-    maintenance: 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400',
+    warning:
+      'bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400',
+    maintenance:
+      'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400',
   };
 
   return (
@@ -46,7 +50,12 @@ export function BasicInfoTile({ station, lastUpdated }: BasicInfoTileProps) {
 
       <div className="space-y-2 text-sm">
         <div className="flex items-center text-gray-600 dark:text-gray-400">
-          <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg
+            className="w-4 h-4 mr-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -62,13 +71,19 @@ export function BasicInfoTile({ station, lastUpdated }: BasicInfoTileProps) {
           </svg>
           <span>
             {station.location.lat.toFixed(4)}, {station.location.lon.toFixed(4)}
-            {station.location.elevationM && ` • ${station.location.elevationM}m`}
+            {station.location.elevationM &&
+              ` • ${station.location.elevationM}m`}
           </span>
         </div>
 
         {lastUpdated && (
           <div className="flex items-center text-gray-600 dark:text-gray-400">
-            <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg
+              className="w-4 h-4 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
