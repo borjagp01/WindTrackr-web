@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { WiStrongWind } from 'react-icons/wi';
 import { useStationsRealtime } from '@/features/stations/hooks';
+import DotGrid from '@/components/DotGrid/DotGrid';
 
 export function Landing() {
   const { t } = useTranslation();
@@ -35,8 +36,23 @@ export function Landing() {
   }
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <div className="container mx-auto px-4 py-12">
+    <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
+      {/* DotGrid Background */}
+      <div className="absolute inset-0 opacity-30 dark:opacity-20">
+        <DotGrid
+          dotSize={8}
+          gap={20}
+          baseColor="#94a3b8"
+          activeColor="#3b82f6"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 py-12 relative z-10">
         {/* Hero Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
