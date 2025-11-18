@@ -30,6 +30,9 @@ export function Station() {
           <p className="text-gray-600 dark:text-gray-400">
             {t('common.loading')}
           </p>
+          <p className="text-gray-600 dark:text-gray-400">
+            {t('common.loading')}
+          </p>
         </div>
       </div>
     );
@@ -80,49 +83,24 @@ export function Station() {
         Volver
       </button>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
         {/* Left column */}
         <div className="lg:col-span-2 space-y-6">
           <BasicInfoTile
             station={station}
             lastUpdated={latestReading?.timestamp}
           />
+
           <StationMap
             stations={stations}
             selectedStation={station}
             onStationSelect={(stationId) => navigate(`/station/${stationId}`)}
             height="400px"
           />
-
-          {readingsLoading ? (
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <p className="text-center text-gray-600 dark:text-gray-400">
-                {t('common.loading')}
-              </p>
-            </div>
-          ) : readings.length > 0 ? (
-            <GraphViewer readings={readings} />
-          ) : (
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <p className="text-center text-gray-600 dark:text-gray-400">
-                {t('common.noData')}
-              </p>
-            </div>
-          )}
-
-          {forecastLoading ? (
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <p className="text-center text-gray-600 dark:text-gray-400">
-                {t('common.loading')}
-              </p>
-            </div>
-          ) : forecast ? (
-            <WeatherForecast forecast={forecast} />
-          ) : null}
         </div>
 
         {/* Right column */}
-        <div className="space-y-6">
+        <div className="space-y-6 h-full">
           {latestReading && (
             <WindCompass
               directionDeg={latestReading.windDirectionDeg}
@@ -131,6 +109,42 @@ export function Station() {
             />
           )}
         </div>
+      </div>
+
+      {/* Graphs - full width below the two-column layout */}
+      <div className="w-full mt-6">
+        {readingsLoading ? (
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <p className="text-center text-gray-600 dark:text-gray-400">
+              {t('common.loading')}
+            </p>
+          </div>
+        ) : readings.length > 0 ? (
+          <div className="w-full">
+            <GraphViewer readings={readings} />
+          </div>
+        ) : (
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <p className="text-center text-gray-600 dark:text-gray-400">
+              {t('common.noData')}
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* Forecast section separated from graphs */}
+      <div className="w-full mt-6">
+        {forecastLoading ? (
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <p className="text-center text-gray-600 dark:text-gray-400">
+              {t('common.loading')}
+            </p>
+          </div>
+        ) : forecast ? (
+          <div className="w-full">
+            <WeatherForecast forecast={forecast} />
+          </div>
+        ) : null}
       </div>
     </div>
   );
