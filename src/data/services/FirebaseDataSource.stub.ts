@@ -1,4 +1,11 @@
-import { ref, get, query, orderByChild, startAt, endAt } from 'firebase/database';
+import {
+  ref,
+  get,
+  query,
+  orderByChild,
+  startAt,
+  endAt,
+} from 'firebase/database';
 import type { Station, Reading, Forecast, ReadingRange } from '@/types';
 import type { DataSource } from './DataSource';
 import { db } from '@/app/firebase';
@@ -50,8 +57,46 @@ export class FirebaseDataSource implements DataSource {
       return [];
     } catch (error) {
       console.error('Error fetching stations from Firebase:', error);
-      throw new Error(`Failed to fetch stations: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      throw new Error(
+        `Failed to fetch stations: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
     }
+  }
+
+  /**
+   * Stub implementation - not used in production
+   */
+  subscribeToStations(
+    _onUpdate: (stations: Station[]) => void,
+    _onError?: (error: Error) => void
+  ): () => void {
+    console.warn('subscribeToStations called on stub implementation');
+    return () => {};
+  }
+
+  /**
+   * Stub implementation - not used in production
+   */
+  subscribeToStation(
+    _id: string,
+    _onUpdate: (station: Station) => void,
+    _onError?: (error: Error) => void
+  ): () => void {
+    console.warn('subscribeToStation called on stub implementation');
+    return () => {};
+  }
+
+  /**
+   * Stub implementation - not used in production
+   */
+  subscribeToReadings(
+    _id: string,
+    _range: ReadingRange,
+    _onUpdate: (readings: Reading[]) => void,
+    _onError?: (error: Error) => void
+  ): () => void {
+    console.warn('subscribeToReadings called on stub implementation');
+    return () => {};
   }
 
   /**
@@ -83,9 +128,10 @@ export class FirebaseDataSource implements DataSource {
     try {
       // Calculate time range
       const endTime = Date.now();
-      const startTime = range === '24h'
-        ? endTime - 24 * 60 * 60 * 1000
-        : endTime - 7 * 24 * 60 * 60 * 1000;
+      const startTime =
+        range === '24h'
+          ? endTime - 24 * 60 * 60 * 1000
+          : endTime - 7 * 24 * 60 * 60 * 1000;
 
       const dbRef = ref(db, `readings/${id}`);
 
@@ -117,17 +163,21 @@ export class FirebaseDataSource implements DataSource {
 
       // Sort by timestamp (ascending) to ensure chronological order
       return readings.sort((a, b) => {
-        const timeA = typeof a.timestamp === 'string'
-          ? new Date(a.timestamp).getTime()
-          : a.timestamp;
-        const timeB = typeof b.timestamp === 'string'
-          ? new Date(b.timestamp).getTime()
-          : b.timestamp;
+        const timeA =
+          typeof a.timestamp === 'string'
+            ? new Date(a.timestamp).getTime()
+            : a.timestamp;
+        const timeB =
+          typeof b.timestamp === 'string'
+            ? new Date(b.timestamp).getTime()
+            : b.timestamp;
         return timeA - timeB;
       });
     } catch (error) {
       console.error(`Error fetching readings for station ${id}:`, error);
-      throw new Error(`Failed to fetch readings: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      throw new Error(
+        `Failed to fetch readings: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
     }
   }
 
@@ -145,7 +195,7 @@ export class FirebaseDataSource implements DataSource {
         console.warn(`No forecast found for station ${id}`);
         return {
           stationId: id,
-          hourly: []
+          hourly: [],
         };
       }
 
@@ -155,7 +205,7 @@ export class FirebaseDataSource implements DataSource {
       // Return empty forecast on error instead of throwing
       return {
         stationId: id,
-        hourly: []
+        hourly: [],
       };
     }
   }

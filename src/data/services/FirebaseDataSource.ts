@@ -91,18 +91,22 @@ export class FirebaseDataSource implements DataSource {
           location: {
             lat: info.latitude || 0,
             lon: info.longitude || 0,
-            elevationM: info.altitude || 0
+            elevationM: info.altitude || 0,
           },
-          description: `${info.province || ''}, ${info.country || ''}`.trim().replace(/^,\s*/, ''),
+          description: `${info.province || ''}, ${info.country || ''}`
+            .trim()
+            .replace(/^,\s*/, ''),
           provider: info.station_type === 'Automatic' ? 'internal' : 'external',
-          status: 'online'
+          status: 'online',
         });
       }
 
       return stations;
     } catch (error) {
       console.error('Error fetching stations from Firebase:', error);
-      throw new Error(`Failed to fetch stations: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      throw new Error(
+        `Failed to fetch stations: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
     }
   }
 
@@ -128,11 +132,13 @@ export class FirebaseDataSource implements DataSource {
         location: {
           lat: info.latitude || 0,
           lon: info.longitude || 0,
-          elevationM: info.altitude || 0
+          elevationM: info.altitude || 0,
         },
-        description: `${info.province || ''}, ${info.country || ''}`.trim().replace(/^,\s*/, ''),
+        description: `${info.province || ''}, ${info.country || ''}`
+          .trim()
+          .replace(/^,\s*/, ''),
         provider: info.station_type === 'Automatic' ? 'internal' : 'external',
-        status: 'online'
+        status: 'online',
       };
     } catch (error) {
       console.error(`Error fetching station ${id} from Firebase:`, error);
@@ -170,17 +176,23 @@ export class FirebaseDataSource implements DataSource {
         allReadings = Object.entries(readingsData)
           .map(([key, data]: [string, any]) => {
             // Parse timestamp (can be key or timestamp field)
-            const timestamp = this.parseTimestamp(data.timestamp || data.datetime || key);
+            const timestamp = this.parseTimestamp(
+              data.timestamp || data.datetime || key
+            );
 
             const reading = {
               stationId: id,
               timestamp: new Date(timestamp * 1000).toISOString(), // Convert to milliseconds
-              windSpeedKts: data.wind?.speed_knots || this.msToKnots(data.wind?.speed_ms || 0),
-              windGustKts: data.wind?.speed_knots || this.msToKnots(data.wind?.speed_ms || 0),
+              windSpeedKts:
+                data.wind?.speed_knots ||
+                this.msToKnots(data.wind?.speed_ms || 0),
+              windGustKts:
+                data.wind?.speed_knots ||
+                this.msToKnots(data.wind?.speed_ms || 0),
               windDirectionDeg: data.wind?.direction || 0,
               temperatureC: data.temperature,
               humidityPct: data.humidity,
-              pressureHPa: undefined
+              pressureHPa: undefined,
             };
 
             return reading;
@@ -196,7 +208,8 @@ export class FirebaseDataSource implements DataSource {
       // Filter readings by actual time range (not by count)
       // BUT: if no readings in range, show the most recent available data
       const now = Date.now();
-      const timeRangeMs = range === '24h' ? 24 * 60 * 60 * 1000 : 7 * 24 * 60 * 60 * 1000;
+      const timeRangeMs =
+        range === '24h' ? 24 * 60 * 60 * 1000 : 7 * 24 * 60 * 60 * 1000;
       const cutoffTime = now - timeRangeMs;
 
       console.log(`🕐 Filtering readings:`, {
@@ -205,11 +218,11 @@ export class FirebaseDataSource implements DataSource {
         range,
         totalReadings: allReadings.length,
         oldestReading: allReadings[allReadings.length - 1]?.timestamp,
-        newestReading: allReadings[0]?.timestamp
+        newestReading: allReadings[0]?.timestamp,
       });
 
       // Filter readings within the time range
-      let filteredReadings = allReadings.filter(reading => {
+      let filteredReadings = allReadings.filter((reading) => {
         const readingTime = new Date(reading.timestamp).getTime();
         return readingTime >= cutoffTime;
       });
@@ -217,9 +230,14 @@ export class FirebaseDataSource implements DataSource {
       // If no readings in the time range, show the most recent available data
       // (e.g., Arduino offline but we still want to show last known data)
       if (filteredReadings.length === 0 && allReadings.length > 0) {
-        console.log(`⚠️ No readings in ${range} range, showing most recent available data`);
+        console.log(
+          `⚠️ No readings in ${range} range, showing most recent available data`
+        );
         const limit = range === '24h' ? 500 : 1000;
-        filteredReadings = allReadings.slice(0, Math.min(limit, allReadings.length));
+        filteredReadings = allReadings.slice(
+          0,
+          Math.min(limit, allReadings.length)
+        );
       }
 
       // Sort chronologically (oldest first) for display
@@ -229,15 +247,23 @@ export class FirebaseDataSource implements DataSource {
         return timeA - timeB;
       });
 
-      console.log(`📊 Loaded ${readings.length} readings for ${id} (range: ${range}, total available: ${allReadings.length})`);
+      console.log(
+        `📊 Loaded ${readings.length} readings for ${id} (range: ${range}, total available: ${allReadings.length})`
+      );
       if (readings.length > 0) {
-        console.log(`📊 Time range: ${readings[0].timestamp} to ${readings[readings.length - 1].timestamp}`);
-        console.log(`📊 Cutoff time: ${new Date(cutoffTime).toISOString()} (${range})`);
+        console.log(
+          `📊 Time range: ${readings[0].timestamp} to ${readings[readings.length - 1].timestamp}`
+        );
+        console.log(
+          `📊 Cutoff time: ${new Date(cutoffTime).toISOString()} (${range})`
+        );
       }
       return readings;
     } catch (error) {
       console.error(`Error fetching readings for station ${id}:`, error);
-      throw new Error(`Failed to fetch readings: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      throw new Error(
+        `Failed to fetch readings: ${error instanceof Error ? error.message : 'Unknown error'}`
+      );
     }
   }
 
@@ -260,7 +286,9 @@ export class FirebaseDataSource implements DataSource {
     if (typeof timestamp === 'string') {
       // Try to parse as date string (handles "2025-11-15 11:52:23" format from Arduino)
       // Replace space with 'T' to make it ISO-compatible
-      const isoString = timestamp.includes('T') ? timestamp : timestamp.replace(' ', 'T');
+      const isoString = timestamp.includes('T')
+        ? timestamp
+        : timestamp.replace(' ', 'T');
       const parsed = Date.parse(isoString);
 
       if (!isNaN(parsed)) {
@@ -287,7 +315,7 @@ export class FirebaseDataSource implements DataSource {
         console.warn(`No forecast found for station ${id}`);
         return {
           stationId: id,
-          hourly: []
+          hourly: [],
         };
       }
 
@@ -304,7 +332,7 @@ export class FirebaseDataSource implements DataSource {
       // Return empty forecast on error instead of throwing
       return {
         stationId: id,
-        hourly: []
+        hourly: [],
       };
     }
   }
@@ -321,7 +349,7 @@ export class FirebaseDataSource implements DataSource {
   ): () => void {
     const dbRef = ref(db, 'weather_stations');
 
-    const unsubscribe = onValue(
+    onValue(
       dbRef,
       (snapshot) => {
         try {
@@ -338,17 +366,66 @@ export class FirebaseDataSource implements DataSource {
             const data = stationData as any;
             const info = data.info || {};
 
+            // Determinar estado basándose en la última lectura
+            let status: 'online' | 'offline' | 'warning' = 'offline';
+
+            // Intentar obtener la última lectura de history o current
+            const current = data.current;
+            const history = data.history;
+
+            if (current?.timestamp) {
+              const lastReadingTime =
+                this.parseTimestamp(current.timestamp) * 1000;
+              const timeSinceLastReading = Date.now() - lastReadingTime;
+
+              // Si la última lectura fue hace menos de 5 minutos → online
+              if (timeSinceLastReading < 5 * 60 * 1000) {
+                status = 'online';
+              }
+              // Si fue hace menos de 1 hora → warning
+              else if (timeSinceLastReading < 60 * 60 * 1000) {
+                status = 'warning';
+              }
+            } else if (history) {
+              // Si no hay current, verificar la última entrada en history
+              const historyEntries = Object.entries(history);
+              if (historyEntries.length > 0) {
+                // Ordenar por timestamp descendente
+                historyEntries.sort(([, a]: any, [, b]: any) => {
+                  const timeA = this.parseTimestamp(a.timestamp || a.datetime);
+                  const timeB = this.parseTimestamp(b.timestamp || b.datetime);
+                  return timeB - timeA;
+                });
+
+                const [, lastReading]: any = historyEntries[0];
+                const lastReadingTime =
+                  this.parseTimestamp(
+                    lastReading.timestamp || lastReading.datetime
+                  ) * 1000;
+                const timeSinceLastReading = Date.now() - lastReadingTime;
+
+                if (timeSinceLastReading < 5 * 60 * 1000) {
+                  status = 'online';
+                } else if (timeSinceLastReading < 60 * 60 * 1000) {
+                  status = 'warning';
+                }
+              }
+            }
+
             stations.push({
               id: stationId,
               name: info.name || stationId,
               location: {
                 lat: info.latitude || 0,
                 lon: info.longitude || 0,
-                elevationM: info.altitude || 0
+                elevationM: info.altitude || 0,
               },
-              description: `${info.province || ''}, ${info.country || ''}`.trim().replace(/^,\s*/, ''),
-              provider: info.station_type === 'Automatic' ? 'internal' : 'external',
-              status: 'online'
+              description: `${info.province || ''}, ${info.country || ''}`
+                .trim()
+                .replace(/^,\s*/, ''),
+              provider:
+                info.station_type === 'Automatic' ? 'internal' : 'external',
+              status,
             });
           }
 
@@ -357,7 +434,9 @@ export class FirebaseDataSource implements DataSource {
         } catch (error) {
           console.error('Error processing stations update:', error);
           if (onError) {
-            onError(error instanceof Error ? error : new Error('Unknown error'));
+            onError(
+              error instanceof Error ? error : new Error('Unknown error')
+            );
           }
         }
       },
@@ -386,7 +465,7 @@ export class FirebaseDataSource implements DataSource {
   ): () => void {
     const dbRef = ref(db, `weather_stations/${id}`);
 
-    const unsubscribe = onValue(
+    onValue(
       dbRef,
       (snapshot) => {
         try {
@@ -408,11 +487,14 @@ export class FirebaseDataSource implements DataSource {
             location: {
               lat: info.latitude || 0,
               lon: info.longitude || 0,
-              elevationM: info.altitude || 0
+              elevationM: info.altitude || 0,
             },
-            description: `${info.province || ''}, ${info.country || ''}`.trim().replace(/^,\s*/, ''),
-            provider: info.station_type === 'Automatic' ? 'internal' : 'external',
-            status: 'online'
+            description: `${info.province || ''}, ${info.country || ''}`
+              .trim()
+              .replace(/^,\s*/, ''),
+            provider:
+              info.station_type === 'Automatic' ? 'internal' : 'external',
+            status: 'online',
           };
 
           console.log(`🔄 Real-time update: station ${id}`);
@@ -420,7 +502,9 @@ export class FirebaseDataSource implements DataSource {
         } catch (error) {
           console.error(`Error processing station ${id} update:`, error);
           if (onError) {
-            onError(error instanceof Error ? error : new Error('Unknown error'));
+            onError(
+              error instanceof Error ? error : new Error('Unknown error')
+            );
           }
         }
       },
@@ -451,7 +535,7 @@ export class FirebaseDataSource implements DataSource {
     // Try 'history' first (V1 structure)
     const historyRef = ref(db, `weather_stations/${id}/history`);
 
-    const unsubscribe = onValue(
+    onValue(
       historyRef,
       (snapshot) => {
         try {
@@ -462,16 +546,27 @@ export class FirebaseDataSource implements DataSource {
               readingsRef,
               (snapshot2) => {
                 if (!snapshot2.exists()) {
-                  console.warn(`🔄 Real-time: No readings found for station ${id}`);
+                  console.warn(
+                    `🔄 Real-time: No readings found for station ${id}`
+                  );
                   onUpdate([]);
                   return;
                 }
-                const readings = this.processReadingsSnapshot(snapshot2, id, range);
-                console.log(`🔄 Real-time update: ${readings.length} readings for ${id} (deprecated path)`);
+                const readings = this.processReadingsSnapshot(
+                  snapshot2,
+                  id,
+                  range
+                );
+                console.log(
+                  `🔄 Real-time update: ${readings.length} readings for ${id} (deprecated path)`
+                );
                 onUpdate(readings);
               },
               (error) => {
-                console.error(`Firebase onValue error (readings ${id} - deprecated):`, error);
+                console.error(
+                  `Firebase onValue error (readings ${id} - deprecated):`,
+                  error
+                );
                 if (onError) {
                   onError(error);
                 }
@@ -481,12 +576,16 @@ export class FirebaseDataSource implements DataSource {
           }
 
           const readings = this.processReadingsSnapshot(snapshot, id, range);
-          console.log(`🔄 Real-time update: ${readings.length} readings for ${id}`);
+          console.log(
+            `🔄 Real-time update: ${readings.length} readings for ${id}`
+          );
           onUpdate(readings);
         } catch (error) {
           console.error(`Error processing readings update for ${id}:`, error);
           if (onError) {
-            onError(error instanceof Error ? error : new Error('Unknown error'));
+            onError(
+              error instanceof Error ? error : new Error('Unknown error')
+            );
           }
         }
       },
@@ -508,7 +607,11 @@ export class FirebaseDataSource implements DataSource {
    * Helper: Process readings snapshot (extracted from getReadings).
    * Reusable logic for both one-time fetch and real-time subscriptions.
    */
-  private processReadingsSnapshot(snapshot: any, id: string, range: ReadingRange): Reading[] {
+  private processReadingsSnapshot(
+    snapshot: any,
+    id: string,
+    range: ReadingRange
+  ): Reading[] {
     const readingsData = snapshot.val();
 
     // Convert object to array and map to Reading type
@@ -517,17 +620,23 @@ export class FirebaseDataSource implements DataSource {
       allReadings = Object.entries(readingsData)
         .map(([key, data]: [string, any]) => {
           // Parse timestamp (can be key or timestamp field)
-          const timestamp = this.parseTimestamp(data.timestamp || data.datetime || key);
+          const timestamp = this.parseTimestamp(
+            data.timestamp || data.datetime || key
+          );
 
           const reading = {
             stationId: id,
             timestamp: new Date(timestamp * 1000).toISOString(), // Convert to milliseconds
-            windSpeedKts: data.wind?.speed_knots || this.msToKnots(data.wind?.speed_ms || 0),
-            windGustKts: data.wind?.speed_knots || this.msToKnots(data.wind?.speed_ms || 0),
+            windSpeedKts:
+              data.wind?.speed_knots ||
+              this.msToKnots(data.wind?.speed_ms || 0),
+            windGustKts:
+              data.wind?.speed_knots ||
+              this.msToKnots(data.wind?.speed_ms || 0),
             windDirectionDeg: data.wind?.direction || 0,
             temperatureC: data.temperature,
             humidityPct: data.humidity,
-            pressureHPa: undefined
+            pressureHPa: undefined,
           };
 
           return reading;
@@ -542,11 +651,12 @@ export class FirebaseDataSource implements DataSource {
 
     // Filter readings by actual time range
     const now = Date.now();
-    const timeRangeMs = range === '24h' ? 24 * 60 * 60 * 1000 : 7 * 24 * 60 * 60 * 1000;
+    const timeRangeMs =
+      range === '24h' ? 24 * 60 * 60 * 1000 : 7 * 24 * 60 * 60 * 1000;
     const cutoffTime = now - timeRangeMs;
 
     // Filter readings within the time range
-    let filteredReadings = allReadings.filter(reading => {
+    let filteredReadings = allReadings.filter((reading) => {
       const readingTime = new Date(reading.timestamp).getTime();
       return readingTime >= cutoffTime;
     });
@@ -554,7 +664,10 @@ export class FirebaseDataSource implements DataSource {
     // If no readings in the time range, show the most recent available data
     if (filteredReadings.length === 0 && allReadings.length > 0) {
       const limit = range === '24h' ? 500 : 1000;
-      filteredReadings = allReadings.slice(0, Math.min(limit, allReadings.length));
+      filteredReadings = allReadings.slice(
+        0,
+        Math.min(limit, allReadings.length)
+      );
     }
 
     // Sort chronologically (oldest first) for display

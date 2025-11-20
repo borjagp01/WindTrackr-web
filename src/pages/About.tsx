@@ -15,13 +15,13 @@ export function About() {
             ¿Qué es WindTrackr?
           </h2>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
-            {t('about.description')} WindTrackr proporciona datos en tiempo casi real de
-            múltiples estaciones meteorológicas, con especial énfasis en velocidad del viento,
-            ráfagas y dirección.
+            {t('about.description')} WindTrackr proporciona datos en tiempo casi
+            real de múltiples estaciones meteorológicas, con especial énfasis en
+            velocidad del viento, ráfagas y dirección.
           </p>
           <p className="text-gray-700 dark:text-gray-300">
-            Esta aplicación está diseñada para entusiastas del windsurf, kitesurf, vela y
-            cualquier actividad relacionada con el viento en la zona del Estrecho de Gibraltar.
+            Esta aplicación está diseñada para entusiastas del windsurf,
+            kitesurf, vela y cualquier actividad relacionada con el viento.
           </p>
         </div>
 
@@ -30,17 +30,21 @@ export function About() {
             Características
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300">
-            <li>Visualización de datos de múltiples estaciones meteorológicas</li>
+            <li>
+              Visualización de datos de múltiples estaciones meteorológicas
+            </li>
             <li>Gráficas de series temporales (24 horas y 7 días)</li>
             <li>Brújula de viento con dirección, velocidad media y rachas</li>
             <li>Pronóstico del tiempo para las próximas 48 horas</li>
             <li>Mapa interactivo con ubicación de todas las estaciones</li>
-            <li>Modo oscuro para mejor visualización en condiciones de baja luz</li>
+            <li>
+              Modo oscuro para mejor visualización en condiciones de baja luz
+            </li>
             <li>Diseño responsive adaptado a móviles y tablets</li>
           </ul>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
+        {/* <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
             Estado del Proyecto
           </h2>
@@ -63,9 +67,9 @@ export function About() {
             <li>Soporte PWA para uso offline</li>
             <li>Internacionalización completa (ES/EN)</li>
           </ul>
-        </div>
+        </div> */}
 
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+        {/* <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
             Tecnologías
           </h2>
@@ -83,6 +87,7 @@ export function About() {
               <ul className="text-sm mt-1">
                 <li>Tailwind CSS</li>
                 <li>Recharts</li>
+                <li>React-bits</li>
                 <li>React Leaflet</li>
               </ul>
             </div>
@@ -113,7 +118,7 @@ export function About() {
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

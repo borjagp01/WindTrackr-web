@@ -1,22 +1,26 @@
-import { useState } from 'react';
+import { useIsMobile } from '@/utils/useIsMobilePortrait';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { BasicInfoTile } from '@/components/BasicInfoTile';
-import { WindCompass } from '@/components/WindCompass';
+import { WeatherPanel } from '@/components/WeatherPanel';
 import { GraphViewer } from '@/components/GraphViewer';
 import { WeatherForecast } from '@/components/WeatherForecast';
 import { StationMap } from '@/components/StationMap';
-import { useStationRealtime, useReadingsRealtime, useForecast, useStationsRealtime } from '@/features/stations/hooks';
-import type { ReadingRange } from '@/types';
+import {
+  useStationRealtime,
+  useReadingsRealtime,
+  useForecast,
+  useStationsRealtime,
+} from '@/features/stations/hooks';
 
 export function Station() {
+  const isMobile = useIsMobile();
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [range, setRange] = useState<ReadingRange>('24h');
 
   const { station, loading: stationLoading, error } = useStationRealtime(id); // ✨ Real-time
-  const { readings, loading: readingsLoading } = useReadingsRealtime(id, range); // ✨ Real-time
+  const { readings, loading: readingsLoading } = useReadingsRealtime(id, '7d'); // ✨ Cargar siempre 7 días
   const { forecast, loading: forecastLoading } = useForecast(id);
   const { stations } = useStationsRealtime(); // ✨ Real-time
 
@@ -25,7 +29,9 @@ export function Station() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">{t('common.loading')}</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            {t('common.loading')}
+          </p>
         </div>
       </div>
     );
@@ -60,61 +66,113 @@ export function Station() {
         onClick={() => navigate('/')}
         className="mb-6 flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300"
       >
-        <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        <svg
+          className="w-5 h-5 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
         </svg>
         Volver
       </button>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="col-span-6 gap-6 mb-6">
+        <BasicInfoTile
+          station={station}
+          lastUpdated={latestReading?.timestamp}
+        />
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-6 gap-6">
         {/* Left column */}
-        <div className="lg:col-span-2 space-y-6">
-          <BasicInfoTile station={station} lastUpdated={latestReading?.timestamp} />
-
-          {readingsLoading ? (
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <p className="text-center text-gray-600 dark:text-gray-400">
-                {t('common.loading')}
-              </p>
-            </div>
-          ) : readings.length > 0 ? (
-            <GraphViewer readings={readings} range={range} onRangeChange={setRange} />
-          ) : (
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <p className="text-center text-gray-600 dark:text-gray-400">
-                {t('common.noData')}
-              </p>
-            </div>
-          )}
-
-          {forecastLoading ? (
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
-              <p className="text-center text-gray-600 dark:text-gray-400">
-                {t('common.loading')}
-              </p>
-            </div>
-          ) : forecast ? (
-            <WeatherForecast forecast={forecast} />
-          ) : null}
-
+        <div className="lg:col-span-3 flex flex-col gap-10">
           <StationMap
             stations={stations}
             selectedStation={station}
             onStationSelect={(stationId) => navigate(`/station/${stationId}`)}
-            height="400px"
+            height={isMobile ? '225px' : '505px'}
           />
+          {/* Tarjetas de Temperatura y Humedad */}
+          {/* {latestReading && (
+            <div className="grid grid-cols-2 gap-6">
+              {latestReading.temperatureC !== undefined && (
+                <DataCard
+                  label="Temperatura"
+                  value={latestReading.temperatureC}
+                  unit="°C"
+                  color="orange"
+                />
+              )}
+              {latestReading.humidityPct !== undefined && (
+                <DataCard
+                  label="Humedad"
+                  value={latestReading.humidityPct}
+                  unit="%"
+                  color="blue"
+                />
+              )}
+            </div>
+          )} */}
         </div>
 
         {/* Right column */}
-        <div className="space-y-6">
+        <div className="lg:col-span-3 flex flex-col gap-6">
+          {/* <BasicInfoTile
+            station={station}
+            lastUpdated={latestReading?.timestamp}
+          /> */}
+
           {latestReading && (
-            <WindCompass
+            <WeatherPanel
               directionDeg={latestReading.windDirectionDeg}
               speedAvgKts={latestReading.windSpeedKts}
               gustKts={latestReading.windGustKts}
+              temperatureC={latestReading.temperatureC}
+              humidityPct={latestReading.humidityPct}
             />
           )}
         </div>
+      </div>
+
+      {/* Graphs - full width below the two-column layout */}
+      <div className="w-full mt-6">
+        {readingsLoading ? (
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <p className="text-center text-gray-600 dark:text-gray-400">
+              {t('common.loading')}
+            </p>
+          </div>
+        ) : readings.length > 0 ? (
+          <div className="w-full">
+            <GraphViewer readings={readings} />
+          </div>
+        ) : (
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <p className="text-center text-gray-600 dark:text-gray-400">
+              {t('common.noData')}
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* Forecast section separated from graphs */}
+      <div className="w-full mt-6">
+        {forecastLoading ? (
+          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+            <p className="text-center text-gray-600 dark:text-gray-400">
+              {t('common.loading')}
+            </p>
+          </div>
+        ) : forecast ? (
+          <div className="w-full">
+            <WeatherForecast forecast={forecast} />
+          </div>
+        ) : null}
       </div>
     </div>
   );

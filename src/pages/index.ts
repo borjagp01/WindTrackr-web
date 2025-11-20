@@ -1,4 +1,4 @@
-export { Home } from './Home';
+export { Landing } from './Landing';
 export { Station } from './Station';
 export { Map } from './Map';
 export { About } from './About';

@@ -2,21 +2,12 @@ import { RouterProvider } from 'react-router-dom';
 import { router } from './app/router';
 import { useFirebaseAuth } from './app/useFirebaseAuth';
 import './i18n/config';
+import { AnimatePresence, LayoutGroup, motion } from 'framer-motion';
 
 function App() {
   const { isAuthenticating, error } = useFirebaseAuth();
 
-  // Show loading while authenticating
-  if (isAuthenticating) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">Conectando con Firebase...</p>
-        </div>
-      </div>
-    );
-  }
+  // Error state still takes over entirely
 
   // Show error if authentication failed
   if (error) {
@@ -49,7 +40,34 @@ function App() {
     );
   }
 
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <LayoutGroup id="root-layout">
+        <RouterProvider router={router} />
+        <AnimatePresence>
+          {isAuthenticating && (
+            <motion.div
+              key="auth-loading"
+              className="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 z-50"
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+            >
+              <motion.h1
+                layoutId="app-title"
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ type: 'spring', stiffness: 120, damping: 20 }}
+                className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white select-none"
+              >
+                WindTrackr
+              </motion.h1>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </LayoutGroup>
+    </>
+  );
 }
 
 export default App;

@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { WiStrongWind, WiWindDeg, WiThermometer } from 'react-icons/wi';
 import type { Forecast } from '@/types';
 import { formatTime, formatWindSpeed, formatTemperature, getWindDirectionCardinal } from '@/utils';
 
@@ -24,44 +26,59 @@ export function WeatherForecast({ forecast }: WeatherForecastProps) {
       <div className="overflow-x-auto">
         <div className="flex gap-4 pb-2">
           {displayItems.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="flex-shrink-0 w-24 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg text-center"
+              className="flex-shrink-0 w-28 p-4 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md transition-shadow"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05, duration: 0.3 }}
+              whileHover={{ scale: 1.05, y: -4 }}
             >
-              <div className="text-xs text-gray-600 dark:text-gray-400 mb-2">
+              <div className="text-xs font-semibold text-gray-600 dark:text-gray-400 mb-3 text-center">
                 {formatTime(item.timestamp)}
               </div>
 
-              {/* Wind icon with direction */}
-              <div className="flex justify-center mb-2">
-                <div
-                  className="w-8 h-8 flex items-center justify-center"
-                  style={{ transform: `rotate(${item.directionDeg}deg)` }}
+              {/* Wind icon with direction - usando React Icons */}
+              <div className="flex justify-center mb-3 relative">
+                <motion.div
+                  animate={{ rotate: item.directionDeg }}
+                  transition={{ type: 'spring', stiffness: 100, damping: 15 }}
+                  className="relative"
                 >
-                  <svg className="w-6 h-6 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l-2 8h4l-2-8zm0 20l2-8h-4l2 8z" />
-                  </svg>
-                </div>
+                  <WiWindDeg
+                    className="text-primary-500 dark:text-primary-400"
+                    size={48}
+                  />
+                </motion.div>
               </div>
 
-              <div className="text-xs text-gray-500 dark:text-gray-400 mb-1">
+              <div className="text-xs font-bold text-primary-600 dark:text-primary-400 mb-2 text-center">
                 {getWindDirectionCardinal(item.directionDeg)}
               </div>
 
-              <div className="font-semibold text-sm text-gray-900 dark:text-white">
-                {formatWindSpeed(item.windKts, 'kts')}
+              {/* Wind speed con icono */}
+              <div className="flex items-center justify-center gap-1 mb-2">
+                <WiStrongWind className="text-blue-500 dark:text-blue-400" size={20} />
+                <span className="font-bold text-sm text-gray-900 dark:text-white">
+                  {formatWindSpeed(item.windKts, 'kts')}
+                </span>
               </div>
 
-              <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+              {/* Gust speed */}
+              <div className="text-xs text-orange-600 dark:text-orange-400 text-center mb-2 font-semibold">
                 ↑ {formatWindSpeed(item.gustKts, 'kts')}
               </div>
 
+              {/* Temperature con icono */}
               {item.tempC !== undefined && (
-                <div className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-                  {formatTemperature(item.tempC)}
+                <div className="flex items-center justify-center gap-1 pt-2 border-t border-gray-300 dark:border-gray-600">
+                  <WiThermometer className="text-red-500 dark:text-red-400" size={20} />
+                  <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                    {formatTemperature(item.tempC)}
+                  </span>
                 </div>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,8 +1,12 @@
 export { BasicInfoTile } from './BasicInfoTile';
+export { Compass } from './Compass';
+export { DataCard } from './DataCard';
 export { GraphViewer } from './GraphViewer';
 export { NavBar } from './NavBar';
+export { SpeedGauge } from './SpeedGauge';
 export { StationMap } from './StationMap';
 export { StationSelector } from './StationSelector';
 export { ThemeToggle } from './ThemeToggle';
 export { WeatherForecast } from './WeatherForecast';
+export { WeatherPanel } from './WeatherPanel';
 export { WindCompass } from './WindCompass';
