@@ -304,6 +304,7 @@ export class FirebaseDataSource implements DataSource {
   /**
    * Get weather forecast for a station.
    * Expected path: /weather_stations/<station-id>/forecast
+   * Structure: { data: { hourly: [], weekly: [] }, lastUpdate, source }
    */
   async getForecast(id: string): Promise<Forecast> {
     try {
@@ -321,12 +322,12 @@ export class FirebaseDataSource implements DataSource {
 
       const forecastData = snapshot.val();
 
-      // If forecast data exists but doesn't have the expected structure
-      if (!forecastData.stationId) {
-        forecastData.stationId = id;
-      }
-
-      return forecastData as Forecast;
+      // Map Firebase structure to Forecast type
+      return {
+        stationId: id,
+        hourly: forecastData?.data?.hourly || [],
+        weekly: forecastData?.data?.weekly || [],
+      };
     } catch (error) {
       console.error(`Error fetching forecast for station ${id}:`, error);
       // Return empty forecast on error instead of throwing
