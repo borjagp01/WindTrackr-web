@@ -83,7 +83,7 @@
 
 ```bash
 git clone <repo-url>
-cd windtrackr
+cd WindTrackr-web
 npm install
 ```
 

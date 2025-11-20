@@ -45,14 +45,14 @@ Este proyecto adhiere a un código de conducta básico:
 ```bash
 # Fork el repositorio en GitHub
 # Luego clona tu fork
-git clone https://github.com/TU-USUARIO/estacion-meteorologica.git
-cd estacion-meteorologica
+git clone https://github.com/TU-USUARIO/WindTrackr.git
+cd WindTrackr
 ```
 
 ### 2. Configurar Upstream
 
 ```bash
-git remote add upstream https://github.com/ORIGINAL-OWNER/estacion-meteorologica.git
+git remote add upstream https://github.com/ORIGINAL-OWNER/WindTrackr.git
 git fetch upstream
 ```
 
