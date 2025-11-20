@@ -1,0 +1,335 @@
+================================================================================
+  FIREBASE FUNCTIONS PARA PRONÓSTICOS AEMET - RESUMEN COMPLETO
+================================================================================
+
+📦 ARCHIVOS CREADOS
+================================================================================
+
+functions/
+  ├── package.json                    - Dependencias y scripts
+  ├── index.js                        - Código principal (updateForecasts + updateForecastManual)
+  ├── .gitignore                      - Ignorar node_modules y .env
+  ├── .env.example                    - Template variables de entorno
+  ├── README.md                       - Documentación técnica completa
+  ├── QUICKSTART.md                   - Guía rápida de despliegue (5 pasos)
+  ├── STATION_CONFIG_EXAMPLE.md       - Ejemplos de configuración
+  ├── IMPLEMENTATION_SUMMARY.md       - Resumen detallado de implementación
+  ├── add-aemet-config.js            - Helper script documentación
+  └── setup-stations.js               - Script interactivo de configuración
+
+Actualizados:
+  - firebase.json                     - Añadida configuración functions
+  - README.md                         - Actualizado roadmap y documentación
+
+================================================================================
+  🎯 FUNCIONALIDADES IMPLEMENTADAS
+================================================================================
+
+1. CLOUD FUNCTION SCHEDULED: updateForecasts
+   - Se ejecuta cada 6 horas (00:00, 06:00, 12:00, 18:00 Madrid)
+   - Lee todas las estaciones de Firebase
+   - Para cada estación con ine_code + aemet_api_key:
+     * Hace petición a AEMET (2 pasos: metadata → datos)
+     * Transforma datos al formato de la app
+     * Guarda en weather_stations/{id}/forecast
+   - Espera 61s entre peticiones (límite AEMET: 1/min)
+   - Logging completo de resultados
+
+2. HTTP ENDPOINT: updateForecastManual
+   - POST request para actualización manual
+   - Opciones:
+     * Sin body: actualiza todas las estaciones
+     * Con {"stationId": "id"}: actualiza solo una
+   - Útil para testing y actualizaciones on-demand
+
+3. TRANSFORMACIÓN DE DATOS
+   - Input: Datos AEMET (predicción horaria municipal)
+   - Output: Formato app (compatible con tipo Forecast)
+   - Conversiones:
+     * Velocidad: km/h → nudos (knots)
+     * Dirección: texto ("N", "NE") → grados (0-360)
+     * Timestamps: formato AEMET → ISO 8601
+   - Filtrado: solo próximas 72 horas
+
+4. MANEJO DE LÍMITES
+   - AEMET: 1 petición/minuto por API key
+   - Solución: procesamiento secuencial con espera 61s
+   - Soporte: API keys diferentes por estación (paralelización futura)
+
+================================================================================
+  📋 CONFIGURACIÓN REQUERIDA
+================================================================================
+
+CADA ESTACIÓN NECESITA EN FIREBASE:
+
+{
+  "weather_stations": {
+    "tu-estacion-id": {
+      "info": {
+        "ine_code": "11033",           ← Código INE del municipio
+        "aemet_api_key": "eyJhbGc..."  ← API Key de AEMET
+      }
+    }
+  }
+}
+
+DÓNDE OBTENER:
+
+1. Código INE
+   - Web: https://www.ine.es/daco/daco42/codmun/codmunmapa.htm
+   - Ejemplos:
+     * Tarifa: 11033
+     * Algeciras: 11004
+     * Barbate: 11007
+
+2. API Key AEMET
+   - Registro: https://opendata.aemet.es/centrodedescargas/inicio
+   - Proceso: Registro → Perfil → Solicitar API Key
+   - Límite: 1 petición/minuto por key
+   - Recomendación: Una key diferente por estación
+
+================================================================================
+  🚀 PASOS PARA DESPLEGAR
+================================================================================
+
+1. INSTALAR DEPENDENCIAS
+   cd functions
+   npm install
+
+2. CONFIGURAR ESTACIONES
+   Opción A (Firebase Console):
+     - Ir a Realtime Database
+     - Navegar a weather_stations/{id}
+     - Añadir nodo "info" con ine_code y aemet_api_key
+
+   Opción B (Script):
+     cd functions
+     node setup-stations.js
+     # Sigue las instrucciones interactivas
+
+3. DESPLEGAR FUNCTIONS
+   firebase deploy --only functions
+
+4. VERIFICAR
+   # Ver logs
+   firebase functions:log --only updateForecasts
+
+   # Probar manualmente
+   curl -X POST https://REGION-PROJECT.cloudfunctions.net/updateForecastManual \
+     -H "Content-Type: application/json" \
+     -d '{"stationId": "tu-estacion"}'
+
+5. ✅ LISTO
+   - La función se ejecutará automáticamente cada 6 horas
+   - Los pronósticos se guardarán en forecast/
+   - Tu app puede leerlos en tiempo real
+
+================================================================================
+  📊 ESTRUCTURA DE DATOS GENERADA
+================================================================================
+
+ANTES (solo tu configuración):
+{
+  "weather_stations": {
+    "mi-estacion": {
+      "name": "...",
+      "location": {...},
+      "info": {
+        "ine_code": "11033",
+        "aemet_api_key": "..."
+      },
+      "current": {...},
+      "history": {...}
+    }
+  }
+}
+
+DESPUÉS (con pronóstico automático):
+{
+  "weather_stations": {
+    "mi-estacion": {
+      "name": "...",
+      "location": {...},
+      "info": {
+        "ine_code": "11033",
+        "aemet_api_key": "..."
+      },
+      "forecast": {                      ← NUEVO NODO CREADO
+        "data": {
+          "hourly": [
+            {
+              "timestamp": "2025-11-20T12:00:00",
+              "windKts": 15,
+              "gustKts": 22,
+              "directionDeg": 270,
+              "tempC": 18
+            },
+            {
+              "timestamp": "2025-11-20T13:00:00",
+              "windKts": 18,
+              "gustKts": 25,
+              "directionDeg": 280,
+              "tempC": 19
+            },
+            ... (hasta 72 horas)
+          ]
+        },
+        "lastUpdate": 1700485200000,
+        "source": "AEMET"
+      },
+      "current": {...},
+      "history": {...}
+    }
+  }
+}
+
+================================================================================
+  🔍 TROUBLESHOOTING
+================================================================================
+
+PROBLEMA: "Station missing ine_code or aemet_api_key"
+SOLUCIÓN: Verifica que el nodo info existe con ambos campos
+
+PROBLEMA: "AEMET request failed: 401"
+SOLUCIÓN: API key inválida o expirada. Solicita nueva en AEMET
+
+PROBLEMA: "AEMET request failed: 429"
+SOLUCIÓN: Demasiadas peticiones. Espera 1 minuto o usa API keys separadas
+
+PROBLEMA: "No forecast data returned"
+SOLUCIÓN: Código INE incorrecto o municipio sin datos
+
+PROBLEMA: No se actualiza automáticamente
+SOLUCIÓN:
+  1. Verifica que la function está desplegada: firebase functions:list
+  2. Revisa logs: firebase functions:log --only updateForecasts
+  3. Espera la próxima ejecución (cada 6h)
+
+================================================================================
+  📈 MONITOREO Y LOGS
+================================================================================
+
+VER LOGS EN TIEMPO REAL:
+  firebase functions:log
+
+VER LOGS DE FUNCIÓN ESPECÍFICA:
+  firebase functions:log --only updateForecasts
+
+VER LOGS RECIENTES (últimos 30 min):
+  firebase functions:log --since 30m
+
+LOGS EXITOSOS MOSTRARÁN:
+  ✅ Found N stations to process
+  ✅ Successfully updated forecast for station X
+  ⏳ Waiting 61 seconds before next AEMET request...
+  ✅ Forecast update job completed
+     Success: N
+     Failed: 0
+     Skipped: 0
+
+================================================================================
+  🎯 VENTAJAS DE ESTA IMPLEMENTACIÓN
+================================================================================
+
+✅ AUTOMATIZACIÓN COMPLETA
+   - Cron cada 6 horas sin intervención manual
+   - Datos siempre actualizados
+
+✅ ESCALABLE
+   - Soporta N estaciones
+   - API keys independientes
+   - Procesamiento inteligente
+
+✅ RESILIENTE
+   - Continúa si una estación falla
+   - Logging detallado
+   - Skips automáticos
+
+✅ MANTENIBLE
+   - Código modular
+   - Documentación completa
+   - Fácil de extender
+
+✅ INTEGRADO
+   - Compatible con formato existente
+   - Sin cambios en la app
+   - Lectura en tiempo real
+
+================================================================================
+  📚 DOCUMENTACIÓN DISPONIBLE
+================================================================================
+
+functions/README.md
+  - Documentación técnica completa
+  - Descripción de functions
+  - API de AEMET explicada
+  - Instalación y deploy
+  - Troubleshooting extenso
+
+functions/QUICKSTART.md
+  - Guía de 5 pasos para desplegar
+  - Configuración avanzada
+  - Ejemplos de uso
+
+functions/STATION_CONFIG_EXAMPLE.md
+  - Estructura completa de estación
+  - Tabla de códigos INE
+  - Proceso de obtención API keys
+  - Configuración manual y automática
+
+functions/IMPLEMENTATION_SUMMARY.md
+  - Resumen ejecutivo
+  - Arquitectura de datos
+  - Flujo de ejecución
+  - Referencias
+
+================================================================================
+  🔜 MEJORAS FUTURAS (OPCIONALES)
+================================================================================
+
+PRÓXIMAS IMPLEMENTACIONES:
+  - Retry automático en errores temporales
+  - Cache Redis para evitar peticiones duplicadas
+  - Webhooks para notificar cambios
+  - Dashboard analytics pronósticos vs realidad
+  - Predicción ML basada en históricos
+  - Integración con más fuentes (OpenWeatherMap)
+
+================================================================================
+  📞 SOPORTE Y REFERENCIAS
+================================================================================
+
+DOCUMENTACIÓN AEMET:
+  https://opendata.aemet.es/dist/index.html
+
+FIREBASE FUNCTIONS:
+  https://firebase.google.com/docs/functions
+
+CÓDIGOS INE:
+  https://www.ine.es/daco/daco42/codmun/codmunmapa.htm
+
+ISSUES Y SOPORTE:
+  GitHub Issues del proyecto
+
+================================================================================
+  ✅ CHECKLIST DE IMPLEMENTACIÓN
+================================================================================
+
+[ ] 1. Instalar dependencias: cd functions && npm install
+[ ] 2. Obtener códigos INE de tus municipios
+[ ] 3. Registrarse en AEMET y obtener API keys
+[ ] 4. Configurar estaciones en Firebase (info/ine_code + aemet_api_key)
+[ ] 5. Desplegar functions: firebase deploy --only functions
+[ ] 6. Probar manualmente: curl POST /updateForecastManual
+[ ] 7. Verificar logs: firebase functions:log
+[ ] 8. Confirmar datos en Firebase Console: forecast/
+[ ] 9. Verificar en app que se leen los pronósticos
+[ ] 10. Esperar ejecución automática (próximas 6h)
+
+================================================================================
+
+Versión: 0.3.1-functions
+Fecha: Noviembre 2025
+Estado: ✅ Production Ready
+
+================================================================================

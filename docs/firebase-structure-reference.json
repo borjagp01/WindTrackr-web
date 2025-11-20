@@ -3412,6 +3412,7 @@
         "name": "V1_STATION_TEST",
         "operation_mode": "auto",
         "province": "Sevilla",
+        "ine_code": 41091,
         "station_type": "Automatic",
         "version": "0.0.8.5"
       }

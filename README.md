@@ -154,6 +154,17 @@ npm run inspect-firebase  # Inspeccionar estructura de Firebase DB
 npm run seed-firebase     # Poblar Firebase con datos mock (testing)
 ```
 
+### Firebase Functions
+
+```bash
+cd functions
+npm install              # Instalar dependencias de functions
+npm run deploy           # Desplegar functions a Firebase
+npm run logs             # Ver logs de functions
+```
+
+Ver [functions/README.md](functions/README.md) para documentación completa de las Cloud Functions.
+
 ### Deploy
 
 ```bash
@@ -276,6 +287,7 @@ export function useFirebaseAuth() {
         "longitude": -5.9823,
         "altitude": 50,
         "province": "Sevilla",
+        "ine_code": 41091,
         "station_type": "Automatic",
         "version": "0.0.8.5"
       },
@@ -372,8 +384,12 @@ const status = isDataStale ? 'offline' : 'online';
 
 ### ⏳ Fase 2.2: Integración APIs Meteorológicas (EN PROGRESO)
 
-- [ ] Integración con OpenWeatherMap API
-- [ ] Integración con AEMET (Agencia Estatal de Meteorología)
+- [x] **Firebase Functions para AEMET** ✅
+  - Cloud Function scheduled (cada 6 horas)
+  - Endpoint HTTP manual
+  - Transformación de datos AEMET → app format
+  - Soporte multi-estación con API keys independientes
+  - Respeto límite 1 petición/minuto por key
 - [ ] Cache inteligente de pronósticos
 - [ ] Fallback entre APIs (redundancia)
 - [ ] Comparativa: datos locales vs pronósticos
@@ -497,6 +513,9 @@ Ver [CONTRIBUTING.md](CONTRIBUTING.md) para guía detallada.
 
 ## 📚 Documentación Adicional
 
+- **[functions/README.md](functions/README.md)** - Firebase Cloud Functions (pronósticos AEMET)
+- **[functions/QUICKSTART.md](functions/QUICKSTART.md)** - Guía rápida de despliegue de functions
+- **[functions/STATION_CONFIG_EXAMPLE.md](functions/STATION_CONFIG_EXAMPLE.md)** - Ejemplo configuración estaciones
 - **[DECISIONES_TECNICAS.md](DECISIONES_TECNICAS.md)** - Decisiones arquitectónicas del proyecto
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - Guía completa de contribución
 
@@ -515,6 +534,16 @@ Ver [CONTRIBUTING.md](CONTRIBUTING.md) para guía detallada.
 ---
 
 ## 📝 Changelog
+
+### v0.3.1-functions (Fase 2.2 - Nov 2025)
+
+- ✅ **Firebase Cloud Functions**: Sistema automático de pronósticos AEMET
+- ✅ **Scheduled Function**: Actualización cada 6 horas
+- ✅ **HTTP Endpoint**: Actualización manual por estación o todas
+- ✅ **Multi-API Key**: Soporte para API keys independientes por estación
+- ✅ **Transformación de datos**: AEMET format → App format automático
+- ✅ **Documentación completa**: README, QUICKSTART, y ejemplos
+- 📊 **Métricas**: +800 LOC functions, 4 archivos doc
 
 ### v0.3.0-realtime (Fase 2.1 - Nov 2025)
 
