@@ -32,9 +32,6 @@ export function Station() {
           <p className="text-gray-600 dark:text-gray-400">
             {t('common.loading')}
           </p>
-          <p className="text-gray-600 dark:text-gray-400">
-            {t('common.loading')}
-          </p>
         </div>
       </div>
     );

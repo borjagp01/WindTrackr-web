@@ -180,30 +180,72 @@ export function StationMap({
             position={[station.location.lat, station.location.lon]}
           >
             <Popup>
-              <div className="min-w-[200px] p-2">
-                <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                  {station.name}
-                </h3>
-                {station.description && (
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                    {station.description}
-                  </p>
-                )}
-                <div className="text-xs text-gray-500 dark:text-gray-500">
-                  <div>Lat: {station.location.lat.toFixed(4)}</div>
-                  <div>Lon: {station.location.lon.toFixed(4)}</div>
-                  {station.location.elevationM && (
-                    <div>Alt: {station.location.elevationM}m</div>
+              <div className="group relative text-left p-4 overflow-hidden min-w-[250px]">
+                {/* Content */}
+                <div className="relative">
+                  {/* Header with status badge */}
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                      {station.name}
+                    </h3>
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-medium ${
+                        station.status === 'online'
+                          ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
+                          : station.status === 'offline'
+                            ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
+                            : 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400'
+                      }`}
+                    >
+                      {t(`station.status.${station.status}`)}
+                    </span>
+                  </div>
+
+                  {/* Description */}
+                  {station.description && (
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-2">
+                      {station.description}
+                    </p>
+                  )}
+
+                  {/* Location info */}
+                  <div className="space-y-2">
+                    <div className="flex items-center text-xs text-gray-400 dark:text-gray-500">
+                      <svg
+                        className="w-4 h-4 mr-2"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                        />
+                      </svg>
+                      <span>
+                        {station.location.lat.toFixed(4)},{' '}
+                        {station.location.lon.toFixed(4)}
+                      </span>
+                    </div>
+                    {station.location.elevationM && (
+                      <div className="text-xs text-gray-400 dark:text-gray-500">
+                        Alt: {station.location.elevationM}m
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Button */}
+                  {onStationSelect && (
+                    <button
+                      onClick={() => onStationSelect(station.id)}
+                      className="mt-4 w-full px-3 py-2 bg-primary-500 text-white text-sm rounded hover:bg-primary-600 transition-colors"
+                    >
+                      {t('map.viewStation')}
+                    </button>
                   )}
                 </div>
-                {onStationSelect && (
-                  <button
-                    onClick={() => onStationSelect(station.id)}
-                    className="mt-2 w-full px-3 py-1 bg-primary-500 text-white text-sm rounded hover:bg-primary-600 transition-colors"
-                  >
-                    {t('map.viewStation')}
-                  </button>
-                )}
               </div>
             </Popup>
           </Marker>

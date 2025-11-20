@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --color-primary-50: #eff6ff;
@@ -17,12 +17,26 @@
 @variant dark (:is(.dark &));
 
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-    Cantarell, 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Helvetica Neue',
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -32,4 +46,110 @@ body {
 
 #root {
   min-height: 100vh;
+}
+
+/* Custom scrollbar - thin and subtle */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.3);
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.5);
+}
+
+/* Dark mode scrollbar */
+.dark * {
+  scrollbar-color: rgba(75, 85, 99, 0.3) transparent;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background-color: rgba(75, 85, 99, 0.3);
+}
+
+.dark *::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(75, 85, 99, 0.5);
+}
+
+/* Leaflet popup dark mode */
+.leaflet-popup-content-wrapper {
+  background: white;
+  border-radius: 1rem;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.dark .leaflet-popup-content-wrapper {
+  background: rgb(31 41 55); /* gray-800 */
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+.dark .leaflet-popup-tip {
+  background: rgb(31 41 55); /* gray-800 */
+}
+
+.leaflet-popup-close-button {
+  color: rgb(31 41 55); /* gray-800 */
+}
+
+.dark .leaflet-popup-close-button {
+  color: rgb(255 255 255); /* white */
+}
+
+/* removed: hidden landing title during auth overlay; using shared element crossfade instead */
+
+/* Hero title invisible blur glass: no visible box, just softened background */
+.blur-div {
+  position: relative;
+  display: inline-block;
+  isolation: isolate; /* ensure z-index layering stays within wrapper */
+}
+
+.blur-div::before {
+  content: '';
+  position: absolute;
+  inset: -44px; /* extend blur beyond glyph bounds to hide edges */
+  pointer-events: none;
+  z-index: 0;
+  /* animate via CSS variable --blur-o (0 -> 1) */
+  opacity: var(--blur-o, 1);
+  -webkit-backdrop-filter: blur(calc(var(--blur-o, 1) * 7px)) saturate(120%);
+  backdrop-filter: blur(calc(var(--blur-o, 1) * 7px)) saturate(120%);
+  border-radius: 44px; /* softens any potential edge */
+  /* feather the edges so no rectangle is perceived */
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    black 50%,
+    rgba(0, 0, 0, 0.25) 70%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    black 50%,
+    rgba(0, 0, 0, 0.25) 70%,
+    transparent 100%
+  );
+  transition:
+    opacity 0.6s ease,
+    -webkit-backdrop-filter 0.6s ease,
+    backdrop-filter 0.6s ease;
 }

@@ -11,7 +11,7 @@ import windAnimation from '@/assets/wind-lottie.json';
 export function Landing() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const { stations, loading } = useStationsRealtime();
+  const { stations } = useStationsRealtime();
   const [search, setSearch] = useState('');
 
   const filteredStations = useMemo(() => {
@@ -24,29 +24,16 @@ export function Landing() {
     );
   }, [stations, search]);
 
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-500 mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">
-            {t('common.loading')}
-          </p>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-gradient-to-br from-blue-50 via-white to-cyan-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden">
       {/* DotGrid Background */}
-      <div className="absolute inset-0 opacity-50 dark:opacity-30">
+      <div className="absolute inset-0 opacity-60 dark:opacity-40">
         <DotGrid
           dotSize={8}
           gap={20}
           baseColor="#94a3b8"
           activeColor="#3b82f6"
-          proximity={120}
+          proximity={150}
           shockRadius={250}
           shockStrength={5}
           resistance={750}
@@ -57,9 +44,9 @@ export function Landing() {
       <div className="container mx-auto px-4 py-12 relative z-10">
         {/* Hero Section */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, scale: 0.9, y: 100 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="text-center mb-12"
         >
           <div className="flex items-center justify-center">
@@ -67,17 +54,26 @@ export function Landing() {
               <Lottie animationData={windAnimation} loop={true} />
             </div>
           </div>
-          <div className="inline-block backdrop-blur-md bg-white/10 dark:bg-gray-800/10 px-8 py-6 rounded-3xl border border-white/10 dark:border-gray-700/10 shadow-xl">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4">
+          <motion.div
+            className="inline-block blur-div"
+            style={{ ['--blur-o' as any]: 0 }}
+            animate={{ ['--blur-o' as any]: 1 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
+            <motion.h1
+              layoutId="app-title"
+              transition={{ type: 'spring', stiffness: 120, damping: 20 }}
+              className="hero-app-title relative z-10 text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4"
+            >
               WindTrackr
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-2">
+            </motion.h1>
+            <p className="text-xl text-gray-600 relative z-10 dark:text-gray-300 mb-2">
               Datos meteorológicos en tiempo real
             </p>
-            <p className="text-gray-500 dark:text-gray-400">
+            <p className="text-gray-500 relative z-10 dark:text-gray-400">
               Selecciona una estación para ver los datos
             </p>
-          </div>
+          </motion.div>
         </motion.div>
 
         {/* Search Bar */}
@@ -111,19 +107,27 @@ export function Landing() {
           </div>
         </motion.div>
 
-        {/* Station Count */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mb-8"
-        >
-          <p className="text-gray-600 dark:text-gray-400">
-            {filteredStations.length === stations.length
-              ? `${stations.length} ${stations.length === 1 ? 'estación disponible' : 'estaciones disponibles'}`
-              : `${filteredStations.length} de ${stations.length} estaciones`}
-          </p>
-        </motion.div>
+        {/* Station Count centrado verticalmente */}
+        <div className="flex items-center justify-center mb-8">
+          {/* Blur animates immediately on mount; text opacity animates with slight delay */}
+          <motion.div
+            className="text-center blur-div"
+            style={{ ['--blur-o' as any]: 0 }}
+            animate={{ ['--blur-o' as any]: 1 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-gray-600 dark:text-gray-400 relative z-10"
+            >
+              {filteredStations.length === stations.length
+                ? `${stations.length} ${stations.length === 1 ? 'estación disponible' : 'estaciones disponibles'}`
+                : `${filteredStations.length} de ${stations.length} estaciones`}
+            </motion.p>
+          </motion.div>
+        </div>
 
         {/* Stations Grid */}
         <motion.div
@@ -227,15 +231,23 @@ export function Landing() {
         </motion.div>
 
         {/* No results message */}
-        {filteredStations.length === 0 && (
+        {/* Only show 'no results' if not loading and stations are loaded */}
+        {filteredStations.length === 0 && stations && stations.length > 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-12"
           >
-            <p className="text-gray-500 dark:text-gray-400 text-lg">
-              No se encontraron estaciones que coincidan con "{search}"
-            </p>
+            <motion.div
+              className="blur-div"
+              style={{ ['--blur-o' as any]: 0 }}
+              animate={{ ['--blur-o' as any]: 1 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
+              <p className="text-gray-500 relative z-10 dark:text-gray-400 text-lg">
+                No se encontraron estaciones que coincidan con "{search}"
+              </p>
+            </motion.div>
           </motion.div>
         )}
 
