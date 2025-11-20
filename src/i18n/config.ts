@@ -8,6 +8,8 @@ const resources = {
       'nav.home': 'Inicio',
       'nav.map': 'Mapa',
       'nav.about': 'Acerca de',
+      'nav.settings': 'Ajustes',
+      'nav.theme': 'Tema',
 
       // Station Selector
       'station.select': 'Seleccionar estación',
