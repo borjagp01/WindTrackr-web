@@ -180,7 +180,7 @@ export function StationMap({
             position={[station.location.lat, station.location.lon]}
           >
             <Popup>
-              <div className="group relative text-left p-4 overflow-hidden min-w-[250px]">
+              <div className="group relative text-left p-2 overflow-hidden min-w-[250px]">
                 {/* Content */}
                 <div className="relative">
                   {/* Header with status badge */}
@@ -189,7 +189,7 @@ export function StationMap({
                       {station.name}
                     </h3>
                     <span
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      className={`ml-3 px-3 py-1 rounded-full text-xs font-medium ${
                         station.status === 'online'
                           ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
                           : station.status === 'offline'

@@ -23,6 +23,15 @@ export function GraphViewer({ readings }: GraphViewerProps) {
     windGust: true,
   });
 
+  const [showScrollHint, setShowScrollHint] = useState(false);
+  const [hintPosition, setHintPosition] = useState({ top: 0, left: 0 });
+
+  // Detectar el OS para mostrar el mensaje correcto
+  const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+  const scrollHintText = isMac
+    ? 'Usa ⌘ + scroll para hacer zoom'
+    : 'Usa Ctrl + scroll para hacer zoom';
+
   const chartData = readings.map((r) => ({
     timestamp: r.timestamp,
     time: formatTime(r.timestamp),
@@ -171,7 +180,7 @@ export function GraphViewer({ readings }: GraphViewerProps) {
         type: 'inside' as const,
         start: initialZoom.start,
         end: initialZoom.end,
-        zoomOnMouseWheel: true,
+        zoomOnMouseWheel: 'ctrl',
         moveOnMouseMove: true,
       },
       // Sider deshabilitado temporalmente // Marcar opcion containLabel true en grid si se activa
@@ -448,6 +457,63 @@ export function GraphViewer({ readings }: GraphViewerProps) {
     ],
   };
 
+  // Manejador de scroll con Ctrl/Cmd para zoom
+  useEffect(() => {
+    let hintTimeout: ReturnType<typeof setTimeout>;
+    let lastChartContainer: HTMLElement | null = null;
+
+    const updateHintPosition = () => {
+      if (showScrollHint && lastChartContainer) {
+        const rect = lastChartContainer.getBoundingClientRect();
+        setHintPosition({
+          top: rect.top,
+          left: rect.left + rect.width / 2,
+        });
+      }
+    };
+
+    const handleWheel = (e: WheelEvent) => {
+      const target = e.target as HTMLElement;
+      const isOnChart =
+        target.closest('.echarts-for-react') ||
+        target.closest('canvas') ||
+        target.tagName === 'CANVAS';
+
+      if (!isOnChart) return;
+
+      if (!(e.ctrlKey || e.metaKey)) {
+        const chartContainer = target.closest(
+          '.chart-container'
+        ) as HTMLElement;
+        if (chartContainer) {
+          lastChartContainer = chartContainer;
+          const rect = chartContainer.getBoundingClientRect();
+          setHintPosition({
+            top: rect.top,
+            left: rect.left + rect.width / 2,
+          });
+        }
+        setShowScrollHint(true);
+        if (hintTimeout) clearTimeout(hintTimeout);
+        hintTimeout = setTimeout(() => {
+          setShowScrollHint(false);
+          lastChartContainer = null;
+        }, 2000);
+      }
+    };
+
+    window.addEventListener('wheel', handleWheel, { capture: true });
+    window.addEventListener('scroll', updateHintPosition, true);
+    window.addEventListener('resize', updateHintPosition);
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel, { capture: true });
+      window.removeEventListener('scroll', updateHintPosition, true);
+      window.removeEventListener('resize', updateHintPosition);
+      if (hintTimeout) clearTimeout(hintTimeout);
+    };
+  }, [showScrollHint]);
+
   // Resize charts on theme change
   useEffect(() => {
     if (windChartRef.current) {
@@ -459,7 +525,23 @@ export function GraphViewer({ readings }: GraphViewerProps) {
   }, [theme]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 relative">
+      {/* Hint overlay */}
+      {showScrollHint && (
+        <div
+          className="fixed z-[1000] pointer-events-none"
+          style={{
+            top: `${hintPosition.top + 16}px`,
+            left: `${hintPosition.left}px`,
+            transform: 'translateX(-50%)',
+          }}
+        >
+          <div className="bg-gray-900/90 dark:bg-gray-800/90 text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium backdrop-blur-sm">
+            {scrollHintText}
+          </div>
+        </div>
+      )}
+
       {/* Header */}
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
         <div className="mb-4">
@@ -530,7 +612,7 @@ export function GraphViewer({ readings }: GraphViewerProps) {
 
       {/* Wind Chart */}
       {showWindChart && (
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 chart-container">
           <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-4">
             Datos de Viento
           </h4>
@@ -547,7 +629,7 @@ export function GraphViewer({ readings }: GraphViewerProps) {
 
       {/* Temperature Chart */}
       {showTempChart && (
-        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 chart-container">
           <h4 className="text-md font-semibold text-gray-900 dark:text-white mb-4">
             Datos de Temperatura
           </h4>
