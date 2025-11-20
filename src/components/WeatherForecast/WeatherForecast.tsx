@@ -10,6 +10,7 @@ import {
   WiRain,
   WiRaindrops,
   WiBarometer,
+  WiAlien,
 } from 'react-icons/wi';
 import type { Forecast } from '@/types';
 import {
@@ -57,9 +58,20 @@ export function WeatherForecast({ forecast }: WeatherForecastProps) {
     );
   }
 
-  // Datos horarios: próximas 24 horas, cada 3 horas
-  const next24Hours = forecast.hourly.slice(0, 24);
-  const hourlyDisplay = next24Hours.filter((_, index) => index % 3 === 0);
+  // Obtener la hora actual y filtrar desde la próxima hora en punto
+  const now = new Date();
+  const nextHour = new Date(now);
+  nextHour.setHours(now.getHours() + 1);
+  nextHour.setMinutes(0);
+  nextHour.setSeconds(0);
+  nextHour.setMilliseconds(0);
+
+  const nextHourTimestamp = nextHour.getTime();
+
+  // Filtrar datos desde la próxima hora en punto hasta el final (todas las 42 mediciones disponibles)
+  const hourlyDisplay = forecast.hourly.filter(
+    (item) => new Date(item.timestamp).getTime() >= nextHourTimestamp
+  );
 
   // Datos semanales
   const weeklyData = forecast.weekly || [];
@@ -84,7 +96,7 @@ export function WeatherForecast({ forecast }: WeatherForecastProps) {
                     : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
                 }`}
               >
-                24h
+                Horario
               </button>
               <button
                 onClick={() => setViewMode('daily')}
@@ -102,17 +114,16 @@ export function WeatherForecast({ forecast }: WeatherForecastProps) {
 
         {/* Crédito AEMET */}
         <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-          <WiBarometer size={16} />
-          <span>Datos por cortesía de</span>
+          <WiCloudy size={22} />
+          <span>Información elaborada por</span>
           <a
             href="https://www.aemet.es"
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-primary-600 dark:text-primary-400 hover:underline"
           >
-            AEMET
+            © AEMET
           </a>
-          <span>© AEMET</span>
         </div>
       </div>
 
@@ -132,6 +143,19 @@ export function WeatherForecast({ forecast }: WeatherForecastProps) {
 
 // Vista horaria (24h)
 function HourlyView({ data }: { data: Forecast['hourly'] }) {
+  // Detectar cambios de día
+  const shouldShowDaySeparator = (
+    currentItem: Forecast['hourly'][0],
+    previousItem: Forecast['hourly'][0] | null
+  ) => {
+    if (!previousItem) return false;
+
+    const currentDate = new Date(currentItem.timestamp);
+    const previousDate = new Date(previousItem.timestamp);
+
+    return currentDate.getDate() !== previousDate.getDate();
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -141,68 +165,97 @@ function HourlyView({ data }: { data: Forecast['hourly'] }) {
     >
       <div className="overflow-x-auto -mx-4 px-4">
         <div className="flex gap-3 pb-2 min-w-max">
-          {data.map((item, index) => (
-            <motion.div
-              key={`${item.timestamp}-${index}`}
-              className="flex-shrink-0 w-24 p-3 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-600 shadow-sm hover:shadow-md transition-all"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.03, duration: 0.25 }}
-              whileHover={{ scale: 1.03, y: -2 }}
-            >
-              {/* Hora */}
-              <div className="text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2 text-center">
-                {formatTime(item.timestamp)}
-              </div>
+          {data.map((item, index) => {
+            const previousItem = index > 0 ? data[index - 1] : null;
+            const showDaySeparator = shouldShowDaySeparator(item, previousItem);
+            const date = new Date(item.timestamp);
+            const dayLabel = date.toLocaleDateString('es-ES', {
+              weekday: 'short',
+              day: 'numeric',
+              month: 'short',
+            });
 
-              {/* Icono de viento con dirección */}
-              <div className="flex justify-center mb-2 relative">
+            return (
+              <>
+                {showDaySeparator && (
+                  <div
+                    key={`separator-${index}`}
+                    className="flex-shrink-0 flex flex-col items-center justify-center px-3 relative"
+                  >
+                    <div className="h-full w-0.5 bg-gradient-to-b from-primary-400 via-primary-500 to-primary-400 dark:from-primary-500 dark:via-primary-600 dark:to-primary-500 rounded-full" />
+                    <div className="absolute top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 px-2 py-1 rounded-lg shadow-md border border-primary-300 dark:border-primary-600">
+                      <span className="text-xs font-bold text-primary-600 dark:text-primary-400 whitespace-nowrap capitalize">
+                        {dayLabel}
+                      </span>
+                    </div>
+                  </div>
+                )}
                 <motion.div
-                  animate={{ rotate: item.directionDeg }}
-                  transition={{ type: 'spring', stiffness: 120, damping: 15 }}
+                  key={`${item.timestamp}-${index}`}
+                  className="flex-shrink-0 w-24 p-3 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700/50 dark:to-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-600 shadow-sm transition-all"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.03, duration: 0.25 }}
                 >
-                  <WiWindDeg
-                    className="text-primary-500 dark:text-primary-400"
-                    size={40}
-                  />
+                  {/* Hora */}
+                  <div className="text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2 text-center">
+                    {formatTime(item.timestamp)}
+                  </div>
+
+                  {/* Icono de viento con dirección */}
+                  <div className="flex justify-center mb-2 relative">
+                    <motion.div
+                      animate={{ rotate: item.directionDeg }}
+                      transition={{
+                        type: 'spring',
+                        stiffness: 120,
+                        damping: 15,
+                      }}
+                    >
+                      <WiWindDeg
+                        className="text-primary-500 dark:text-primary-400"
+                        size={40}
+                      />
+                    </motion.div>
+                  </div>
+
+                  {/* Dirección cardinal */}
+                  <div className="text-xs font-bold text-primary-600 dark:text-primary-400 mb-2 text-center">
+                    {getWindDirectionCardinal(item.directionDeg)}
+                  </div>
+
+                  {/* Velocidad del viento */}
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <WiStrongWind
+                      className="text-blue-500 dark:text-blue-400 flex-shrink-0"
+                      size={18}
+                    />
+                    <span className="font-bold text-sm text-gray-900 dark:text-white">
+                      {formatWindSpeed(item.windKts, 'kts')}
+                    </span>
+                  </div>
+
+                  {/* Rachas */}
+                  <div className="text-xs text-orange-600 dark:text-orange-400 text-center mb-2 font-semibold">
+                    ↑ {formatWindSpeed(item.gustKts, 'kts')}
+                  </div>
+
+                  {/* Temperatura */}
+                  {item.tempC !== undefined && item.tempC !== null && (
+                    <div className="flex items-center justify-center gap-1 pt-2 border-t border-gray-300 dark:border-gray-600">
+                      <WiThermometer
+                        className="text-red-500 dark:text-red-400 flex-shrink-0"
+                        size={18}
+                      />
+                      <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                        {formatTemperature(item.tempC)}
+                      </span>
+                    </div>
+                  )}
                 </motion.div>
-              </div>
-
-              {/* Dirección cardinal */}
-              <div className="text-xs font-bold text-primary-600 dark:text-primary-400 mb-2 text-center">
-                {getWindDirectionCardinal(item.directionDeg)}
-              </div>
-
-              {/* Velocidad del viento */}
-              <div className="flex items-center justify-center gap-1 mb-1">
-                <WiStrongWind
-                  className="text-blue-500 dark:text-blue-400 flex-shrink-0"
-                  size={18}
-                />
-                <span className="font-bold text-sm text-gray-900 dark:text-white">
-                  {formatWindSpeed(item.windKts, 'kts')}
-                </span>
-              </div>
-
-              {/* Rachas */}
-              <div className="text-xs text-orange-600 dark:text-orange-400 text-center mb-2 font-semibold">
-                ↑ {formatWindSpeed(item.gustKts, 'kts')}
-              </div>
-
-              {/* Temperatura */}
-              {item.tempC !== undefined && item.tempC !== null && (
-                <div className="flex items-center justify-center gap-1 pt-2 border-t border-gray-300 dark:border-gray-600">
-                  <WiThermometer
-                    className="text-red-500 dark:text-red-400 flex-shrink-0"
-                    size={18}
-                  />
-                  <span className="text-xs font-medium text-gray-700 dark:text-gray-300">
-                    {formatTemperature(item.tempC)}
-                  </span>
-                </div>
-              )}
-            </motion.div>
-          ))}
+              </>
+            );
+          })}
         </div>
       </div>
     </motion.div>
@@ -237,11 +290,10 @@ function DailyView({ data }: { data: Forecast['weekly'] }) {
         return (
           <motion.div
             key={day.date}
-            className="flex items-center gap-4 p-4 bg-gradient-to-r from-gray-50 to-white dark:from-gray-700/30 dark:to-gray-800/30 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-md transition-all"
+            className="flex items-center gap-4 p-4 bg-gradient-to-r from-gray-50 to-white dark:from-gray-700/30 dark:to-gray-800/30 rounded-xl border border-gray-200 dark:border-gray-600 transition-all"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: index * 0.05, duration: 0.25 }}
-            whileHover={{ x: 4 }}
           >
             {/* Fecha */}
             <div className="flex-shrink-0 w-16 text-center">
